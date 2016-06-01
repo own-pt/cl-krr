@@ -26,3 +26,4 @@ integration with systems such as ACL2 and SNARK.
 - https://github.com/ontologyportal/sigmakee
 - http://www.ai.sri.com/~stickel/snark.html
 - http://www.cs.utexas.edu/users/moore/acl2/
+- http://franz.com/products/allegrocl/
