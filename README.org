@@ -17,6 +17,10 @@ processing.
 Another advantage of keeping everything in Common Lisp is better
 integration with systems such as ACL2 and SNARK.
 
+To use this, you need the following project not yet in QuickLisp:
+
+- https://github.com/fcbr/graph-algorithms
+
 * Links 
 
 - http://logic.stanford.edu/kif/Hypertext/kif-manual.html
