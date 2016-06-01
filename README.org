@@ -1,0 +1,28 @@
+#+Title: Environment for knowledge representation, reasoning, and engineering.
+
+Contains a transformation from SUO-KIF to TPTP-FOF.
+
+You can read more about SUMO here: http://www.ontologyportal.org
+
+You need to execute it with Allegro Common Lisp (`mlisp`).
+
+See file `test-cases.tptp` for some sample test cases.
+
+While there is already an implementation of a transformation from
+SUO-KIF TPTP in Sigmakee (see link below), we felt that it would be
+interesting to have a new implementation in Common Lisp that is
+aligned to the essence of KIF, which has its roots in symbolic list
+processing.
+
+Another advantage of keeping everything in Common Lisp is better
+integration with systems such as ACL2 and SNARK.
+
+* Links 
+
+- http://logic.stanford.edu/kif/Hypertext/kif-manual.html
+- http://www.cs.miami.edu/~tptp/
+- http://www.ontologyportal.org
+- http://www.eprover.org/
+- https://github.com/ontologyportal/sigmakee
+- http://www.ai.sri.com/~stickel/snark.html
+- http://www.cs.utexas.edu/users/moore/acl2/

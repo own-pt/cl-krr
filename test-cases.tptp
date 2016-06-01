@@ -1,0 +1,53 @@
+% Copyright 2016 IBM
+
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+
+%     http://www.apache.org/licenses/LICENSE-2.0
+
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
+
+% These are fragments that can be used to test the transformation.
+% They are based on the combined Merge.kif and Mid-Level-Ontology.kif
+% axioms from SUMO.
+
+% To execute these test cases, first, generate the TPTP conversion of
+% these two files as follows:
+
+% (in-package :suo-kif)
+% (compile-suo-kif :in-files '("Merge.kif" "Mid-Level-Ontology.kif") :tptp t)
+%
+%
+% Next, copy-and-paste each one of them at the end of the generated
+% TPTP file and execute E as follows:
+
+% eprover --proof-object --auto --tptp3-format --memory-limit=4000 output.tptp
+
+% if a different invocation of E is required, it will be noted at the
+% end of each test case
+
+%% (1)
+fof(x1, axiom, s_instance(car, s_DamagedVehicle)).
+fof(q, conjecture, s_attribute(car, s_DeviceDamaged)).
+%%
+
+%% (2)
+fof(x1, axiom, s_instance(john, s_HumanAdult)).
+fof(q, conjecture, s_instance(john, s_Mammal)).
+%%
+
+%% (3) 
+fof(x1, axiom, s_instance(john, s_HumanAdult)).
+fof(q, conjecture, s_instance(john, s_Vertebrate)).
+%% E --auto ran for over 1h without proving this
+%% E (without --auto) proved in ~50 seconds
+
+%% (4)
+fof(r1, axiom, s_instance(coquina, s_Rock)).
+fof(q, question, ? [A] : s_attribute(coquina, A)).
+%% Use ~/E/PROVER/eprover -s --tptp3-format --answers --memory-limit=2048
