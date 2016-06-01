@@ -743,7 +743,7 @@ metadata to be used in later passes."
       (when debug-passes
         (format t "Saving to TPTP: ~w s.~%" (float real-time))))
     
-    (setf *transformed-kb* pass4))
+    (setf *transformed-kb* pass5))
   t)
 
 (defun relativize-formula (f &optional ctxs)
