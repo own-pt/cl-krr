@@ -459,10 +459,10 @@
                     (equal ?A ?B)))))
     (relativize-formula formula)))
 
-(defun test-relativize6 ()
+(defun test-relativize7 ()
   (relativize-formula '(subclass OrganismRemains OrganicObject)))
 
-(defun test-relativize7 ()
+(defun test-relativize8 ()
   (relativize-formula '(=>
                         (and (subrelation contraryAttribute contraryAttribute)
                          (instance contraryAttribute Predicate)
@@ -470,7 +470,7 @@
                         (contraryAttribute7 ?ROW0 ?ROW1 ?ROW2 ?ROW3 ?ROW4 ?ROW5 ?ROW6))))
 
 
-(defun test-relativize8 ()
+(defun test-relativize9 ()
   (relativize-formula '(holdsDuring ?T2 (part ?OBJ ?REM))))
 
 (defun test-can-translate0 ()

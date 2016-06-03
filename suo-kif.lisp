@@ -14,17 +14,13 @@
 
 (in-package #:suo-kif)
 
-(defconstant +max-row-expansion+ 7 "Maximum number of variables to expand row vars.")
+(defparameter *max-row-expansion* 7 "Maximum number of variables to expand row vars")
 
-(defconstant +excluded-predicates+ 
+(defparameter *excluded-predicates*
   '(documentation domain format termFormat externalImage
     relatedExternalConcept relatedInternalConcept formerName 
-    abbreviation conventionalShortName conventionalLongName
-    "Predicates to be excluded from the final TPTP conversion."))
-
-(defconstant +binary-logical-operators+ '(and or => <=>))
-(defconstant +unary-logical-operators+ '(not))
-(defconstant +quantifiers+ '(forall exists))
+    abbreviation conventionalShortName conventionalLongName)
+  "Predicates to be excluded from the final TPTP conversion")
 
 (defparameter *kb* nil
  "All axioms defined in the KIF files.")
@@ -32,29 +28,8 @@
 (defparameter *transformed-kb* nil
   "*KB*, after all transformation passes.")
 
-(defparameter *variable-arity-relations* nil
-  "List of predicates defined as having variable arity.")
-
-(defparameter *domains* nil 
-  "Information about predicate domains.")
-
-(defparameter *parent-relation* nil 
-  "Hierarchy of relations (key = relation, value = parent relation).")
-
-(defparameter *subclasses* nil 
-  "Hierarchy of classes.")
-
-(defparameter *superclasses* nil 
-  "Hierarchy of classes, inverse of *subclasses*.")
-
-(defparameter *instances* nil
-  "All defined instances and their types.")
-
-(defparameter *type-instances* nil
-  "All defined types and their instances.")
-
 (defun excluded-predicatep (f)
-  (member (car f) +excluded-predicates+))
+  (member (car f) *excluded-predicates*))
 
 (defun car-is (formula symbol)
   "Checks if the CAR of formula is SYMBOL."
@@ -445,14 +420,14 @@ where the theorem prover doesn't handle overloaded predicates."
   "Expand row variables by treating them as syntactic sugar for lists
 of regular variables up to the arity of the relation.  If a relation
 is of variable arity or we don't know the maximum arity, use a fixed
-number (defined by +max-row-expansion+).
+number (defined by *max-row-expansion*).
 
 1. Collect all row variables and their context;
 
 2. Decide, for each row variable, the minimum and maximum number of
    variables to be expanded into.  For relations with a predefined
    number of variables, say, 2, minimum == maximum.  For variable
-   arity relations, minimum = 0, maximum = +max-row-expansion+
+   arity relations, minimum = 0, maximum = *max-row-expansion*
 
 3. For each row variable present in the formula, make the appropriate
    substitution as follows:
@@ -470,11 +445,11 @@ number (defined by +max-row-expansion+).
              (let ((arity (find-relation-arity relation)))
                (if arity arity 1)))
            (get-maximum-arity-relation (relation)
-             "The maximum arity of a relation is either +max-row-expansion+, for
+             "The maximum arity of a relation is either *max-row-expansion*, for
               variable arity relations, or the fixed arity of the relation."
              (let ((arity (find-relation-arity relation)))
                (if (or (variable-arityp relation) (not arity))
-                   +max-row-expansion+
+                   *max-row-expansion*
                    arity)))
            (get-minimum-var-expansion (var row-vars)
              "The minimum var expansion (ie., the minimum amount of
@@ -568,6 +543,7 @@ number (defined by +max-row-expansion+).
       (if (not (zerop (hash-table-count row-vars)))
           (progn
             (maphash (lambda (var rel-info)
+                       (declare (ignore rel-info))
                        (let ((expansion (get-var-expansion var row-vars)))
                          (push (mapcar (lambda (x) (cons var x)) expansion) substitution-template)))
                      row-vars)
@@ -821,25 +797,11 @@ metadata to be used in later passes."
                         (instantiated-vars (find-explicit-instantiations (get-antecedent formula)))
                         (quantifier (car ctx))
                         (quantified-vars (cdr ctx))
-                        (op (ecase quantifier ('forall '=>) ('exists 'and)))
+                        (op (ecase quantifier (forall '=>) (exists 'and)))
                         (conjunction (create-conjunction (set-difference quantified-vars instantiated-vars) formula)))
                    (if conjunction
                        `(,op (,@conjunction)
                              (,@(create-restrictions formula (cdr contexts))))
                        `(,@(create-restrictions formula (cdr contexts)))))
-                 formula))
-           (relativize-formula1 (formula contexts)
-             "Relativize the FORMULA variables using CONTEXTS to
-              generate the restrictions.  Existentially quantified
-              variables are restricted via AND; universally
-              quantified, via =>.  Formulas that are themselves
-              restrictions, such as (INSTANCE <X> <Y>) and (SUBCLASS
-              <X> <Y>) are skipped to avoid redundant restrictions."
-             (if (atom formula)
-                 formula
-                 (if (or (car-is formula 'instance) (car-is formula 'subclass))
-                     formula
-                     (let* ((vars (find-all-if #'regular-varp (cdr formula)))
-                            (restrictions (create-restrictions vars formula contexts)))
-                       restrictions)))))
+                 formula)))
     (create-restrictions f ctxs)))

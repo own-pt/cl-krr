@@ -14,6 +14,31 @@
 
 (in-package #:suo-kif)
 
+(defparameter *variable-arity-relations* nil
+  "List of predicates defined as having variable arity.")
+
+(defparameter *domains* nil 
+  "Information about predicate domains.")
+
+(defparameter *parent-relation* nil 
+  "Hierarchy of relations (key = relation, value = parent relation).")
+
+(defparameter *subclasses* nil 
+  "Hierarchy of classes.")
+
+(defparameter *superclasses* nil 
+  "Hierarchy of classes, inverse of *subclasses*.")
+
+(defparameter *instances* nil
+  "All defined instances and their types.")
+
+(defparameter *type-instances* nil
+  "All defined types and their instances.")
+
+(defparameter *binary-logical-operators* '(and or => <=>))
+(defparameter *unary-logical-operators* '(not))
+(defparameter *quantifiers* '(forall exists))
+
 (defun row-varp (s)
   "Checks if S is a row variable, i.e., starts with @."
   (and (symbolp s) (eq #\@ (elt (symbol-name s) 0))))
@@ -26,7 +51,7 @@
   (or (regular-varp s) (row-varp s)))
 
 (defun quantifier-termp (s)
-  (member s +quantifiers+))
+  (member s *quantifiers*))
 
 (defun quantifierp (f)
   "Check if the formula fragment is a quantifier."
@@ -49,15 +74,15 @@
   (and (relationp s) (not (kif-functionp s))))
 
 (defun logical-operatorp (s)
-  (or (member s +binary-logical-operators+)
-      (member s +unary-logical-operators+)))
+  (or (member s *binary-logical-operators*)
+      (member s *unary-logical-operators*)))
 
 (defun binary-logical-formulap (formula)
-  (or (member (car formula) +binary-logical-operators+)
+  (or (member (car formula) *binary-logical-operators*)
       (eq (car formula) 'equal)))
 
 (defun unary-logical-formulap (formula)
-  (member (car formula) +unary-logical-operators+))
+  (member (car formula) *unary-logical-operators*))
 
 ;; TODO: rewrite this, since we are already doing things that are
 ;; specific to SUO-KIF.  We should receive different functions for
