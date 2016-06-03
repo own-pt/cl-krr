@@ -398,7 +398,7 @@ where the theorem prover doesn't handle overloaded predicates."
                (unless (gethash new-rel *domains*)
                  (insert-new-relation-signature rel new-rel (length (cdr f))))
                (sublis `((,rel . ,new-rel)) f))))
-    (treemap formula #'variable-arity-predicate #'disambiguate-relation-name)))
+    `(,(treemap formula #'variable-arity-predicate #'disambiguate-relation-name))))
 
 ;; http://stackoverflow.com/questions/36720381/sublis-and-splicing/36722620#36722620
 (defun sublis1 (bindings tree)
@@ -593,8 +593,8 @@ number (defined by *max-row-expansion*).
   (let ((quantifier (if axiom? 'forall 'exists))
         (free-variables (find-free-variables formula)))
     (if free-variables
-        `(,quantifier ,free-variables ,formula)
-        formula)))
+        `((,quantifier ,free-variables ,formula))
+        `(,formula))))
 
 (defun generate-instantiations (f)
   "From a F, generate new (instance <X> SetOrClass) as follows:
@@ -624,18 +624,23 @@ number (defined by *max-row-expansion*).
     (dolist (f formulas)
       (print f out))))
 
+(defun binarize-and-prenex (f)
+  `(,(prenex (binarize f))))
+
 (defun compile-suo-kif (&key in-files
                           (out-file "output.tptp") (tptp nil) (debug-passes t))
   "First pass of the compiler: reads the filename, and capture all
 metadata to be used in later passes."
   (let* ((kb (read-kif in-files))
          (kb-with-instances)
-         (pass0 nil)
-         (pass1 nil)
-         (pass2 nil)
-         (pass3 nil)
-         (pass4 nil)
-         (pass5 nil)
+         (passes '(expand-predicate-vars
+                   expand-row-vars
+                   rename-variable-arity-relations
+                   quantify-free-variables 
+                   binarize-and-prenex
+                   relativize-formula))
+         (p)
+         (q)
          (real-time 0))
 
     (setf *kb* kb)
@@ -646,90 +651,48 @@ metadata to be used in later passes."
     (setf *instances* (collect-instances kb))
 
     (dolist (f kb)
-      (push f kb-with-instances)
-      (mapcar (lambda (x) 
-                (when x
-                  (let ((instance-types (gethash (cadr x) *instances*)))
-                    (unless (or (not x) (member 'SetOrClass instance-types))
-                      (push 'SetOrClass (gethash (cadr x) *instances*))
-                      (push x kb-with-instances)))))
-              (generate-instantiations f)))
+      (unless (excluded-predicatep f)
+        (push f kb-with-instances)
+        (mapcar (lambda (x) 
+                  (when x
+                    (let ((instance-types (gethash (cadr x) *instances*)))
+                      (unless (or (not x) (member 'SetOrClass instance-types))
+                        (push 'SetOrClass (gethash (cadr x) *instances*))
+                        (push x kb-with-instances)))))
+                (generate-instantiations f))))
 
     (format t "Original KB: ~a~%" (length kb))
     (format t "KB with instances: ~a~%" (length kb-with-instances))
-   
-    (setq real-time
-          (timings
-           (lambda () (dolist (f kb-with-instances)
-                        (when (not (excluded-predicatep f))
-                          (mapcar (lambda (x) (push x pass0)) (expand-predicate-vars f)))))))
 
-    (when debug-passes
-     (format t "Pass 0 (expand predicate variables): ~a (~w s)~%" (length pass0) (float real-time))
-     (save-pass "pass0.kif" pass0))
+    (setf p kb-with-instances)
 
-    (setq real-time 
-          (timings
-           (lambda ()
-             (dolist (f pass0)
-               (mapcar (lambda (x) (push x pass1)) (expand-row-vars f))))))
+    (dolist (pass passes)
+      (format t "[executing ~a (~a formulas)] ~%" pass (length p))
+      (dolist (f p)
+        (dolist (n (funcall pass f))
+          (push n q)))
+      (setf p q)
+      ;; (save-pass (symbol-name pass) p)
+      (setf q nil))
 
-    (when debug-passes
-      (format t "Pass 1 (expand row variables): ~a (~w s)~%" (length pass1) (float real-time))
-      (save-pass "pass1.kif" pass1))
-
-    (setq real-time 
-          (timings (lambda ()
-                     (dolist (f pass1)
-                       (push (rename-variable-arity-relations f) pass2)))))
-
-    (when debug-passes
-      (format t "Pass 2 (rename variable arity relations): ~a (~w s)~%" (length pass2) (float real-time))
-      (save-pass "pass2.kif" pass2))
-    
-    (setq real-time
-          (timings
-           (lambda () (dolist (f pass2)
-                        (push (quantify-free-variables f) pass3)))))
-
-    (when debug-passes
-      (format t "Pass 3 (quantify free variables): ~a (~w s)~%" (length pass3) (float real-time))
-      (save-pass "pass3.kif" pass3))
-
-    (setq real-time
-          (timings
-           (lambda () (dolist (f pass3)
-                        (push (prenex (binarize f)) pass4)))))
-
-    (when debug-passes
-      (format t "Pass 4 (binarize/prenex): ~a (~w s)~%" (length pass4) (float real-time))
-      (save-pass "pass4.kif" pass4))
-
-    (setq real-time
-          (timings
-           (lambda () (dolist (f pass4)
-                        (push (relativize-formula f) pass5)))))
-
-    (when debug-passes
-      (format t "Pass 5 (relativize): ~a (~w s)~%" (length pass5) (float real-time))
-      (save-pass "pass5.kif" pass5))
+    (setf *transformed-kb* p)
     
     (when (and tptp out-file)
-      (setq real-time (timings (lambda ()  (kif-tptp out-file pass5))))
+      (setq real-time (timings (lambda ()  (kif-tptp out-file *transformed-kb*))))
       (when debug-passes
-        (format t "Saving to TPTP: ~w s.~%" (float real-time))))
-    
-    (setf *transformed-kb* pass5))
+        (format t "Saving to TPTP: ~w s.~%" (float real-time)))))
   t)
 
 (defun relativize-formula (f &optional ctxs)
+  `(,(relativize-formula1 f)))
+
+(defun relativize-formula1 (f &optional ctxs)
   "Assuming F in prenex normal form, recurse down F until we leave the
    quantifiers, but capturing them in CTXS.  Then create the
    apropriate restrictions on the formula (see RELATIVIZE-FORMULA*)."
   (cond
     ((quantifierp f)
-     (list (car f) (cadr f)
-           (relativize-formula (caddr f) (cons (cons (car f) (cadr f)) ctxs))))
+     `(,(car f) ,(cadr f) ,(relativize-formula1 (caddr f) (cons (cons (car f) (cadr f)) ctxs))))
     (t (relativize-formula* f ctxs))))
 
 (defun find-explicit-instantiations (f &optional negative)  
