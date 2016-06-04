@@ -31,7 +31,7 @@
             appropriate values in patern PAT.  Returns NIL if no
             substituation was performed.."
            (let* ((p (prenex1 e))
-                  (bindings (pairlis '(V E) (list v p))))
+                  (bindings (pairlis '(V E) `(,v ,p))))
              (when p (sublis bindings pat))))
          (tr2 (v e1 e2 ren pat)
            "Expands the variables (V) and expressions (E1 E2) to the
@@ -41,20 +41,15 @@
                   (r2 (if (eq ren :e2) (rename-variables v e2) e2))
                   (p1 (prenex1 r1))
                   (p2 (prenex1 r2))
-                  (bindings (pairlis '(V E1 E2) (list v (or p1 r1) (or p2 r2)))))
+                  (bindings (pairlis '(V E1 E2) `(,v ,(or p1 r1) ,(or p2 r2)))))
              (sublis bindings pat)))
-         (tr2* (v e1 e2 ren pat)
+         (tr2* (e1 e2 pat)
            "This is a special form of the TR2 transform that returns
-            NIL if no changes were made.  We need this methods to stop
-            the recusion when we hit the matches for (=> e1 e2) (and
-            e1 e2), etc. This those matches themselves don't rewrite
-            the formula, they can potentially simply rewrite the
-            formula to itself, after running through TR2."
-           (let* ((r1 (if (eq ren :e1) (rename-variables v e1) e1))
-                  (r2 (if (eq ren :e2) (rename-variables v e2) e2))
-                  (p1 (prenex1 r1))
-                  (p2 (prenex1 r2))
-                  (bindings (pairlis '(V E1 E2) (list v (or p1 r1) (or p2 r2)))))
+            NIL if no changes were made.  We use this to stop the
+            recusion when we match (=> e1 e2) (and e1 e2), etc."
+           (let* ((p1 (prenex1 e1))
+                  (p2 (prenex1 e2))
+                  (bindings (pairlis '(E1 E2) `(,(or p1 e1) ,(or p2 e2)))))
              (when (or p1 p2) (sublis bindings pat)))))
     (match f
       (`(<=> (exists ,v ,e1) ,e2) 
@@ -96,11 +91,13 @@
       ;; further substitution made.
       (`(exists ,v ,e) (tr1* v e '(exists V E)))
       (`(forall ,v ,e) (tr1* v e '(forall V E)))
-      (`(<=> ,e1 ,e2) (tr2* nil e1 e2 :none '(<=> E1 E2)))
-      (`(=> ,e1 ,e2) (tr2* nil e1 e2 :none '(=> E1 E2)))
-      (`(or ,e1 ,e2) (tr2* nil e1 e2 :none '(or E1 E2)))
-      (`(and ,e1 ,e2) (tr2* nil e1 e2 :none '(and E1 E2)))
+
+      (`(<=> ,e1 ,e2) (tr2* e1 e2 '(<=> E1 E2)))
+      (`(=> ,e1 ,e2)  (tr2* e1 e2  '(=> E1 E2)))
+      (`(or ,e1 ,e2)  (tr2* e1 e2  '(or E1 E2)))
+      (`(and ,e1 ,e2) (tr2* e1 e2 '(and E1 E2)))
       (otherwise nil))))
+
 (named-readtables:in-readtable :standard)
 
 (defun prenex (f)

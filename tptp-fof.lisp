@@ -16,15 +16,15 @@
 
 (defun binary-logical-formula-tptp (l)
   (ecase (car l)
-    ('and (format nil "(~{~a~^ & ~})" (mapcar #'formula-tptp (cdr l))))
-    ('or (format nil "(~{~a~^ | ~})" (mapcar #'formula-tptp (cdr l))))
-    ('=> (format nil "(~a => ~a)" (formula-tptp (cadr l)) (formula-tptp (caddr l))))
-    ('<=> (format nil "(~a <=> ~a)" (formula-tptp (cadr l)) (formula-tptp (caddr l))))
-    ('equal (format nil "(~a = ~a)"  (formula-tptp (cadr l)) (formula-tptp (caddr l))))))
+    (and (format nil "(~{~a~^ & ~})" (mapcar #'formula-tptp (cdr l))))
+    (or (format nil "(~{~a~^ | ~})" (mapcar #'formula-tptp (cdr l))))
+    (=> (format nil "(~a => ~a)" (formula-tptp (cadr l)) (formula-tptp (caddr l))))
+    (<=> (format nil "(~a <=> ~a)" (formula-tptp (cadr l)) (formula-tptp (caddr l))))
+    (equal (format nil "(~a = ~a)"  (formula-tptp (cadr l)) (formula-tptp (caddr l))))))
 
 (defun unary-logical-formula-tptp (l)
   (let ((op (ecase (car l)
-              ('not "~"))))
+              (not "~"))))
     (format nil "(~a ~a)" op (formula-tptp (cadr l)))))
 
 (defun atom-tptp (a)
@@ -41,18 +41,18 @@
 
 (defun relation-name-tptp (r)
   (case r
-    ('<= "lesseq")
-    ('< "less")
-    ('> "greater")
-    ('>= "greatereq")
-    ('lessThanOrEqualTo "lesseq")
-    ('lessThan "less")
-    ('greaterThan "greater")
-    ('greatherThanOrEqualTo "greatereq")
-    ('MultiplicationFn "times")
-    ('DivisionFn "divide")
-    ('AdditionFn "plus")
-    ('SutractionFn "minus")
+    (<= "lesseq")
+    (< "less")
+    (> "greater")
+    (>= "greatereq")
+    (lessThanOrEqualTo "lesseq")
+    (lessThan "less")
+    (greaterThan "greater")
+    (greatherThanOrEqualTo "greatereq")
+    (MultiplicationFn "times")
+    (DivisionFn "divide")
+    (AdditionFn "plus")
+    (SutractionFn "minus")
     (otherwise (format nil "s_~a" (symbol-name r)))))
 
 (defun predicate-tptp (l)
@@ -74,8 +74,8 @@
 
 (defun quantifier-tptp (quantifier variables formula)
   (let ((fmt (ecase quantifier 
-               ('forall "! [~a] : (~a)") 
-               ('exists "? [~a] : (~a)"))))
+               (forall "! [~a] : (~a)") 
+               (exists "? [~a] : (~a)"))))
    (format nil fmt (atoms-tptp variables) (formula-tptp formula))))
 
 (defun can-translate-to-FOF (f &optional ctx)
