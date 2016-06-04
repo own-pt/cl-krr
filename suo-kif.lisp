@@ -482,9 +482,11 @@ number (defined by *max-row-expansion*).
            (get-var-expansion (var row-vars)
              "Returns the initial assessment of the number of regular
               variables that VAR needs to be expanded into."
-             (let ((max1 (get-maximum-var-expansion var row-vars))
-                   (min1 (get-minimum-var-expansion var row-vars)))
-               (iota (1+ (- max1 min1)) :start min1)))
+             (let* ((max1 (get-maximum-var-expansion var row-vars))
+                    (min1 (get-minimum-var-expansion var row-vars))
+                    (l (1+ (- max1 min1))))
+               (when (> l 0)
+                (iota l :start min1))))
            (expand-row (var formula n row-vars)
              "Expand all instances of VAR.
 
