@@ -13,7 +13,7 @@
 ;; limitations under the License.
 
 (asdf:defsystem #:suo-kif
-  :description "SUO-KIF programming environment, including a TPTP translator."
+  :description "SUO-KIF programming environment, TPTP-FOF translator."
   :author "Fabricio Chalub <fchalub@br.ibm.com> and Alexandre Rademaker <alexrad@br.ibm.com>"
   :license "Apache 2.0"
   :depends-on (#:cl-fad
