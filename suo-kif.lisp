@@ -672,7 +672,7 @@ metadata to be used in later passes."
         (dolist (n (funcall pass f))
           (push n q)))
       (setf p q)
-      ;; (save-pass (symbol-name pass) p)
+      ;; (save-pass (format t "~a.kif" (symbol-name pass)) p)
       (setf q nil))
 
     (setf *transformed-kb* p)
