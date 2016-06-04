@@ -21,6 +21,7 @@
                #:cl-ppcre
                #:optima
                #:graph-algorithms
+               #:fare-memoization
                #:fare-quasiquote-optima
                #:fare-quasiquote-readtable
                #:fiveam)

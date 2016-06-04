@@ -13,4 +13,4 @@
 ;; limitations under the License.
 
 (defpackage #:suo-kif
-  (:use #:cl #:alexandria #:cl-ppcre #:optima #:graph-algorithms))
+  (:use #:cl #:alexandria #:cl-ppcre #:optima #:fare-memoization #:graph-algorithms))

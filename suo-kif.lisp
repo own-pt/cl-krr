@@ -643,6 +643,10 @@ metadata to be used in later passes."
          (q)
          (real-time 0))
 
+    (memoize 'find-class-hierarchy)
+    (memoize 'topmost-relation)
+    (memoize 'subclassp)
+
     (setf *kb* kb)
     (setf *variable-arity-relations* (collect-variable-arity-predicates kb))
     (setf *parent-relation* (collect-relation-hierarchy kb))
