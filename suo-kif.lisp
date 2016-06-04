@@ -628,7 +628,7 @@ number (defined by *max-row-expansion*).
   `(,(prenex (binarize f))))
 
 (defun compile-suo-kif (&key in-files
-                          (out-file "output.tptp") (tptp nil) (debug-passes t))
+                          (out-file "output.tptp") (tptp nil) (debug-passes t) (save-passes nil))
   "First pass of the compiler: reads the filename, and capture all
 metadata to be used in later passes."
   (let* ((kb (read-kif in-files))
@@ -667,24 +667,30 @@ metadata to be used in later passes."
     (setf p kb-with-instances)
 
     (dolist (pass passes)
-      (format t "[executing ~a (~a formulas)] ~%" pass (length p))
-      (dolist (f p)
-        (dolist (n (funcall pass f))
-          (push n q)))
+      (when debug-passes
+        (format t "[executing ~a (~a formulas): " pass (length p)))
+      (setq real-time 
+            (timings (lambda () 
+                       (dolist (f p)
+                         (dolist (n (funcall pass f))
+                           (push n q))))))
+      (when debug-passes
+        (format t "~w s]~%" (float real-time)))
       (setf p q)
-      ;; (save-pass (format t "~a.kif" (symbol-name pass)) p)
-      (setf q nil))
+      (setf q nil)
+      (when save-passes
+        (save-pass (format t "~a.kif" (symbol-name pass)) p)))
 
     (setf *transformed-kb* p)
     
     (when (and tptp out-file)
       (setq real-time (timings (lambda ()  (kif-tptp out-file *transformed-kb*))))
       (when debug-passes
-        (format t "Saving to TPTP: ~w s.~%" (float real-time)))))
+        (format t "[saving to TPTP: ~w s]~%" (float real-time)))))
   t)
 
 (defun relativize-formula (f &optional ctxs)
-  `(,(relativize-formula1 f)))
+  `(,(relativize-formula1 f ctxs)))
 
 (defun relativize-formula1 (f &optional ctxs)
   "Assuming F in prenex normal form, recurse down F until we leave the
