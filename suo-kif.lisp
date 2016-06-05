@@ -685,7 +685,7 @@ metadata to be used in later passes."
       (setf p q)
       (setf q nil)
       (when save-passes
-        (save-pass (format t "~a.kif" (symbol-name pass)) p)))
+        (save-pass (format nil "~a.kif" (symbol-name pass)) p)))
 
     (setf *transformed-kb* p)
     
