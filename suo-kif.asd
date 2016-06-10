@@ -13,7 +13,7 @@
 ;; limitations under the License.
 
 (asdf:defsystem #:suo-kif
-  :description "SUO-KIF programming environment, TPTP-FOF translator."
+  :description "SUO-KIF programming environment, TPTP translator."
   :author "Fabricio Chalub <fchalub@br.ibm.com> and Alexandre Rademaker <alexrad@br.ibm.com>"
   :license "Apache 2.0"
   :depends-on (#:cl-fad
@@ -28,9 +28,9 @@
   :serial t
   :components ((:file "package")
                (:file "utils")
-               (:file "tptp-fof" :depends-on ("utils"))
+               (:file "tptp" :depends-on ("utils"))
                (:file "prenex" :depends-on ("utils"))
                (:file "tests")
                (:file "graph" :depends-on ("utils"))
-               (:file "suo-kif" :depends-on ("utils" "prenex" "tptp-fof"))))
+               (:file "suo-kif" :depends-on ("utils" "prenex" "tptp"))))
 

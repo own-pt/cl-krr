@@ -279,105 +279,6 @@
 ;;                     (=> (instance ?X HumanCorpse) (instance ?X (DeadFn Human)))))))
 ;;     (can-translate-to-TPTP formula)))
 
-(defun test-formula-structure1 ()
-  (let ((formula '(holdsDuring ?TIME2 (property ?ENTITY ?ATTR1))))
-    (formula-structure formula)))
-
-(defun test-formula-structure2 ()
-  (let ((formula '(temporalPart ?TIME2 (PastFn ?TIME1))))
-    (formula-structure formula)))
-
-(defun test-formula-structure3 ()
-  (let ((formula '(=>
-                   (and
-                    (subrelation equal lineMeasure)
-                    (instance equal Predicate)
-                    (instance lineMeasure Predicate)
-                    (equal ?ROW0 ?ROW1))
-                   (lineMeasure ?ROW0 ?ROW1))))
-    (formula-structure formula)))
-
-(defun test-formula-structure4 ()
-  (let ((formula '(=> (knows ?AGENT ?FORMULA) (truth ?FORMULA True))))
-    (formula-structure formula)))
-
-(defun test-formula-structure5 ()
-  (let ((formula '(=> (holdsDuring ?TIME (not ?SITUATION))
-                   (not (holdsDuring ?TIME ?SITUATION)))))
-    (formula-structure formula)))
-
-(defun test-formula-structure6 ()
-  (let ((formula '(=> (capability ?PROCESS direction ?OBJ)
-                   (modalAttribute
-                    (exists (?P) (and (instance ?P ?PROCESS) (direction ?P ?OBJ)))
-                    Possibility))))
-    (formula-structure formula)))
-
-(defun test-formula-structure7 ()
-  (let ((formula '(=>
-                   (and
-                    (instance ?SOUND RadiatingSound)
-                    (agent ?SOUND ?OBJ)
-                    (attribute ?SOUND Audible))
-                   (exists (?HUMAN)
-                    (and
-                     (instance ?HUMAN Human)
-                     (capability 
-                      (KappaFn ?HEAR
-                               (and
-                                (instance ?HEAR Hearing)
-                                (agent ?HEAR ?HUMAN)
-                                (destination ?HEAR ?HUMAN)
-                                (origin ?HEAR ?OBJ))) agent ?HUMAN))))))
-    (formula-structure formula)))
-
-(defun test-formula-structure8 ()
-  (let ((formula '(=>
-                   (and
-                    (instance ?GUN Gun)
-                    (effectiveRange ?GUN ?LM)
-                    (distance ?GUN ?O ?LM1)
-                    (not
-                     (exists (?O2)
-                             (between ?O ?O2 ?GUN)))
-                    (lessThanOrEqualTo ?LM1 ?LM))
-                   (capability
-                    (KappaFn ?DAMAGING
-                     (and
-                      (instance ?DAMAGING Damaging)
-                      (patient ?DAMAGING ?O)))
-                    instrument ?GUN))))
-    (formula-structure formula)))
-
-(defun test-formula-structure9 ()
-  (let ((formula '(exists (?X) (instance ?X BinaryFunction))))
-    (formula-structure formula)))
-
-
-(defun test-formula-structure10 ()
-  (let ((formula '(forall (?NUMBER ?ROW0 ?VALENCE ?CLASS ?ITEM)
-                   (=>
-                    (and (instance ?NUMBER PositiveInteger) (instance ?ROW0 Quantity)
-                     (instance ?VALENCE PositiveInteger) (instance ?ITEM Quantity)
-                     (instance ?CLASS SetOrClass))
-                    (<=>
-                     (and (instance MultiplicationFn TotalValuedRelation)
-                          (instance MultiplicationFn Predicate))
-                     (exists (?VALENCE)
-                             (and (instance MultiplicationFn Relation)
-                                  (valence MultiplicationFn ?VALENCE)
-                                  (=>
-                                   (forall (?NUMBER ?ELEMENT ?CLASS)
-                                           (=>
-                                            (and (lessThan ?NUMBER ?VALENCE)
-                                                 (domain MultiplicationFn ?NUMBER ?CLASS)
-                                                 (equal ?ELEMENT
-                                                        (ListOrderFn (ListFn1 ?ROW0) ?NUMBER)))
-                                            (instance ?ELEMENT ?CLASS)))
-                                   (exists (?ITEM) (MultiplicationFn ?ROW0 ?ITEM))))))))))
-    (formula-structure formula)))
-
-
 (defun test-predicates-in-var ()
   (let ((formula '(<=>
                    (and
@@ -474,7 +375,7 @@
   (relativize-formula '(holdsDuring ?T2 (part ?OBJ ?REM))))
 
 (defun test-can-translate0 ()
-  (can-translate-to-TPTP '(=>
+  (can-translate-to-FOL '(=>
                            (equal (GreatestCommonDivisorFn @ROW) ?NUMBER)
                            (forall (?ELEMENT)
                             (=>
@@ -482,7 +383,7 @@
                              (equal (RemainderFn ?ELEMENT ?NUMBER) 0))))))
 
 (defun test-can-translate1 ()
-  (can-translate-to-TPTP '(=>
+  (can-translate-to-FOL '(=>
                            (GreatestCommonDivisorFn @ROW)
                            (=>
                             (inList ?ELEMENT
