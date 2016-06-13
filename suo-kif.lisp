@@ -630,11 +630,15 @@ number (defined by *max-row-expansion*).
   `(,(prenex (binarize f))))
 
 (defun compile-suo-kif (&key in-files
-                          (out-file "output.tptp") (tptp nil) (debug-passes t) (save-passes nil))
+                          (out-file "output.tptp") 
+                          (tptp nil) 
+                          (subclass-closure nil)
+                          (debug-passes t)
+                          (save-passes nil))
   "First pass of the compiler: reads the filename, and capture all
 metadata to be used in later passes."
   (let* ((kb (read-kif in-files))
-         (kb-with-instances)
+         (augmented-kb)
          (passes '(expand-predicate-vars
                    expand-row-vars
                    rename-variable-arity-relations
@@ -658,19 +662,40 @@ metadata to be used in later passes."
 
     (dolist (f kb)
       (unless (excluded-predicatep f)
-        (push f kb-with-instances)
+        (push f augmented-kb)
         (mapcar (lambda (x) 
                   (when x
                     (let ((instance-types (gethash (cadr x) *instances*)))
                       (unless (or (not x) (member 'SetOrClass instance-types))
                         (push 'SetOrClass (gethash (cadr x) *instances*))
-                        (push x kb-with-instances)))))
+                        (push x augmented-kb)))))
                 (generate-instantiations f))))
 
-    (format t "Original KB: ~a~%" (length kb))
-    (format t "KB with instances: ~a~%" (length kb-with-instances))
+;; Experimental code:
+;;
+;; If (subclass A B) and (subclass B C) then I generate (subclass A C).
+;;
+;; Also, in the same example above, if I have
+;;
+;; (instance i A)
+;;
+;; then I generate also:
+;;
+;; (instance i B)
+;; (instance i C)
+;;
+    (when subclass-closure
+      (when save-passes
+        (save-pass "closure-classes.kif" (transitive-closure-classes (hash-table-keys *subclasses*)))
+        (save-pass "closure-instances.kif" (transitive-closure-instances (hash-table-keys *instances*))))
 
-    (setf p kb-with-instances)
+      (setf augmented-kb (append augmented-kb (transitive-closure-classes (hash-table-keys *subclasses*))))
+      (setf augmented-kb (append augmented-kb (transitive-closure-instances (hash-table-keys *instances*)))))
+
+    (format t "Original  KB: ~a~%" (length kb))
+    (format t "Augmented KB: ~a~%" (length augmented-kb))
+
+    (setf p augmented-kb)
 
     (dolist (pass passes)
       (when debug-passes
@@ -780,3 +805,27 @@ metadata to be used in later passes."
                        `(,@(create-restrictions formula (cdr contexts)))))
                  formula)))
     (create-restrictions f ctxs)))
+
+(defun transitive-closure-classes (classes)
+  "Generates the transitive closure of the subclass relation.  So,
+if (subclass C1 C2) and (subclass C2 C3) then generate (subclass C1
+C3)."
+  (let ((f))
+    (dolist (c classes)
+      (dolist (sc (find-class-parents c))
+        (push `(subclass ,c ,sc) f)))
+    (remove-duplicates f :test #'equal)))
+
+(defun transitive-closure-instances (instances)
+  "For each instance (instance I C), generate new instances that cover
+the transitive closure of the subclass relation of C."
+  (let ((f))
+    (dolist (i instances)
+      (let ((super-types))
+       (dolist (type (gethash i *instances*))
+         (dolist (super-type (find-class-parents type))
+           (push super-type super-types)))
+       (setf super-types (remove-duplicates super-types))
+       (dolist (super-type super-types)
+         (push `(instance ,i ,super-type) f))))
+    (remove-duplicates f :test #'equal)))
