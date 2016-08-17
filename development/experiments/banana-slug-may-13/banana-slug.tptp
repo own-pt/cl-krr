@@ -1,0 +1,27 @@
+%% see issue #33 for a discussion on these axioms
+
+fof(kb_SUMO_5285,axiom,(
+    s_instance(s_PartialOrderingRelation,s_SetOrClass) )).
+
+fof(kb_SUMO_5308,axiom,(
+    s_instance(s_TransitiveRelation,s_SetOrClass) )).
+
+fof(kb_SUMO_5389,axiom,(
+    s_instance(s_SymmetricRelation,s_SetOrClass) )).
+
+fof(kb_SUMO_5437,axiom,(
+    s_instance(s_EquivalenceRelation,s_SetOrClass) )).
+
+fof(kb_SUMO_5711,axiom,(
+    s_instance(s_AntisymmetricRelation,s_SetOrClass) )).
+
+fof(kb_SUMO_6023,axiom,(
+    s_instance(s_BinaryRelation,s_SetOrClass) )).
+
+fof(kb_SUMO_7071,axiom,(
+    s_instance(s_InheritableRelation,s_SetOrClass) )).
+
+fof(kb_SUMO_7082,axiom,(
+    s_instance(s_Relation,s_SetOrClass) )).
+
+fof(q1,conjecture,s_instance(s_BananaSlug10_1, s_Invertebrate)).

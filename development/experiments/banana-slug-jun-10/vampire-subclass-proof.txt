@@ -1,0 +1,502 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 215919 next slice time: 1279
+dis+11_4_bsr=unit_only:cond=fast:fde=none:lwlo=on:nm=0:nwc=1.2:spl=off:sp=occurrence_1218 on bs
+% (20812)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 57902
+% Passive clauses: 482812
+% Generated clauses: 503965
+% Final active clauses: 37181
+% Final passive clauses: 311027
+% Input formulas: 229645
+% Initial clauses: 233479
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 1766
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 7940
+% Bw subsumption resolutions: 20721
+% Fw demodulations: 6204
+% Condensations: 310
+% 
+% Simple tautologies: 518
+% Equational tautologies: 425
+% Forward subsumptions: 118384
+% 
+% Binary resolution: 233683
+% Forward superposition: 58
+% Backward superposition: 252
+% Self superposition: 10
+% Equality resolution: 61
+% 
+% Memory used [KB]: 726128
+% Time elapsed: 128.0000 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 503973
+clauses deleted: 10007
+-----------------------------
+% ------------------------------
+% remaining time: 214638 next slice time: 728
+lrs+1011_4_cond=fast:gs=on:gsaa=from_current:gsem=off:gsssp=full:nwc=1:stl=90:sd=5:ss=axioms:st=3.0:sac=on:sdd=off:sser=off:sfr=on:ssfp=1000:ssfq=1.0:ssnc=none_693 on bs
+% (20887)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Passive clauses: 3362
+% Generated clauses: 222002
+% Final passive clauses: 3362
+% Input formulas: 229645
+% Initial clauses: 221074
+% 
+% Pure predicates: 9
+% Selected by SInE selection: 220285
+% SInE iterations: 5
+% 
+% Duplicate literals: 1156
+% Trivial inequalities: 1
+% Condensations: 145
+% 
+% Simple tautologies: 381
+% Equational tautologies: 374
+% 
+% SAT solver clauses: 3363
+% SAT solver unit clauses: 29
+% 
+% TWLsolver clauses: 3363
+% TWLsolver calls for satisfiability: 486845
+% 
+% Memory used [KB]: 560587
+% Time elapsed: 72.900 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 222002
+clauses deleted: 746
+naming_introduced_defs: 45
+-----------------------------
+% ------------------------------
+% remaining time: 213909 next slice time: 316
+dis+11_7_300 on bs
+% (20919)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 577
+% Passive clauses: 232640
+% Generated clauses: 454193
+% Final active clauses: 577
+% Final passive clauses: 231917
+% Input formulas: 229645
+% Initial clauses: 233528
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 1252
+% Trivial inequalities: 1
+% 
+% Simple tautologies: 439
+% Equational tautologies: 400
+% 
+% Split clauses: 219842
+% Split components: 981914
+% SAT solver clauses: 219960
+% SAT solver unit clauses: 109
+% SAT solver binary clauses: 2820
+% 
+% Sat splits: 219842
+% 
+% TWLsolver clauses: 219951
+% TWLsolver calls for satisfiability: 90
+% 
+% Memory used [KB]: 1157635
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 943178
+clauses deleted: 798
+naming_introduced_defs: 54
+ssat_new_components: 437420
+ssat_non_splittable_sat_clauses: 108
+ssat_reused_components: 544494
+ssat_sat_clauses: 219951
+unworthy child removed: 56
+-----------------------------
+% ------------------------------
+% remaining time: 213591 next slice time: 316
+ott+11_8:1_cond=fast:gs=on:gsem=off:igrpq=1.0:nwc=1:nicw=on:sd=2:ss=axioms:st=1.2:sos=all:sscc=on:sfr=on:ssfp=100000:ssfq=1.0:smm=sco:ssnc=none:urr=on_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 22
+% Passive clauses: 1
+% Generated clauses: 2
+% Final active clauses: 22
+% Input formulas: 229645
+% Initial clauses: 24
+% 
+% Selected by SInE selection: 23
+% SInE iterations: 2
+% 
+% Simple tautologies: 2
+% 
+% SAT solver clauses: 2
+% SAT solver unit clauses: 2
+% 
+% TWLsolver clauses: 2
+% TWLsolver calls for satisfiability: 2
+% 
+% Memory used [KB]: 188696
+% Time elapsed: 0.864 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 26
+clauses deleted: 1
+ssat_ground_clauses_for_congruence: 1
+ssat_new_components: 1
+ssat_non_splittable_sat_clauses: 1
+ssat_sat_clauses: 1
+-----------------------------
+% ------------------------------
+% remaining time: 213582 next slice time: 316
+lrs+1011_4_cond=fast:gs=on:gsaa=from_current:gsem=off:gsssp=full:igrpq=1.0:nm=0:nwc=1:sas=minisat:sd=3:ss=axioms:st=2.0:sdd=off:sfr=on:ssfp=100000:ssfq=1.2:smm=off:ssnc=none:sp=reverse_arity_300 on bs
+% (20937)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Passive clauses: 268001
+% Generated clauses: 1393637
+% Final passive clauses: 133235
+% Input formulas: 229645
+% Initial clauses: 214765
+% 
+% Selected by SInE selection: 214655
+% SInE iterations: 3
+% 
+% Duplicate literals: 981
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 3199
+% Fw demodulations: 3749
+% Bw demodulations: 2495
+% Global subsumptions: 2
+% 
+% Simple tautologies: 329
+% Equational tautologies: 327
+% Forward subsumptions: 2301
+% 
+% Split clauses: 213505
+% Split components: 956748
+% SAT solver clauses: 1592177
+% SAT solver unit clauses: 521
+% SAT solver binary clauses: 920918
+% 
+% Sat splits: 213505
+% Sat splitting refutations: 2796
+% 
+% Memory used [KB]: 1267911
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 916109
+clauses deleted: 652
+fast_clauses_not_restored: 1493
+fast_clauses_restored: 685407
+global_subsumption_by_number_of_removed_literals:
+  1: 2
+ssat_new_components: 426049
+ssat_reused_components: 530699
+ssat_sat_clauses: 216301
+total_frozen: 11117
+total_unfrozen: 5561
+unworthy child removed: 104
+-----------------------------
+% ------------------------------
+% remaining time: 213263 next slice time: 316
+lrs+1002_6_ccuc=first:cond=on:fsr=off:igrpq=1.0:nwc=4:nicw=on:sas=minisat:sscc=on:sfr=on:ssfp=40000:ssfq=1.0:smm=sco:ssnc=all_dependent:sp=reverse_arity:urr=ec_only_300 on bs
+% (20948)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Passive clauses: 13910
+% Generated clauses: 242974
+% Final passive clauses: 13910
+% Input formulas: 229645
+% Initial clauses: 233528
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 1266
+% Trivial inequalities: 1
+% Condensations: 170
+% 
+% Simple tautologies: 439
+% Equational tautologies: 400
+% Forward subsumptions: 110
+% 
+% Split clauses: 219817
+% Split components: 981671
+% SAT solver clauses: 227418
+% SAT solver unit clauses: 7261
+% SAT solver binary clauses: 2820
+% 
+% Sat splits: 219817
+% 
+% Memory used [KB]: 1058234
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 957472
+clauses deleted: 804
+naming_introduced_defs: 54
+ssat_dp_conflict: 339
+ssat_dp_conflict_clauses: 339
+ssat_ground_clauses_for_congruence: 7242
+ssat_new_components: 444292
+ssat_non_splittable_sat_clauses: 7261
+ssat_reused_components: 544621
+ssat_sat_clauses: 227078
+total_frozen: 57
+-----------------------------
+% ------------------------------
+% remaining time: 212945 next slice time: 316
+ott+1011_4:1_bd=off:bsr=unit_only:cond=fast:fsr=off:fde=none:inw=on:igrpq=1.0:nm=0:nwc=1.1:sas=minisat:sos=on:ssfp=10000:ssfq=1.2:ssnc=none:sp=occurrence_300 on bs
+% (20956)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 23964
+% Final active clauses: 23964
+% Input formulas: 229645
+% Initial clauses: 24016
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 67
+% Trivial inequalities: 1
+% 
+% Simple tautologies: 30
+% Equational tautologies: 21
+% 
+% Memory used [KB]: 599606
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 233526
+clauses deleted: 44
+-----------------------------
+% ------------------------------
+% remaining time: 212627 next slice time: 316
+lrs+4_2:1_ep=R:fde=unused:gs=on:igrpq=1.0:nwc=1:sos=all:sac=on:ssac=none:sser=off:sfr=on:ssfp=10000:ssfq=1.2:ssnc=none:sp=occurrence:updr=off_300 on bs
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for bs
+% SZS output start Proof for bs
+fof(f1719754,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f1719449,f1354216,f1356209,f1356208,f1377858])).
+fof(f1377858,plain,(
+  $false | $spl88),
+  inference(subsumption_resolution,[],[f1377857,f1009713])).
+fof(f1009713,plain,(
+  s_subclass(s_Organism,s_OrganicObject)),
+  inference(cnf_transformation,[],[f222725])).
+fof(f222725,axiom,(
+  s_subclass(s_Organism,s_OrganicObject)),
+  file('bs.tptp',a222725)).
+fof(f1377857,plain,(
+  ~s_subclass(s_Organism,s_OrganicObject) | $spl88),
+  inference(subsumption_resolution,[],[f1377150,f1013926])).
+fof(f1013926,plain,(
+  s_instance(s_Organism,s_SetOrClass)),
+  inference(cnf_transformation,[],[f222754])).
+fof(f222754,axiom,(
+  s_instance(s_Organism,s_SetOrClass)),
+  file('bs.tptp',a222754)).
+fof(f1377150,plain,(
+  ~s_instance(s_Organism,s_SetOrClass) | ~s_subclass(s_Organism,s_OrganicObject) | $spl88),
+  inference(resolution,[],[f1356209,f1009030])).
+fof(f1009030,plain,(
+  s_subclass(s_Animal,s_Organism)),
+  inference(cnf_transformation,[],[f222752])).
+fof(f222752,axiom,(
+  s_subclass(s_Animal,s_Organism)),
+  file('bs.tptp',a222752)).
+fof(f1356208,plain,(
+  ~s_instance(s_subclass_m,s_TransitiveRelation) | $spl87),
+  inference(cnf_transformation,[],[f1356208_D])).
+fof(f1356208_D,plain,(
+  ~s_instance(s_subclass_m,s_TransitiveRelation) <=> ~$spl87),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl87])])).
+fof(f1356209,plain,(
+  ( ! [X19] : (~s_subclass(s_Animal,X19) | ~s_instance(X19,s_SetOrClass) | ~s_subclass(X19,s_OrganicObject)) ) | $spl88),
+  inference(cnf_transformation,[],[f1356209_D])).
+fof(f1356209_D,plain,(
+  ( ! [X19] : (~s_subclass(s_Animal,X19) | ~s_instance(X19,s_SetOrClass) | ~s_subclass(X19,s_OrganicObject)) ) <=> ~$spl88),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl88])])).
+fof(f1354216,plain,(
+  ( ! [X19] : (~s_subclass(X19,s_OrganicObject) | ~s_subclass(s_Animal,X19) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X19,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f1354215,f1011939])).
+fof(f1011939,plain,(
+  s_instance(s_OrganicObject,s_SetOrClass)),
+  inference(cnf_transformation,[],[f227281])).
+fof(f227281,axiom,(
+  s_instance(s_OrganicObject,s_SetOrClass)),
+  file('bs.tptp',a227281)).
+fof(f1354215,plain,(
+  ( ! [X19] : (~s_subclass(X19,s_OrganicObject) | ~s_subclass(s_Animal,X19) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X19,s_SetOrClass) | ~s_instance(s_OrganicObject,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f1353530,f1014697])).
+fof(f1014697,plain,(
+  s_instance(s_Animal,s_SetOrClass)),
+  inference(cnf_transformation,[],[f229640])).
+fof(f229640,axiom,(
+  s_instance(s_Animal,s_SetOrClass)),
+  file('bs.tptp',a229640)).
+fof(f1353530,plain,(
+  ( ! [X19] : (~s_subclass(X19,s_OrganicObject) | ~s_subclass(s_Animal,X19) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(s_Animal,s_SetOrClass) | ~s_instance(X19,s_SetOrClass) | ~s_instance(s_OrganicObject,s_SetOrClass)) )),
+  inference(resolution,[],[f1007752,f1239106])).
+fof(f1239106,plain,(
+  ( ! [X2,X0,X1] : (s_subclass(X0,X2) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f1002521])).
+fof(f1002521,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X0,s_SetOrClass) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_subclass(X0,X1) | ~s_subclass(X1,X2) | s_subclass(X0,X2))),
+  inference(flattening,[],[f1002520])).
+fof(f1002520,plain,(
+  ! [X0,X1,X2] : ((~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X0,s_SetOrClass)) | (~s_instance(s_subclass_m,s_TransitiveRelation) | ((~s_subclass(X0,X1) | ~s_subclass(X1,X2)) | s_subclass(X0,X2))))),
+  inference(ennf_transformation,[],[f560189])).
+fof(f560189,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,s_SetOrClass) & s_instance(X1,s_SetOrClass) & s_instance(X0,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X0,X1) & s_subclass(X1,X2)) => s_subclass(X0,X2))))),
+  inference(rectify,[],[f218291])).
+fof(f218291,axiom,(
+  ! [X324,X325,X326] : ((s_instance(X326,s_SetOrClass) & s_instance(X325,s_SetOrClass) & s_instance(X324,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X324,X325) & s_subclass(X325,X326)) => s_subclass(X324,X326))))),
+  file('bs.tptp',a218291)).
+fof(f1007752,plain,(
+  ~s_subclass(s_Animal,s_OrganicObject)),
+  inference(cnf_transformation,[],[f229647])).
+fof(f229647,plain,(
+  ~s_subclass(s_Animal,s_OrganicObject)),
+  inference(flattening,[],[f229646])).
+fof(f229646,negated_conjecture,(
+  ~s_subclass(s_Animal,s_OrganicObject)),
+  inference(negated_conjecture,[],[f229645])).
+fof(f229645,conjecture,(
+  s_subclass(s_Animal,s_OrganicObject)),
+  file('bs.tptp',b6)).
+fof(f1719449,plain,(
+  $false | $spl87),
+  inference(subsumption_resolution,[],[f1719448,f1012623])).
+fof(f1012623,plain,(
+  s_instance(s_PartialOrderingRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f227888])).
+fof(f227888,axiom,(
+  s_instance(s_PartialOrderingRelation,s_SetOrClass)),
+  file('bs.tptp',a227888)).
+fof(f1719448,plain,(
+  ~s_instance(s_PartialOrderingRelation,s_SetOrClass) | $spl87),
+  inference(subsumption_resolution,[],[f1718547,f1014709])).
+fof(f1014709,plain,(
+  s_instance(s_subclass_m,s_PartialOrderingRelation)),
+  inference(cnf_transformation,[],[f13])).
+fof(f13,axiom,(
+  s_instance(s_subclass_m,s_PartialOrderingRelation)),
+  file('bs.tptp',a13)).
+fof(f1718547,plain,(
+  ~s_instance(s_subclass_m,s_PartialOrderingRelation) | ~s_instance(s_PartialOrderingRelation,s_SetOrClass) | $spl87),
+  inference(resolution,[],[f1356993,f1008656])).
+fof(f1008656,plain,(
+  s_subclass(s_PartialOrderingRelation,s_TransitiveRelation)),
+  inference(cnf_transformation,[],[f218348])).
+fof(f218348,axiom,(
+  s_subclass(s_PartialOrderingRelation,s_TransitiveRelation)),
+  file('bs.tptp',a218348)).
+fof(f1356993,plain,(
+  ( ! [X8] : (~s_subclass(X8,s_TransitiveRelation) | ~s_instance(s_subclass_m,X8) | ~s_instance(X8,s_SetOrClass)) ) | $spl87),
+  inference(subsumption_resolution,[],[f1356542,f1014599])).
+fof(f1014599,plain,(
+  s_instance(s_TransitiveRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f229595])).
+fof(f229595,axiom,(
+  s_instance(s_TransitiveRelation,s_SetOrClass)),
+  file('bs.tptp',a229595)).
+fof(f1356542,plain,(
+  ( ! [X8] : (~s_instance(s_subclass_m,X8) | ~s_subclass(X8,s_TransitiveRelation) | ~s_instance(X8,s_SetOrClass) | ~s_instance(s_TransitiveRelation,s_SetOrClass)) ) | $spl87),
+  inference(resolution,[],[f1356208,f1239559])).
+fof(f1239559,plain,(
+  ( ! [X2,X0,X1] : (s_instance(X0,X1) | ~s_instance(X0,X2) | ~s_subclass(X2,X1) | ~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f1003355])).
+fof(f1003355,plain,(
+  ! [X0,X1,X2] : (~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass) | ~s_subclass(X2,X1) | ~s_instance(X0,X2) | s_instance(X0,X1))),
+  inference(flattening,[],[f1003354])).
+fof(f1003354,plain,(
+  ! [X0,X1,X2] : ((~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)) | ((~s_subclass(X2,X1) | ~s_instance(X0,X2)) | s_instance(X0,X1)))),
+  inference(ennf_transformation,[],[f560773])).
+fof(f560773,plain,(
+  ! [X0,X1,X2] : ((s_instance(X1,s_SetOrClass) & s_instance(X2,s_SetOrClass)) => ((s_subclass(X2,X1) & s_instance(X0,X2)) => s_instance(X0,X1)))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X5,X3,X4] : ((s_instance(X3,s_SetOrClass) & s_instance(X4,s_SetOrClass)) => ((s_subclass(X4,X3) & s_instance(X5,X4)) => s_instance(X5,X3)))),
+  file('bs.tptp',a15)).
+% SZS output end Proof for bs
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 237638
+% Passive clauses: 70957
+% Generated clauses: 367313
+% Final active clauses: 237619
+% Final passive clauses: 61949
+% Input formulas: 229645
+% Initial clauses: 233699
+% 
+% Duplicate literals: 3040
+% Fw subsumption resolutions: 62806
+% 
+% Simple tautologies: 439
+% Forward subsumptions: 231765
+% 
+% Binary resolution: 300590
+% 
+% Split clauses: 466
+% Split components: 2186
+% SAT solver clauses: 822
+% SAT solver unit clauses: 9
+% SAT solver binary clauses: 10
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 466
+% Sat splitting refutations: 8
+% 
+% TWLsolver clauses: 821
+% TWLsolver calls for satisfiability: 20551
+% 
+% Memory used [KB]: 1052221
+% Time elapsed: 11.746 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 712002
+clauses deleted: 7154
+naming_introduced_defs: 54
+ssat_new_components: 1383
+ssat_reused_components: 803
+ssat_sat_clauses: 474
+total_frozen: 220566
+total_unfrozen: 1487
+unworthy child removed: 16113
+-----------------------------
+% ------------------------------
+% Success in time 349.082 s

@@ -1,0 +1,16 @@
+Alt-Ergo---0.95.2    => TF1 TF0 FOF CNF;
+Beagle---0.9.47      => TF0 FOF CNF;
+Beagle---SAT-0.9.47  => TF0 FOF CNF;
+CVC4---1.5.1     => TF0;
+leanCoP-Omega---0.1  => TF0_ARI;
+MetiTarski---1.9     => TF0_ARI;
+Princess---160606    => TF0 FOF;
+SNARK---20120808r022 => TF0 FOF CNF;
+SPASS+T---2.2.22     => TF0;
+SPASS-XDB---0.8      => TF0_ARI;
+Vampire---4.0        => TF0 FOF CNF;
+VampireZ3---1.0      => TF0 FOF CNF;
+Z3---4.4-TPTP        => TF0 FOF;
+ZenonArith---0.1.0   => FOF TF0;
+ZenonModulo---0.4.1  => TF1 TF0 FOF CNF;
+Zipperpin---TFF-0.4  => TF0 TF1;

@@ -1,0 +1,14 @@
+based on TTQG34.kif.tq
+
+E and Vampire didn't find proofs in over 20 minutes.
+
+According to the documentation in Sigma:
+
+TQG34.kif.tq: A KB integrity test: Every term is an instance of
+              Entity.  Succeeds for local Vampire in five steps.
+
+///
+
+The most likely explanation for the current state of affairs is that
+Vampire-KIF had arithmetic operations built-in, where as the current
+E/Vampire ATPs don't.  A number of SUMO axioms need this.

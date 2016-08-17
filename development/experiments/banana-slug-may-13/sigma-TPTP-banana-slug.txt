@@ -1,0 +1,1041 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 4319998 next slice time: 12
+lrs+11_1_br=off:cond=on:er=known:fsr=off:fde=unused:nwc=1:stl=30:sac=on:sdd=off:sfr=on:ssfp=40000:ssfq=1.0:smm=off:ssnc=none:sp=occurrence:urr=on_11 on SUMO
+% (16848)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 16325
+% Passive clauses: 27350
+% Generated clauses: 33133
+% Final active clauses: 16149
+% Final passive clauses: 10402
+% Input formulas: 11368
+% Initial clauses: 14307
+% 
+% Pure predicates: 61
+% 
+% Duplicate literals: 69
+% Fw demodulations: 8
+% Condensations: 28
+% 
+% Simple tautologies: 19
+% Equational tautologies: 4
+% Forward subsumptions: 5404
+% 
+% Unit resulting resolution: 17788
+% Forward superposition: 16
+% Backward superposition: 3
+% Self superposition: 3
+% Equality resolution: 6
+% 
+% Split clauses: 477
+% Split components: 995
+% SAT solver clauses: 729
+% SAT solver unit clauses: 252
+% SAT solver binary clauses: 436
+% 
+% Sat splits: 477
+% Sat splitting refutations: 252
+% 
+% TWLsolver clauses: 729
+% TWLsolver calls for satisfiability: 653
+% 
+% Memory used [KB]: 246776
+% Time elapsed: 1.300 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 33491
+clauses deleted: 3955
+naming_introduced_defs: 153
+ssat_new_components: 870
+ssat_reused_components: 125
+ssat_sat_clauses: 729
+total_frozen: 93
+-----------------------------
+% ------------------------------
+% remaining time: 4319985 next slice time: 5
+ott+1002_5_bsr=on:fsr=off:fde=none:gs=on:gsem=off:lwlo=on:nwc=1:sscc=on:sser=off:ssfp=100000:ssfq=1.1:sp=occurrence_3 on SUMO
+% (16849)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 7671
+% Passive clauses: 16464
+% Generated clauses: 28048
+% Final active clauses: 7658
+% Final passive clauses: 8759
+% Input formulas: 11368
+% Initial clauses: 14307
+% 
+% Pure predicates: 61
+% 
+% Duplicate literals: 52
+% Bw subsumption resolutions: 34
+% Global subsumptions: 363
+% 
+% Simple tautologies: 19
+% Equational tautologies: 1
+% Forward subsumptions: 58
+% 
+% Binary resolution: 2273
+% 
+% Split clauses: 1639
+% Split components: 3353
+% SAT solver clauses: 26426
+% SAT solver unit clauses: 14778
+% SAT solver binary clauses: 6667
+% SAT solver learnt clauses: 363
+% SAT solver learnt literals: 1093
+% 
+% Sat splits: 1639
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 25706
+% TWLsolver calls for satisfiability: 240999
+% 
+% Memory used [KB]: 85073
+% Time elapsed: 0.600 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 39118
+clauses deleted: 6
+global_subsumption_by_number_of_removed_literals:
+  1: 337
+  2: 26
+naming_introduced_defs: 153
+ssat_ground_clauses_for_congruence: 9446
+ssat_new_components: 11893
+ssat_non_splittable_sat_clauses: 9447
+ssat_reused_components: 906
+ssat_sat_clauses: 11092
+total_frozen: 47
+unworthy child removed: 22
+-----------------------------
+% ------------------------------
+% remaining time: 4319979 next slice time: 7
+lrs+1011_3:1_bsr=unit_only:cond=fast:er=known:fsr=off:fde=unused:gs=on:gsaa=from_current:gsem=off:nwc=1:sas=minisat:stl=30:sdd=large:sser=off:sfr=on:ssfp=100000:ssfq=2.0:updr=off_5 on SUMO
+% (16850)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Passive clauses: 12310
+% Generated clauses: 15014
+% Final passive clauses: 12310
+% Input formulas: 11368
+% Initial clauses: 14648
+% 
+% Duplicate literals: 52
+% Condensations: 12
+% Global subsumptions: 303
+% 
+% Simple tautologies: 19
+% Equational tautologies: 1
+% Forward subsumptions: 36
+% 
+% Split clauses: 1596
+% Split components: 3248
+% SAT solver clauses: 15808
+% SAT solver unit clauses: 7343
+% SAT solver binary clauses: 4428
+% 
+% Sat splits: 1596
+% 
+% Memory used [KB]: 95307
+% Time elapsed: 0.800 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 18201
+clauses deleted: 2
+global_subsumption_by_number_of_removed_literals:
+  1: 293
+  2: 11
+naming_introduced_defs: 154
+ssat_new_components: 2409
+ssat_reused_components: 839
+ssat_sat_clauses: 1596
+-----------------------------
+% ------------------------------
+% remaining time: 4319970 next slice time: 6
+ins+11_3_cond=on:fde=none:gs=on:gsem=off:gsssp=full:igbrr=1.0:igrr=1/16:igrp=100:igrpq=1.05:igs=1:igwr=on:nwc=1:sas=minisat:sos=on:spl=off:sp=occurrence:urr=on_4 on SUMO
+% (16851)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 14287
+% Input formulas: 11368
+% Initial clauses: 14307
+% 
+% Pure predicates: 61
+% 
+% Duplicate literals: 120
+% Condensations: 28
+% Global subsumptions: 123
+% 
+% Simple tautologies: 38
+% Equational tautologies: 1
+% 
+% SAT solver clauses: 51854
+% SAT solver unit clauses: 21505
+% SAT solver binary clauses: 11432
+% 
+% InstGen redundant clauses: 25
+% InstGen kept clauses: 17877
+% InstGen iterations: 2
+% 
+% Memory used [KB]: 86864
+% Time elapsed: 0.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 32323
+clauses deleted: 14
+global_subsumption_by_number_of_removed_literals:
+  1: 112
+  2: 11
+  4: 1
+naming_introduced_defs: 153
+-----------------------------
+% ------------------------------
+% remaining time: 4319963 next slice time: 61
+ott-1_2:3_bs=unit_only:bsr=unit_only:fde=none:gs=on:gsem=on:gsssp=full:nwc=1:sas=minisat:sos=on:sdd=large:sfr=on:ssfp=1000:ssfq=1.4:smm=off:ssnc=all:sp=occurrence_58 on SUMO
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 14287
+% Final active clauses: 14287
+% Input formulas: 11368
+% Initial clauses: 14307
+% 
+% Pure predicates: 61
+% 
+% Duplicate literals: 52
+% 
+% Simple tautologies: 19
+% Equational tautologies: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 39274
+% Time elapsed: 0.204 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 14358
+clauses deleted: 2
+naming_introduced_defs: 153
+-----------------------------
+% ------------------------------
+% remaining time: 4319961 next slice time: 71
+dis+1011_4_fde=none:gs=on:nwc=1:sos=on:sdd=off:ssfp=10000:ssfq=1.4:smm=sco:ssnc=none:sp=reverse_arity:updr=off_67 on SUMO
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 14628
+% Passive clauses: 1
+% Generated clauses: 1
+% Final active clauses: 14628
+% Input formulas: 11368
+% Initial clauses: 14648
+% 
+% Duplicate literals: 52
+% 
+% Simple tautologies: 19
+% Equational tautologies: 1
+% 
+% SAT solver clauses: 2
+% SAT solver unit clauses: 2
+% 
+% TWLsolver clauses: 2
+% TWLsolver calls for satisfiability: 2
+% 
+% Memory used [KB]: 36204
+% Time elapsed: 0.198 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 14699
+clauses deleted: 2
+naming_introduced_defs: 154
+-----------------------------
+% ------------------------------
+% remaining time: 4319959 next slice time: 91
+dis+11_4_cond=fast:fsr=off:fde=none:gs=on:gsssp=full:nwc=1:sas=minisat:ss=axioms:st=2.0:sos=all:sdd=large:sfr=on:ssfp=1000:ssfq=2.0:smm=sco:ssnc=none:updr=off_86 on SUMO
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 1
+% Passive clauses: 1
+% Generated clauses: 1
+% Final active clauses: 1
+% Input formulas: 11368
+% Initial clauses: 1
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 4
+% SAT solver unit clauses: 2
+% 
+% Memory used [KB]: 8187
+% Time elapsed: 0.014 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 1
+-----------------------------
+% ------------------------------
+% remaining time: 4319959 next slice time: 8
+dis+1002_4_cond=fast:fde=unused:gsp=input_only:gs=on:gsem=on:nm=64:nwc=1:sas=minisat:sos=on:sscc=model:sser=off:sfr=on:ssfp=4000:ssfq=1.4:ssnc=none:updr=off_6 on SUMO
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 15257
+% Passive clauses: 1
+% Generated clauses: 2
+% Final active clauses: 15257
+% Input formulas: 11368
+% Initial clauses: 15277
+% 
+% Duplicate literals: 52
+% 
+% Simple tautologies: 19
+% Equational tautologies: 1
+% 
+% SAT solver clauses: 4
+% SAT solver unit clauses: 2
+% 
+% Memory used [KB]: 35948
+% Time elapsed: 0.127 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 15946
+clauses deleted: 3
+ssat_dp_model: 1
+ssat_ground_clauses_for_congruence: 1
+ssat_new_components: 1
+ssat_non_splittable_sat_clauses: 1
+ssat_sat_clauses: 1
+-----------------------------
+% ------------------------------
+% remaining time: 4319958 next slice time: 5
+lrs+1010_4_fde=unused:gs=on:gsem=off:nwc=1:stl=30:sd=2:ss=axioms:st=1.5:sos=on:sac=on:ssfp=40000:ssfq=1.2:smm=sco:ssnc=none:sp=reverse_arity:urr=on:updr=off_3 on SUMO
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 1
+% Passive clauses: 1
+% Generated clauses: 1
+% Final active clauses: 1
+% Input formulas: 11368
+% Initial clauses: 1
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 1
+% SAT solver unit clauses: 1
+% 
+% TWLsolver clauses: 1
+% TWLsolver calls for satisfiability: 1
+% 
+% Memory used [KB]: 8315
+% Time elapsed: 0.014 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 1
+-----------------------------
+% ------------------------------
+% remaining time: 4319958 next slice time: 292
+ott+2_8_bsr=unit_only:cond=fast:fde=none:gs=on:lwlo=on:nwc=1:sas=minisat:spl=off_278 on SUMO
+% (16857)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 43022
+% Passive clauses: 105176
+% Generated clauses: 187021
+% Final active clauses: 43022
+% Final passive clauses: 62154
+% Input formulas: 11368
+% Initial clauses: 14307
+% 
+% Pure predicates: 61
+% 
+% Duplicate literals: 1664
+% Fw subsumption resolutions: 28009
+% Fw demodulations: 146
+% Condensations: 13
+% Global subsumptions: 719
+% 
+% Simple tautologies: 403
+% Equational tautologies: 21
+% Forward subsumptions: 50943
+% 
+% Binary resolution: 142137
+% Forward superposition: 60
+% Backward superposition: 14
+% Self superposition: 9
+% Equality resolution: 39
+% 
+% SAT solver clauses: 105897
+% SAT solver unit clauses: 9702
+% SAT solver binary clauses: 34139
+% 
+% Memory used [KB]: 1299637
+% Time elapsed: 29.300 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 187021
+clauses deleted: 51560
+global_subsumption_by_number_of_removed_literals:
+  1: 658
+  2: 17
+  3: 2
+  4: 38
+  5: 5
+naming_introduced_defs: 153
+-----------------------------
+% ------------------------------
+% remaining time: 4319664 next slice time: 34
+lrs+1002_3_bd=off:bs=on:bsr=unit_only:cond=fast:fsr=off:lcm=predicate:nwc=1.5:stl=30:sos=on:sdd=off:sser=off:sfr=on:sp=reverse_arity_32 on SUMO
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 14287
+% Final active clauses: 14287
+% Input formulas: 11368
+% Initial clauses: 14307
+% 
+% Pure predicates: 61
+% 
+% Duplicate literals: 52
+% Condensations: 12
+% 
+% Simple tautologies: 19
+% Equational tautologies: 1
+% 
+% Memory used [KB]: 37483
+% Time elapsed: 0.129 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 14370
+clauses deleted: 2
+naming_introduced_defs: 153
+-----------------------------
+% ------------------------------
+% remaining time: 4319662 next slice time: 400
+ott+11_5_nwc=1:sd=7:ss=axioms:st=2.0:sac=on:sfr=on:ssfp=40000:ssfq=1.2:ssnc=none_380 on SUMO
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 11368
+% 
+% Pure predicates: 1
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 8571
+% Time elapsed: 0.014 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 4319662 next slice time: 124
+lrs+10_8_br=off:fsr=off:gsp=input_only:gs=on:gsem=off:nwc=1:sas=minisat:stl=30:spl=off:sp=reverse_arity:urr=on:updr=off_118 on SUMO
+% (16910)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 43895
+% Passive clauses: 144059
+% Generated clauses: 235072
+% Final active clauses: 43895
+% Final passive clauses: 100164
+% Input formulas: 11368
+% Initial clauses: 15141
+% 
+% Duplicate literals: 58
+% Fw demodulations: 8
+% Global subsumptions: 328
+% 
+% Simple tautologies: 20
+% Equational tautologies: 5
+% Forward subsumptions: 80212
+% 
+% Unit resulting resolution: 219397
+% Forward superposition: 32
+% Backward superposition: 4
+% Self superposition: 3
+% Equality resolution: 102
+% 
+% SAT solver clauses: 144388
+% SAT solver unit clauses: 136205
+% SAT solver binary clauses: 3004
+% 
+% Memory used [KB]: 478584
+% Time elapsed: 12.500 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 235565
+clauses deleted: 80184
+global_subsumption_by_number_of_removed_literals:
+  1: 317
+  2: 11
+naming_introduced_defs: 154
+-----------------------------
+% ------------------------------
+% remaining time: 4319537 next slice time: 414
+lrs+3_5_bd=preordered:bsr=unit_only:gsp=input_only:gs=on:gsem=on:gsssp=full:lwlo=on:nm=64:nwc=1:sas=minisat:stl=90:spl=off:sp=occurrence:urr=ec_only:updr=off_394 on SUMO
+% (16917)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 409215
+% Passive clauses: 608208
+% Generated clauses: 1051823
+% Final active clauses: 403664
+% Final passive clauses: 70644
+% Input formulas: 11368
+% Initial clauses: 15277
+% Discarded non-redundant clauses: 133923
+% 
+% Duplicate literals: 8450
+% Fw subsumption resolutions: 6410
+% Bw subsumption resolutions: 4
+% Fw demodulations: 298
+% Global subsumptions: 23
+% 
+% Simple tautologies: 234
+% Equational tautologies: 9
+% Forward subsumptions: 428194
+% 
+% Binary resolution: 1016924
+% Forward superposition: 62
+% Backward superposition: 36
+% Self superposition: 16
+% Equality resolution: 4339
+% 
+% SAT solver clauses: 608232
+% SAT solver unit clauses: 14490
+% SAT solver binary clauses: 23714
+% 
+% Memory used [KB]: 1196142
+% Time elapsed: 41.500 s
+% ------------------------------
+----  Runtime statistics ----
+binary resolutions skipped for weight limit before building clause: 6
+binary resolutions skipped for weight limit while building clause: 8
+clauses created: 1052447
+clauses deleted: 432377
+clauses discarded by weight limit in forward simplification: 13
+clauses discarded from active on weight limit update: 5551
+clauses discarded from passive on weight limit update: 128345
+global_subsumption_by_number_of_removed_literals:
+  1: 23
+-----------------------------
+% ------------------------------
+% remaining time: 4319121 next slice time: 1572
+lrs+3_4:1_bs=unit_only:bsr=on:cond=on:er=known:fde=none:lcm=predicate:lwlo=on:nwc=1.5:sas=minisat:stl=210:sos=all:sfr=on:ssfp=100000:ssfq=1.1:smm=sco:ssnc=all_dependent:sp=occurrence:updr=off_1497 on SUMO
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 14628
+% Passive clauses: 1
+% Generated clauses: 1
+% Final active clauses: 14628
+% Input formulas: 11368
+% Initial clauses: 14648
+% 
+% Duplicate literals: 68
+% Condensations: 28
+% 
+% Simple tautologies: 19
+% Equational tautologies: 1
+% 
+% SAT solver clauses: 1
+% 
+% Memory used [KB]: 42088
+% Time elapsed: 0.189 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 14743
+clauses deleted: 2
+naming_introduced_defs: 154
+-----------------------------
+% ------------------------------
+% remaining time: 4319119 next slice time: 316
+dis+11_7_300 on SUMO
+% (16994)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 77041
+% Passive clauses: 187889
+% Generated clauses: 266909
+% Final active clauses: 58938
+% Final passive clauses: 94062
+% Input formulas: 11368
+% Initial clauses: 14307
+% 
+% Pure predicates: 61
+% 
+% Duplicate literals: 1241
+% Fw subsumption resolutions: 11246
+% Fw demodulations: 3257
+% Bw demodulations: 16125
+% 
+% Simple tautologies: 693
+% Equational tautologies: 453
+% Forward subsumptions: 29036
+% 
+% Binary resolution: 183273
+% Forward superposition: 448
+% Backward superposition: 366
+% Self superposition: 64
+% Equality resolution: 193
+% 
+% Split clauses: 28252
+% Split components: 60137
+% SAT solver clauses: 42110
+% SAT solver unit clauses: 1184
+% SAT solver binary clauses: 9833
+% SAT solver learnt clauses: 3
+% SAT solver learnt literals: 5
+% 
+% Sat splits: 28252
+% Sat splitting refutations: 9214
+% 
+% TWLsolver clauses: 42103
+% TWLsolver calls for satisfiability: 17435
+% 
+% Memory used [KB]: 212491
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 315431
+clauses deleted: 1880
+naming_introduced_defs: 153
+ssat_new_components: 46600
+ssat_non_splittable_sat_clauses: 4637
+ssat_reused_components: 13537
+ssat_sat_clauses: 42103
+total_frozen: 43654
+total_unfrozen: 5968
+unworthy child removed: 32411
+-----------------------------
+% ------------------------------
+% remaining time: 4318802 next slice time: 316
+ott+11_8:1_cond=fast:gs=on:gsem=off:igrpq=1.0:nwc=1:nicw=on:sd=2:ss=axioms:st=1.2:sos=all:sscc=on:sfr=on:ssfp=100000:ssfq=1.0:smm=sco:ssnc=none:urr=on_300 on SUMO
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 11368
+% 
+% Pure predicates: 1
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 8699
+% Time elapsed: 0.014 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 4318801 next slice time: 316
+lrs+1011_4_cond=fast:gs=on:gsaa=from_current:gsem=off:gsssp=full:igrpq=1.0:nm=0:nwc=1:sas=minisat:sd=3:ss=axioms:st=2.0:sdd=off:sfr=on:ssfp=100000:ssfq=1.2:smm=off:ssnc=none:sp=reverse_arity_300 on SUMO
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 11368
+% 
+% Pure predicates: 1
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 8827
+% Time elapsed: 0.015 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 4318801 next slice time: 1261
+dis+11_4_bsr=unit_only:cond=fast:fde=none:lwlo=on:nm=0:nwc=1.2:spl=off:sp=occurrence_1200 on SUMO
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for SUMO
+% SZS output start Proof for SUMO
+fof(f5305403,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f5305393,f117716])).
+fof(f117716,plain,(
+  s__instance(s__equivalentContentClass__m,s__SymmetricRelation)),
+  inference(resolution,[],[f116790,f29897])).
+fof(f29897,plain,(
+  s__instance(s__equivalentContentClass__m,s__EquivalenceRelation)),
+  inference(cnf_transformation,[],[f5540])).
+fof(f5540,axiom,(
+  s__instance(s__equivalentContentClass__m,s__EquivalenceRelation)),
+  file('SUMO.tptp',kb_SUMO_5540)).
+fof(f116790,plain,(
+  ( ! [X1] : (~s__instance(X1,s__EquivalenceRelation) | s__instance(X1,s__SymmetricRelation)) )),
+  inference(subsumption_resolution,[],[f116785,f29746])).
+fof(f29746,plain,(
+  s__instance(s__SymmetricRelation,s__SetOrClass)),
+  inference(cnf_transformation,[],[f5389])).
+fof(f5389,axiom,(
+  s__instance(s__SymmetricRelation,s__SetOrClass)),
+  file('SUMO.tptp',kb_SUMO_5389)).
+fof(f116785,plain,(
+  ( ! [X1] : (~s__instance(X1,s__EquivalenceRelation) | ~s__instance(s__SymmetricRelation,s__SetOrClass) | s__instance(X1,s__SymmetricRelation)) )),
+  inference(resolution,[],[f43653,f27614])).
+fof(f27614,plain,(
+  s__subclass(s__EquivalenceRelation,s__SymmetricRelation)),
+  inference(cnf_transformation,[],[f8108])).
+fof(f8108,axiom,(
+  s__subclass(s__EquivalenceRelation,s__SymmetricRelation)),
+  file('SUMO.tptp',kb_SUMO_8108)).
+fof(f43653,plain,(
+  ( ! [X3419,X3418] : (~s__subclass(s__EquivalenceRelation,X3419) | ~s__instance(X3418,s__EquivalenceRelation) | ~s__instance(X3419,s__SetOrClass) | s__instance(X3418,X3419)) )),
+  inference(resolution,[],[f38539,f29794])).
+fof(f29794,plain,(
+  s__instance(s__EquivalenceRelation,s__SetOrClass)),
+  inference(cnf_transformation,[],[f5437])).
+fof(f5437,axiom,(
+  s__instance(s__EquivalenceRelation,s__SetOrClass)),
+  file('SUMO.tptp',kb_SUMO_5437)).
+fof(f38539,plain,(
+  ( ! [X2,X0,X1] : (~s__instance(X0,s__SetOrClass) | ~s__instance(X2,X0) | ~s__subclass(X0,X1) | ~s__instance(X1,s__SetOrClass) | s__instance(X2,X1)) )),
+  inference(cnf_transformation,[],[f22741])).
+fof(f22741,plain,(
+  ! [X0,X1,X2] : (~s__instance(X0,s__SetOrClass) | ~s__instance(X1,s__SetOrClass) | ~s__subclass(X0,X1) | ~s__instance(X2,X0) | s__instance(X2,X1))),
+  inference(flattening,[],[f22740])).
+fof(f22740,plain,(
+  ! [X0,X1,X2] : ((~s__instance(X0,s__SetOrClass) | ~s__instance(X1,s__SetOrClass)) | ((~s__subclass(X0,X1) | ~s__instance(X2,X0)) | s__instance(X2,X1)))),
+  inference(ennf_transformation,[],[f15872])).
+fof(f15872,plain,(
+  ! [X0,X1,X2] : ((s__instance(X0,s__SetOrClass) & s__instance(X1,s__SetOrClass)) => ((s__subclass(X0,X1) & s__instance(X2,X0)) => s__instance(X2,X1)))),
+  inference(rectify,[],[f1603])).
+fof(f1603,axiom,(
+  ! [X153,X131,X624] : ((s__instance(X153,s__SetOrClass) & s__instance(X131,s__SetOrClass)) => ((s__subclass(X153,X131) & s__instance(X624,X153)) => s__instance(X624,X131)))),
+  file('SUMO.tptp',kb_SUMO_1603)).
+fof(f5305393,plain,(
+  ~s__instance(s__equivalentContentClass__m,s__SymmetricRelation)),
+  inference(resolution,[],[f5305391,f41575])).
+fof(f41575,plain,(
+  ( ! [X67] : (~s__instance(X67,s__AntisymmetricRelation) | ~s__instance(X67,s__SymmetricRelation)) )),
+  inference(subsumption_resolution,[],[f41574,f30648])).
+fof(f30648,plain,(
+  s__instance(s__AntisymmetricRelation,s__SetOrClass)),
+  inference(cnf_transformation,[],[f5711])).
+fof(f5711,axiom,(
+  s__instance(s__AntisymmetricRelation,s__SetOrClass)),
+  file('SUMO.tptp',kb_SUMO_5711)).
+fof(f41574,plain,(
+  ( ! [X67] : (~s__instance(X67,s__SymmetricRelation) | ~s__instance(X67,s__AntisymmetricRelation) | ~s__instance(s__AntisymmetricRelation,s__SetOrClass)) )),
+  inference(subsumption_resolution,[],[f41337,f29746])).
+fof(f41337,plain,(
+  ( ! [X67] : (~s__instance(X67,s__SymmetricRelation) | ~s__instance(X67,s__AntisymmetricRelation) | ~s__instance(s__SymmetricRelation,s__SetOrClass) | ~s__instance(s__AntisymmetricRelation,s__SetOrClass)) )),
+  inference(resolution,[],[f37620,f24670])).
+fof(f24670,plain,(
+  s__disjoint(s__SymmetricRelation,s__AntisymmetricRelation)),
+  inference(cnf_transformation,[],[f4326])).
+fof(f4326,axiom,(
+  s__disjoint(s__SymmetricRelation,s__AntisymmetricRelation)),
+  file('SUMO.tptp',kb_SUMO_4326)).
+fof(f37620,plain,(
+  ( ! [X2,X0,X1] : (~s__disjoint(X1,X0) | ~s__instance(X2,X1) | ~s__instance(X2,X0) | ~s__instance(X1,s__SetOrClass) | ~s__instance(X0,s__SetOrClass)) )),
+  inference(cnf_transformation,[],[f21742])).
+fof(f21742,plain,(
+  ! [X0,X1] : (~s__instance(X0,s__SetOrClass) | ~s__instance(X1,s__SetOrClass) | ~s__disjoint(X1,X0) | ! [X2] : (~s__instance(X2,X1) | ~s__instance(X2,X0)))),
+  inference(flattening,[],[f21741])).
+fof(f21741,plain,(
+  ! [X0,X1] : ((~s__instance(X0,s__SetOrClass) | ~s__instance(X1,s__SetOrClass)) | (~s__disjoint(X1,X0) | ! [X2] : (~s__instance(X2,X1) | ~s__instance(X2,X0))))),
+  inference(ennf_transformation,[],[f15303])).
+fof(f15303,plain,(
+  ! [X0,X1] : ((s__instance(X0,s__SetOrClass) & s__instance(X1,s__SetOrClass)) => (s__disjoint(X1,X0) => ! [X2] : ~(s__instance(X2,X1) & s__instance(X2,X0))))),
+  inference(rectify,[],[f2109])).
+fof(f2109,axiom,(
+  ! [X15,X16] : ((s__instance(X15,s__SetOrClass) & s__instance(X16,s__SetOrClass)) => (s__disjoint(X16,X15) => ! [X172] : ~(s__instance(X172,X16) & s__instance(X172,X15))))),
+  file('SUMO.tptp',kb_SUMO_2109)).
+fof(f5305391,plain,(
+  s__instance(s__equivalentContentClass__m,s__AntisymmetricRelation)),
+  inference(subsumption_resolution,[],[f5305390,f172655])).
+fof(f172655,plain,(
+  s__instance(s__equivalentContentClass__m,s__Relation)),
+  inference(subsumption_resolution,[],[f172648,f30644])).
+fof(f30644,plain,(
+  s__instance(s__Relation,s__SetOrClass)),
+  inference(cnf_transformation,[],[f7082])).
+fof(f7082,axiom,(
+  s__instance(s__Relation,s__SetOrClass)),
+  file('SUMO.tptp',kb_SUMO_7082)).
+fof(f172648,plain,(
+  ~s__instance(s__Relation,s__SetOrClass) | s__instance(s__equivalentContentClass__m,s__Relation)),
+  inference(resolution,[],[f117628,f26724])).
+fof(f26724,plain,(
+  s__subclass(s__BinaryRelation,s__Relation)),
+  inference(cnf_transformation,[],[f7083])).
+fof(f7083,axiom,(
+  s__subclass(s__BinaryRelation,s__Relation)),
+  file('SUMO.tptp',kb_SUMO_7083)).
+fof(f117628,plain,(
+  ( ! [X0] : (~s__subclass(s__BinaryRelation,X0) | ~s__instance(X0,s__SetOrClass) | s__instance(s__equivalentContentClass__m,X0)) )),
+  inference(resolution,[],[f117625,f42067])).
+fof(f42067,plain,(
+  ( ! [X246,X247] : (~s__instance(X246,s__BinaryRelation) | ~s__subclass(s__BinaryRelation,X247) | ~s__instance(X247,s__SetOrClass) | s__instance(X246,X247)) )),
+  inference(resolution,[],[f38539,f30835])).
+fof(f30835,plain,(
+  s__instance(s__BinaryRelation,s__SetOrClass)),
+  inference(cnf_transformation,[],[f6023])).
+fof(f6023,axiom,(
+  s__instance(s__BinaryRelation,s__SetOrClass)),
+  file('SUMO.tptp',kb_SUMO_6023)).
+fof(f117625,plain,(
+  s__instance(s__equivalentContentClass__m,s__BinaryRelation)),
+  inference(resolution,[],[f117614,f102947])).
+fof(f102947,plain,(
+  ( ! [X0] : (~s__instance(X0,s__TransitiveRelation) | s__instance(X0,s__BinaryRelation)) )),
+  inference(subsumption_resolution,[],[f102944,f30835])).
+fof(f102944,plain,(
+  ( ! [X0] : (~s__instance(X0,s__TransitiveRelation) | ~s__instance(s__BinaryRelation,s__SetOrClass) | s__instance(X0,s__BinaryRelation)) )),
+  inference(resolution,[],[f42741,f25276])).
+fof(f25276,plain,(
+  s__subclass(s__TransitiveRelation,s__BinaryRelation)),
+  inference(cnf_transformation,[],[f10798])).
+fof(f10798,axiom,(
+  s__subclass(s__TransitiveRelation,s__BinaryRelation)),
+  file('SUMO.tptp',kb_SUMO_10798)).
+fof(f42741,plain,(
+  ( ! [X1594,X1595] : (~s__subclass(s__TransitiveRelation,X1595) | ~s__instance(X1594,s__TransitiveRelation) | ~s__instance(X1595,s__SetOrClass) | s__instance(X1594,X1595)) )),
+  inference(resolution,[],[f38539,f29665])).
+fof(f29665,plain,(
+  s__instance(s__TransitiveRelation,s__SetOrClass)),
+  inference(cnf_transformation,[],[f5308])).
+fof(f5308,axiom,(
+  s__instance(s__TransitiveRelation,s__SetOrClass)),
+  file('SUMO.tptp',kb_SUMO_5308)).
+fof(f117614,plain,(
+  s__instance(s__equivalentContentClass__m,s__TransitiveRelation)),
+  inference(resolution,[],[f116789,f29897])).
+fof(f116789,plain,(
+  ( ! [X0] : (~s__instance(X0,s__EquivalenceRelation) | s__instance(X0,s__TransitiveRelation)) )),
+  inference(subsumption_resolution,[],[f116784,f29665])).
+fof(f116784,plain,(
+  ( ! [X0] : (~s__instance(X0,s__EquivalenceRelation) | ~s__instance(s__TransitiveRelation,s__SetOrClass) | s__instance(X0,s__TransitiveRelation)) )),
+  inference(resolution,[],[f43653,f27613])).
+fof(f27613,plain,(
+  s__subclass(s__EquivalenceRelation,s__TransitiveRelation)),
+  inference(cnf_transformation,[],[f8109])).
+fof(f8109,axiom,(
+  s__subclass(s__EquivalenceRelation,s__TransitiveRelation)),
+  file('SUMO.tptp',kb_SUMO_8109)).
+fof(f5305390,plain,(
+  s__instance(s__equivalentContentClass__m,s__AntisymmetricRelation) | ~s__instance(s__equivalentContentClass__m,s__Relation)),
+  inference(resolution,[],[f5304883,f24981])).
+fof(f24981,plain,(
+  s__subrelation(s__equivalentContentClass__m,s__subsumesContentClass__m)),
+  inference(cnf_transformation,[],[f11202])).
+fof(f11202,axiom,(
+  s__subrelation(s__equivalentContentClass__m,s__subsumesContentClass__m)),
+  file('SUMO.tptp',kb_SUMO_11202)).
+fof(f5304883,plain,(
+  ( ! [X16] : (~s__subrelation(X16,s__subsumesContentClass__m) | s__instance(X16,s__AntisymmetricRelation) | ~s__instance(X16,s__Relation)) )),
+  inference(resolution,[],[f274915,f117395])).
+fof(f117395,plain,(
+  s__instance(s__subsumesContentClass__m,s__AntisymmetricRelation)),
+  inference(resolution,[],[f116697,f30845])).
+fof(f30845,plain,(
+  s__instance(s__subsumesContentClass__m,s__PartialOrderingRelation)),
+  inference(cnf_transformation,[],[f6013])).
+fof(f6013,axiom,(
+  s__instance(s__subsumesContentClass__m,s__PartialOrderingRelation)),
+  file('SUMO.tptp',kb_SUMO_6013)).
+fof(f116697,plain,(
+  ( ! [X1] : (~s__instance(X1,s__PartialOrderingRelation) | s__instance(X1,s__AntisymmetricRelation)) )),
+  inference(subsumption_resolution,[],[f116691,f30648])).
+fof(f116691,plain,(
+  ( ! [X1] : (~s__instance(X1,s__PartialOrderingRelation) | ~s__instance(s__AntisymmetricRelation,s__SetOrClass) | s__instance(X1,s__AntisymmetricRelation)) )),
+  inference(resolution,[],[f43651,f26240])).
+fof(f26240,plain,(
+  s__subclass(s__PartialOrderingRelation,s__AntisymmetricRelation)),
+  inference(cnf_transformation,[],[f9557])).
+fof(f9557,axiom,(
+  s__subclass(s__PartialOrderingRelation,s__AntisymmetricRelation)),
+  file('SUMO.tptp',kb_SUMO_9557)).
+fof(f43651,plain,(
+  ( ! [X3415,X3414] : (~s__subclass(s__PartialOrderingRelation,X3415) | ~s__instance(X3414,s__PartialOrderingRelation) | ~s__instance(X3415,s__SetOrClass) | s__instance(X3414,X3415)) )),
+  inference(resolution,[],[f38539,f29642])).
+fof(f29642,plain,(
+  s__instance(s__PartialOrderingRelation,s__SetOrClass)),
+  inference(cnf_transformation,[],[f5285])).
+fof(f5285,axiom,(
+  s__instance(s__PartialOrderingRelation,s__SetOrClass)),
+  file('SUMO.tptp',kb_SUMO_5285)).
+fof(f274915,plain,(
+  ( ! [X2,X3] : (~s__instance(X3,s__AntisymmetricRelation) | s__instance(X2,s__AntisymmetricRelation) | ~s__subrelation(X2,X3) | ~s__instance(X2,s__Relation)) )),
+  inference(subsumption_resolution,[],[f274911,f30648])).
+fof(f274911,plain,(
+  ( ! [X2,X3] : (s__instance(X2,s__AntisymmetricRelation) | ~s__instance(X3,s__AntisymmetricRelation) | ~s__subrelation(X2,X3) | ~s__instance(X2,s__Relation) | ~s__instance(s__AntisymmetricRelation,s__SetOrClass)) )),
+  inference(resolution,[],[f274893,f38538])).
+fof(f38538,plain,(
+  ( ! [X2,X0,X1] : (~s__subclass(X0,s__InheritableRelation) | s__instance(X1,X0) | ~s__instance(X2,X0) | ~s__subrelation(X1,X2) | ~s__instance(X1,s__Relation) | ~s__instance(X0,s__SetOrClass)) )),
+  inference(cnf_transformation,[],[f22739])).
+fof(f22739,plain,(
+  ! [X0,X1,X2] : (~s__instance(X0,s__SetOrClass) | ~s__instance(X1,s__Relation) | ~s__subrelation(X1,X2) | ~s__instance(X2,X0) | ~s__subclass(X0,s__InheritableRelation) | s__instance(X1,X0))),
+  inference(flattening,[],[f22738])).
+fof(f22738,plain,(
+  ! [X0,X1,X2] : ((~s__instance(X0,s__SetOrClass) | ~s__instance(X1,s__Relation)) | ((~s__subrelation(X1,X2) | ~s__instance(X2,X0) | ~s__subclass(X0,s__InheritableRelation)) | s__instance(X1,X0)))),
+  inference(ennf_transformation,[],[f15871])).
+fof(f15871,plain,(
+  ! [X0,X1,X2] : ((s__instance(X0,s__SetOrClass) & s__instance(X1,s__Relation)) => ((s__subrelation(X1,X2) & s__instance(X2,X0) & s__subclass(X0,s__InheritableRelation)) => s__instance(X1,X0)))),
+  inference(rectify,[],[f1606])).
+fof(f1606,axiom,(
+  ! [X10,X629,X628] : ((s__instance(X10,s__SetOrClass) & s__instance(X629,s__Relation)) => ((s__subrelation(X629,X628) & s__instance(X628,X10) & s__subclass(X10,s__InheritableRelation)) => s__instance(X629,X10)))),
+  file('SUMO.tptp',kb_SUMO_1606)).
+fof(f274893,plain,(
+  s__subclass(s__AntisymmetricRelation,s__InheritableRelation)),
+  inference(subsumption_resolution,[],[f274886,f30655])).
+fof(f30655,plain,(
+  s__instance(s__InheritableRelation,s__SetOrClass)),
+  inference(cnf_transformation,[],[f7071])).
+fof(f7071,axiom,(
+  s__instance(s__InheritableRelation,s__SetOrClass)),
+  file('SUMO.tptp',kb_SUMO_7071)).
+fof(f274886,plain,(
+  ~s__instance(s__InheritableRelation,s__SetOrClass) | s__subclass(s__AntisymmetricRelation,s__InheritableRelation)),
+  inference(resolution,[],[f245831,f26735])).
+fof(f26735,plain,(
+  s__subclass(s__BinaryRelation,s__InheritableRelation)),
+  inference(cnf_transformation,[],[f7081])).
+fof(f7081,axiom,(
+  s__subclass(s__BinaryRelation,s__InheritableRelation)),
+  file('SUMO.tptp',kb_SUMO_7081)).
+fof(f245831,plain,(
+  ( ! [X0] : (~s__subclass(s__BinaryRelation,X0) | ~s__instance(X0,s__SetOrClass) | s__subclass(s__AntisymmetricRelation,X0)) )),
+  inference(subsumption_resolution,[],[f245825,f30835])).
+fof(f245825,plain,(
+  ( ! [X0] : (~s__instance(X0,s__SetOrClass) | ~s__instance(s__BinaryRelation,s__SetOrClass) | ~s__subclass(s__BinaryRelation,X0) | s__subclass(s__AntisymmetricRelation,X0)) )),
+  inference(resolution,[],[f143652,f25663])).
+fof(f25663,plain,(
+  s__subclass(s__AntisymmetricRelation,s__BinaryRelation)),
+  inference(cnf_transformation,[],[f6805])).
+fof(f6805,axiom,(
+  s__subclass(s__AntisymmetricRelation,s__BinaryRelation)),
+  file('SUMO.tptp',kb_SUMO_6805)).
+fof(f143652,plain,(
+  ( ! [X229,X228] : (~s__subclass(s__AntisymmetricRelation,X228) | ~s__instance(X229,s__SetOrClass) | ~s__instance(X228,s__SetOrClass) | ~s__subclass(X228,X229) | s__subclass(s__AntisymmetricRelation,X229)) )),
+  inference(resolution,[],[f117554,f30648])).
+fof(f117554,plain,(
+  ( ! [X2,X0,X1] : (~s__instance(X0,s__SetOrClass) | ~s__subclass(X0,X1) | ~s__instance(X2,s__SetOrClass) | ~s__instance(X1,s__SetOrClass) | ~s__subclass(X1,X2) | s__subclass(X0,X2)) )),
+  inference(subsumption_resolution,[],[f32063,f117534])).
+fof(f117534,plain,(
+  s__instance(s__subclass__m,s__TransitiveRelation)),
+  inference(resolution,[],[f116698,f30851])).
+fof(f30851,plain,(
+  s__instance(s__subclass__m,s__PartialOrderingRelation)),
+  inference(cnf_transformation,[],[f6007])).
+fof(f6007,axiom,(
+  s__instance(s__subclass__m,s__PartialOrderingRelation)),
+  file('SUMO.tptp',kb_SUMO_6007)).
+fof(f116698,plain,(
+  ( ! [X2] : (~s__instance(X2,s__PartialOrderingRelation) | s__instance(X2,s__TransitiveRelation)) )),
+  inference(subsumption_resolution,[],[f116692,f29665])).
+fof(f116692,plain,(
+  ( ! [X2] : (~s__instance(X2,s__PartialOrderingRelation) | ~s__instance(s__TransitiveRelation,s__SetOrClass) | s__instance(X2,s__TransitiveRelation)) )),
+  inference(resolution,[],[f43651,f26248])).
+fof(f26248,plain,(
+  s__subclass(s__PartialOrderingRelation,s__TransitiveRelation)),
+  inference(cnf_transformation,[],[f9560])).
+fof(f9560,axiom,(
+  s__subclass(s__PartialOrderingRelation,s__TransitiveRelation)),
+  file('SUMO.tptp',kb_SUMO_9560)).
+fof(f32063,plain,(
+  ( ! [X2,X0,X1] : (~s__instance(s__subclass__m,s__TransitiveRelation) | ~s__subclass(X1,X2) | ~s__subclass(X0,X1) | ~s__instance(X2,s__SetOrClass) | ~s__instance(X1,s__SetOrClass) | ~s__instance(X0,s__SetOrClass) | s__subclass(X0,X2)) )),
+  inference(cnf_transformation,[],[f17176])).
+fof(f17176,plain,(
+  ~s__instance(s__subclass__m,s__TransitiveRelation) | ! [X0,X1,X2] : (~s__instance(X0,s__SetOrClass) | ~s__instance(X1,s__SetOrClass) | ~s__instance(X2,s__SetOrClass) | ~s__subclass(X0,X1) | ~s__subclass(X1,X2) | s__subclass(X0,X2))),
+  inference(flattening,[],[f17175])).
+fof(f17175,plain,(
+  ~s__instance(s__subclass__m,s__TransitiveRelation) | ! [X0,X1,X2] : ((~s__instance(X0,s__SetOrClass) | ~s__instance(X1,s__SetOrClass) | ~s__instance(X2,s__SetOrClass)) | ((~s__subclass(X0,X1) | ~s__subclass(X1,X2)) | s__subclass(X0,X2)))),
+  inference(ennf_transformation,[],[f12016])).
+fof(f12016,plain,(
+  s__instance(s__subclass__m,s__TransitiveRelation) => ! [X0,X1,X2] : ((s__instance(X0,s__SetOrClass) & s__instance(X1,s__SetOrClass) & s__instance(X2,s__SetOrClass)) => ((s__subclass(X0,X1) & s__subclass(X1,X2)) => s__subclass(X0,X2)))),
+  inference(rectify,[],[f3466])).
+fof(f3466,axiom,(
+  s__instance(s__subclass__m,s__TransitiveRelation) => ! [X170,X171,X693] : ((s__instance(X170,s__SetOrClass) & s__instance(X171,s__SetOrClass) & s__instance(X693,s__SetOrClass)) => ((s__subclass(X170,X171) & s__subclass(X171,X693)) => s__subclass(X170,X693)))),
+  file('SUMO.tptp',kb_SUMO_3466)).
+% SZS output end Proof for SUMO
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 514585
+% Passive clauses: 4689392
+% Generated clauses: 5280861
+% Final active clauses: 511118
+% Final passive clauses: 4154886
+% Input formulas: 11368
+% Initial clauses: 14321
+% 
+% Pure predicates: 61
+% 
+% Duplicate literals: 25835
+% Trivial inequalities: 2
+% Fw subsumption resolutions: 353546
+% Bw subsumption resolutions: 3467
+% Fw demodulations: 36953
+% Condensations: 29
+% 
+% Simple tautologies: 1003
+% Equational tautologies: 429
+% Forward subsumptions: 197359
+% 
+% Binary resolution: 4825249
+% Forward superposition: 18736
+% Backward superposition: 4622
+% Self superposition: 340
+% Equality resolution: 1536
+% 
+% Memory used [KB]: 2921146
+% Time elapsed: 112.448 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 5280930
+clauses deleted: 184518
+-----------------------------
+% ------------------------------
+% Success in time 232.536 s

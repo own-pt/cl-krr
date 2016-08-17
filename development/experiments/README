@@ -1,0 +1,45 @@
+This directory contains various experiments created to assess the
+correcteness of the SUO-KIF -> TPTP transformation. 
+
+Notes on E (email exchange with Stephan Schulz):
+
+Hi Stephan,
+
+here's another interesting behavior.  We are working on a new
+translator from SUMO to TPTP (https://github.com/own-pt/cl-krr) and
+are using E 1.9 to verify our conversion.
+
+We are finding out that, in certain cases --auto will make E *not*
+find a proof, after even waiting for more than one hour, where as
+using E with defaults does find one in less than one or two minutes.
+
+Specifically, the following line works:
+
+$ eprover -s --proof-object --tptp3-format
+--delete-bad-limit=9048000000 auto.tptp
+
+whereas:
+
+$ eprover -s --auto --proof-object --tptp3-format
+--delete-bad-limit=9048000000 auto.tptp
+
+Do you know why this might be the case?
+
+----
+
+In general, the Auto mode is only a heuristic. It works great _on average_,
+but not for all problems. In particular, the auto mode will sometimes use
+E’s variant SInE, which may prune away something important ;-).
+
+There are some things you can try:
+
+First, and simplest, use --auto-schedule instead of --auto - it will try
+several things, one after the other. To help the scheduler, give it a
+maximum time limit (otherwise it will assume 5 minutes).
+
+Secondly, try -xAuto -tAuto instead of --auto. That will run auto-mode,
+but without SInE.
+
+I’ve got at least 3 students working on improving the situation, but they
+are a mixed blessing ;-). I also try to hack things myself, but I have
+quite some teaching to do nowadays.

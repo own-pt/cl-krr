@@ -1,0 +1,23 @@
+tff(t1_type,type, 
+     t1: $tType ).
+
+tff(t2_type,type, 
+     t2: $tType ).
+
+tff(tn_type,type, 
+     tn: $tType ).
+
+tff(q_type,type, 
+      q: (t2 * tn) > $o).
+
+tff(p_type,type, 
+      p: (t1 * tn) > $o).
+
+tff(axiom1,axiom,
+        ! [X1: t1, X2: t2, Xn: tn] : p(X1,Xn) & q(X2,Xn)).
+
+tff(axiom2,axiom,
+        ! [X1: t1, X2: t2, Xn: tn] : p(X1,Xn) | q(X2,Xn)).
+
+tff(axiom3,axiom,
+        ! [X1: t1, X2: t2, Xn: tn] : p(X1,Xn) => q(X2,Xn)).

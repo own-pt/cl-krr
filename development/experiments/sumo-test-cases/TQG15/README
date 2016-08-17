@@ -1,0 +1,10 @@
+Based on TQG15.kif.tq
+
+E and Vampire ran for over 15 minutes with no solution.  SUMO's notes
+says that it also couldn't be proved then. 
+
+Command lines used:
+
+time nice E/PROVER/eprover -s --auto-schedule --proof-object --tptp3-format --delete-bad-limit=9048000000
+time nice E/PROVER/eprover -s --auto --proof-object --tptp3-format --delete-bad-limit=9048000000
+time nice Vampire---4.0/vampire --mode casc -m 20000 -t 6h

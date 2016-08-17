@@ -1,0 +1,11 @@
+bs.tptp: TPTP used to find the inconsistency
+
+v4: proof found by Vampire 4.0 (downloaded from CASC 25)
+
+v4-new: proof found by Vampire 4.0 (commit 910b0ff on 2016-04-14
+14:40:26 +0200) (downloaded from
+http://www.cse.chalmers.se/~laurako/links/FOTP.html)
+
+There may be only one proof in the directory, if I noticed that one
+Vampire is still running several minutes after the other one found the
+proof. 

@@ -1,0 +1,41 @@
+(subclass CorpuscularObject Entity)
+(subclass Substance Entity)
+
+(instance Substance SetOrClass)
+(instance CorpuscularObject SetOrClass)
+
+(instance BananaSlug10-1 Entity)
+(instance BananaSlug10-1 CorpuscularObject)
+
+(forall (?Z ?Y ?X)
+ (=> (and (instance ?Y SetOrClass)
+          (instance ?X SetOrClass))
+     (=> (and (subclass ?X ?Y) (instance ?Z ?X)) (instance ?Z ?Y))))
+
+(disjoint CorpuscularObject Substance)
+
+(forall (?CLASS2 ?CLASS1)
+ (forall (?INST)
+  (=> (instance ?INST Entity)
+   (=>
+    (and (instance ?CLASS1 SetOrClass) (instance ?CLASS2 SetOrClass))
+    (=> (disjoint ?CLASS1 ?CLASS2)
+     (not (and (instance ?INST ?CLASS1) (instance ?INST ?CLASS2))))))))
+
+(forall (?CLASS) (<=> (instance ?CLASS Class) (subclass ?CLASS Entity)))
+
+(forall (?CLASS ?ROW2 ?ROW1)
+ (=>
+  (and (instance ?ROW1 SetOrClass) (instance ?ROW1 Class)
+       (instance ?CLASS Class) (instance ?ROW2 Class)
+       (instance ?ROW2 SetOrClass))
+  (<=> (disjointDecomposition3 ?CLASS ?ROW1 ?ROW2)
+   (disjoint ?ROW1 ?ROW2))))
+
+(forall (?CLASS ?ROW2 ?ROW1)
+ (=>
+  (and (instance ?ROW1 SetOrClass) (instance ?ROW1 Class)
+       (instance ?ROW2 SetOrClass) (instance ?ROW2 Class)
+       (instance ?CLASS Class) (instance ?CLASS SetOrClass))
+  (=> (disjointDecomposition3 ?CLASS ?ROW1 ?ROW2)
+   (and (subclass ?ROW1 ?CLASS) (subclass ?ROW2 ?CLASS)))))

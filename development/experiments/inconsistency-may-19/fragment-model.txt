@@ -1,0 +1,81 @@
+============================== Mace4 =================================
+Mace4 (64) version 2009-11A, November 2009.
+Process 22985 was started by fcbr on FCBR-TP,
+Fri May 20 09:44:25 2016
+The command was "./mace4".
+============================== end of head ===========================
+
+============================== INPUT =================================
+set(prolog_style_variables).
+
+formulas(assumptions).
+end_of_list.
+
+formulas(goals).
+(all OBJ all HOLE (s_instance(OBJ,s_SelfConnectedObject) & s_instance(HOLE,s_Hole) -> (s_hole(HOLE,OBJ) -> -s_instance(OBJ,s_Hole)))) -> (all OBJ all HOLE ((s_instance(HOLE,s_Hole) & s_instance(OBJ,s_SelfConnectedObject) -> s_hole(HOLE,OBJ)) -> -s_instance(OBJ,s_Hole))) # label(a1698_kb_SUMO_2310_equivalence) # label(conjecture).
+end_of_list.
+
+============================== end of input ==========================
+
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
+
+% Formulas that are not ordinary clauses:
+1 (all OBJ all HOLE (s_instance(OBJ,s_SelfConnectedObject) & s_instance(HOLE,s_Hole) -> (s_hole(HOLE,OBJ) -> -s_instance(OBJ,s_Hole)))) -> (all OBJ all HOLE ((s_instance(HOLE,s_Hole) & s_instance(OBJ,s_SelfConnectedObject) -> s_hole(HOLE,OBJ)) -> -s_instance(OBJ,s_Hole))) # label(a1698_kb_SUMO_2310_equivalence) # label(conjecture) # label(non_clause) # label(goal).  [goal].
+
+============================== end of process non-clausal formulas ===
+
+============================== CLAUSES FOR SEARCH ====================
+
+formulas(mace4_clauses).
+-s_instance(A,s_SelfConnectedObject) | -s_instance(B,s_Hole) | -s_hole(B,A) | -s_instance(A,s_Hole) # label(a1698_kb_SUMO_2310_equivalence) # label(conjecture).
+-s_instance(c2,s_Hole) | -s_instance(c1,s_SelfConnectedObject) | s_hole(c2,c1) # label(a1698_kb_SUMO_2310_equivalence) # label(conjecture).
+s_instance(c1,s_Hole) # label(a1698_kb_SUMO_2310_equivalence) # label(conjecture).
+end_of_list.
+
+============================== end of clauses for search =============
+
+% There are no natural numbers in the input.
+
+============================== DOMAIN SIZE 2 =========================
+
+============================== MODEL =================================
+
+interpretation( 2, [number=1, seconds=0], [
+
+        function(s_Hole, [ 0 ]),
+
+        function(s_SelfConnectedObject, [ 0 ]),
+
+        function(c1, [ 0 ]),
+
+        function(c2, [ 1 ]),
+
+        relation(s_hole(_,_), [
+			   0, 0,
+			   0, 0 ]),
+
+        relation(s_instance(_,_), [
+			   1, 0,
+			   0, 0 ])
+]).
+
+============================== end of model ==========================
+
+============================== STATISTICS ============================
+
+For domain size 2.
+
+Current CPU time: 0.00 seconds (total CPU time: 0.00 seconds).
+Ground clauses: seen=6, kept=6.
+Selections=9, assignments=10, propagations=3, current_models=1.
+Rewrite_terms=20, rewrite_bools=15, indexes=13.
+Rules_from_neg_clauses=0, cross_offs=0.
+
+============================== end of statistics =====================
+
+User_CPU=0.00, System_CPU=0.00, Wall_clock=0.
+
+Exiting with 1 model.
+
+Process 22985 exit (max_models) Fri May 20 09:44:25 2016
+The process finished Fri May 20 09:44:25 2016

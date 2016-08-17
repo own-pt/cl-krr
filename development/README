@@ -1,0 +1,10 @@
+This directory contains assorted files that were created during the
+development of CL-KRR, including experiments, sample files, etc. 
+
+How to execute provers (E and Vampire):
+
+time nice E/PROVER/eprover -s --auto-schedule --proof-object --tptp3-format --delete-bad-limit=9048000000 $1 > $2/e.ac &
+time nice E/PROVER/eprover -s --auto --proof-object --tptp3-format --delete-bad-limit=9048000000 $1 > $2/e.a &
+time nice E/PROVER/eprover -s --proof-object --tptp3-format --delete-bad-limit=9048000000 $1 > $2/e &
+time nice Vampire---4.0/vampire --mode casc -m 20000 -t 6h $1 > $2/v.c &
+time nice Vampire---4.0/vampire -m 20000 -t 6h $1 > $2/v &

@@ -1,0 +1,25 @@
+% -*- prolog -*-
+fof(kb_SUMO_2310,axiom,(
+    ! [OBJ,HOLE] :
+      ( ( s_instance(OBJ,s_SelfConnectedObject)
+        & s_instance(HOLE,s_Hole) )
+     => ( s_hole(HOLE,OBJ)
+       => ~ s_instance(OBJ,s_Hole) ) ) )).
+
+fof(kb_SUMO_91,axiom,(
+    ! [HOLE] :
+      ( s_instance(HOLE,s_Hole)
+    <=> ? [OBJ] :
+          ( s_instance(OBJ,s_SelfConnectedObject)
+          & s_hole(HOLE,OBJ) ) ) )).
+
+fof(kb_SUMO_1618,axiom,(
+    ! [O,S,TOP] :
+      ( ( s_instance(O,s_SelfConnectedObject)
+        & s_instance(S,s_SelfConnectedObject)
+        & s_instance(TOP,s_SelfConnectedObject) )
+     => ( ( s_top(TOP,O)
+          & s_side(S,O) )
+       => TOP != S ) ) )).
+
+fof(q,conjecture,$false).

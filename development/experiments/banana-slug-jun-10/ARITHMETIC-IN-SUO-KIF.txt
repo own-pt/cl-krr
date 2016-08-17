@@ -1,0 +1,90 @@
+Date: Thu, 2 Jun 2016 09:31:13 -0300
+Subject: Arithmetic in SUO-KIF (was Re: Banana Slug experiment)
+From: Fabricio Chalub
+To: Adam Pease
+Cc: Alexandre Rademaker
+
+For once I have question that is only borderline related to our
+transformation. :-)
+
+I started exploring exhaustiveDecomposition, disjointDecomposition and
+follow their implementation in terms of inList, ListOrderFn,
+ListLengthFn, etc.  to try to understand the failure to prove the
+banana slug.
+
+ListLengthFn, for instance is defined like:
+
+(forall (@ROW ?ITEM)
+  (equal
+    (ListLengthFn (ListFn @ROW ?ITEM))
+    (SuccessorFn (ListLengthFn (ListFn @ROW)))))
+
+and SuccessorFn is defined as:
+
+(forall (?NUMBER)
+  (equal (SuccessorFn ?NUMBER) (AdditionFn ?NUMBER 1)))
+
+Where it's Sigma translation is:
+
+fof(kb_SUMO_4453,axiom,(
+    ! [NUMBER] :
+      ( s_instance(NUMBER,s_Integer)
+     => s_SuccessorFn(NUMBER) = plus(NUMBER,1) ) )).
+
+So AdditionFn was translated to plus, but unless I'm missing
+something, plus is not a TPTP-FOF predefined function.
+
+I also don't see any reference to plus in the E documentation.
+
+Looking at the TPTP site, it looks like arithmetic is defined for TFF
+and THF only ($sum, etc.)?
+
+Clearly I'm missing something... unless we are doing some form of
+Peano arithmetic in SUMO that I'm not seeing?
+
+Cheers,
+Fabricio
+
+-------------------------------
+
+Subject: Re: Arithmetic in SUO-KIF (was Re: Banana Slug experiment)
+To: Fabricio Chalub
+Cc: Alexandre Rademaker
+From: Adam Pease
+Date: Thu, 2 Jun 2016 06:55:07 -0700
+
+Hi Fabricio,
+   The old KIF-Vampire had the four arithmetic functions but not E.  So 
+your right we have some basic Peano arithmetic axioms as a last resort, 
+but it's not all coherently implemented and doesn't work.  I know Geoff 
+had some proposals for arithmetic in TPTP but I haven't followed them 
+and whether or how they were implemented.  I'd love to have a 
+translation that took advantage of them, if they exist.  And this is why 
+I've suggested that if you're interested in SNARK you might connect with 
+its arithmetic functions.
+
+Adam
+
+-------------------------------
+
+Subject: Re: Arithmetic in SUO-KIF (was Re: Banana Slug experiment)
+From: Alexandre Rademaker
+Cc: Fabricio Chalub,
+ Valeria de Paiva
+To: Adam Pease
+Date: Thu, 2 Jun 2016 15:08:02 -0300
+
+Yes, I haven't answered yet the other thread with Valeria but the SNARK =
+ability to handle  procedural attachments is one of the indeed features =
+that we take into consideration when we started to play with it.
+
+In the case of SNARK, however, thing get more complicated since I would =
+expect to think about a more direct translation from SUMO to SNARK =
+language not via TPTP.
+
+More problems, more fun!=20
+
+Best,
+
+--
+Alexandre Rademaker

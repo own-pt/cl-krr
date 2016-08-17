@@ -1,0 +1,80 @@
+% -*- prolog -*-
+
+% This files attempts to prove the equivalence between our TPTP and
+% the Sigma TPTP by comparing a few selected axioms.  We split the
+% equivalence (<=>) for the first one into two: one that our TPTP
+% implies Sigma and vice-versa.
+
+% fof(a1698_kb_SUMO_2310_equivalence,conjecture,
+%     ( ! [OBJ,HOLE] :
+%         ( ( ( s_instance(HOLE,s_Hole)
+%             & s_instance(OBJ,s_SelfConnectedObject) )
+%          => s_hole(HOLE,OBJ) )
+%        => ~ s_instance(OBJ,s_Hole) )
+%   <=> ! [OBJ,HOLE] :
+%         ( ( s_instance(OBJ,s_SelfConnectedObject)
+%           & s_instance(HOLE,s_Hole) )
+%        => ( s_hole(HOLE,OBJ)
+%          => ~ s_instance(OBJ,s_Hole) ) ) )).
+
+% unfolding the <= above into => and <=
+
+% this is ok
+fof(a1698_kb_SUMO_2310_equivalence,conjecture,
+    ( ! [OBJ,HOLE] :
+        ( ( ( s_instance(HOLE,s_Hole)
+            & s_instance(OBJ,s_SelfConnectedObject) )
+         => s_hole(HOLE,OBJ) )
+       => ~ s_instance(OBJ,s_Hole) )
+  => ! [OBJ,HOLE] :
+        ( ( s_instance(OBJ,s_SelfConnectedObject)
+          & s_instance(HOLE,s_Hole) )
+       => ( s_hole(HOLE,OBJ)
+         => ~ s_instance(OBJ,s_Hole) ) ) )).
+
+% [mace4] this one is not
+fof(a1698_kb_SUMO_2310_equivalence,conjecture,
+    ( ! [OBJ,HOLE] :
+        ( ( s_instance(OBJ,s_SelfConnectedObject)
+          & s_instance(HOLE,s_Hole) )
+       => ( s_hole(HOLE,OBJ)
+         => ~ s_instance(OBJ,s_Hole) ) ) )
+   =>
+     ! [OBJ,HOLE] :
+        ( ( ( s_instance(HOLE,s_Hole)
+            & s_instance(OBJ,s_SelfConnectedObject) )
+         => s_hole(HOLE,OBJ) )
+       => ~ s_instance(OBJ,s_Hole) ) ).
+
+
+% fof(a1699_kb_SUMO_91_equivalence,conjecture,
+%     ( ! [HOLE] :
+%         ( s_instance(HOLE,s_Hole)
+%       <=> ? [OBJ] :
+%             ( s_instance(OBJ,s_SelfConnectedObject)
+%             & ( s_instance(HOLE,s_Hole)
+%              => s_hole(HOLE,OBJ) ) ) )
+%   <=> ! [HOLE] :
+%         ( s_instance(HOLE,s_Hole)
+%       <=> ? [OBJ] :
+%             ( s_instance(OBJ,s_SelfConnectedObject)
+%             & s_hole(HOLE,OBJ) ) ) )).
+
+% fof(a1719_kb_SUMO_1618_equivalence,conjecture,
+%     ( ! [S,O,TOP] :
+%         ( ( ( ( s_instance(TOP,s_SelfConnectedObject)
+%               & s_instance(O,s_SelfConnectedObject) )
+%            => s_top(TOP,O) )
+%           & ( ( s_instance(S,s_SelfConnectedObject)
+%               & s_instance(O,s_SelfConnectedObject) )
+%            => s_side(S,O) ) )
+%        => ~ ( ( s_instance(TOP,s_Entity)
+%               & s_instance(S,s_Entity) )
+%            => TOP = S ) )
+%   <=> ! [O,S,TOP] :
+%         ( ( s_instance(O,s_SelfConnectedObject)
+%           & s_instance(S,s_SelfConnectedObject)
+%           & s_instance(TOP,s_SelfConnectedObject) )
+%        => ( ( s_top(TOP,O)
+%             & s_side(S,O) )
+%          => TOP != S ) ) )).

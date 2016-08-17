@@ -1,0 +1,417 @@
+fof(f520409,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f520356,f35736,f44606,f44605,f519988])).
+fof(f519988,plain,(
+  $false | spl3368),
+  inference(resolution,[],[f519977,f39926])).
+fof(f39926,plain,(
+  ( ! [X0,X1] : (s_instance(sK1235(X1,X0),s_Hole)) )),
+  inference(cnf_transformation,[],[f26356])).
+fof(f26356,plain,(
+  ! [X0,X1] : (s_instance(sK1235(X1,X0),s_Hole) & (~s_instance(X1,s_SelfConnectedObject) | ~s_instance(X0,s_Object) | ((~s_contains(X1,X0) | (s_hole(sK1235(X1,X0),X1) & s_properlyFills(X0,sK1235(X1,X0)))) & (~s_hole(sK1235(X1,X0),X1) | ~s_properlyFills(X0,sK1235(X1,X0)) | s_contains(X1,X0)))))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK1235])],[f26355])).
+fof(f26355,plain,(
+  ! [X0,X1] : ? [X2] : (s_instance(X2,s_Hole) & (~s_instance(X1,s_SelfConnectedObject) | ~s_instance(X0,s_Object) | ((~s_contains(X1,X0) | (s_hole(X2,X1) & s_properlyFills(X0,X2))) & (~s_hole(X2,X1) | ~s_properlyFills(X0,X2) | s_contains(X1,X0)))))),
+  inference(flattening,[],[f26354])).
+fof(f26354,plain,(
+  ! [X0,X1] : ? [X2] : (s_instance(X2,s_Hole) & (~s_instance(X1,s_SelfConnectedObject) | ~s_instance(X0,s_Object) | ((~s_contains(X1,X0) | (s_hole(X2,X1) & s_properlyFills(X0,X2))) & ((~s_hole(X2,X1) | ~s_properlyFills(X0,X2)) | s_contains(X1,X0)))))),
+  inference(nnf_transformation,[],[f23107])).
+fof(f23107,plain,(
+  ! [X0,X1] : ? [X2] : (s_instance(X2,s_Hole) & (~s_instance(X1,s_SelfConnectedObject) | ~s_instance(X0,s_Object) | (s_contains(X1,X0) <=> (s_hole(X2,X1) & s_properlyFills(X0,X2)))))),
+  inference(flattening,[],[f23106])).
+fof(f23106,plain,(
+  ! [X0,X1] : ? [X2] : (s_instance(X2,s_Hole) & ((~s_instance(X1,s_SelfConnectedObject) | ~s_instance(X0,s_Object)) | (s_contains(X1,X0) <=> (s_hole(X2,X1) & s_properlyFills(X0,X2)))))),
+  inference(ennf_transformation,[],[f16113])).
+fof(f16113,plain,(
+  ! [X0,X1] : ? [X2] : (s_instance(X2,s_Hole) & ((s_instance(X1,s_SelfConnectedObject) & s_instance(X0,s_Object)) => (s_contains(X1,X0) <=> (s_hole(X2,X1) & s_properlyFills(X0,X2)))))),
+  inference(rectify,[],[f6427])).
+fof(f6427,axiom,(
+  ! [X214,X213] : ? [X150] : (s_instance(X150,s_Hole) & ((s_instance(X213,s_SelfConnectedObject) & s_instance(X214,s_Object)) => (s_contains(X213,X214) <=> (s_hole(X150,X213) & s_properlyFills(X214,X150)))))),
+  file('output.tptp',a6427)).
+fof(f519977,plain,(
+  ( ! [X0] : (~s_instance(X0,s_Hole)) ) | spl3368),
+  inference(subsumption_resolution,[],[f519976,f37133])).
+fof(f37133,plain,(
+  ( ! [X0] : (s_instance(sK558(X0),s_SelfConnectedObject)) )),
+  inference(cnf_transformation,[],[f25805])).
+fof(f25805,plain,(
+  ! [X0] : (s_instance(sK558(X0),s_SelfConnectedObject) & (~s_instance(X0,s_Hole) | s_hole(X0,sK558(X0))) & (~s_hole(X0,sK558(X0)) | s_instance(X0,s_Hole)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK558])],[f25804])).
+fof(f25804,plain,(
+  ! [X0] : ? [X1] : (s_instance(X1,s_SelfConnectedObject) & (~s_instance(X0,s_Hole) | s_hole(X0,X1)) & (~s_hole(X0,X1) | s_instance(X0,s_Hole)))),
+  inference(flattening,[],[f25803])).
+fof(f25803,plain,(
+  ! [X0] : ? [X1] : (s_instance(X1,s_SelfConnectedObject) & ((~s_instance(X0,s_Hole) | s_hole(X0,X1)) & (~s_hole(X0,X1) | s_instance(X0,s_Hole))))),
+  inference(nnf_transformation,[],[f14895])).
+fof(f14895,plain,(
+  ! [X0] : ? [X1] : (s_instance(X1,s_SelfConnectedObject) & (s_instance(X0,s_Hole) <=> s_hole(X0,X1)))),
+  inference(rectify,[],[f9823])).
+fof(f9823,axiom,(
+  ! [X150] : ? [X125] : (s_instance(X125,s_SelfConnectedObject) & (s_instance(X150,s_Hole) <=> s_hole(X150,X125)))),
+  file('output.tptp',a9823)).
+fof(f519976,plain,(
+  ( ! [X0] : (~s_instance(sK558(X0),s_SelfConnectedObject) | ~s_instance(X0,s_Hole)) ) | spl3368),
+  inference(duplicate_literal_removal,[],[f519970])).
+fof(f519970,plain,(
+  ( ! [X0] : (~s_instance(sK558(X0),s_SelfConnectedObject) | ~s_instance(X0,s_Hole) | ~s_instance(X0,s_Hole)) ) | spl3368),
+  inference(resolution,[],[f504862,f37134])).
+fof(f37134,plain,(
+  ( ! [X0] : (s_hole(X0,sK558(X0)) | ~s_instance(X0,s_Hole)) )),
+  inference(cnf_transformation,[],[f25805])).
+fof(f504862,plain,(
+  ( ! [X0,X1] : (~s_hole(X0,X1) | ~s_instance(X1,s_SelfConnectedObject) | ~s_instance(X0,s_Hole)) ) | spl3368),
+  inference(subsumption_resolution,[],[f504861,f411141])).
+fof(f411141,plain,(
+  ( ! [X0] : (~s_instance(X0,s_Hole) | s_instance(X0,s_Object)) )),
+  inference(resolution,[],[f411109,f286086])).
+fof(f286086,plain,(
+  ( ! [X5] : (~s_instance(X5,s_Region) | s_instance(X5,s_Object)) )),
+  inference(subsumption_resolution,[],[f286076,f30145])).
+fof(f30145,plain,(
+  s_instance(s_Region,s_SetOrClass)),
+  inference(cnf_transformation,[],[f10585])).
+fof(f10585,axiom,(
+  s_instance(s_Region,s_SetOrClass)),
+  file('output.tptp',a10585)).
+fof(f286076,plain,(
+  ( ! [X5] : (~s_instance(X5,s_Region) | ~s_instance(s_Region,s_SetOrClass) | s_instance(X5,s_Object)) )),
+  inference(resolution,[],[f61698,f28064])).
+fof(f28064,plain,(
+  s_subclass(s_Region,s_Object)),
+  inference(cnf_transformation,[],[f6468])).
+fof(f6468,axiom,(
+  s_subclass(s_Region,s_Object)),
+  file('output.tptp',a6468)).
+fof(f61698,plain,(
+  ( ! [X50,X51] : (~s_subclass(X51,s_Object) | ~s_instance(X50,X51) | ~s_instance(X51,s_SetOrClass) | s_instance(X50,s_Object)) )),
+  inference(resolution,[],[f41331,f31437])).
+fof(f31437,plain,(
+  s_instance(s_Object,s_SetOrClass)),
+  inference(cnf_transformation,[],[f10935])).
+fof(f10935,axiom,(
+  s_instance(s_Object,s_SetOrClass)),
+  file('output.tptp',a10935)).
+fof(f41331,plain,(
+  ( ! [X2,X0,X1] : (~s_instance(X1,s_SetOrClass) | ~s_instance(X0,X2) | ~s_subclass(X2,X1) | ~s_instance(X2,s_SetOrClass) | s_instance(X0,X1)) )),
+  inference(cnf_transformation,[],[f23897])).
+fof(f23897,plain,(
+  ! [X0,X1,X2] : (~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass) | ~s_subclass(X2,X1) | ~s_instance(X0,X2) | s_instance(X0,X1))),
+  inference(flattening,[],[f23896])).
+fof(f23896,plain,(
+  ! [X0,X1,X2] : ((~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)) | ((~s_subclass(X2,X1) | ~s_instance(X0,X2)) | s_instance(X0,X1)))),
+  inference(ennf_transformation,[],[f16616])).
+fof(f16616,plain,(
+  ! [X0,X1,X2] : ((s_instance(X1,s_SetOrClass) & s_instance(X2,s_SetOrClass)) => ((s_subclass(X2,X1) & s_instance(X0,X2)) => s_instance(X0,X1)))),
+  inference(rectify,[],[f5835])).
+fof(f5835,axiom,(
+  ! [X788,X53,X3] : ((s_instance(X53,s_SetOrClass) & s_instance(X3,s_SetOrClass)) => ((s_subclass(X3,X53) & s_instance(X788,X3)) => s_instance(X788,X53)))),
+  file('output.tptp',a5835)).
+fof(f411109,plain,(
+  ( ! [X0] : (s_instance(X0,s_Region) | ~s_instance(X0,s_Hole)) )),
+  inference(subsumption_resolution,[],[f411097,f32310])).
+fof(f32310,plain,(
+  s_instance(s_Hole,s_SetOrClass)),
+  inference(cnf_transformation,[],[f9821])).
+fof(f9821,axiom,(
+  s_instance(s_Hole,s_SetOrClass)),
+  file('output.tptp',a9821)).
+fof(f411097,plain,(
+  ( ! [X0] : (~s_instance(X0,s_Hole) | ~s_instance(s_Hole,s_SetOrClass) | s_instance(X0,s_Region)) )),
+  inference(resolution,[],[f62512,f28619])).
+fof(f28619,plain,(
+  s_subclass(s_Hole,s_Region)),
+  inference(cnf_transformation,[],[f9822])).
+fof(f9822,axiom,(
+  s_subclass(s_Hole,s_Region)),
+  file('output.tptp',a9822)).
+fof(f62512,plain,(
+  ( ! [X1678,X1679] : (~s_subclass(X1679,s_Region) | ~s_instance(X1678,X1679) | ~s_instance(X1679,s_SetOrClass) | s_instance(X1678,s_Region)) )),
+  inference(resolution,[],[f41331,f30145])).
+fof(f504861,plain,(
+  ( ! [X0,X1] : (~s_hole(X0,X1) | ~s_instance(X1,s_SelfConnectedObject) | ~s_instance(X0,s_Hole) | ~s_instance(X0,s_Object)) ) | spl3368),
+  inference(subsumption_resolution,[],[f504860,f286084])).
+fof(f286084,plain,(
+  ( ! [X3] : (~s_instance(X3,s_SelfConnectedObject) | s_instance(X3,s_Object)) )),
+  inference(subsumption_resolution,[],[f286074,f30983])).
+fof(f30983,plain,(
+  s_instance(s_SelfConnectedObject,s_SetOrClass)),
+  inference(cnf_transformation,[],[f10781])).
+fof(f10781,axiom,(
+  s_instance(s_SelfConnectedObject,s_SetOrClass)),
+  file('output.tptp',a10781)).
+fof(f286074,plain,(
+  ( ! [X3] : (~s_instance(X3,s_SelfConnectedObject) | ~s_instance(s_SelfConnectedObject,s_SetOrClass) | s_instance(X3,s_Object)) )),
+  inference(resolution,[],[f61698,f28173])).
+fof(f28173,plain,(
+  s_subclass(s_SelfConnectedObject,s_Object)),
+  inference(cnf_transformation,[],[f6395])).
+fof(f6395,axiom,(
+  s_subclass(s_SelfConnectedObject,s_Object)),
+  file('output.tptp',a6395)).
+fof(f504860,plain,(
+  ( ! [X0,X1] : (~s_hole(X0,X1) | ~s_instance(X1,s_SelfConnectedObject) | ~s_instance(X0,s_Hole) | ~s_instance(X1,s_Object) | ~s_instance(X0,s_Object)) ) | spl3368),
+  inference(resolution,[],[f39068,f44605])).
+fof(f39068,plain,(
+  ( ! [X0,X1] : (s_connected(X1,X0) | ~s_hole(X1,X0) | ~s_instance(X0,s_SelfConnectedObject) | ~s_instance(X1,s_Hole)) )),
+  inference(cnf_transformation,[],[f22301])).
+fof(f22301,plain,(
+  ! [X0,X1] : (~s_instance(X1,s_Hole) | ~s_instance(X0,s_SelfConnectedObject) | ~s_hole(X1,X0) | s_connected(X1,X0))),
+  inference(flattening,[],[f22300])).
+fof(f22300,plain,(
+  ! [X0,X1] : ((~s_instance(X1,s_Hole) | ~s_instance(X0,s_SelfConnectedObject)) | (~s_hole(X1,X0) | s_connected(X1,X0)))),
+  inference(ennf_transformation,[],[f15592])).
+fof(f15592,plain,(
+  ! [X0,X1] : ((s_instance(X1,s_Hole) & s_instance(X0,s_SelfConnectedObject)) => (s_hole(X1,X0) => s_connected(X1,X0)))),
+  inference(rectify,[],[f9836])).
+fof(f9836,axiom,(
+  ! [X125,X150] : ((s_instance(X150,s_Hole) & s_instance(X125,s_SelfConnectedObject)) => (s_hole(X150,X125) => s_connected(X150,X125)))),
+  file('output.tptp',a9836)).
+fof(f44605,plain,(
+  ( ! [X2,X1] : (~s_connected(X1,X2) | ~s_instance(X2,s_Object) | ~s_instance(X1,s_Object)) ) | spl3368),
+  inference(cnf_transformation,[],[f44605_D])).
+fof(f44605_D,plain,(
+  ( ! [X2,X1] : (~s_connected(X1,X2) | ~s_instance(X2,s_Object) | ~s_instance(X1,s_Object)) ) <=> ~spl3368),
+  introduced(sat_splitting_component,[new_symbols(naming,[spl3368])])).
+fof(f44606,plain,(
+  ( ! [X0] : (s_instance(X0,s_SelfConnectedObject)) ) | spl3370),
+  inference(cnf_transformation,[],[f44606_D])).
+fof(f44606_D,plain,(
+  ( ! [X0] : (s_instance(X0,s_SelfConnectedObject)) ) <=> ~spl3370),
+  introduced(sat_splitting_component,[new_symbols(naming,[spl3370])])).
+fof(f35736,plain,(
+  ( ! [X2,X0,X1] : (s_instance(X0,s_SelfConnectedObject) | ~s_connected(X1,X2) | ~s_instance(X1,s_Object) | ~s_instance(X2,s_Object)) )),
+  inference(cnf_transformation,[],[f25340])).
+fof(f25340,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_Object) | ~s_instance(X1,s_Object) | ((~s_instance(X0,s_SelfConnectedObject) | s_MereologicalSumFn(X1,X2) != X0 | s_connected(X1,X2)) & ((s_MereologicalSumFn(X1,X2) = X0 & ~s_connected(X1,X2)) | s_instance(X0,s_SelfConnectedObject))))),
+  inference(flattening,[],[f25339])).
+fof(f25339,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_Object) | ~s_instance(X1,s_Object) | ((~s_instance(X0,s_SelfConnectedObject) | (s_MereologicalSumFn(X1,X2) != X0 | s_connected(X1,X2))) & ((s_MereologicalSumFn(X1,X2) = X0 & ~s_connected(X1,X2)) | s_instance(X0,s_SelfConnectedObject))))),
+  inference(nnf_transformation,[],[f20719])).
+fof(f20719,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_Object) | ~s_instance(X1,s_Object) | (s_instance(X0,s_SelfConnectedObject) <=> (s_MereologicalSumFn(X1,X2) != X0 | s_connected(X1,X2))))),
+  inference(flattening,[],[f20718])).
+fof(f20718,plain,(
+  ! [X0,X1,X2] : ((~s_instance(X2,s_Object) | ~s_instance(X1,s_Object)) | (s_instance(X0,s_SelfConnectedObject) <=> (s_MereologicalSumFn(X1,X2) != X0 | s_connected(X1,X2))))),
+  inference(ennf_transformation,[],[f14370])).
+fof(f14370,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,s_Object) & s_instance(X1,s_Object)) => (s_instance(X0,s_SelfConnectedObject) <=> (s_MereologicalSumFn(X1,X2) = X0 => s_connected(X1,X2))))),
+  inference(flattening,[],[f14369])).
+fof(f14369,plain,(
+  ! [X0] : ! [X1,X2] : ((s_instance(X2,s_Object) & s_instance(X1,s_Object)) => (s_instance(X0,s_SelfConnectedObject) <=> (s_MereologicalSumFn(X1,X2) = X0 => s_connected(X1,X2))))),
+  inference(rectify,[],[f9724])).
+fof(f9724,axiom,(
+  ! [X125] : ! [X31,X32] : ((s_instance(X32,s_Object) & s_instance(X31,s_Object)) => (s_instance(X125,s_SelfConnectedObject) <=> (s_MereologicalSumFn(X31,X32) = X125 => s_connected(X31,X32))))),
+  file('output.tptp',a9724)).
+fof(f520356,plain,(
+  $false | spl3370),
+  inference(subsumption_resolution,[],[f408169,f44606])).
+fof(f408169,plain,(
+  ~s_instance(s_USFEMA,s_SelfConnectedObject)),
+  inference(subsumption_resolution,[],[f408167,f359606])).
+fof(f359606,plain,(
+  s_instance(s_USFEMA,s_Entity)),
+  inference(resolution,[],[f359230,f328309])).
+fof(f328309,plain,(
+  ( ! [X2] : (~s_instance(X2,s_Object) | s_instance(X2,s_Entity)) )),
+  inference(resolution,[],[f286205,f285413])).
+fof(f285413,plain,(
+  ( ! [X0] : (~s_instance(X0,s_Physical) | s_instance(X0,s_Entity)) )),
+  inference(subsumption_resolution,[],[f285411,f33300])).
+fof(f33300,plain,(
+  s_instance(s_Physical,s_SetOrClass)),
+  inference(cnf_transformation,[],[f9055])).
+fof(f9055,axiom,(
+  s_instance(s_Physical,s_SetOrClass)),
+  file('output.tptp',a9055)).
+fof(f285411,plain,(
+  ( ! [X0] : (~s_instance(X0,s_Physical) | ~s_instance(s_Physical,s_SetOrClass) | s_instance(X0,s_Entity)) )),
+  inference(resolution,[],[f61683,f28194])).
+fof(f28194,plain,(
+  s_subclass(s_Physical,s_Entity)),
+  inference(cnf_transformation,[],[f6391])).
+fof(f6391,axiom,(
+  s_subclass(s_Physical,s_Entity)),
+  file('output.tptp',a6391)).
+fof(f61683,plain,(
+  ( ! [X21,X20] : (~s_subclass(X21,s_Entity) | ~s_instance(X20,X21) | ~s_instance(X21,s_SetOrClass) | s_instance(X20,s_Entity)) )),
+  inference(resolution,[],[f41331,f33294])).
+fof(f33294,plain,(
+  s_instance(s_Entity,s_SetOrClass)),
+  inference(cnf_transformation,[],[f6547])).
+fof(f6547,axiom,(
+  s_instance(s_Entity,s_SetOrClass)),
+  file('output.tptp',a6547)).
+fof(f286205,plain,(
+  ( ! [X1] : (s_instance(X1,s_Physical) | ~s_instance(X1,s_Object)) )),
+  inference(subsumption_resolution,[],[f286201,f31437])).
+fof(f286201,plain,(
+  ( ! [X1] : (~s_instance(X1,s_Object) | ~s_instance(s_Object,s_SetOrClass) | s_instance(X1,s_Physical)) )),
+  inference(resolution,[],[f61700,f28185])).
+fof(f28185,plain,(
+  s_subclass(s_Object,s_Physical)),
+  inference(cnf_transformation,[],[f6394])).
+fof(f6394,axiom,(
+  s_subclass(s_Object,s_Physical)),
+  file('output.tptp',a6394)).
+fof(f61700,plain,(
+  ( ! [X54,X55] : (~s_subclass(X55,s_Physical) | ~s_instance(X54,X55) | ~s_instance(X55,s_SetOrClass) | s_instance(X54,s_Physical)) )),
+  inference(resolution,[],[f41331,f33300])).
+fof(f359230,plain,(
+  s_instance(s_USFEMA,s_Object)),
+  inference(resolution,[],[f359228,f286081])).
+fof(f286081,plain,(
+  ( ! [X0] : (~s_instance(X0,s_Agent) | s_instance(X0,s_Object)) )),
+  inference(subsumption_resolution,[],[f286071,f31981])).
+fof(f31981,plain,(
+  s_instance(s_Agent,s_SetOrClass)),
+  inference(cnf_transformation,[],[f11142])).
+fof(f11142,axiom,(
+  s_instance(s_Agent,s_SetOrClass)),
+  file('output.tptp',a11142)).
+fof(f286071,plain,(
+  ( ! [X0] : (~s_instance(X0,s_Agent) | ~s_instance(s_Agent,s_SetOrClass) | s_instance(X0,s_Object)) )),
+  inference(resolution,[],[f61698,f27925])).
+fof(f27925,plain,(
+  s_subclass(s_Agent,s_Object)),
+  inference(cnf_transformation,[],[f6531])).
+fof(f6531,axiom,(
+  s_subclass(s_Agent,s_Object)),
+  file('output.tptp',a6531)).
+fof(f359228,plain,(
+  s_instance(s_USFEMA,s_Agent)),
+  inference(resolution,[],[f359226,f285396])).
+fof(f285396,plain,(
+  ( ! [X2] : (~s_instance(X2,s_Organization) | s_instance(X2,s_Agent)) )),
+  inference(subsumption_resolution,[],[f285389,f32060])).
+fof(f32060,plain,(
+  s_instance(s_Organization,s_SetOrClass)),
+  inference(cnf_transformation,[],[f11176])).
+fof(f11176,axiom,(
+  s_instance(s_Organization,s_SetOrClass)),
+  file('output.tptp',a11176)).
+fof(f285389,plain,(
+  ( ! [X2] : (~s_instance(X2,s_Organization) | ~s_instance(s_Organization,s_SetOrClass) | s_instance(X2,s_Agent)) )),
+  inference(resolution,[],[f61682,f28363])).
+fof(f28363,plain,(
+  s_subclass(s_Organization,s_Agent)),
+  inference(cnf_transformation,[],[f11143])).
+fof(f11143,axiom,(
+  s_subclass(s_Organization,s_Agent)),
+  file('output.tptp',a11143)).
+fof(f61682,plain,(
+  ( ! [X19,X18] : (~s_subclass(X19,s_Agent) | ~s_instance(X18,X19) | ~s_instance(X19,s_SetOrClass) | s_instance(X18,s_Agent)) )),
+  inference(resolution,[],[f41331,f31981])).
+fof(f359226,plain,(
+  s_instance(s_USFEMA,s_Organization)),
+  inference(resolution,[],[f358899,f31683])).
+fof(f31683,plain,(
+  s_instance(s_USFEMA,s_GovernmentOrganization)),
+  inference(cnf_transformation,[],[f4937])).
+fof(f4937,axiom,(
+  s_instance(s_USFEMA,s_GovernmentOrganization)),
+  file('output.tptp',a4937)).
+fof(f358899,plain,(
+  ( ! [X10] : (~s_instance(X10,s_GovernmentOrganization) | s_instance(X10,s_Organization)) )),
+  inference(subsumption_resolution,[],[f358882,f32051])).
+fof(f32051,plain,(
+  s_instance(s_GovernmentOrganization,s_SetOrClass)),
+  inference(cnf_transformation,[],[f11170])).
+fof(f11170,axiom,(
+  s_instance(s_GovernmentOrganization,s_SetOrClass)),
+  file('output.tptp',a11170)).
+fof(f358882,plain,(
+  ( ! [X10] : (~s_instance(X10,s_GovernmentOrganization) | ~s_instance(s_GovernmentOrganization,s_SetOrClass) | s_instance(X10,s_Organization)) )),
+  inference(resolution,[],[f61777,f28404])).
+fof(f28404,plain,(
+  s_subclass(s_GovernmentOrganization,s_Organization)),
+  inference(cnf_transformation,[],[f11159])).
+fof(f11159,axiom,(
+  s_subclass(s_GovernmentOrganization,s_Organization)),
+  file('output.tptp',a11159)).
+fof(f61777,plain,(
+  ( ! [X208,X209] : (~s_subclass(X209,s_Organization) | ~s_instance(X208,X209) | ~s_instance(X209,s_SetOrClass) | s_instance(X208,s_Organization)) )),
+  inference(resolution,[],[f41331,f32060])).
+fof(f408167,plain,(
+  ~s_instance(s_USFEMA,s_SelfConnectedObject) | ~s_instance(s_USFEMA,s_Entity)),
+  inference(resolution,[],[f408156,f78506])).
+fof(f78506,plain,(
+  ( ! [X20] : (~s_instance(X20,s_Collection) | ~s_instance(X20,s_SelfConnectedObject) | ~s_instance(X20,s_Entity)) )),
+  inference(subsumption_resolution,[],[f78505,f31694])).
+fof(f31694,plain,(
+  s_instance(s_Collection,s_SetOrClass)),
+  inference(cnf_transformation,[],[f11044])).
+fof(f11044,axiom,(
+  s_instance(s_Collection,s_SetOrClass)),
+  file('output.tptp',a11044)).
+fof(f78505,plain,(
+  ( ! [X20] : (~s_instance(X20,s_Collection) | ~s_instance(X20,s_SelfConnectedObject) | ~s_instance(s_Collection,s_SetOrClass) | ~s_instance(X20,s_Entity)) )),
+  inference(subsumption_resolution,[],[f78315,f30983])).
+fof(f78315,plain,(
+  ( ! [X20] : (~s_instance(X20,s_Collection) | ~s_instance(X20,s_SelfConnectedObject) | ~s_instance(s_SelfConnectedObject,s_SetOrClass) | ~s_instance(s_Collection,s_SetOrClass) | ~s_instance(X20,s_Entity)) )),
+  inference(resolution,[],[f39366,f27132])).
+fof(f27132,plain,(
+  s_disjoint(s_Collection,s_SelfConnectedObject)),
+  inference(cnf_transformation,[],[f6471])).
+fof(f6471,axiom,(
+  s_disjoint(s_Collection,s_SelfConnectedObject)),
+  file('output.tptp',a6471)).
+fof(f39366,plain,(
+  ( ! [X2,X0,X1] : (~s_disjoint(X1,X0) | ~s_instance(X2,X1) | ~s_instance(X2,X0) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_Entity)) )),
+  inference(cnf_transformation,[],[f22745])).
+fof(f22745,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_Entity) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X0,s_SetOrClass) | ~s_disjoint(X1,X0) | ~s_instance(X2,X1) | ~s_instance(X2,X0))),
+  inference(flattening,[],[f22744])).
+fof(f22744,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_Entity) | ((~s_instance(X1,s_SetOrClass) | ~s_instance(X0,s_SetOrClass)) | (~s_disjoint(X1,X0) | (~s_instance(X2,X1) | ~s_instance(X2,X0)))))),
+  inference(ennf_transformation,[],[f15894])).
+fof(f15894,plain,(
+  ! [X0,X1,X2] : (s_instance(X2,s_Entity) => ((s_instance(X1,s_SetOrClass) & s_instance(X0,s_SetOrClass)) => (s_disjoint(X1,X0) => ~(s_instance(X2,X1) & s_instance(X2,X0)))))),
+  inference(flattening,[],[f15893])).
+fof(f15893,plain,(
+  ! [X0,X1] : ! [X2] : (s_instance(X2,s_Entity) => ((s_instance(X1,s_SetOrClass) & s_instance(X0,s_SetOrClass)) => (s_disjoint(X1,X0) => ~(s_instance(X2,X1) & s_instance(X2,X0)))))),
+  inference(rectify,[],[f6086])).
+fof(f6086,axiom,(
+  ! [X789,X790] : ! [X255] : (s_instance(X255,s_Entity) => ((s_instance(X790,s_SetOrClass) & s_instance(X789,s_SetOrClass)) => (s_disjoint(X790,X789) => ~(s_instance(X255,X790) & s_instance(X255,X789)))))),
+  file('output.tptp',a6086)).
+fof(f408156,plain,(
+  s_instance(s_USFEMA,s_Collection)),
+  inference(resolution,[],[f406366,f359226])).
+fof(f406366,plain,(
+  ( ! [X0] : (~s_instance(X0,s_Organization) | s_instance(X0,s_Collection)) )),
+  inference(resolution,[],[f406363,f328608])).
+fof(f328608,plain,(
+  ( ! [X3] : (~s_instance(X3,s_Group) | s_instance(X3,s_Collection)) )),
+  inference(subsumption_resolution,[],[f328598,f31967])).
+fof(f31967,plain,(
+  s_instance(s_Group,s_SetOrClass)),
+  inference(cnf_transformation,[],[f11140])).
+fof(f11140,axiom,(
+  s_instance(s_Group,s_SetOrClass)),
+  file('output.tptp',a11140)).
+fof(f328598,plain,(
+  ( ! [X3] : (~s_instance(X3,s_Group) | ~s_instance(s_Group,s_SetOrClass) | s_instance(X3,s_Collection)) )),
+  inference(resolution,[],[f61732,f29242])).
+fof(f29242,plain,(
+  s_subclass(s_Group,s_Collection)),
+  inference(cnf_transformation,[],[f11045])).
+fof(f11045,axiom,(
+  s_subclass(s_Group,s_Collection)),
+  file('output.tptp',a11045)).
+fof(f61732,plain,(
+  ( ! [X118,X119] : (~s_subclass(X119,s_Collection) | ~s_instance(X118,X119) | ~s_instance(X119,s_SetOrClass) | s_instance(X118,s_Collection)) )),
+  inference(resolution,[],[f41331,f31694])).
+fof(f406363,plain,(
+  ( ! [X0] : (s_instance(X0,s_Group) | ~s_instance(X0,s_Organization)) )),
+  inference(subsumption_resolution,[],[f406360,f32060])).
+fof(f406360,plain,(
+  ( ! [X0] : (~s_instance(X0,s_Organization) | ~s_instance(s_Organization,s_SetOrClass) | s_instance(X0,s_Group)) )),
+  inference(resolution,[],[f62344,f28350])).
+fof(f28350,plain,(
+  s_subclass(s_Organization,s_Group)),
+  inference(cnf_transformation,[],[f11141])).
+fof(f11141,axiom,(
+  s_subclass(s_Organization,s_Group)),
+  file('output.tptp',a11141)).
+fof(f62344,plain,(
+  ( ! [X1343,X1342] : (~s_subclass(X1343,s_Group) | ~s_instance(X1342,X1343) | ~s_instance(X1343,s_SetOrClass) | s_instance(X1342,s_Group)) )),
+  inference(resolution,[],[f41331,f31967])).

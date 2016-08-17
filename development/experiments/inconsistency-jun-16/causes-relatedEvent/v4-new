@@ -1,0 +1,885 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 215969 next slice time: 54
+lrs+1002_3_ep=RST:er=known:fsr=off:gs=on:gsaa=from_current:nwc=1:sas=minisat:stl=30:sd=2:ss=axioms:st=5.0:sos=on:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence_51 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54625
+% Time elapsed: 0.228 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215967 next slice time: 48
+lrs+1002_2:3_bsr=unit_only:er=known:fde=none:gs=on:gsem=on:nwc=1:sas=minisat:stl=30:sd=1:ss=axioms:st=1.5:sdd=large:sfr=on:ssfp=40000:ssfq=1.4:smm=sco:ssnc=none:sp=reverse_arity_45 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 53730
+% Time elapsed: 0.225 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215964 next slice time: 37
+dis-2_4_cond=fast:ep=RST:er=filter:fde=unused:gs=on:gsem=on:lcm=reverse:nwc=1:sd=3:ss=axioms:sos=on:spl=off:updr=off_35 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 50788
+% Time elapsed: 0.191 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215962 next slice time: 197
+dis-3_10_bsr=unit_only:er=filter:fde=unused:lcm=predicate:nm=64:nwc=1:spl=off:sp=occurrence:updr=off_187 on bs
+% (27700)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 685191
+% Time elapsed: 19.800 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215764 next slice time: 49
+ins+11_3_cond=fast:fde=none:igbrr=0.8:igrr=1/16:igrp=200:igrpq=1.05:igs=1003:igwr=on:nm=64:nwc=1:sas=minisat:sd=2:ss=axioms:st=3.0:sos=on:spl=off:updr=off_46 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54370
+% Time elapsed: 0.208 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215762 next slice time: 29
+dis+2_5:4_fde=none:nwc=1:sd=2:ss=axioms:sos=on:ssfp=40000:ssfq=2.0_27 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51043
+% Time elapsed: 0.161 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215760 next slice time: 58
+dis+11_4_cond=fast:fsr=off:gs=on:gsaa=from_current:gsem=on:nwc=1:sas=minisat:sd=10:ss=axioms:st=5.0:sos=all:sser=off:ssfp=4000:ssfq=1.0:ssnc=none:sp=occurrence_55 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54753
+% Time elapsed: 0.203 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215758 next slice time: 23
+lrs+1010_4:1_cond=fast:fsr=off:fde=unused:gs=on:gsem=on:nm=0:nwc=1:sas=minisat:stl=30:sd=2:ss=axioms:st=1.5:sos=on:sac=on:sdd=off:sser=off:sfr=on:ssfp=100000:ssfq=1.4:ssnc=none:sp=occurrence_21 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 53986
+% Time elapsed: 0.204 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215755 next slice time: 131
+dis+11_5_fde=none:gs=on:gsaa=from_current:gsssp=full:lcm=reverse:nwc=1:sas=minisat:ss=axioms:st=1.5:sos=on:ssfp=4000:ssfq=1.2:smm=sco:ssnc=none_124 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 53986
+% Time elapsed: 0.207 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215753 next slice time: 46
+lrs-4_4_cond=fast:fsr=off:fde=unused:gs=on:gsaa=from_current:gsem=off:gsssp=full:lcm=reverse:nwc=1:sas=minisat:stl=30:sd=4:ss=axioms:sos=on:sac=on:ssac=none:sdd=large:sser=off:ssfp=1000:ssfq=1.2:ssnc=none:sp=reverse_arity_43 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51171
+% Time elapsed: 0.164 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215752 next slice time: 50
+ott+11_8:1_cond=fast:gs=on:gsem=off:nwc=1:nicw=on:sd=2:ss=axioms:st=1.2:sos=all:sscc=on:sfr=on:ssfp=100000:ssfq=1.0:smm=sco:ssnc=none:urr=on_47 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 53858
+% Time elapsed: 0.206 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215749 next slice time: 131
+ott+1011_10_cond=fast:fde=none:gsp=input_only:gs=on:gsssp=full:nwc=1:sas=minisat:sd=3:ss=axioms:sos=all:spl=off:sp=occurrence:updr=off_124 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51043
+% Time elapsed: 0.184 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215748 next slice time: 48
+lrs+1004_2:1_cond=fast:fde=none:gs=on:gsem=off:nwc=1:stl=30:sd=2:ss=axioms:sos=on:spl=off:sp=reverse_arity:updr=off_45 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51171
+% Time elapsed: 0.164 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215746 next slice time: 70
+ins+11_4_cond=fast:fsr=off:fde=none:gsp=input_only:gs=on:gsem=on:igbrr=0.3:igpr=on:igrr=1/8:igrp=100:igrpq=1.5:igwr=on:nwc=1:sd=1:ss=axioms:st=5.0:sos=all:spl=off:dm=on_66 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 55137
+% Time elapsed: 0.206 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215744 next slice time: 296
+lrs+4_2:1_ep=R:fde=unused:gs=on:nwc=1:stl=30:sos=all:sac=on:ssac=none:sser=off:sfr=on:ssfp=10000:ssfq=1.2:ssnc=none:sp=occurrence:updr=off_281 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 224388
+% Time elapsed: 1.248 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215731 next slice time: 103
+lrs-2_5_cond=on:fde=none:lcm=predicate:nwc=1:stl=30:sd=2:ss=axioms:st=3.0:sos=on:sdd=off:ssfp=100000:ssfq=1.4:ssnc=none_98 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54625
+% Time elapsed: 0.207 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215729 next slice time: 54
+dis+4_3:1_gs=on:nwc=1:sd=1:ss=axioms:sos=all:spl=off:updr=off_51 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51299
+% Time elapsed: 0.162 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215727 next slice time: 207
+dis+11_2_fde=none:gsp=input_only:gs=on:gsem=on:nwc=1:sd=2:ss=axioms:st=1.2:sos=all:spl=off:sp=reverse_arity:urr=on:updr=off_197 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 53986
+% Time elapsed: 0.204 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215725 next slice time: 142
+lrs-1_2:1_bd=preordered:bsr=on:br=off:cond=on:gs=on:lcm=reverse:nwc=1:stl=30:sd=2:ss=axioms:sos=on:sdd=large:sser=off:ssfp=100000:ssfq=2.0:ssnc=none:sp=occurrence:urr=on:updr=off_135 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51299
+% Time elapsed: 0.161 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215723 next slice time: 297
+ott+11_24_cond=fast:ep=RST:fsr=off:fde=none:gs=on:lcm=predicate:nm=64:nwc=1:sas=minisat:ss=axioms:st=5.0:sos=all:spl=off:sp=occurrence_282 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 55265
+% Time elapsed: 0.222 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215721 next slice time: 200
+lrs+1_3:1_cond=fast:gsp=input_only:gs=on:gsaa=from_current:gsem=off:nwc=1:stl=30:sd=2:ss=axioms:st=1.2:sos=on:sac=on:sdd=off:sfr=on:ssfp=100000:ssfq=1.2:smm=sco:ssnc=none:sp=reverse_arity_190 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54242
+% Time elapsed: 0.206 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215719 next slice time: 158
+dis+1003_8:1_bd=off:bs=unit_only:cond=fast:fsr=off:fde=none:gsp=input_only:lcm=reverse:nwc=1:sas=minisat:sos=all:ssac=none:sscc=on:sdd=off:sfr=on:smm=sco:ssnc=none:sp=reverse_arity_150 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 273897
+% Time elapsed: 2.278 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215695 next slice time: 239
+lrs+11_3:2_cond=fast:fsr=off:fde=none:gs=on:nm=0:nwc=1.7:stl=30:sd=2:ss=axioms:st=2.0:spl=off:urr=on_227 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54625
+% Time elapsed: 0.204 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215693 next slice time: 316
+dis+11_7_300 on bs
+% (27747)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 438670
+% Time elapsed: 31.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215376 next slice time: 316
+ott+11_8:1_cond=fast:gs=on:gsem=off:igrpq=1.0:nwc=1:nicw=on:sd=2:ss=axioms:st=1.2:sos=all:sscc=on:sfr=on:ssfp=100000:ssfq=1.0:smm=sco:ssnc=none:urr=on_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54370
+% Time elapsed: 0.216 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215374 next slice time: 316
+lrs+1011_4_cond=fast:gs=on:gsaa=from_current:gsem=off:gsssp=full:igrpq=1.0:nm=0:nwc=1:sas=minisat:sd=3:ss=axioms:st=2.0:sdd=off:sfr=on:ssfp=100000:ssfq=1.2:smm=off:ssnc=none:sp=reverse_arity_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54625
+% Time elapsed: 0.212 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215371 next slice time: 1261
+dis+11_4_bsr=unit_only:cond=fast:fde=none:lwlo=on:nm=0:nwc=1.2:spl=off:sp=occurrence_1200 on bs
+% (27762)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 2137577
+% Time elapsed: 126.200 s
+% ------------------------------
+% ------------------------------
+% remaining time: 214108 next slice time: 316
+lrs+1002_6_ccuc=first:cond=on:fsr=off:igrpq=1.0:nwc=4:nicw=on:sas=minisat:sscc=on:sfr=on:ssfp=40000:ssfq=1.0:smm=sco:ssnc=all_dependent:sp=reverse_arity:urr=ec_only_300 on bs
+% (27842)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 508904
+% Time elapsed: 31.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 213790 next slice time: 316
+ott+1011_4:1_bd=off:bsr=unit_only:cond=fast:fsr=off:fde=none:inw=on:igrpq=1.0:nm=0:nwc=1.1:sas=minisat:sos=on:ssfp=10000:ssfq=1.2:ssnc=none:sp=occurrence_300 on bs
+% (27851)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 199698
+% Time elapsed: 31.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 213473 next slice time: 316
+lrs+4_2:1_ep=R:fde=unused:gs=on:igrpq=1.0:nwc=1:sos=all:sac=on:ssac=none:sser=off:sfr=on:ssfp=10000:ssfq=1.2:ssnc=none:sp=occurrence:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 224900
+% Time elapsed: 1.258 s
+% ------------------------------
+% ------------------------------
+% remaining time: 213460 next slice time: 316
+lrs+1011_3_bsr=unit_only:cond=on:fsr=off:lwlo=on:nwc=1:sd=3:ss=axioms:st=3.0:spl=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 55137
+% Time elapsed: 0.210 s
+% ------------------------------
+% ------------------------------
+% remaining time: 213458 next slice time: 316
+lrs+1010_1_bs=unit_only:cond=fast:gs=on:gsem=off:igrpq=1.0:nwc=1:sos=all:spl=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 299483
+% Time elapsed: 2.471 s
+% ------------------------------
+% ------------------------------
+% remaining time: 213433 next slice time: 316
+dis+1010_3:1_cond=fast:fde=unused:gs=on:igrpq=1.0:nwc=1:sd=2:ss=axioms:sos=on:sdd=large:sser=off:sfr=on:ssfp=100000:ssfq=1.2:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51683
+% Time elapsed: 0.164 s
+% ------------------------------
+% ------------------------------
+% remaining time: 213431 next slice time: 316
+lrs+11_5:4_br=off:cond=on:fde=none:gs=on:gsem=on:gsssp=full:igrpq=1.0:nwc=1:sas=minisat:sd=3:ss=axioms:st=3.0:sos=all:sac=on:sser=off:sfr=on:ssfp=1000:ssfq=1.4:ssnc=all:sp=reverse_arity:urr=on:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 55009
+% Time elapsed: 0.204 s
+% ------------------------------
+% ------------------------------
+% remaining time: 213429 next slice time: 316
+dis-3_10_bsr=unit_only:er=filter:fde=unused:igrpq=1.0:lcm=predicate:nm=64:nwc=1:spl=off:sp=occurrence:updr=off_300 on bs
+% (27875)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 859559
+% Time elapsed: 31.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 213111 next slice time: 631
+ott+1010_40_bs=unit_only:cond=fast:nwc=1:sas=minisat:sdd=off:ssfp=10000:ssfq=2.0:smm=sco:ssnc=none:sp=reverse_arity:updr=off_600 on bs
+% (27888)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 8227158
+% Time elapsed: 63.200 s
+% ------------------------------
+% ------------------------------
+% remaining time: 212470 next slice time: 316
+dis+11_1024_br=off:ep=RSTC:fsr=off:fde=unused:gs=on:gsaa=from_current:gsem=off:nwc=1:sac=on:ssfp=40000:ssfq=1.0:ssnc=none:sp=reverse_arity:urr=on_300 on bs
+% (27908)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 4321081
+% Time elapsed: 31.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 212149 next slice time: 316
+ins+11_32_br=off:ep=RSTC:inw=on:igbrr=0.9:igrr=1/32:igrp=100:igrpq=2.0:igs=1004:igwr=on:nwc=1:spl=off:urr=on:updr=off:dm=on_300 on bs
+% (27916)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 455941
+% Time elapsed: 31.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 211832 next slice time: 316
+lrs+11_5:1_bd=off:gs=on:gsem=off:gsssp=full:nwc=1.3:sas=minisat:sos=all:sac=on:ssac=none:sscc=model:sdd=large:ssfp=4000:ssfq=1.4:ssnc=none:sp=occurrence_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 249846
+% Time elapsed: 1.737 s
+% ------------------------------
+% ------------------------------
+% remaining time: 211814 next slice time: 316
+lrs+1002_2:3_bsr=unit_only:er=known:fde=none:gs=on:gsem=on:nwc=1:sas=minisat:sd=1:ss=axioms:st=1.5:sdd=large:sfr=on:ssfp=40000:ssfq=1.4:smm=sco:ssnc=none:sp=reverse_arity_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54881
+% Time elapsed: 0.213 s
+% ------------------------------
+% ------------------------------
+% remaining time: 211812 next slice time: 946
+lrs+3_5_bd=preordered:bsr=unit_only:gsp=input_only:gs=on:gsem=on:gsssp=full:lwlo=on:nm=64:nwc=1:sas=minisat:spl=off:sp=occurrence:urr=ec_only:updr=off_900 on bs
+% Refutation not found, non-redundant clauses discarded
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, non-redundant clauses discarded
+
+% Memory used [KB]: 2039583
+% Time elapsed: 91.944 s
+% ------------------------------
+% ------------------------------
+% remaining time: 210891 next slice time: 316
+dis+1002_6_ccuc=first:cond=fast:gsp=input_only:gs=on:gsaa=from_current:gsem=on:gsssp=full:nm=64:nwc=2.5:nicw=on:sas=minisat:sos=on:ssac=none:sscc=on:sdd=large:sfr=on:ssfp=100000:ssfq=1.2:smm=off:sp=occurrence:urr=ec_only:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 248567
+% Time elapsed: 1.900 s
+% ------------------------------
+% ------------------------------
+% remaining time: 210871 next slice time: 316
+ott+10_5_cond=fast:fde=none:nwc=1:sas=minisat:sos=all:spl=off:sp=occurrence:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 267756
+% Time elapsed: 2.080 s
+% ------------------------------
+% ------------------------------
+% remaining time: 210850 next slice time: 316
+lrs+1002_2:3_br=off:fde=unused:gs=on:gsaa=from_current:gsem=on:gsssp=full:igrpq=1.0:nwc=1:sas=minisat:sac=on:sser=off:sfr=on:ssfp=100000:ssfq=2.0:ssnc=none:sp=reverse_arity:urr=on_300 on bs
+% (27967)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 694786
+% Time elapsed: 31.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 210533 next slice time: 316
+dis+11_7_fde=none:igrpq=1.0:nm=0:nwc=1:sd=3:ss=axioms:st=2.0:spl=off:sp=occurrence:urr=on:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 55137
+% Time elapsed: 0.227 s
+% ------------------------------
+% ------------------------------
+% remaining time: 210530 next slice time: 946
+ott+11_5_nwc=1:sd=7:ss=axioms:st=2.0:sac=on:sfr=on:ssfp=40000:ssfq=1.2:ssnc=none_900 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 55265
+% Time elapsed: 0.224 s
+% ------------------------------
+% ------------------------------
+% remaining time: 210528 next slice time: 316
+lrs+1002_3_ep=RST:er=known:fsr=off:gs=on:gsaa=from_current:igrpq=1.0:nwc=1:sas=minisat:sd=2:ss=axioms:st=5.0:sos=on:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 56033
+% Time elapsed: 0.238 s
+% ------------------------------
+% ------------------------------
+% remaining time: 210525 next slice time: 316
+lrs+11_8:1_br=off:cond=on:fsr=off:fde=none:gs=on:inw=on:igrpq=1.0:lwlo=on:nwc=1.5:sser=off:ssfp=10000:ssfq=1.2:ssnc=none:sp=reverse_arity:urr=on_300 on bs
+% (27983)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 1783211
+% Time elapsed: 31.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 210207 next slice time: 316
+lrs-2_5_cond=on:fde=none:igrpq=1.0:lcm=predicate:nwc=1:sd=2:ss=axioms:st=3.0:sos=on:sdd=off:ssfp=100000:ssfq=1.4:ssnc=none_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 55649
+% Time elapsed: 0.255 s
+% ------------------------------
+% ------------------------------
+% remaining time: 210204 next slice time: 946
+ins+11_5_fde=unused:igpr=on:igrr=1/16:igrp=200:igrpq=1.1:igs=1010:igwr=on:nwc=1:sos=all:spl=off_900 on bs
+% (27996)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 2127982
+% Time elapsed: 94.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 209255 next slice time: 316
+lrs-1_2:1_bd=preordered:bsr=on:br=off:cond=on:gs=on:lcm=reverse:nwc=1:sd=2:ss=axioms:sos=on:sdd=large:sser=off:ssfp=100000:ssfq=2.0:ssnc=none:sp=occurrence:urr=on:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 52323
+% Time elapsed: 0.186 s
+% ------------------------------
+% ------------------------------
+% remaining time: 209253 next slice time: 316
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:igrpq=1.0:lwlo=on:nwc=2:sas=minisat:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_300 on bs
+% (28029)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 342339
+% Time elapsed: 31.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 208935 next slice time: 316
+dis-4_2_cond=on:fde=unused:igrpq=1.0:lcm=reverse:nwc=1:sos=on:spl=off:sp=reverse_arity:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 263663
+% Time elapsed: 1.904 s
+% ------------------------------
+% ------------------------------
+% remaining time: 208916 next slice time: 316
+dis+1002_4_cond=fast:fde=unused:gsp=input_only:gs=on:gsem=on:igrpq=1.0:nm=64:nwc=1:sas=minisat:sos=on:sscc=model:sser=off:sfr=on:ssfp=4000:ssfq=1.4:ssnc=none:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 223493
+% Time elapsed: 1.500 s
+% ------------------------------
+% ------------------------------
+% remaining time: 208901 next slice time: 631
+lrs+4_40_bsr=unit_only:cond=fast:fde=none:gs=on:gsem=on:igrpq=1.0:lwlo=on:nwc=1.2:sd=7:ss=axioms:st=5.0:ssac=none:sdd=off:sfr=on:ssfp=1000:ssfq=1.1:smm=sco:ssnc=all_dependent:sp=reverse_arity:tha=off_600 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 56289
+% Time elapsed: 0.239 s
+% ------------------------------
+% ------------------------------
+% remaining time: 208898 next slice time: 316
+lrs+1010_4:1_cond=fast:fsr=off:fde=unused:gs=on:gsem=on:igrpq=1.0:nm=0:nwc=1:sas=minisat:sd=2:ss=axioms:st=1.5:sos=on:sac=on:sdd=off:sser=off:sfr=on:ssfp=100000:ssfq=1.4:ssnc=none:sp=occurrence_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 55393
+% Time elapsed: 0.235 s
+% ------------------------------
+% ------------------------------
+% remaining time: 208896 next slice time: 316
+dis+1011_1_cond=on:fde=unused:gs=on:gsaa=from_current:gsem=off:igrpq=1.0:nm=0:nwc=1:sas=minisat:sd=3:ss=axioms:sos=on:ssac=none:sfr=on:ssfp=100000:ssfq=1.2:smm=sco:ssnc=none:sp=occurrence_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 52579
+% Time elapsed: 0.178 s
+% ------------------------------
+% ------------------------------
+% remaining time: 208894 next slice time: 316
+lrs+1010_8:1_fsr=off:fde=none:gs=on:gsem=on:gsssp=full:igrpq=1.0:nwc=1.1:sas=minisat:sos=all:ssac=none:sfr=on:ssfp=100000:ssfq=1.0:smm=off:ssnc=all:sp=occurrence:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 268268
+% Time elapsed: 1.923 s
+% ------------------------------
+% ------------------------------
+% remaining time: 208874 next slice time: 316
+dis+11_5_fde=none:gs=on:gsaa=from_current:gsssp=full:igrpq=1.0:lcm=reverse:nwc=1:sas=minisat:ss=axioms:st=1.5:sos=on:ssfp=4000:ssfq=1.2:smm=sco:ssnc=none_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 55521
+% Time elapsed: 0.222 s
+% ------------------------------
+% ------------------------------
+% remaining time: 208872 next slice time: 316
+lrs+1002_4_cond=on:er=filter:fde=unused:gsp=input_only:gs=on:gsssp=full:igrpq=1.0:nwc=10:sas=minisat:spl=off:sp=occurrence_300 on bs
+% (28056)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 378671
+% Time elapsed: 31.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 208555 next slice time: 316
+ott+1011_3_bd=off:fde=unused:nwc=1.5:spl=off:sp=occurrence:updr=off_300 on bs
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for bs
+% SZS output start Proof for bs
+fof(f27793,axiom,(
+  ! [X0,X10,X11] : ((s_instance(X11,s_Relation) & s_instance(X0,s_SetOrClass)) => ((s_subclass(X0,s_InheritableRelation) & s_instance(X10,X0) & s_subrelation(X11,X10)) => s_instance(X11,X0)))),
+  file('bs.tptp',a27793)).
+fof(f27884,axiom,(
+  ! [X6,X7] : ! [X46] : (s_instance(X46,s_Entity) => ((s_instance(X6,s_SetOrClass) & s_instance(X7,s_SetOrClass)) => (s_disjoint(X7,X6) => ~(s_instance(X46,X6) & s_instance(X46,X7)))))),
+  file('bs.tptp',a27884)).
+fof(f56121,axiom,(
+  s_subclass(s_BinaryRelation,s_InheritableRelation)),
+  file('bs.tptp',a56121)).
+fof(f56241,axiom,(
+  s_subclass(s_SymmetricRelation,s_BinaryRelation)),
+  file('bs.tptp',a56241)).
+fof(f56242,axiom,(
+  s_disjoint(s_SymmetricRelation,s_AntisymmetricRelation)),
+  file('bs.tptp',a56242)).
+fof(f56267,axiom,(
+  ! [X19] : (s_instance(X19,s_AsymmetricRelation) <=> (s_instance(X19,s_IrreflexiveRelation) & s_instance(X19,s_AntisymmetricRelation)))),
+  file('bs.tptp',a56267)).
+fof(f56397,axiom,(
+  ! [X289,X290,X291] : ((s_instance(X289,s_SetOrClass) & s_instance(X290,s_SetOrClass) & s_instance(X291,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X290,X291) & s_subclass(X289,X290)) => s_subclass(X289,X291))))),
+  file('bs.tptp',a56397)).
+fof(f57313,axiom,(
+  s_instance(s_BinaryRelation,s_SetOrClass)),
+  file('bs.tptp',a57313)).
+fof(f57337,axiom,(
+  s_instance(s_InheritableRelation,s_SetOrClass)),
+  file('bs.tptp',a57337)).
+fof(f57839,axiom,(
+  s_instance(s_relatedEvent_m,s_SymmetricRelation)),
+  file('bs.tptp',a57839)).
+fof(f57842,axiom,(
+  s_instance(s_causes_m,s_AsymmetricRelation)),
+  file('bs.tptp',a57842)).
+fof(f57843,axiom,(
+  s_subrelation(s_causes_m,s_relatedEvent_m)),
+  file('bs.tptp',a57843)).
+fof(f57901,axiom,(
+  s_instance(s_AntisymmetricRelation,s_SetOrClass)),
+  file('bs.tptp',a57901)).
+fof(f60478,axiom,(
+  s_instance(s_SymmetricRelation,s_SetOrClass)),
+  file('bs.tptp',a60478)).
+fof(f63189,axiom,(
+  s_instance(s_causes_m,s_Relation)),
+  file('bs.tptp',a63189)).
+fof(f63191,axiom,(
+  s_instance(s_causes_m,s_Entity)),
+  file('bs.tptp',a63191)).
+fof(f63428,axiom,(
+  s_instance(s_subclass_m,s_TransitiveRelation)),
+  file('bs.tptp',a63428)).
+fof(f66156,plain,(
+  ! [X0] : (s_instance(X0,s_AsymmetricRelation) <=> (s_instance(X0,s_IrreflexiveRelation) & s_instance(X0,s_AntisymmetricRelation)))),
+  inference(rectify,[],[f56267])).
+fof(f121258,plain,(
+  ! [X0,X1] : ! [X2] : (s_instance(X2,s_Entity) => ((s_instance(X0,s_SetOrClass) & s_instance(X1,s_SetOrClass)) => (s_disjoint(X1,X0) => ~(s_instance(X2,X0) & s_instance(X2,X1)))))),
+  inference(rectify,[],[f27884])).
+fof(f121259,plain,(
+  ! [X0,X1,X2] : (s_instance(X2,s_Entity) => ((s_instance(X0,s_SetOrClass) & s_instance(X1,s_SetOrClass)) => (s_disjoint(X1,X0) => ~(s_instance(X2,X0) & s_instance(X2,X1)))))),
+  inference(flattening,[],[f121258])).
+fof(f123570,plain,(
+  ! [X0,X1,X2] : ((s_instance(X0,s_SetOrClass) & s_instance(X1,s_SetOrClass) & s_instance(X2,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X1,X2) & s_subclass(X0,X1)) => s_subclass(X0,X2))))),
+  inference(rectify,[],[f56397])).
+fof(f123817,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,s_Relation) & s_instance(X0,s_SetOrClass)) => ((s_subclass(X0,s_InheritableRelation) & s_instance(X1,X0) & s_subrelation(X2,X1)) => s_instance(X2,X0)))),
+  inference(rectify,[],[f27793])).
+fof(f233848,plain,(
+  ! [X0,X1,X2] : ((((~s_instance(X2,X0) | ~s_instance(X2,X1)) | ~s_disjoint(X1,X0)) | (~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass))) | ~s_instance(X2,s_Entity))),
+  inference(ennf_transformation,[],[f121259])).
+fof(f233849,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,X0) | ~s_instance(X2,X1) | ~s_disjoint(X1,X0) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_Entity))),
+  inference(flattening,[],[f233848])).
+fof(f238333,plain,(
+  ! [X0,X1,X2] : (((s_subclass(X0,X2) | (~s_subclass(X1,X2) | ~s_subclass(X0,X1))) | ~s_instance(s_subclass_m,s_TransitiveRelation)) | (~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)))),
+  inference(ennf_transformation,[],[f123570])).
+fof(f238334,plain,(
+  ! [X0,X1,X2] : (s_subclass(X0,X2) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass))),
+  inference(flattening,[],[f238333])).
+fof(f238827,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,X0) | (~s_subclass(X0,s_InheritableRelation) | ~s_instance(X1,X0) | ~s_subrelation(X2,X1))) | (~s_instance(X2,s_Relation) | ~s_instance(X0,s_SetOrClass)))),
+  inference(ennf_transformation,[],[f123817])).
+fof(f238828,plain,(
+  ! [X0,X1,X2] : (s_instance(X2,X0) | ~s_subclass(X0,s_InheritableRelation) | ~s_instance(X1,X0) | ~s_subrelation(X2,X1) | ~s_instance(X2,s_Relation) | ~s_instance(X0,s_SetOrClass))),
+  inference(flattening,[],[f238827])).
+fof(f240801,plain,(
+  ! [X0] : ((s_instance(X0,s_AsymmetricRelation) | (~s_instance(X0,s_IrreflexiveRelation) | ~s_instance(X0,s_AntisymmetricRelation))) & ((s_instance(X0,s_IrreflexiveRelation) & s_instance(X0,s_AntisymmetricRelation)) | ~s_instance(X0,s_AsymmetricRelation)))),
+  inference(nnf_transformation,[],[f66156])).
+fof(f240802,plain,(
+  ! [X0] : ((s_instance(X0,s_AsymmetricRelation) | ~s_instance(X0,s_IrreflexiveRelation) | ~s_instance(X0,s_AntisymmetricRelation)) & ((s_instance(X0,s_IrreflexiveRelation) & s_instance(X0,s_AntisymmetricRelation)) | ~s_instance(X0,s_AsymmetricRelation)))),
+  inference(flattening,[],[f240801])).
+fof(f241810,plain,(
+  s_disjoint(s_SymmetricRelation,s_AntisymmetricRelation)),
+  inference(cnf_transformation,[],[f56242])).
+fof(f241982,plain,(
+  s_subrelation(s_causes_m,s_relatedEvent_m)),
+  inference(cnf_transformation,[],[f57843])).
+fof(f242120,plain,(
+  s_subclass(s_SymmetricRelation,s_BinaryRelation)),
+  inference(cnf_transformation,[],[f56241])).
+fof(f242123,plain,(
+  s_subclass(s_BinaryRelation,s_InheritableRelation)),
+  inference(cnf_transformation,[],[f56121])).
+fof(f244394,plain,(
+  s_instance(s_BinaryRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f57313])).
+fof(f244426,plain,(
+  s_instance(s_InheritableRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f57337])).
+fof(f245486,plain,(
+  s_instance(s_relatedEvent_m,s_SymmetricRelation)),
+  inference(cnf_transformation,[],[f57839])).
+fof(f245489,plain,(
+  s_instance(s_causes_m,s_AsymmetricRelation)),
+  inference(cnf_transformation,[],[f57842])).
+fof(f245586,plain,(
+  s_instance(s_AntisymmetricRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f57901])).
+fof(f247224,plain,(
+  s_instance(s_SymmetricRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f60478])).
+fof(f247902,plain,(
+  s_instance(s_subclass_m,s_TransitiveRelation)),
+  inference(cnf_transformation,[],[f63428])).
+fof(f248443,plain,(
+  s_instance(s_causes_m,s_Entity)),
+  inference(cnf_transformation,[],[f63191])).
+fof(f248446,plain,(
+  s_instance(s_causes_m,s_Relation)),
+  inference(cnf_transformation,[],[f63189])).
+fof(f249834,plain,(
+  ( ! [X0] : (s_instance(X0,s_AntisymmetricRelation) | ~s_instance(X0,s_AsymmetricRelation)) )),
+  inference(cnf_transformation,[],[f240802])).
+fof(f304777,plain,(
+  ( ! [X2,X0,X1] : (~s_disjoint(X1,X0) | ~s_instance(X2,X1) | ~s_instance(X2,X0) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_Entity)) )),
+  inference(cnf_transformation,[],[f233849])).
+fof(f307696,plain,(
+  ( ! [X2,X0,X1] : (s_subclass(X0,X2) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f238334])).
+fof(f307975,plain,(
+  ( ! [X2,X0,X1] : (~s_subclass(X0,s_InheritableRelation) | s_instance(X2,X0) | ~s_instance(X1,X0) | ~s_subrelation(X2,X1) | ~s_instance(X2,s_Relation) | ~s_instance(X0,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f238828])).
+fof(f421882,plain,(
+  ( ! [X2,X0,X1] : (s_subclass(X0,X2) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f307696,f247902])).
+fof(f428353,plain,(
+  ( ! [X3] : (~s_instance(X3,s_SymmetricRelation) | ~s_instance(X3,s_AntisymmetricRelation) | ~s_instance(s_AntisymmetricRelation,s_SetOrClass) | ~s_instance(s_SymmetricRelation,s_SetOrClass) | ~s_instance(X3,s_Entity)) )),
+  inference(resolution,[],[f304777,f241810])).
+fof(f428392,plain,(
+  ( ! [X3] : (~s_instance(X3,s_SymmetricRelation) | ~s_instance(X3,s_AntisymmetricRelation) | ~s_instance(s_SymmetricRelation,s_SetOrClass) | ~s_instance(X3,s_Entity)) )),
+  inference(subsumption_resolution,[],[f428353,f245586])).
+fof(f428393,plain,(
+  ( ! [X3] : (~s_instance(X3,s_AntisymmetricRelation) | ~s_instance(X3,s_SymmetricRelation) | ~s_instance(X3,s_Entity)) )),
+  inference(subsumption_resolution,[],[f428392,f247224])).
+fof(f428469,plain,(
+  ( ! [X2] : (~s_instance(X2,s_SymmetricRelation) | ~s_instance(X2,s_Entity) | ~s_instance(X2,s_AsymmetricRelation)) )),
+  inference(resolution,[],[f428393,f249834])).
+fof(f435840,plain,(
+  ( ! [X327,X329,X328,X330] : (~s_subclass(X327,s_InheritableRelation) | ~s_subclass(X328,X327) | ~s_instance(X328,s_SetOrClass) | ~s_instance(X327,s_SetOrClass) | ~s_instance(s_InheritableRelation,s_SetOrClass) | s_instance(X329,X328) | ~s_instance(X330,X328) | ~s_subrelation(X329,X330) | ~s_instance(X329,s_Relation) | ~s_instance(X328,s_SetOrClass)) )),
+  inference(resolution,[],[f421882,f307975])).
+fof(f436909,plain,(
+  ( ! [X327,X329,X328,X330] : (~s_subclass(X327,s_InheritableRelation) | ~s_subclass(X328,X327) | ~s_instance(X328,s_SetOrClass) | ~s_instance(X327,s_SetOrClass) | ~s_instance(s_InheritableRelation,s_SetOrClass) | s_instance(X329,X328) | ~s_instance(X330,X328) | ~s_subrelation(X329,X330) | ~s_instance(X329,s_Relation)) )),
+  inference(duplicate_literal_removal,[],[f435840])).
+fof(f437201,plain,(
+  ( ! [X327,X329,X328,X330] : (~s_subclass(X327,s_InheritableRelation) | ~s_subclass(X328,X327) | ~s_instance(X328,s_SetOrClass) | ~s_instance(X327,s_SetOrClass) | s_instance(X329,X328) | ~s_instance(X330,X328) | ~s_subrelation(X329,X330) | ~s_instance(X329,s_Relation)) )),
+  inference(subsumption_resolution,[],[f436909,f244426])).
+fof(f568917,plain,(
+  ( ! [X14,X15,X16] : (~s_subclass(X14,s_BinaryRelation) | ~s_instance(X14,s_SetOrClass) | ~s_instance(s_BinaryRelation,s_SetOrClass) | s_instance(X15,X14) | ~s_instance(X16,X14) | ~s_subrelation(X15,X16) | ~s_instance(X15,s_Relation)) )),
+  inference(resolution,[],[f437201,f242123])).
+fof(f568943,plain,(
+  ( ! [X14,X15,X16] : (~s_subclass(X14,s_BinaryRelation) | ~s_instance(X14,s_SetOrClass) | s_instance(X15,X14) | ~s_instance(X16,X14) | ~s_subrelation(X15,X16) | ~s_instance(X15,s_Relation)) )),
+  inference(subsumption_resolution,[],[f568917,f244394])).
+fof(f570195,plain,(
+  ( ! [X12,X13] : (~s_instance(s_SymmetricRelation,s_SetOrClass) | s_instance(X12,s_SymmetricRelation) | ~s_instance(X13,s_SymmetricRelation) | ~s_subrelation(X12,X13) | ~s_instance(X12,s_Relation)) )),
+  inference(resolution,[],[f568943,f242120])).
+fof(f570207,plain,(
+  ( ! [X12,X13] : (~s_instance(X13,s_SymmetricRelation) | s_instance(X12,s_SymmetricRelation) | ~s_subrelation(X12,X13) | ~s_instance(X12,s_Relation)) )),
+  inference(subsumption_resolution,[],[f570195,f247224])).
+fof(f570801,plain,(
+  ( ! [X9] : (~s_subrelation(X9,s_relatedEvent_m) | s_instance(X9,s_SymmetricRelation) | ~s_instance(X9,s_Relation)) )),
+  inference(resolution,[],[f570207,f245486])).
+fof(f570873,plain,(
+  s_instance(s_causes_m,s_SymmetricRelation) | ~s_instance(s_causes_m,s_Relation)),
+  inference(resolution,[],[f570801,f241982])).
+fof(f570874,plain,(
+  s_instance(s_causes_m,s_SymmetricRelation)),
+  inference(subsumption_resolution,[],[f570873,f248446])).
+fof(f570878,plain,(
+  ~s_instance(s_causes_m,s_Entity) | ~s_instance(s_causes_m,s_AsymmetricRelation)),
+  inference(resolution,[],[f570874,f428469])).
+fof(f570879,plain,(
+  ~s_instance(s_causes_m,s_AsymmetricRelation)),
+  inference(subsumption_resolution,[],[f570878,f248443])).
+fof(f570880,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f570879,f245489])).
+% SZS output end Proof for bs
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation
+
+% Memory used [KB]: 291807
+% Time elapsed: 26.713 s
+% ------------------------------
+% ------------------------------
+% Success in time 771.25 s

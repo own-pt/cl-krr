@@ -1,0 +1,249 @@
+fof(f938382,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f938381,f269123])).
+fof(f269123,plain,(
+  ~s_instance(s_BananaSlug10_1,s_Invertebrate)),
+  inference(cnf_transformation,[],[f65924])).
+fof(f65924,plain,(
+  ~s_instance(s_BananaSlug10_1,s_Invertebrate)),
+  inference(flattening,[],[f65923])).
+fof(f65923,negated_conjecture,(
+  ~s_instance(s_BananaSlug10_1,s_Invertebrate)),
+  inference(negated_conjecture,[],[f65922])).
+fof(f65922,conjecture,(
+  s_instance(s_BananaSlug10_1,s_Invertebrate)),
+  file('bs.tptp',q1)).
+fof(f938381,plain,(
+  s_instance(s_BananaSlug10_1,s_Invertebrate)),
+  inference(subsumption_resolution,[],[f938373,f338081])).
+fof(f338081,plain,(
+  ~s_instance(s_BananaSlug10_1,s_Vertebrate)),
+  inference(subsumption_resolution,[],[f338080,f272217])).
+fof(f272217,plain,(
+  s_instance(s_BananaSlug10_1,s_Animal)),
+  inference(cnf_transformation,[],[f60815])).
+fof(f60815,axiom,(
+  s_instance(s_BananaSlug10_1,s_Animal)),
+  file('bs.tptp',a60815)).
+fof(f338080,plain,(
+  ~s_instance(s_BananaSlug10_1,s_Animal) | ~s_instance(s_BananaSlug10_1,s_Vertebrate)),
+  inference(duplicate_literal_removal,[],[f338079])).
+fof(f338079,plain,(
+  ~s_instance(s_BananaSlug10_1,s_Animal) | ~s_instance(s_BananaSlug10_1,s_Vertebrate) | ~s_instance(s_BananaSlug10_1,s_Vertebrate) | ~s_instance(s_BananaSlug10_1,s_Animal)),
+  inference(resolution,[],[f337978,f278400])).
+fof(f278400,plain,(
+  ( ! [X0] : (s_part(sK148(X0),X0) | ~s_instance(X0,s_Vertebrate) | ~s_instance(X0,s_Animal)) )),
+  inference(cnf_transformation,[],[f268823])).
+fof(f268823,plain,(
+  ! [X0] : (s_instance(sK148(X0),s_Object) & (~s_instance(X0,s_Animal) | (s_instance(sK148(X0),s_SpinalColumn) & s_part(sK148(X0),X0)) | ~s_instance(X0,s_Vertebrate)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK148])],[f154915])).
+fof(f154915,plain,(
+  ! [X0] : ? [X1] : (s_instance(X1,s_Object) & (~s_instance(X0,s_Animal) | (s_instance(X1,s_SpinalColumn) & s_part(X1,X0)) | ~s_instance(X0,s_Vertebrate)))),
+  inference(flattening,[],[f154914])).
+fof(f154914,plain,(
+  ! [X0] : ? [X1] : (s_instance(X1,s_Object) & ((~s_instance(X0,s_Animal) | (s_instance(X1,s_SpinalColumn) & s_part(X1,X0))) | ~s_instance(X0,s_Vertebrate)))),
+  inference(ennf_transformation,[],[f67888])).
+fof(f67888,plain,(
+  ! [X0] : ? [X1] : (s_instance(X1,s_Object) & ((s_instance(X0,s_Animal) & ~(s_instance(X1,s_SpinalColumn) & s_part(X1,X0))) => ~s_instance(X0,s_Vertebrate)))),
+  inference(flattening,[],[f67887])).
+fof(f67887,plain,(
+  ! [X0] : ? [X1] : (s_instance(X1,s_Object) & ((s_instance(X0,s_Animal) & ~(s_instance(X1,s_SpinalColumn) & s_part(X1,X0))) => ~s_instance(X0,s_Vertebrate)))),
+  inference(rectify,[],[f60816])).
+fof(f60816,axiom,(
+  ! [X329] : ? [X66] : (s_instance(X66,s_Object) & ((s_instance(X329,s_Animal) & ~(s_instance(X66,s_SpinalColumn) & s_part(X66,X329))) => ~s_instance(X329,s_Vertebrate)))),
+  file('bs.tptp',a60816)).
+fof(f337978,plain,(
+  ( ! [X0] : (~s_part(sK148(X0),s_BananaSlug10_1) | ~s_instance(X0,s_Animal) | ~s_instance(X0,s_Vertebrate)) )),
+  inference(subsumption_resolution,[],[f337977,f278398])).
+fof(f278398,plain,(
+  ( ! [X0] : (s_instance(sK148(X0),s_Object)) )),
+  inference(cnf_transformation,[],[f268823])).
+fof(f337977,plain,(
+  ( ! [X0] : (~s_instance(X0,s_Vertebrate) | ~s_instance(X0,s_Animal) | ~s_part(sK148(X0),s_BananaSlug10_1) | ~s_instance(sK148(X0),s_Object)) )),
+  inference(resolution,[],[f278399,f277224])).
+fof(f277224,plain,(
+  ( ! [X0] : (~s_instance(X0,s_SpinalColumn) | ~s_part(X0,s_BananaSlug10_1) | ~s_instance(X0,s_Object)) )),
+  inference(cnf_transformation,[],[f153290])).
+fof(f153290,plain,(
+  ! [X0] : (~s_instance(X0,s_Object) | ~s_instance(X0,s_SpinalColumn) | ~s_part(X0,s_BananaSlug10_1))),
+  inference(flattening,[],[f153289])).
+fof(f153289,plain,(
+  ! [X0] : (~s_instance(X0,s_Object) | (~s_instance(X0,s_SpinalColumn) | ~s_part(X0,s_BananaSlug10_1)))),
+  inference(ennf_transformation,[],[f66275])).
+fof(f66275,plain,(
+  ! [X0] : (s_instance(X0,s_Object) => ~(s_instance(X0,s_SpinalColumn) & s_part(X0,s_BananaSlug10_1)))),
+  inference(rectify,[],[f60817])).
+fof(f60817,axiom,(
+  ! [X796] : (s_instance(X796,s_Object) => ~(s_instance(X796,s_SpinalColumn) & s_part(X796,s_BananaSlug10_1)))),
+  file('bs.tptp',a60817)).
+fof(f278399,plain,(
+  ( ! [X0] : (s_instance(sK148(X0),s_SpinalColumn) | ~s_instance(X0,s_Vertebrate) | ~s_instance(X0,s_Animal)) )),
+  inference(cnf_transformation,[],[f268823])).
+fof(f938373,plain,(
+  s_instance(s_BananaSlug10_1,s_Vertebrate) | s_instance(s_BananaSlug10_1,s_Invertebrate)),
+  inference(resolution,[],[f936695,f272217])).
+fof(f936695,plain,(
+  ( ! [X10] : (~s_instance(X10,s_Animal) | s_instance(X10,s_Vertebrate) | s_instance(X10,s_Invertebrate)) )),
+  inference(subsumption_resolution,[],[f936694,f272315])).
+fof(f272315,plain,(
+  s_instance(s_Vertebrate,s_SetOrClass)),
+  inference(cnf_transformation,[],[f59932])).
+fof(f59932,axiom,(
+  s_instance(s_Vertebrate,s_SetOrClass)),
+  file('bs.tptp',a59932)).
+fof(f936694,plain,(
+  ( ! [X10] : (s_instance(X10,s_Vertebrate) | ~s_instance(X10,s_Animal) | s_instance(X10,s_Invertebrate) | ~s_instance(s_Vertebrate,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f936693,f337401])).
+fof(f337401,plain,(
+  s_instance(s_Vertebrate,s_Class)),
+  inference(resolution,[],[f277246,f270359])).
+fof(f270359,plain,(
+  s_subclass(s_Vertebrate,s_Entity)),
+  inference(cnf_transformation,[],[f60985])).
+fof(f60985,axiom,(
+  s_subclass(s_Vertebrate,s_Entity)),
+  file('bs.tptp',a60985)).
+fof(f277246,plain,(
+  ( ! [X0] : (~s_subclass(X0,s_Entity) | s_instance(X0,s_Class)) )),
+  inference(cnf_transformation,[],[f268672])).
+fof(f268672,plain,(
+  ! [X0] : ((~s_instance(X0,s_Class) | s_subclass(X0,s_Entity)) & (~s_subclass(X0,s_Entity) | s_instance(X0,s_Class)))),
+  inference(nnf_transformation,[],[f55801])).
+fof(f55801,axiom,(
+  ! [X0] : (s_instance(X0,s_Class) <=> s_subclass(X0,s_Entity))),
+  file('bs.tptp',a55801)).
+fof(f936693,plain,(
+  ( ! [X10] : (s_instance(X10,s_Vertebrate) | ~s_instance(X10,s_Animal) | s_instance(X10,s_Invertebrate) | ~s_instance(s_Vertebrate,s_Class) | ~s_instance(s_Vertebrate,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f936692,f272323])).
+fof(f272323,plain,(
+  s_instance(s_Invertebrate,s_SetOrClass)),
+  inference(cnf_transformation,[],[f59918])).
+fof(f59918,axiom,(
+  s_instance(s_Invertebrate,s_SetOrClass)),
+  file('bs.tptp',a59918)).
+fof(f936692,plain,(
+  ( ! [X10] : (s_instance(X10,s_Vertebrate) | ~s_instance(X10,s_Animal) | s_instance(X10,s_Invertebrate) | ~s_instance(s_Invertebrate,s_SetOrClass) | ~s_instance(s_Vertebrate,s_Class) | ~s_instance(s_Vertebrate,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f936691,f337402])).
+fof(f337402,plain,(
+  s_instance(s_Invertebrate,s_Class)),
+  inference(resolution,[],[f277246,f270374])).
+fof(f270374,plain,(
+  s_subclass(s_Invertebrate,s_Entity)),
+  inference(cnf_transformation,[],[f61000])).
+fof(f61000,axiom,(
+  s_subclass(s_Invertebrate,s_Entity)),
+  file('bs.tptp',a61000)).
+fof(f936691,plain,(
+  ( ! [X10] : (s_instance(X10,s_Vertebrate) | ~s_instance(X10,s_Animal) | s_instance(X10,s_Invertebrate) | ~s_instance(s_Invertebrate,s_Class) | ~s_instance(s_Invertebrate,s_SetOrClass) | ~s_instance(s_Vertebrate,s_Class) | ~s_instance(s_Vertebrate,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f936690,f337223])).
+fof(f337223,plain,(
+  s_instance(s_Animal,s_Class)),
+  inference(resolution,[],[f277246,f270699])).
+fof(f270699,plain,(
+  s_subclass(s_Animal,s_Entity)),
+  inference(cnf_transformation,[],[f61326])).
+fof(f61326,axiom,(
+  s_subclass(s_Animal,s_Entity)),
+  file('bs.tptp',a61326)).
+fof(f936690,plain,(
+  ( ! [X10] : (s_instance(X10,s_Vertebrate) | ~s_instance(X10,s_Animal) | s_instance(X10,s_Invertebrate) | ~s_instance(s_Animal,s_Class) | ~s_instance(s_Invertebrate,s_Class) | ~s_instance(s_Invertebrate,s_SetOrClass) | ~s_instance(s_Vertebrate,s_Class) | ~s_instance(s_Vertebrate,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f936595,f272216])).
+fof(f272216,plain,(
+  s_instance(s_Animal,s_SetOrClass)),
+  inference(cnf_transformation,[],[f60814])).
+fof(f60814,axiom,(
+  s_instance(s_Animal,s_SetOrClass)),
+  file('bs.tptp',a60814)).
+fof(f936595,plain,(
+  ( ! [X10] : (s_instance(X10,s_Vertebrate) | ~s_instance(X10,s_Animal) | s_instance(X10,s_Invertebrate) | ~s_instance(s_Animal,s_SetOrClass) | ~s_instance(s_Animal,s_Class) | ~s_instance(s_Invertebrate,s_Class) | ~s_instance(s_Invertebrate,s_SetOrClass) | ~s_instance(s_Vertebrate,s_Class) | ~s_instance(s_Vertebrate,s_SetOrClass)) )),
+  inference(resolution,[],[f936584,f343537])).
+fof(f343537,plain,(
+  s_exhaustiveDecomposition3(s_Animal,s_Vertebrate,s_Invertebrate)),
+  inference(subsumption_resolution,[],[f343536,f337401])).
+fof(f343536,plain,(
+  s_exhaustiveDecomposition3(s_Animal,s_Vertebrate,s_Invertebrate) | ~s_instance(s_Vertebrate,s_Class)),
+  inference(subsumption_resolution,[],[f343535,f337402])).
+fof(f343535,plain,(
+  s_exhaustiveDecomposition3(s_Animal,s_Vertebrate,s_Invertebrate) | ~s_instance(s_Invertebrate,s_Class) | ~s_instance(s_Vertebrate,s_Class)),
+  inference(subsumption_resolution,[],[f343489,f337223])).
+fof(f343489,plain,(
+  s_exhaustiveDecomposition3(s_Animal,s_Vertebrate,s_Invertebrate) | ~s_instance(s_Animal,s_Class) | ~s_instance(s_Invertebrate,s_Class) | ~s_instance(s_Vertebrate,s_Class)),
+  inference(resolution,[],[f335311,f276916])).
+fof(f276916,plain,(
+  s_partition3(s_Animal,s_Vertebrate,s_Invertebrate)),
+  inference(cnf_transformation,[],[f59899])).
+fof(f59899,axiom,(
+  s_partition3(s_Animal,s_Vertebrate,s_Invertebrate)),
+  file('bs.tptp',a59899)).
+fof(f335311,plain,(
+  ( ! [X2,X0,X1] : (~s_partition3(X0,X2,X1) | s_exhaustiveDecomposition3(X0,X2,X1) | ~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X2,s_Class)) )),
+  inference(cnf_transformation,[],[f269042])).
+fof(f269042,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class) | ((~s_partition3(X0,X2,X1) | (s_exhaustiveDecomposition3(X0,X2,X1) & s_disjointDecomposition3(X0,X2,X1))) & (~s_exhaustiveDecomposition3(X0,X2,X1) | ~s_disjointDecomposition3(X0,X2,X1) | s_partition3(X0,X2,X1))))),
+  inference(flattening,[],[f269041])).
+fof(f269041,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class) | ((~s_partition3(X0,X2,X1) | (s_exhaustiveDecomposition3(X0,X2,X1) & s_disjointDecomposition3(X0,X2,X1))) & ((~s_exhaustiveDecomposition3(X0,X2,X1) | ~s_disjointDecomposition3(X0,X2,X1)) | s_partition3(X0,X2,X1))))),
+  inference(nnf_transformation,[],[f266754])).
+fof(f266754,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class) | (s_partition3(X0,X2,X1) <=> (s_exhaustiveDecomposition3(X0,X2,X1) & s_disjointDecomposition3(X0,X2,X1))))),
+  inference(flattening,[],[f266753])).
+fof(f266753,plain,(
+  ! [X0,X1,X2] : ((~s_instance(X2,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class)) | (s_partition3(X0,X2,X1) <=> (s_exhaustiveDecomposition3(X0,X2,X1) & s_disjointDecomposition3(X0,X2,X1))))),
+  inference(ennf_transformation,[],[f151646])).
+fof(f151646,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,s_Class) & s_instance(X1,s_Class) & s_instance(X0,s_Class)) => (s_partition3(X0,X2,X1) <=> (s_exhaustiveDecomposition3(X0,X2,X1) & s_disjointDecomposition3(X0,X2,X1))))),
+  inference(rectify,[],[f55761])).
+fof(f55761,axiom,(
+  ! [X13,X14,X12] : ((s_instance(X12,s_Class) & s_instance(X14,s_Class) & s_instance(X13,s_Class)) => (s_partition3(X13,X12,X14) <=> (s_exhaustiveDecomposition3(X13,X12,X14) & s_disjointDecomposition3(X13,X12,X14))))),
+  file('bs.tptp',a55761)).
+fof(f936584,plain,(
+  ( ! [X2,X0,X3,X1] : (~s_exhaustiveDecomposition3(X0,X2,X1) | s_instance(X3,X2) | ~s_instance(X3,X0) | s_instance(X3,X1) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_Class) | ~s_instance(X2,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f335363,f385378])).
+fof(f385378,plain,(
+  ( ! [X0,X1] : (~s_instance(X1,s_Class) | ~s_instance(X1,s_SetOrClass) | s_instance(X0,s_Entity) | ~s_instance(X0,X1)) )),
+  inference(resolution,[],[f342608,f277245])).
+fof(f277245,plain,(
+  ( ! [X0] : (s_subclass(X0,s_Entity) | ~s_instance(X0,s_Class)) )),
+  inference(cnf_transformation,[],[f268672])).
+fof(f342608,plain,(
+  ( ! [X10,X11] : (~s_subclass(X11,s_Entity) | ~s_instance(X10,X11) | ~s_instance(X11,s_SetOrClass) | s_instance(X10,s_Entity)) )),
+  inference(resolution,[],[f335342,f276663])).
+fof(f276663,plain,(
+  s_instance(s_Entity,s_SetOrClass)),
+  inference(cnf_transformation,[],[f55957])).
+fof(f55957,axiom,(
+  s_instance(s_Entity,s_SetOrClass)),
+  file('bs.tptp',a55957)).
+fof(f335342,plain,(
+  ( ! [X2,X0,X1] : (~s_instance(X1,s_SetOrClass) | ~s_instance(X0,X2) | ~s_subclass(X2,X1) | ~s_instance(X2,s_SetOrClass) | s_instance(X0,X1)) )),
+  inference(cnf_transformation,[],[f266798])).
+fof(f266798,plain,(
+  ! [X0,X1,X2] : (~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass) | ~s_subclass(X2,X1) | ~s_instance(X0,X2) | s_instance(X0,X1))),
+  inference(flattening,[],[f266797])).
+fof(f266797,plain,(
+  ! [X0,X1,X2] : ((~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)) | ((~s_subclass(X2,X1) | ~s_instance(X0,X2)) | s_instance(X0,X1)))),
+  inference(ennf_transformation,[],[f151673])).
+fof(f151673,plain,(
+  ! [X0,X1,X2] : ((s_instance(X1,s_SetOrClass) & s_instance(X2,s_SetOrClass)) => ((s_subclass(X2,X1) & s_instance(X0,X2)) => s_instance(X0,X1)))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X5,X3,X4] : ((s_instance(X3,s_SetOrClass) & s_instance(X4,s_SetOrClass)) => ((s_subclass(X4,X3) & s_instance(X5,X4)) => s_instance(X5,X3)))),
+  file('bs.tptp',a15)).
+fof(f335363,plain,(
+  ( ! [X2,X0,X3,X1] : (s_instance(X3,X1) | s_instance(X3,X2) | ~s_instance(X3,X0) | ~s_exhaustiveDecomposition3(X0,X2,X1) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_Class) | ~s_instance(X2,s_SetOrClass) | ~s_instance(X3,s_Entity)) )),
+  inference(cnf_transformation,[],[f266838])).
+fof(f266838,plain,(
+  ! [X0,X1,X2,X3] : (~s_instance(X3,s_Entity) | ~s_instance(X2,s_SetOrClass) | ~s_instance(X2,s_Class) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class) | ~s_instance(X0,s_SetOrClass) | ~s_exhaustiveDecomposition3(X0,X2,X1) | ~s_instance(X3,X0) | s_instance(X3,X2) | s_instance(X3,X1))),
+  inference(flattening,[],[f266837])).
+fof(f266837,plain,(
+  ! [X0,X1,X2,X3] : (~s_instance(X3,s_Entity) | ((~s_instance(X2,s_SetOrClass) | ~s_instance(X2,s_Class) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class) | ~s_instance(X0,s_SetOrClass)) | (~s_exhaustiveDecomposition3(X0,X2,X1) | (~s_instance(X3,X0) | (s_instance(X3,X2) | s_instance(X3,X1))))))),
+  inference(ennf_transformation,[],[f151697])).
+fof(f151697,plain,(
+  ! [X0,X1,X2,X3] : (s_instance(X3,s_Entity) => ((s_instance(X2,s_SetOrClass) & s_instance(X2,s_Class) & s_instance(X1,s_SetOrClass) & s_instance(X1,s_Class) & s_instance(X0,s_Class) & s_instance(X0,s_SetOrClass)) => (s_exhaustiveDecomposition3(X0,X2,X1) => (s_instance(X3,X0) => (s_instance(X3,X2) | s_instance(X3,X1))))))),
+  inference(flattening,[],[f151696])).
+fof(f151696,plain,(
+  ! [X0,X1,X2] : ! [X3] : (s_instance(X3,s_Entity) => ((s_instance(X2,s_SetOrClass) & s_instance(X2,s_Class) & s_instance(X1,s_SetOrClass) & s_instance(X1,s_Class) & s_instance(X0,s_Class) & s_instance(X0,s_SetOrClass)) => (s_exhaustiveDecomposition3(X0,X2,X1) => (s_instance(X3,X0) => (s_instance(X3,X2) | s_instance(X3,X1))))))),
+  inference(rectify,[],[f56583])).
+fof(f56583,axiom,(
+  ! [X0,X14,X12] : ! [X48] : (s_instance(X48,s_Entity) => ((s_instance(X12,s_SetOrClass) & s_instance(X12,s_Class) & s_instance(X14,s_SetOrClass) & s_instance(X14,s_Class) & s_instance(X0,s_Class) & s_instance(X0,s_SetOrClass)) => (s_exhaustiveDecomposition3(X0,X12,X14) => (s_instance(X48,X0) => (s_instance(X48,X12) | s_instance(X48,X14))))))),
+  file('bs.tptp',a56583)).

@@ -1,0 +1,77 @@
+This is an analysis of the inconsistency of the output.tptp, generated
+with the latest relativization attempt (prenex1).  See NOTES.text for
+details on the relativization attempts.
+
+I only got proofs using Vampire.  E either runs out of memory or says
+"Failure: Out of unprocessed clauses!"
+
+Analysing the vamp-consistency.txt proof using IDV, I found this:
+
+Looking backwards:
+
+1. ~ s_instance(s_USFEMA, s_SelfConnectedObject).
+2. ! [X0] : s_instance(X0,s_SelfConnectedObject).
+
+From (1) and (2), we get a contradiction.
+
+Let's analyse each one:
+
+# 1. ~ s_instance(s_USFEMA, s_SelfConnectedObject).
+
+a) s_instance(s_Collection,s_SetOrClass)
+b) s_instance(s_SelfConnectedObject,s_SetOrClass)
+c) s_disjoint(s_Collection,s_SelfConnectedObject)
+d) axiom f6086
+
+(forall (?CLASS2 ?CLASS1)
+ (forall (?INST)
+  (=> (and (instance ?CLASS1 SetOrClass) (instance ?CLASS2 SetOrClass))
+   (=> (disjoint ?CLASS1 ?CLASS2)
+    (not (and (instance ?INST ?CLASS1) (instance ?INST ?CLASS2)))))))
+
+e) s_instance(s_USFEMA, s_Collection)
+
+From (e) (c) (d), we have 1. (USFEMA is a Collection, which is
+disjoint from SelfConnectedObject, so USFEMA is not a
+SelfConnectedObject). 
+
+All this make sense.
+
+# 2. ! [X0] : s_instance(X0,s_SelfConnectedObject).
+
+a) axiom a716
+
+(forall (?PLUG)
+ (exists (?HOLE)
+  (and (instance ?HOLE Hole)
+       (=> (instance ?PLUG Plug) (completelyFills ?PLUG ?HOLE)))))
+
+original SUMO:
+
+(=>
+   (instance ?PLUG Plug)
+   (exists (?HOLE)
+      (completelyFills ?PLUG ?HOLE)))
+
+The Sigma translation is a bit different:
+
+fof(kb_SUMO_2961,axiom,(
+    ! [PLUG] :
+      ( s_instance(PLUG,s_Plug)
+     => ? [HOLE] :
+          ( s_instance(HOLE,s_Entity)
+          & s_completelyFills(PLUG,HOLE) ) ) )).
+
+from a716, we conclude that:
+
+b) ! [X0] : 
+      ( s_instance(sK13(X0),s_Hole)
+      & ( ~ s_instance(X0,s_Plug)
+        | s_completelyFills(X0,sK13(X0)) ) )
+
+due to skolemization and expansion of the implication.  From (b), we
+can extract the following, via conversion to CNF:
+
+c) ! [X] : s_instance(sK13(X),s_Hole)
+
+Which seems wrong.

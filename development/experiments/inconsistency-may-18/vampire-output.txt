@@ -1,0 +1,162 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 4319997 next slice time: 12
+lrs+11_1_br=off:cond=on:er=known:fsr=off:fde=unused:nwc=1:stl=30:sac=on:sdd=off:sfr=on:ssfp=40000:ssfq=1.0:smm=off:ssnc=none:sp=occurrence:urr=on_11 on suo-kif-consistency
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for suo-kif-consistency
+% SZS output start Proof for suo-kif-consistency
+fof(f61348,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f61347,f29992,f49530,f49529,f52529])).
+fof(f52529,plain,(
+  $false | $spl673),
+  inference(unit_resulting_resolution,[],[f27733,f49529,f38650])).
+fof(f38650,plain,(
+  ( ! [X0] : (s_instance(X0,s_IrreflexiveRelation) | ~s_instance(X0,s_AsymmetricRelation)) )),
+  inference(cnf_transformation,[],[f22695])).
+fof(f22695,plain,(
+  ! [X0] : ((~s_instance(X0,s_AsymmetricRelation) | (s_instance(X0,s_AntisymmetricRelation) & s_instance(X0,s_IrreflexiveRelation))) & (~s_instance(X0,s_AntisymmetricRelation) | ~s_instance(X0,s_IrreflexiveRelation) | s_instance(X0,s_AsymmetricRelation)))),
+  inference(flattening,[],[f22694])).
+fof(f22694,plain,(
+  ! [X0] : ((~s_instance(X0,s_AsymmetricRelation) | (s_instance(X0,s_AntisymmetricRelation) & s_instance(X0,s_IrreflexiveRelation))) & ((~s_instance(X0,s_AntisymmetricRelation) | ~s_instance(X0,s_IrreflexiveRelation)) | s_instance(X0,s_AsymmetricRelation)))),
+  inference(nnf_transformation,[],[f11386])).
+fof(f11386,plain,(
+  ! [X0] : (s_instance(X0,s_AsymmetricRelation) <=> (s_instance(X0,s_AntisymmetricRelation) & s_instance(X0,s_IrreflexiveRelation)))),
+  inference(rectify,[],[f5193])).
+fof(f5193,axiom,(
+  ! [X492] : (s_instance(X492,s_AsymmetricRelation) <=> (s_instance(X492,s_AntisymmetricRelation) & s_instance(X492,s_IrreflexiveRelation)))),
+  file('suo-kif-consistency.tptp',a5193)).
+fof(f27733,plain,(
+  s_instance(s_hole_m,s_AsymmetricRelation)),
+  inference(cnf_transformation,[],[f7722])).
+fof(f7722,axiom,(
+  s_instance(s_hole_m,s_AsymmetricRelation)),
+  file('suo-kif-consistency.tptp',a7722)).
+fof(f49529,plain,(
+  ~s_instance(s_hole_m,s_IrreflexiveRelation) | $spl673),
+  inference(cnf_transformation,[],[f49529_D])).
+fof(f49529_D,plain,(
+  ~s_instance(s_hole_m,s_IrreflexiveRelation) <=> ~$spl673),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl673])])).
+fof(f49530,plain,(
+  ( ! [X0] : (s_instance(X0,s_Hole)) ) | $spl674),
+  inference(cnf_transformation,[],[f49530_D])).
+fof(f49530_D,plain,(
+  ( ! [X0] : (s_instance(X0,s_Hole)) ) <=> ~$spl674),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl674])])).
+fof(f29992,plain,(
+  ( ! [X0] : (s_instance(X0,s_Hole) | ~s_instance(s_hole_m,s_IrreflexiveRelation)) )),
+  inference(cnf_transformation,[],[f13322])).
+fof(f13322,plain,(
+  ~s_instance(s_hole_m,s_IrreflexiveRelation) | ! [X0] : (s_instance(X0,s_Hole) & s_instance(X0,s_Hole) & ~s_hole(X0,X0))),
+  inference(flattening,[],[f13321])).
+fof(f13321,plain,(
+  ~s_instance(s_hole_m,s_IrreflexiveRelation) | ! [X0] : ((s_instance(X0,s_Hole) & s_instance(X0,s_Hole)) & ~s_hole(X0,X0))),
+  inference(ennf_transformation,[],[f9076])).
+fof(f9076,plain,(
+  s_instance(s_hole_m,s_IrreflexiveRelation) => ! [X0] : ~((s_instance(X0,s_Hole) & s_instance(X0,s_Hole)) => s_hole(X0,X0))),
+  inference(rectify,[],[f5144])).
+fof(f5144,axiom,(
+  s_instance(s_hole_m,s_IrreflexiveRelation) => ! [X237] : ~((s_instance(X237,s_Hole) & s_instance(X237,s_Hole)) => s_hole(X237,X237))),
+  file('suo-kif-consistency.tptp',a5144)).
+fof(f61347,plain,(
+  $false | $spl674),
+  inference(unit_resulting_resolution,[],[f49530,f57883,f48077])).
+fof(f48077,plain,(
+  ( ! [X0] : (s_hole(X0,sK1950(X0)) | ~s_instance(X0,s_Hole)) )),
+  inference(duplicate_literal_removal,[],[f38740])).
+fof(f38740,plain,(
+  ( ! [X0] : (s_hole(X0,sK1950(X0)) | ~s_instance(X0,s_Hole) | ~s_instance(X0,s_Hole)) )),
+  inference(cnf_transformation,[],[f22745])).
+fof(f22745,plain,(
+  ! [X0] : ((~s_instance(X0,s_Hole) | (s_instance(sK1950(X0),s_SelfConnectedObject) & (~s_instance(X0,s_Hole) | s_hole(X0,sK1950(X0))))) & (! [X1] : (~s_instance(X1,s_SelfConnectedObject) | (s_instance(X0,s_Hole) & ~s_hole(X0,X1))) | s_instance(X0,s_Hole)))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK1950])],[f22744])).
+fof(f22744,plain,(
+  ! [X0] : ((~s_instance(X0,s_Hole) | ? [X2] : (s_instance(X2,s_SelfConnectedObject) & (~s_instance(X0,s_Hole) | s_hole(X0,X2)))) & (! [X1] : (~s_instance(X1,s_SelfConnectedObject) | (s_instance(X0,s_Hole) & ~s_hole(X0,X1))) | s_instance(X0,s_Hole)))),
+  inference(rectify,[],[f22743])).
+fof(f22743,plain,(
+  ! [X0] : ((~s_instance(X0,s_Hole) | ? [X1] : (s_instance(X1,s_SelfConnectedObject) & (~s_instance(X0,s_Hole) | s_hole(X0,X1)))) & (! [X1] : (~s_instance(X1,s_SelfConnectedObject) | (s_instance(X0,s_Hole) & ~s_hole(X0,X1))) | s_instance(X0,s_Hole)))),
+  inference(nnf_transformation,[],[f17244])).
+fof(f17244,plain,(
+  ! [X0] : (s_instance(X0,s_Hole) <=> ? [X1] : (s_instance(X1,s_SelfConnectedObject) & (~s_instance(X0,s_Hole) | s_hole(X0,X1))))),
+  inference(ennf_transformation,[],[f11406])).
+fof(f11406,plain,(
+  ! [X0] : (s_instance(X0,s_Hole) <=> ? [X1] : (s_instance(X1,s_SelfConnectedObject) & (s_instance(X0,s_Hole) => s_hole(X0,X1))))),
+  inference(rectify,[],[f7724])).
+fof(f7724,axiom,(
+  ! [X135] : (s_instance(X135,s_Hole) <=> ? [X110] : (s_instance(X110,s_SelfConnectedObject) & (s_instance(X135,s_Hole) => s_hole(X135,X110))))),
+  file('suo-kif-consistency.tptp',a7724)).
+fof(f57883,plain,(
+  ( ! [X0,X1] : (~s_hole(X0,X1)) ) | $spl674),
+  inference(unit_resulting_resolution,[],[f49530,f40970])).
+fof(f40970,plain,(
+  ( ! [X0,X1] : (~s_hole(X1,X0) | ~s_instance(X0,s_Hole)) )),
+  inference(cnf_transformation,[],[f18104])).
+fof(f18104,plain,(
+  ! [X0,X1] : ((s_instance(X1,s_Hole) & s_instance(X0,s_SelfConnectedObject) & ~s_hole(X1,X0)) | ~s_instance(X0,s_Hole))),
+  inference(flattening,[],[f18103])).
+fof(f18103,plain,(
+  ! [X0,X1] : (((s_instance(X1,s_Hole) & s_instance(X0,s_SelfConnectedObject)) & ~s_hole(X1,X0)) | ~s_instance(X0,s_Hole))),
+  inference(ennf_transformation,[],[f11882])).
+fof(f11882,plain,(
+  ! [X0,X1] : (((s_instance(X1,s_Hole) & s_instance(X0,s_SelfConnectedObject)) => s_hole(X1,X0)) => ~s_instance(X0,s_Hole))),
+  inference(flattening,[],[f11881])).
+fof(f11881,plain,(
+  ! [X0,X1] : (((s_instance(X1,s_Hole) & s_instance(X0,s_SelfConnectedObject)) => s_hole(X1,X0)) => ~s_instance(X0,s_Hole))),
+  inference(rectify,[],[f7725])).
+fof(f7725,axiom,(
+  ! [X110,X135] : (((s_instance(X135,s_Hole) & s_instance(X110,s_SelfConnectedObject)) => s_hole(X135,X110)) => ~s_instance(X110,s_Hole))),
+  file('suo-kif-consistency.tptp',a7725)).
+% SZS output end Proof for suo-kif-consistency
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 12108
+% Passive clauses: 22922
+% Generated clauses: 36725
+% Final active clauses: 12002
+% Final passive clauses: 10353
+% Input formulas: 8931
+% Initial clauses: 22752
+% 
+% Pure predicates: 38
+% 
+% Duplicate literals: 2199
+% Trivial inequalities: 2
+% Fw demodulations: 40
+% Condensations: 48
+% 
+% Simple tautologies: 892
+% Equational tautologies: 160
+% Forward subsumptions: 10830
+% 
+% Unit resulting resolution: 11639
+% Factoring: 1
+% 
+% Split clauses: 381
+% Split components: 762
+% SAT solver clauses: 489
+% SAT solver unit clauses: 107
+% SAT solver binary clauses: 381
+% SAT solver learnt clauses: 1
+% 
+% Sat splits: 381
+% Sat splitting refutations: 107
+% 
+% TWLsolver clauses: 488
+% TWLsolver calls for satisfiability: 408
+% 
+% Memory used [KB]: 46310
+% Time elapsed: 0.439 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 36847
+clauses deleted: 8973
+naming_introduced_defs: 1038
+ssat_new_components: 450
+ssat_reused_components: 312
+ssat_sat_clauses: 488
+total_frozen: 6963
+-----------------------------
+% ------------------------------
+% Success in time 0.652 s

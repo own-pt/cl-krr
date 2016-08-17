@@ -1,0 +1,562 @@
+-*- org -*-
+
+* Passes
+
+  - Rename variable arity predicates
+  - Expand variables in the predicate position
+  - Expand @ROW variables
+  - Quoting
+  - quantify free variables   
+  - Convert to pre-TPTP s-expressions
+  - Emit TPTP
+  
+* Static analysis
+
+  - A @ROW variable cannot appear multiple times on the same
+    statement.
+
+* Terminology
+
+  SetOrClass is named "types" in the code.  Probably need to review
+  that.
+
+* Variables in the Predicate Position
+
+SUO-KIF allows variables in the predicate position, such as (?REL ?V1
+?V2).  Technically, if the value of ?REL ranges over the universe of
+all possible relations, then SUO_KIF would be higher-order. However,
+in a practical reasoning system, ?REL needs only to range over the set
+of relations already defined in the knowledge base, which is first
+order. Most reasoning systems however take the broader interpretation,
+and will disallow variables in the predicate position. One solution
+for this is to pre-process every statement to add a “dummy” relation,
+such as (holds ?REL ?V1 ?V2), and then remove the dummy relation in
+proof output. This is the solution taken in the Sigma knowledge
+engineering system (Pease, 2003).
+
+From "Ontology": This transformation however resulted in poor
+performance for theorem provers that give special indexing priority to
+the predicate when searching the proof space.  another approach was to
+instantiate every predicate variable with all possible values for
+predicates in the knowledge base that meet the type restrictions that
+may be implied by the axiom. [...] One limitation however is that the
+semantics of predicate variables is thereby limited to the set of
+predicates existing in the knowledge base, rather than ranging over
+all possible predicates.
+
+(=> (and (instance ?FUNCTION UnitOfMeasureMultiplier) (instance ?UNIT CompositeUnitOfMeasure)) (instance (?FUNCTION ?UNIT) CompositeUnitOfMeasure))
+
+>>>
+
+(=> (and (instance TeraFn UnitOfMeasureMultiplier) (instance ?UNIT CompositeUnitOfMeasure)) (instance (TeraFn ?UNIT) CompositeUnitOfMeasure))
+(=> (and (instance MilliFn UnitOfMeasureMultiplier) (instance ?UNIT CompositeUnitOfMeasure)) (instance (MilliFn ?UNIT) CompositeUnitOfMeasure))
+(=> (and (instance KiloFn UnitOfMeasureMultiplier) (instance ?UNIT CompositeUnitOfMeasure)) (instance (KiloFn ?UNIT) CompositeUnitOfMeasure))
+(=> (and (instance MegaFn UnitOfMeasureMultiplier) (instance ?UNIT CompositeUnitOfMeasure)) (instance (MegaFn ?UNIT) CompositeUnitOfMeasure))
+(=> (and (instance MicroFn UnitOfMeasureMultiplier) (instance ?UNIT CompositeUnitOfMeasure)) (instance (MicroFn ?UNIT) CompositeUnitOfMeasure))
+(=> (and (instance PicoFn UnitOfMeasureMultiplier) (instance ?UNIT CompositeUnitOfMeasure)) (instance (PicoFn ?UNIT) CompositeUnitOfMeasure))
+(=> (and (instance NanoFn UnitOfMeasureMultiplier) (instance ?UNIT CompositeUnitOfMeasure)) (instance (NanoFn ?UNIT) CompositeUnitOfMeasure))
+(=> (and (instance GigaFn UnitOfMeasureMultiplier) (instance ?UNIT CompositeUnitOfMeasure)) (instance (GigaFn ?UNIT) CompositeUnitOfMeasure))
+
+---
+
+(=> (and (instance ?FUNCTION UnitOfMeasureMultiplier) (instance ?UNIT NonCompositeUnitOfMeasure)) (instance (?FUNCTION ?UNIT) NonCompositeUnitOfMeasure))
+
+>>>
+
+(=> (and (instance MicroFn UnitOfMeasureMultiplier) (instance ?UNIT NonCompositeUnitOfMeasure)) (instance (MicroFn ?UNIT) NonCompositeUnitOfMeasure))
+(=> (and (instance KiloFn UnitOfMeasureMultiplier) (instance ?UNIT NonCompositeUnitOfMeasure)) (instance (KiloFn ?UNIT) NonCompositeUnitOfMeasure))
+(=> (and (instance PicoFn UnitOfMeasureMultiplier) (instance ?UNIT NonCompositeUnitOfMeasure)) (instance (PicoFn ?UNIT) NonCompositeUnitOfMeasure))
+(=> (and (instance GigaFn UnitOfMeasureMultiplier) (instance ?UNIT NonCompositeUnitOfMeasure)) (instance (GigaFn ?UNIT) NonCompositeUnitOfMeasure))
+(=> (and (instance MilliFn UnitOfMeasureMultiplier) (instance ?UNIT NonCompositeUnitOfMeasure)) (instance (MilliFn ?UNIT) NonCompositeUnitOfMeasure))
+(=> (and (instance TeraFn UnitOfMeasureMultiplier) (instance ?UNIT NonCompositeUnitOfMeasure)) (instance (TeraFn ?UNIT) NonCompositeUnitOfMeasure))
+(=> (and (instance NanoFn UnitOfMeasureMultiplier) (instance ?UNIT NonCompositeUnitOfMeasure)) (instance (NanoFn ?UNIT) NonCompositeUnitOfMeasure))
+(=> (and (instance MegaFn UnitOfMeasureMultiplier) (instance ?UNIT NonCompositeUnitOfMeasure)) (instance (MegaFn ?UNIT) NonCompositeUnitOfMeasure))
+
+(see also file PROBLEMS-PRED-EXPANSION.txt)
+
+* Variables in the Predicate Position: issues
+
+** Expanding multiple variables to the same values?
+
+Example:
+
+(=>
+   (and
+      (subrelation ?REL1 ?REL2)
+      (instance ?REL1 Predicate)
+      (instance ?REL2 Predicate)
+      (?REL1 @ROW))
+   (?REL2 @ROW))
+
+nothing tell us that ?REL1 must be different than ?REL2.  So we end up
+with a strange (useless) formula such as
+
+(=>
+ (and (subrelation contraryAttribute contraryAttribute)
+      (instance contraryAttribute Predicate)
+      (instance contraryAttribute Predicate) (contraryAttribute @ROW))
+ (contraryAttribute @ROW)) 
+
+* Row Variables
+
+While the unbounded implementation the existence of row variables
+would make SUO-KIF technically an "infinitary logic", with associated
+issues in efficient implementation, a bounded interpretation does keep
+SUO-KIF out of first order.  One option is to treat row variables as
+"macros", which would get expanded automatically so
+
+(=>
+ (and
+  (subrelation ?REL1 ?REL2)
+  (holds ?REL1 @ROW))
+ (holds ?REL2 @ROW))
+
+would become
+
+(=>
+ (and
+  (subrelation ?REL1 ?REL2)
+  (holds ?REL1 ?ARG1))
+ (holds ?REL2 ?ARG1))
+
+(=>
+ (and
+  (subrelation ?REL1 ?REL2)
+  (holds ?REL1 ?ARG1 ?ARG2))
+ (holds ?REL2 ?ARG1 ?ARG2))
+
+etc.
+
+Note that this "macro" style expansion has the problem that unlike the
+true semantics of row variables, that it is not infinite. If the
+interpretation only expands to five variables, that there is a problem
+if the knowledge engineer uses a relation with six.  This is the
+solution taken again the Sigma knowledge engineering system (Pease,
+2003).
+
+Implementation notes:
+
+1. Collect all row variables in a formula.  Row variables may be
+associated with multiple relations.
+
+(=> (and (contraryAttribute @ROW1) 
+         (identicalListItems (ListFn @ROW1) (ListFn @ROW2)))
+    (contraryAttribute @ROW2))
+
+Here, @ROW1 and @ROW2 are associated to contraryAttribute and ListFn.
+
+2. Given the multiple relations associated with each row variable,
+   check their maximum and minimum arities for expansion.  
+
+   If a row variable is associated with a relation that has a definite
+   number of parameters (fixed arity), then minimum == maximum
+   expansion and this will be a simple substitution operation.  For
+   example:
+
+   (located @ROW) ==> (located ?ROW1 ?ROW2)
+
+   because located is a fixed arity relation (arity = 2).
+
+   * Also, if row variables are used mixed with regular variables,
+     only the necessary expansion should be made.  Using the same
+     example above:
+
+     (located ?P @ROW) ==> (located ?P ?ROW1)
+
+   If a row variable is associated with a variable arity relation (or
+   the arity of the relation cannot be infered), then multiple
+   expansions of row must be executed, up to a predefined number (7 in
+   Sigma).  This needs to happen for the combination of all variables.
+
+   Notice that the same restriction outlined in * above also needs to
+   happen for variable arity expansions.
+
+* Row variables alternative implementation
+
+Instead of setting an arbitrary limit, we could scan all the KIF
+formulas to decide the maximum arity for each variable arity relation.
+
+* Quoting
+
+The original version of KIF had an explicit single quote for denoting
+uninterpreted structures that were essentially terms. This was used to
+state complex expressions which could be read by humans, without
+incurring the computational cost of becoming higher- order. For
+example (believes Mary (likes John Sue)) is a higher-order expression,
+because the second argument to ‘believes’ is not a term. (believes
+Mary ‘(likes John Sue)) is first order in the original KIF because the
+single quote character converts the following list into a term. This
+however is not strictly necessary since a reasoning system can apply a
+quote automatically when needed. SUO-KIF allows the former expression
+and leaves it to a reasoning system how it wishes to handle it. If a
+higher-order interpretation is possible, then that is allowed. If not,
+then the reasoning system is responsible for quoting any argument to a
+relation which is not a term. Sigma employs the latter approach.
+
+HOL
+===
+(=>
+   (frequency ?PROC ?TIME1)
+   (forall (?TIME2)
+      (=>
+         (duration ?TIME2 ?TIME1)
+         (exists (?POSITION)
+            (and
+               (temporalPart ?POSITION ?TIME2)
+               (holdsDuring ?POSITION (exists (?INST) (instance ?INST ?PROC))))))))
+
+=>
+
+fof(kb_SUMO_2283,axiom,(( ( ! [V__TIME1,V__PROC] : ((s__instance(V__TIME1,s__TimeDuration) & s__subclass(V__PROC,s__Process)) => (s__frequency(V__PROC,V__TIME1) => (! [V__TIME2] : ((s__instance(V__TIME2,s__TimeInterval)) => (s__duration(V__TIME2,V__TIME1) => (? [V__POSITION] : (s__instance(V__POSITION,s__TimePosition) & (s__temporalPart(V__POSITION,V__TIME2) & s__holdsDuring(V__POSITION,'(? [V__INST] : s__instance(V__INST,V__PROC))'))))))))) ) ))).
+
+* Symbol clash with Common Lisp
+
+CL-USER> (princ (mapcar #'cdr (sort '((1 . FUNCTION) (2 . SETORCLASS)) #'< :key #'car)))
+#'SETORCLASS
+
+* Relation names as parameters
+
+E doesn't like this:
+
+fof(a1,axiom,instance(instance, binarypredicate)).
+
+it will complain that instance is being defined as a 0-argument and
+binary function.  Sigma adds a prefix:
+
+fof(a1,axiom,(( s__instance(s__instance__m,s__BinaryPredicate) ))).
+
+* Relativize variables
+
+Generate additional preconditions so that formulas are considered
+only if the type requirements of their variables is being
+met. Example from Pease, A., and Sutcliffe, G., (2007) First Order
+Reasoning on a Large Ontology, in Proceedings of the CADE-21
+workshop on Empirically Successful Automated Reasoning on Large
+Theories (ESARLT).
+
+(=>
+ (and
+  (instance ?TRANSFER Transfer)
+  (agent ?TRANSFER ?AGENT)
+  (patient ?TRANSFER ?PATIENT))
+ (not
+  (equal ?AGENT ?PATIENT)))
+
+is transformed into:
+
+(=>
+ (and
+  (instance ?AGENT Agent)
+  (instance ?PATIENT Object))
+ (=>
+  (and
+   (instance ?TRANSFER Transfer)
+   (agent ?TRANSFER ?AGENT)
+   (patient ?TRANSFER ?PATIENT))
+  (not
+   (equal ?AGENT ?PATIENT))))
+
+Note that a naïve implementation of this approach would be to state
+
+(=>
+ (and
+  (instance ?PATIENT Object)
+   (instance ?TRANSFER Process)
+    (instance ?TRANSFER Instance)
+     (instance ?AGENT Agent))
+ (=>
+  (and
+   (instance ?TRANSFER Transfer)
+   (agent ?TRANSFER ?AGENT)
+   (patient ?TRANSFER ?PATIENT))
+  (not
+   (equal ?AGENT ?PATIENT))))
+ 
+but since ?TRANSFER is already constrained by the first clause of the original rule,
+those additional preconditions are not necessary.
+
+* Relativize variables: issues and discussion
+
+Notice that this implementation has a flaw where the type restrictions
+may not make sense on the formula given.  Here's an example (email
+thread with Adam Pease and Alexandre Rademaker)
+
+** Fabricio:
+
+I understand that a SUO-KIF statement such as (never mind whether it
+makes sense or not):
+
+(spouse ?X ?Y)
+
+by way of restricting ?X and ?Y to the domain of spouse, would be
+transformed into:
+
+(=> (and (instance ?X Human) (instance ?Y Human))
+      (spouse ?X ?Y))
+
+(omitting the universal quantification for brevity).
+
+That makes perfect sense.  However, what about the formula:
+
+(or (spouse ?X ?Y) (geometricPart ?X ?Y))
+
+(also nonsensical)
+
+My admittedly naive interpretation of the relativization process would
+generate a new formula such as:
+
+(=> (and (instance ?X Human)
+         (instance ?Y Human)
+         (instance ?X GeometricPart)
+         (instance ?Y GeometricPart))
+    (or (spouse ?X ?Y) (geometricPart ?X ?Y))
+
+** Adam:
+
+In Sigma we take advantage of the fact that SUMO is a real-world
+theory.  Substituting the set of defined predicates into predicate
+variables is one case, where we lose an "infinitary logic"
+interpretation (where a predicate variable can have the value of any
+predicate, including ones that have yet to be defined) and reduce the
+statements to strict first order.
+
+You could always just add the examples you state below to SUMO and see
+what Sigma does.  I suspect that you may be right about the result.
+However, I don't believe it has any effect in practice because we do
+not have statements with variables that are not in rules.
+
+Using Sigma as a general environment for theorem proving would be a
+problem, since it's not completely general.  Using it as an
+environment for theorem proving with SUMO however does not present the
+same problems.  It does matter that SUMO doesn't have nonsensical
+statements such as the examples you've provided.
+
+** Alexandre:
+
+Hum, so the SUMO language do have constraints not explicit
+defined. That is, a user must know how the transformation from SUMO to
+FOL (TPTP) works to proper formalize concepts in SUMO.
+
+** Adam:
+
+Having a clear specification of SUMO terms that are required for the
+proper functioning of Sigma would be a good idea.  We could expand the
+static list of reserved predicates mentioned at the top of
+Formula.java, as well as documenting them fully.
+
+** Fabricio:
+
+OK, I just tried with Sigma and indeed the TPTP conversion (after a
+little reformatting for clarity) is as suspected:
+
+! [X,Y] : ((instance(X,Human) &
+            instance(X,GeometricFigure) &
+            instance(Y,Human) &
+            instance(Y,GeometricFigure))
+     => (spouse(X,Y) | geometricPart(X,Y)))
+
+(I wrongly used GeometricPart in my quote above -- it should be indeed
+GeometricFigure.)
+
+* Relativize variables: preliminary ideas of an alternate implementation
+
+Some preliminary ideas on how to address this involve doing an
+"algebra of types" based on the formula.
+
+So for:
+
+(or (spouse ?X ?Y) (geometricPart ?X ?Y))
+
+we would have a "prelude" that handles the types of the variables like:
+
+(or (and (sort-of ?X Human) (sort-of ?Y Human))
+    (and (sort-of ?X GeometricFigure) (sort-of ?Y GeometricFigure)))
+
+The OR is based on the formula itself.  The AND comes from the usage
+of ?X ?Y as parameters of "spouse" ad "geometricPart".
+
+SORT-OF is a predicate that states that ?X is of a certain sort,
+similar to the usage of INSTANCE.
+
+Still need to hash this out more, and how this would relate to
+variables in the predicate position.
+* Relativize variables: implementation notes
+
+This is an analysis of the Sigma implementation.  The implementation
+is in FormulaPreprocessor.java, method addTypeRestrictions.
+
+It looks like it recurse down the formula to add restrictions to
+UNQUANTIFIED variables.
+
+Example (nonsensical formula):
+
+(and
+  (forall (?A ?B)
+    (subclass ?A ?B))
+  (subclass ?X ?Y))
+
+===>
+
+(=>
+  (and
+    (instance ?X SetOrClass)
+    (instance ?Y SetOrClass))
+  (and
+    (forall (?A ?B)
+      (=>
+        (and
+          (instance ?A SetOrClass)
+          (instance ?B SetOrClass))
+        (subclass ?A ?B)))
+    (subclass ?X ?Y)))
+
+1. First it collects all unquantified variables and generate the
+   restrictions.
+
+2. Next, recurse down the formula and restrict all subformulas that
+   appear immediatelly under a quantifier.  Avoid restricting things
+   that have already been explicitly have been already restricted
+   explicitly.
+
+   If the quantifier is existential then use (and <restrictions>
+   formula).
+
+   If the quantifier is universal then use (=> <restriction> formula).
+
+   add-type-restrictions-recurse (f):
+
+     if (is-logical-operator (car f)):
+        if (is-quantifier (car f)):
+           quantified-variables = (second f) ;; (forall (?X ?Y) <...>)
+           ;; remove explicitly defined types
+           create either AND or => type restriction
+           recurse down the arguments of the quantifier
+        else:
+           recurse down the arguments of the logical operator
+     else:
+        recurse on (car f)
+        recurse on (cdr f)
+
+The Lisp implementation was moved to
+sigma-relativization-implementation.lisp
+   
+* Relativize variables: "bottom ups"
+
+This relativization attempt tried to move the restrictions as close to
+the formulas as possible.  See issue #34.
+
+The Lisp implementation was moved to
+bottoms-up-relativization-implementation.lisp
+
+* Relativize variables: "prenex1" (first attempt)
+
+This relativization attempt first, converts all formulas do prenex
+normal form, then use all restrictions right after the quantifiers of
+the formula.  All explicit instantiations on the formula are excluded
+from the restrictions. Latest checkin where this was implemented is in
+97d6d87f.
+
+This implementation generated an inconsistency, analyzed in
+experiments/inconsistency-may-23.
+
+* Relativize variables: "prenex2" (second attempt)
+
+This is a variant of the "prenex1" method.  Following the Sigma
+implementation and only add restrictions for the antecedent of the
+formula.
+
+* Semantics of SUO-KIF
+
+** Correspondence with Ian Horrocks and Peter Patel-Schneier
+
+*** Fabricio:
+
+Hello Ian, Peter,
+
+I was reading your "Three Theses of Representation in the Semantic
+Web" paper and noticed footnote 5 regarding the transformation of the
+higher order features from SKIF to FOL.  The note mentions that there
+appears to be a more complex translation that does not have the issues
+with the naive "holds" translation, but no further details.  Do you
+recall where I could find more information on this?
+
+*** Ian:
+
+I think that the SKIF/CL guys (Pat Hayes and others) wrote one or more
+papers about it. That’s all I can remember I’m afraid.
+
+*** Peter:
+
+I  think that this has to do with fixing the problems that arise if the
+formulae require a too-small domain.
+Ian probably has a better description of the enhanced mapping, but I seem to
+remember that the idea is to have a predicate that distinguishes between the
+entities that correspond to SKIF predicates and entities that are somehow
+"real".  The mapping then makes sure that quantification is over just the
+second for first-order quantifiers or over everything for SKIF quantifiers.
+
+*** Peter:
+
+Showing that SKIF can be embedded in FOL is easy using the simple holds
+transformation.
+
+Define H(f) for f a SKIF formula as follows
+1/ introduce fresh predicates hi for 0<=i<=maximum arity of formulae in f
+1/ introduce fresh functions vi for 0<=i<=maximum arity of terms in f
+2/ rewrite P(t1,...,tn) in f as hn(P,H(t1),...,H(tn))
+2/ rewrite g(t1,...,tn) in f as vn(g,H(t1),...,H(tn))
+
+Then for f a SKIF formula f is SKIF satisfiable iff H(f) is FOL satisfiable.
+Just transform between FOL interpretations i and SKIF interpretations by
+letting i(hn)(eP,e1,...,en) = eP(e1,...,en) and
+i(vn)(eg,e1,...,en) = eP(e1,...,en) for all eP,eg,e1,...,en
+
+The trick for the other embedding is to relativize quantifiers and functions
+(including constants).
+
+Define transformation S(f) as follows
+1/ introduce a fresh predicate Q (domain objects that quantifiers can see)
+2/ rewrite Ax a as Ax Qx -> a
+3/ rewrite Ex a as Ex Qx & a
+4/ for each function g of arity n in f conjoin
+   Ax1...Axn Qx1 & .... & Qxn -> Q(g(x1,...,xn)) to the formula
+Then if f is first-order satisfiable on a domain of size n then S(f) is
+first-order satisfiable on a domain of size m for any m>n, including
+infinite m.  Just add in extra domain elements where Q is false.
+
+Then for f a FOL formula f is FOL satisfiable iff S(f) is SKIF satisfiable.
+To go from left to right just pick an infinite FOL model for f and interpret
+predicates and functions as different domain elements where Q is false.
+To go from right to left just remove domain elements where Q is false and
+let i(P)(e1,...,en) = i+(i+(P))(e1,...,en) and
+i(g)(e1,...,en) = i+(i+(g))(e1,...,en)
+
+** Correspondence with Christopher Menzel
+
+*** Fabricio:
+
+[...]
+
+I can't get my head around the section that describes the "holds"
+language that is used to describe the conversion from the flexible
+SKIF syntax to FOL.  In the paper you mention that this is a "familiar
+trick", so perhaps it is described elsewhere, with examples?  It is
+not clear to me how to fit the translated "holds language" into the
+traditional FOL syntax, as described in, say, Enderton (it looks like
+we would still have predicates as terms?), nor the relationships
+between "hold" and "app".  I am likely missing something painfully
+obvious but I can't get past the tunnel vision that I formed so far...
+
+Also, on Horrocks & Patel-Schenier. Three Theses of Representation in
+the Semantic Web, they show a counter-example that breaks down this
+translation (section 2.2), but mention in passing in a footnote that
+there is a more complex translation that "appears to solve these
+problems", with no further clarifications or references -- do you have
+this newer translation written down somewhere?
+
+*** Christopher:
+
+I think both of your questions are addressed in Section 7 of the
+attached paper (which is currently undergoing pretty heavy revisions,
+but the formal stuff is all sound, I think). [see file
+"logic-single-type-cm.pdf"]

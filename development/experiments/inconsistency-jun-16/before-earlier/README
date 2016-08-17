@@ -1,0 +1,53 @@
+Finally an inconsistency that is not related to subrelation.
+
+bs.tptp: TPTP used to find the inconsistency
+
+v4: proof found by Vampire 4.0 (downloaded from CASC 25)
+
+v4-new: proof found by Vampire 4.0 (commit 910b0ff on 2016-04-14
+14:40:26 +0200) (downloaded from
+http://www.cse.chalmers.se/~laurako/links/FOTP.html)
+
+Proof analysis:
+
+(partition TimePosition TimeInterval TimePoint)
+
+(=>
+   (and
+      (instance ?PREDICT Predicting)
+      (patient ?PREDICT ?FORMULA))
+   (exists (?TIME)
+      (and
+         (holdsDuring ?TIME ?FORMULA)
+         (or
+            (before ?TIME (WhenFn ?PREDICT))
+            (earlier ?TIME (WhenFn ?PREDICT))))))
+
+/*
+(forall (?FORMULA ?PREDICT)
+ (exists (?TIME)
+  (and (and (instance ?TIME TimePoint) 
+            (instance ?TIME TimeInterval))
+       (=> (instance ?FORMULA Formula)
+        (=>
+         (and (instance ?PREDICT Predicting)
+              (patient ?PREDICT ?FORMULA))
+         (and (holdsDuring ?TIME ?FORMULA)
+              (or (before ?TIME (WhenFn ?PREDICT))
+                  (earlier ?TIME (WhenFn ?PREDICT)))))))))
+*/
+fof(a59460,axiom,! [FORMULA,PREDICT] : (? [TIME] : (((s_instance(TIME, s_TimePoint) & s_instance(TIME, s_TimeInterval)) & (s_instance(FORMULA, s_Formula) => ((s_instance(PREDICT, s_Predicting) & s_patient(PREDICT, FORMULA)) => (s_holdsDuring(TIME, FORMULA) & (s_before(TIME, s_WhenFn(PREDICT)) | s_earlier(TIME, s_WhenFn(PREDICT)))))))))).
+
+The problem is the the relativization added a restriction:
+
+(and (instance ?TIME TimePoint) 
+     (instance ?TIME TimeInterval))
+
+But TimePoint and TimeInterval are disjoint.
+
+(domain holdsDuring 1 TimePosition)
+(domain before 1 TimePoint)
+
+This is the translation from Sigma:
+
+fof(kb_SUMO_663,axiom,(( ( ! [V__FORMULA,V__PREDICT] : ((s__instance(V__FORMULA,s__Formula)) => ((s__instance(V__PREDICT,s__Predicting) & s__patient(V__PREDICT,V__FORMULA)) => (? [V__TIME] : (s__instance(V__TIME,s__TimeInterval) & s__instance(V__TIME,s__TimePoint) & (s__holdsDuring(V__TIME,V__FORMULA) & (s__before(V__TIME,s__WhenFn(V__PREDICT)) | s__earlier(V__TIME,s__WhenFn(V__PREDICT)))))))) ) ))).

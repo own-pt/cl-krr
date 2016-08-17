@@ -1,0 +1,26 @@
+While attempting to understand the proof found by Vampire and E (see
+banana-slug-jun-13), we started to get suspicious of the proof there.
+So we tried to prove $false and see what happens.  Vampire found a
+proof in about 3 minutes, and this experiments was created to analyze
+that proof (vampire.txt). 
+
+///
+
+Found the issue, opened an issue to SUMO, copy here for convenience:
+
+https://github.com/ontologyportal/sumo/issues/13
+
+(instance eventPartlyLocated PartialValuedRelation)
+(instance partlyLocated TotalValuedRelation)
+(subrelation eventPartlyLocated partlyLocated)
+
+following the same deductions in #7 we find that:
+
+(instance eventPartlyLocated TotalValuedRelation)
+
+but:
+
+(partition Relation TotalValuedRelation PartialValuedRelation)
+
+which, by way, of disjointDecomposition means that no relation can be
+TotalValuedRelation and PartialValuedRelation.

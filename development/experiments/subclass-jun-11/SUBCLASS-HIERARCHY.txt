@@ -1,0 +1,91 @@
+Date: Mon, 30 May 2016 11:33:10 -0300
+Subject: Caching subclass hierarchy (was Re: Possible inconsistency in SUMO (penetrates vs meetsSpatially))
+From: Fabricio Chalub
+To: Adam Pease
+Cc: Alexandre Rademaker
+
+Hi Adam,
+
+> Caching the subclass hierarchy has a disproportionally large
+> effect, for example.
+
+I'm forking the discussion at this point since I am experiencing this
+very problem.  Can you clarify what you mean by caching the subclass
+hierarchy?  Do you mean generating pregenerating "(instance X Cx)" for
+all superclasses of [C1..Cn] of C?  Can you give me some pointers
+where in Sigma this happens?
+
+In my experiments, with our transformation:
+
+fof(x1, axiom, s_instance(john, s_HumanAdult)).
+fof(q, conjecture, s_instance(john, s_Mammal)).
+
+E proves this very quickly (a couple of seconds)
+
+but
+
+fof(x1, axiom, s_instance(john, s_HumanAdult)).
+fof(q, conjecture, s_instance(john, s_Vertebrate)).
+
+Has E trying to prove it for over 20 minutes and so far nothing.
+Vampire at least proved in 6 minutes, which is also surprisingly slow
+for such an apparently simple transitivity check.
+
+I suspect this may be caused by the fact that both Vertebrate and its
+subclass WarmBloodedVertebrate are also involved in other axioms such
+as disjoint and partition that may complicate the search space.
+
+Do you think this cache would help in this case?
+
+Thanks,
+Fabricio
+
+-----------------------------------------
+
+Date: Mon, 30 May 2016 11:37:25 -0300
+Subject: Re: Caching subclass hierarchy (was Re: Possible inconsistency in SUMO (penetrates vs meetsSpatially))
+From: Fabricio Chalub
+To: Adam Pease
+Cc: Alexandre Rademaker
+
+>
+> Do you think this cache would help in this case?
+>
+
+Answering my own question, if the cache is as I expect, this would
+help this particular case since we would eventually generate a
+statement such as:
+
+(instance john Vertebrate)
+
+which trivially satisfies the conjecture.  So I guess I would like to
+confirm the exact workings of the subclass caching...
+
+[]s,
+Fabricio
+
+-----------------------------------------
+
+Subject: Re: Caching subclass hierarchy (was Re: Possible inconsistency in SUMO (penetrates vs meetsSpatially))
+To: Fabricio Chalub
+Cc: Alexandre Rademaker
+From: Adam Pease
+Date: Mon, 30 May 2016 07:55:07 -0700
+
+Hi Fabricio,
+   Yes, caching is essential for good performance, so it's another thing 
+you'll have to implement that Sigma does in order to get equivalent 
+behavior on inference.  For all TransitiveRelation(s) if you have aRbRc 
+you'll need to generate aRc recursively to get the full transitive 
+closure.  It also helps to cache that though to &%instance since it's so 
+common as your example points out.
+
+all the best,
+Adam
+
+-- 
+-------------------
+Adam Pease
+http://www.ontologyportal.org
+http://www.articulatesoftware.com
+http://www.adampease.org

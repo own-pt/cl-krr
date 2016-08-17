@@ -1,0 +1,2019 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 215981 next slice time: 54
+lrs+1002_3_ep=RST:er=known:fsr=off:gs=on:gsaa=from_current:nwc=1:sas=minisat:stl=30:sd=2:ss=axioms:st=5.0:sos=on:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence_51 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 51171
+% Time elapsed: 0.203 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215979 next slice time: 48
+lrs+1002_2:3_bsr=unit_only:er=known:fde=none:gs=on:gsem=on:nwc=1:sas=minisat:stl=30:sd=1:ss=axioms:st=1.5:sdd=large:sfr=on:ssfp=40000:ssfq=1.4:smm=sco:ssnc=none:sp=reverse_arity_45 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 50404
+% Time elapsed: 0.202 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215977 next slice time: 37
+dis-2_4_cond=fast:ep=RST:er=filter:fde=unused:gs=on:gsem=on:lcm=reverse:nwc=1:sd=3:ss=axioms:sos=on:spl=off:updr=off_35 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 47333
+% Time elapsed: 0.157 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215975 next slice time: 197
+dis-3_10_bsr=unit_only:er=filter:fde=unused:lcm=predicate:nm=64:nwc=1:spl=off:sp=occurrence:updr=off_187 on bs
+% (31895)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 60746
+% Passive clauses: 1759304
+% Extensionality clauses: 114
+% Generated clauses: 3089082
+% Final active clauses: 60735
+% Final passive clauses: 1669336
+% Final extensionality clauses: 114
+% Input formulas: 65896
+% Initial clauses: 67356
+% 
+% Duplicate literals: 25018
+% Trivial inequalities: 126
+% Fw subsumption resolutions: 315182
+% Bw subsumption resolutions: 11
+% Fw demodulations: 221
+% 
+% Simple tautologies: 843
+% Equational tautologies: 346
+% Forward subsumptions: 1027325
+% 
+% Binary resolution: 2682215
+% Factoring: 80
+% Forward superposition: 9
+% Backward superposition: 16
+% Self superposition: 5
+% Equality resolution: 14
+% Fw extensionality resolution: 1152
+% Bw extensionality resolution: 7740
+% 
+% Memory used [KB]: 685703
+% Time elapsed: 19.800 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 3089082
+clauses deleted: 1004319
+-----------------------------
+% ------------------------------
+% remaining time: 215777 next slice time: 49
+ins+11_3_cond=fast:fde=none:igbrr=0.8:igrr=1/16:igrp=200:igrpq=1.05:igs=1003:igwr=on:nm=64:nwc=1:sas=minisat:sd=2:ss=axioms:st=3.0:sos=on:spl=off:updr=off_46 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 1
+% 
+% Memory used [KB]: 50916
+% Time elapsed: 0.200 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215774 next slice time: 29
+dis+2_5:4_fde=none:nwc=1:sd=2:ss=axioms:sos=on:ssfp=40000:ssfq=2.0_27 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 47589
+% Time elapsed: 0.172 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215773 next slice time: 58
+dis+11_4_cond=fast:fsr=off:gs=on:gsaa=from_current:gsem=on:nwc=1:sas=minisat:sd=10:ss=axioms:st=5.0:sos=all:sser=off:ssfp=4000:ssfq=1.0:ssnc=none:sp=occurrence_55 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 51427
+% Time elapsed: 0.204 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215770 next slice time: 23
+lrs+1010_4:1_cond=fast:fsr=off:fde=unused:gs=on:gsem=on:nm=0:nwc=1:sas=minisat:stl=30:sd=2:ss=axioms:st=1.5:sos=on:sac=on:sdd=off:sser=off:sfr=on:ssfp=100000:ssfq=1.4:ssnc=none:sp=occurrence_21 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 50532
+% Time elapsed: 0.198 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215768 next slice time: 131
+dis+11_5_fde=none:gs=on:gsaa=from_current:gsssp=full:lcm=reverse:nwc=1:sas=minisat:ss=axioms:st=1.5:sos=on:ssfp=4000:ssfq=1.2:smm=sco:ssnc=none_124 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 50532
+% Time elapsed: 0.206 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215766 next slice time: 46
+lrs-4_4_cond=fast:fsr=off:fde=unused:gs=on:gsaa=from_current:gsem=off:gsssp=full:lcm=reverse:nwc=1:sas=minisat:stl=30:sd=4:ss=axioms:sos=on:sac=on:ssac=none:sdd=large:sser=off:ssfp=1000:ssfq=1.2:ssnc=none:sp=reverse_arity_43 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 47845
+% Time elapsed: 0.162 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215764 next slice time: 50
+ott+11_8:1_cond=fast:gs=on:gsem=off:nwc=1:nicw=on:sd=2:ss=axioms:st=1.2:sos=all:sscc=on:sfr=on:ssfp=100000:ssfq=1.0:smm=sco:ssnc=none:urr=on_47 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 50532
+% Time elapsed: 0.202 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215762 next slice time: 131
+ott+1011_10_cond=fast:fde=none:gsp=input_only:gs=on:gsssp=full:nwc=1:sas=minisat:sd=3:ss=axioms:sos=all:spl=off:sp=occurrence:updr=off_124 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 1
+% 
+% Memory used [KB]: 47717
+% Time elapsed: 0.162 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215761 next slice time: 48
+lrs+1004_2:1_cond=fast:fde=none:gs=on:gsem=off:nwc=1:stl=30:sd=2:ss=axioms:sos=on:spl=off:sp=reverse_arity:updr=off_45 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 47717
+% Time elapsed: 0.159 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215759 next slice time: 70
+ins+11_4_cond=fast:fsr=off:fde=none:gsp=input_only:gs=on:gsem=on:igbrr=0.3:igpr=on:igrr=1/8:igrp=100:igrpq=1.5:igwr=on:nwc=1:sd=1:ss=axioms:st=5.0:sos=all:spl=off:dm=on_66 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% TWLsolver calls for satisfiability: 1
+% 
+% Memory used [KB]: 51811
+% Time elapsed: 0.205 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215757 next slice time: 296
+lrs+4_2:1_ep=R:fde=unused:gs=on:nwc=1:stl=30:sos=all:sac=on:ssac=none:sser=off:sfr=on:ssfp=10000:ssfq=1.2:ssnc=none:sp=occurrence:updr=off_281 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 67145
+% Final active clauses: 67145
+% Input formulas: 65896
+% Initial clauses: 67397
+% 
+% Duplicate literals: 688
+% 
+% Simple tautologies: 252
+% 
+% Memory used [KB]: 226435
+% Time elapsed: 1.154 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 97002
+clauses deleted: 218
+naming_introduced_defs: 41
+-----------------------------
+% ------------------------------
+% remaining time: 215745 next slice time: 103
+lrs-2_5_cond=on:fde=none:lcm=predicate:nwc=1:stl=30:sd=2:ss=axioms:st=3.0:sos=on:sdd=off:ssfp=100000:ssfq=1.4:ssnc=none_98 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 51299
+% Time elapsed: 0.202 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215743 next slice time: 54
+dis+4_3:1_gs=on:nwc=1:sd=1:ss=axioms:sos=all:spl=off:updr=off_51 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 47845
+% Time elapsed: 0.159 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215741 next slice time: 207
+dis+11_2_fde=none:gsp=input_only:gs=on:gsem=on:nwc=1:sd=2:ss=axioms:st=1.2:sos=all:spl=off:sp=reverse_arity:urr=on:updr=off_197 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 50532
+% Time elapsed: 0.200 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215739 next slice time: 142
+lrs-1_2:1_bd=preordered:bsr=on:br=off:cond=on:gs=on:lcm=reverse:nwc=1:stl=30:sd=2:ss=axioms:sos=on:sdd=large:sser=off:ssfp=100000:ssfq=2.0:ssnc=none:sp=occurrence:urr=on:updr=off_135 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 47973
+% Time elapsed: 0.156 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215737 next slice time: 297
+ott+11_24_cond=fast:ep=RST:fsr=off:fde=none:gs=on:lcm=predicate:nm=64:nwc=1:sas=minisat:ss=axioms:st=5.0:sos=all:spl=off:sp=occurrence_282 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 1
+% 
+% Memory used [KB]: 51811
+% Time elapsed: 0.200 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215735 next slice time: 200
+lrs+1_3:1_cond=fast:gsp=input_only:gs=on:gsaa=from_current:gsem=off:nwc=1:stl=30:sd=2:ss=axioms:st=1.2:sos=on:sac=on:sdd=off:sfr=on:ssfp=100000:ssfq=1.2:smm=sco:ssnc=none:sp=reverse_arity_190 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 50788
+% Time elapsed: 0.239 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215733 next slice time: 158
+dis+1003_8:1_bd=off:bs=unit_only:cond=fast:fsr=off:fde=none:gsp=input_only:lcm=reverse:nwc=1:sas=minisat:sos=all:ssac=none:sscc=on:sdd=off:sfr=on:smm=sco:ssnc=none:sp=reverse_arity_150 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 67693
+% Final active clauses: 67693
+% Input formulas: 65896
+% Initial clauses: 68164
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 688
+% Trivial inequalities: 1
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% 
+% SAT solver clauses: 1
+% 
+% Memory used [KB]: 275816
+% Time elapsed: 2.180 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 69444
+clauses deleted: 436
+naming_introduced_defs: 41
+-----------------------------
+% ------------------------------
+% remaining time: 215711 next slice time: 239
+lrs+11_3:2_cond=fast:fsr=off:fde=none:gs=on:nm=0:nwc=1.7:stl=30:sd=2:ss=axioms:st=2.0:spl=off:urr=on_227 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 51171
+% Time elapsed: 0.205 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215709 next slice time: 316
+dis+11_7_300 on bs
+% (31945)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 64446
+% Passive clauses: 75078
+% Generated clauses: 143863
+% Final active clauses: 62146
+% Final passive clauses: 6121
+% Input formulas: 65896
+% Initial clauses: 67354
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 1722
+% Trivial inequalities: 29
+% Fw subsumption resolutions: 2051
+% Fw demodulations: 165
+% Bw demodulations: 1905
+% 
+% Simple tautologies: 281
+% Equational tautologies: 238
+% Forward subsumptions: 4250
+% 
+% Binary resolution: 10280
+% Forward superposition: 2
+% Backward superposition: 8
+% Self superposition: 5
+% Equality resolution: 293
+% 
+% Split clauses: 57573
+% Split components: 253853
+% SAT solver clauses: 62479
+% SAT solver unit clauses: 600
+% SAT solver binary clauses: 1579
+% 
+% Sat splits: 57573
+% Sat splitting refutations: 4001
+% 
+% TWLsolver clauses: 62478
+% TWLsolver calls for satisfiability: 797
+% 
+% Memory used [KB]: 332489
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 266305
+clauses deleted: 498
+naming_introduced_defs: 41
+ssat_new_components: 113259
+ssat_non_splittable_sat_clauses: 904
+ssat_reused_components: 140594
+ssat_sat_clauses: 62478
+total_frozen: 6471
+total_unfrozen: 2222
+unworthy child removed: 12358
+-----------------------------
+% ------------------------------
+% remaining time: 215391 next slice time: 316
+ott+11_8:1_cond=fast:gs=on:gsem=off:igrpq=1.0:nwc=1:nicw=on:sd=2:ss=axioms:st=1.2:sos=all:sscc=on:sfr=on:ssfp=100000:ssfq=1.0:smm=sco:ssnc=none:urr=on_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 50916
+% Time elapsed: 0.207 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215389 next slice time: 316
+lrs+1011_4_cond=fast:gs=on:gsaa=from_current:gsem=off:gsssp=full:igrpq=1.0:nm=0:nwc=1:sas=minisat:sd=3:ss=axioms:st=2.0:sdd=off:sfr=on:ssfp=100000:ssfq=1.2:smm=off:ssnc=none:sp=reverse_arity_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 51299
+% Time elapsed: 0.216 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 215387 next slice time: 1261
+dis+11_4_bsr=unit_only:cond=fast:fde=none:lwlo=on:nm=0:nwc=1.2:spl=off:sp=occurrence_1200 on bs
+% (31957)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 80665
+% Passive clauses: 534572
+% Generated clauses: 615983
+% Final active clauses: 80593
+% Final passive clauses: 26695
+% Input formulas: 65896
+% Initial clauses: 67314
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 1279
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 105480
+% Bw subsumption resolutions: 72
+% Fw demodulations: 2425
+% Condensations: 240
+% 
+% Simple tautologies: 449
+% Equational tautologies: 278
+% Forward subsumptions: 398787
+% 
+% Binary resolution: 432309
+% Forward superposition: 6858
+% Backward superposition: 183
+% Self superposition: 10
+% Equality resolution: 129
+% 
+% Memory used [KB]: 421144
+% Time elapsed: 126.200 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 615983
+clauses deleted: 21370
+-----------------------------
+% ------------------------------
+% remaining time: 214124 next slice time: 316
+lrs+1002_6_ccuc=first:cond=on:fsr=off:igrpq=1.0:nwc=4:nicw=on:sas=minisat:sscc=on:sfr=on:ssfp=40000:ssfq=1.0:smm=sco:ssnc=all_dependent:sp=reverse_arity:urr=ec_only_300 on bs
+% (31995)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Passive clauses: 66897
+% Generated clauses: 141551
+% Final passive clauses: 65546
+% Input formulas: 65896
+% Initial clauses: 67354
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 689
+% Trivial inequalities: 1
+% Fw demodulations: 3390
+% Bw demodulations: 1343
+% Condensations: 123
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% Forward subsumptions: 3673
+% 
+% Split clauses: 57000
+% Split components: 252413
+% SAT solver clauses: 67037
+% SAT solver unit clauses: 7875
+% SAT solver binary clauses: 1487
+% 
+% Sat splits: 57000
+% 
+% Memory used [KB]: 376752
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 269193
+clauses deleted: 439
+naming_introduced_defs: 41
+ssat_dp_conflict: 510
+ssat_dp_conflict_clauses: 510
+ssat_ground_clauses_for_congruence: 9499
+ssat_new_components: 119695
+ssat_non_splittable_introduced_components: 9
+ssat_non_splittable_sat_clauses: 9526
+ssat_reused_components: 142226
+ssat_sat_clauses: 66526
+total_frozen: 8364
+total_unfrozen: 4695
+unworthy child removed: 4781
+-----------------------------
+% ------------------------------
+% remaining time: 213807 next slice time: 316
+ott+1011_4:1_bd=off:bsr=unit_only:cond=fast:fsr=off:fde=none:inw=on:igrpq=1.0:nm=0:nwc=1.1:sas=minisat:sos=on:ssfp=10000:ssfq=1.2:ssnc=none:sp=occurrence_300 on bs
+% (32005)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 38601
+% Final active clauses: 38601
+% Input formulas: 65896
+% Initial clauses: 38646
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 66
+% Trivial inequalities: 1
+% 
+% Simple tautologies: 24
+% Equational tautologies: 21
+% 
+% Memory used [KB]: 200721
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 67360
+clauses deleted: 44
+-----------------------------
+% ------------------------------
+% remaining time: 213490 next slice time: 316
+lrs+4_2:1_ep=R:fde=unused:gs=on:igrpq=1.0:nwc=1:sos=all:sac=on:ssac=none:sser=off:sfr=on:ssfp=10000:ssfq=1.2:ssnc=none:sp=occurrence:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 67145
+% Final active clauses: 67145
+% Input formulas: 65896
+% Initial clauses: 67397
+% 
+% Duplicate literals: 688
+% 
+% Simple tautologies: 252
+% 
+% Memory used [KB]: 227075
+% Time elapsed: 1.343 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 97002
+clauses deleted: 218
+naming_introduced_defs: 41
+-----------------------------
+% ------------------------------
+% remaining time: 213476 next slice time: 316
+lrs+1011_3_bsr=unit_only:cond=on:fsr=off:lwlo=on:nwc=1:sd=3:ss=axioms:st=3.0:spl=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 51811
+% Time elapsed: 0.220 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 213474 next slice time: 316
+lrs+1010_1_bs=unit_only:cond=fast:gs=on:gsem=off:igrpq=1.0:nwc=1:sos=all:spl=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 66883
+% Final active clauses: 66883
+% Input formulas: 65896
+% Initial clauses: 67354
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 688
+% Trivial inequalities: 1
+% Condensations: 122
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% 
+% Memory used [KB]: 301146
+% Time elapsed: 2.581 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 67946
+clauses deleted: 436
+naming_introduced_defs: 41
+-----------------------------
+% ------------------------------
+% remaining time: 213447 next slice time: 316
+dis+1010_3:1_cond=fast:fde=unused:gs=on:igrpq=1.0:nwc=1:sd=2:ss=axioms:sos=on:sdd=large:sser=off:sfr=on:ssfp=100000:ssfq=1.2:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 48357
+% Time elapsed: 0.175 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 213445 next slice time: 316
+lrs+11_5:4_br=off:cond=on:fde=none:gs=on:gsem=on:gsssp=full:igrpq=1.0:nwc=1:sas=minisat:sd=3:ss=axioms:st=3.0:sos=all:sac=on:sser=off:sfr=on:ssfp=1000:ssfq=1.4:ssnc=all:sp=reverse_arity:urr=on:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 51811
+% Time elapsed: 0.218 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 213443 next slice time: 316
+dis-3_10_bsr=unit_only:er=filter:fde=unused:igrpq=1.0:lcm=predicate:nm=64:nwc=1:spl=off:sp=occurrence:updr=off_300 on bs
+% (32034)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 105077
+% Passive clauses: 2154067
+% Extensionality clauses: 203
+% Generated clauses: 3860679
+% Final active clauses: 105066
+% Final passive clauses: 1980793
+% Final extensionality clauses: 203
+% Input formulas: 65896
+% Initial clauses: 67356
+% 
+% Duplicate literals: 119100
+% Trivial inequalities: 126
+% Fw subsumption resolutions: 618885
+% Bw subsumption resolutions: 11
+% Fw demodulations: 221
+% 
+% Simple tautologies: 2292
+% Equational tautologies: 392
+% Forward subsumptions: 1078136
+% 
+% Binary resolution: 3082203
+% Factoring: 102
+% Forward superposition: 9
+% Backward superposition: 16
+% Self superposition: 5
+% Equality resolution: 15
+% Fw extensionality resolution: 2360
+% Bw extensionality resolution: 14692
+% 
+% Memory used [KB]: 869154
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 3860679
+clauses deleted: 1024920
+-----------------------------
+% ------------------------------
+% remaining time: 213126 next slice time: 631
+ott+1010_40_bs=unit_only:cond=fast:nwc=1:sas=minisat:sdd=off:ssfp=10000:ssfq=2.0:smm=sco:ssnc=none:sp=reverse_arity:updr=off_600 on bs
+% (32049)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Passive clauses: 259145
+% Generated clauses: 22268168
+% Final passive clauses: 11525
+% Input formulas: 65896
+% Initial clauses: 67396
+% 
+% Duplicate literals: 688
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 146393
+% Fw demodulations: 12060066
+% Bw demodulations: 113316
+% Condensations: 122
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% Forward subsumptions: 9711753
+% Backward subsumptions: 1547
+% 
+% Split clauses: 55346
+% Split components: 138336
+% SAT solver clauses: 87500
+% SAT solver binary clauses: 27753
+% 
+% Sat splits: 55346
+% Sat splitting refutations: 32153
+% 
+% Memory used [KB]: 7796418
+% Time elapsed: 63.200 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 12566987
+clauses deleted: 605
+naming_introduced_defs: 41
+ssat_new_components: 110498
+ssat_reused_components: 27838
+ssat_sat_clauses: 87499
+total_frozen: 21584872
+total_unfrozen: 9808276
+unworthy child removed: 675833
+-----------------------------
+% ------------------------------
+% remaining time: 212487 next slice time: 316
+dis+11_1024_br=off:ep=RSTC:fsr=off:fde=unused:gs=on:gsaa=from_current:gsem=off:nwc=1:sac=on:ssfp=40000:ssfq=1.0:ssnc=none:sp=reverse_arity:urr=on_300 on bs
+% (32068)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 357045
+% Passive clauses: 4847867
+% Generated clauses: 4962850
+% Final active clauses: 356365
+% Final passive clauses: 4489437
+% Input formulas: 65896
+% Initial clauses: 68374
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 688
+% Global subsumptions: 112674
+% 
+% Simple tautologies: 252
+% Forward subsumptions: 2828
+% 
+% Unit resulting resolution: 4781192
+% 
+% Split clauses: 13
+% Split components: 26
+% SAT solver clauses: 5542738
+% SAT solver unit clauses: 5255493
+% SAT solver binary clauses: 3505
+% SAT solver learnt clauses: 112674
+% SAT solver learnt literals: 675957
+% 
+% Sat splits: 13
+% Sat splitting refutations: 6
+% 
+% TWLsolver clauses: 5317618
+% TWLsolver calls for satisfiability: 17124538
+% 
+% Memory used [KB]: 4450673
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 4991865
+clauses deleted: 1703
+global_subsumption_by_number_of_removed_literals:
+  1: 112312
+  2: 204
+  3: 37
+  4: 1
+  8: 56
+  9: 4
+  11: 56
+  12: 4
+naming_introduced_defs: 41
+ssat_new_components: 25
+ssat_reused_components: 1
+ssat_sat_clauses: 19
+total_frozen: 13
+total_unfrozen: 9
+unworthy child removed: 760
+-----------------------------
+% ------------------------------
+% remaining time: 212167 next slice time: 316
+ins+11_32_br=off:ep=RSTC:inw=on:igbrr=0.9:igrr=1/32:igrp=100:igrpq=2.0:igs=1004:igwr=on:nwc=1:spl=off:urr=on:updr=off:dm=on_300 on bs
+% (32079)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 9921
+% Passive clauses: 463382
+% Generated clauses: 472839
+% Final active clauses: 9921
+% Final passive clauses: 453015
+% Input formulas: 65896
+% Initial clauses: 68420
+% 
+% Duplicate literals: 2064
+% Fw subsumption resolutions: 152
+% 
+% Simple tautologies: 756
+% Forward subsumptions: 9030
+% 
+% Unit resulting resolution: 403798
+% 
+% SAT solver clauses: 319007
+% SAT solver unit clauses: 32476
+% SAT solver binary clauses: 4548
+% 
+% InstGen redundant clauses: 624
+% InstGen kept clauses: 203568
+% InstGen iterations: 84
+% 
+% TWLsolver clauses: 211796
+% TWLsolver calls for satisfiability: 10005
+% 
+% Memory used [KB]: 423447
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 571333
+clauses deleted: 8948
+naming_introduced_defs: 41
+-----------------------------
+% ------------------------------
+% remaining time: 211850 next slice time: 316
+lrs+11_5:1_bd=off:gs=on:gsem=off:gsssp=full:nwc=1.3:sas=minisat:sos=all:sac=on:ssac=none:sscc=model:sdd=large:ssfp=4000:ssfq=1.4:ssnc=none:sp=occurrence_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 66883
+% Final active clauses: 66883
+% Input formulas: 65896
+% Initial clauses: 67354
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 688
+% Trivial inequalities: 1
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 251765
+% Time elapsed: 1.624 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 67824
+clauses deleted: 436
+naming_introduced_defs: 41
+-----------------------------
+% ------------------------------
+% remaining time: 211833 next slice time: 316
+lrs+1002_2:3_bsr=unit_only:er=known:fde=none:gs=on:gsem=on:nwc=1:sas=minisat:sd=1:ss=axioms:st=1.5:sdd=large:sfr=on:ssfp=40000:ssfq=1.4:smm=sco:ssnc=none:sp=reverse_arity_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 51683
+% Time elapsed: 0.225 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 211831 next slice time: 946
+lrs+3_5_bd=preordered:bsr=unit_only:gsp=input_only:gs=on:gsem=on:gsssp=full:lwlo=on:nm=64:nwc=1:sas=minisat:spl=off:sp=occurrence:urr=ec_only:updr=off_900 on bs
+% (32092)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 795830
+% Passive clauses: 1207311
+% Generated clauses: 1522488
+% Final active clauses: 788636
+% Final passive clauses: 46654
+% Input formulas: 65896
+% Initial clauses: 68432
+% Discarded non-redundant clauses: 483455
+% 
+% Duplicate literals: 1576
+% Trivial inequalities: 3
+% Fw subsumption resolutions: 113593
+% Bw subsumption resolutions: 530
+% Fw demodulations: 380
+% Global subsumptions: 2
+% 
+% Simple tautologies: 1896
+% Equational tautologies: 224
+% Forward subsumptions: 197189
+% 
+% Binary resolution: 1335340
+% Factoring: 147
+% Forward superposition: 1913
+% Backward superposition: 222
+% Self superposition: 73
+% Equality resolution: 497
+% 
+% SAT solver clauses: 1207314
+% SAT solver unit clauses: 21251
+% SAT solver binary clauses: 356663
+% 
+% Memory used [KB]: 2138600
+% Time elapsed: 94.700 s
+% ------------------------------
+----  Runtime statistics ----
+binary resolutions skipped for weight limit before building clause: 72195
+binary resolutions skipped for weight limit while building clause: 39140
+clauses created: 1562729
+clauses deleted: 239130
+clauses discarded by weight limit in forward simplification: 534
+clauses discarded from active on weight limit update: 7191
+clauses discarded from passive on weight limit update: 364300
+global_subsumption_by_number_of_removed_literals:
+  1: 2
+superpositions skipped for weight limit while constructing other literals: 25
+superpositions weight skipped after rewrited literal weight retrieval: 47
+superpositions weight skipped after rewriter weight retrieval: 13
+superpositions weight skipped early: 10
+-----------------------------
+% ------------------------------
+% remaining time: 210882 next slice time: 316
+dis+1002_6_ccuc=first:cond=fast:gsp=input_only:gs=on:gsaa=from_current:gsem=on:gsssp=full:nm=64:nwc=2.5:nicw=on:sas=minisat:sos=on:ssac=none:sscc=on:sdd=large:sfr=on:ssfp=100000:ssfq=1.2:smm=off:sp=occurrence:urr=ec_only:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 67961
+% Final active clauses: 67961
+% Input formulas: 65896
+% Initial clauses: 68432
+% 
+% Duplicate literals: 688
+% Trivial inequalities: 1
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 250614
+% Time elapsed: 1.761 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 69978
+clauses deleted: 436
+-----------------------------
+% ------------------------------
+% remaining time: 210864 next slice time: 316
+ott+10_5_cond=fast:fde=none:nwc=1:sas=minisat:sos=all:spl=off:sp=occurrence:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 66925
+% Final active clauses: 66925
+% Input formulas: 65896
+% Initial clauses: 67396
+% 
+% Duplicate literals: 688
+% Trivial inequalities: 1
+% Condensations: 122
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% 
+% Memory used [KB]: 269675
+% Time elapsed: 1.842 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 67988
+clauses deleted: 436
+naming_introduced_defs: 41
+-----------------------------
+% ------------------------------
+% remaining time: 210845 next slice time: 316
+lrs+1002_2:3_br=off:fde=unused:gs=on:gsaa=from_current:gsem=on:gsssp=full:igrpq=1.0:nwc=1:sas=minisat:sac=on:sser=off:sfr=on:ssfp=100000:ssfq=2.0:ssnc=none:sp=reverse_arity:urr=on_300 on bs
+% Refutation not found, non-redundant clauses discarded
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, non-redundant clauses discarded
+
+% Active clauses: 16470
+% Passive clauses: 77745
+% Generated clauses: 216983
+% Final active clauses: 15663
+% Input formulas: 65896
+% Initial clauses: 67354
+% Discarded non-redundant clauses: 62131
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 698
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 112468
+% Fw demodulations: 28
+% Global subsumptions: 2
+% 
+% Simple tautologies: 252
+% Equational tautologies: 222
+% Forward subsumptions: 25767
+% 
+% Unit resulting resolution: 36537
+% Forward superposition: 18
+% Backward superposition: 22
+% Self superposition: 9
+% Equality factoring: 3
+% Equality resolution: 1
+% 
+% Split clauses: 45
+% Split components: 90
+% SAT solver clauses: 77801
+% SAT solver unit clauses: 18054
+% SAT solver binary clauses: 2058
+% 
+% Sat splits: 45
+% Sat splitting refutations: 7
+% 
+% Memory used [KB]: 295389
+% Time elapsed: 28.766 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 217047
+clauses deleted: 25693
+clauses discarded by weight limit in forward simplification: 1
+clauses discarded from active on weight limit update: 801
+clauses discarded from passive on weight limit update: 61219
+global_subsumption_by_number_of_removed_literals:
+  1: 2
+naming_introduced_defs: 41
+ssat_new_components: 84
+ssat_reused_components: 6
+ssat_sat_clauses: 52
+superpositions weight skipped early: 110
+total_frozen: 2
+unworthy child removed: 24
+-----------------------------
+% ------------------------------
+% remaining time: 210557 next slice time: 316
+dis+11_7_fde=none:igrpq=1.0:nm=0:nwc=1:sd=3:ss=axioms:st=2.0:spl=off:sp=occurrence:urr=on:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 51811
+% Time elapsed: 0.203 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 210555 next slice time: 946
+ott+11_5_nwc=1:sd=7:ss=axioms:st=2.0:sac=on:sfr=on:ssfp=40000:ssfq=1.2:ssnc=none_900 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 51939
+% Time elapsed: 0.199 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 210553 next slice time: 316
+lrs+1002_3_ep=RST:er=known:fsr=off:gs=on:gsaa=from_current:igrpq=1.0:nwc=1:sas=minisat:sd=2:ss=axioms:st=5.0:sos=on:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 52707
+% Time elapsed: 0.205 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 210551 next slice time: 316
+lrs+11_8:1_br=off:cond=on:fsr=off:fde=none:gs=on:inw=on:igrpq=1.0:lwlo=on:nwc=1.5:sser=off:ssfp=10000:ssfq=1.2:ssnc=none:sp=reverse_arity:urr=on_300 on bs
+% (32139)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 7075
+% Passive clauses: 120523
+% Generated clauses: 4185381
+% Final active clauses: 6131
+% Final passive clauses: 12194
+% Input formulas: 65896
+% Initial clauses: 67354
+% Discarded non-redundant clauses: 10601
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 689
+% Trivial inequalities: 77
+% Fw demodulations: 2262884
+% Bw demodulations: 64807
+% Condensations: 123
+% Global subsumptions: 56599
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% Forward subsumptions: 1683779
+% 
+% Unit resulting resolution: 101
+% Forward superposition: 14
+% Backward superposition: 62
+% 
+% Split clauses: 55340
+% Split components: 138319
+% SAT solver clauses: 515386
+% SAT solver unit clauses: 176486
+% SAT solver binary clauses: 28697
+% SAT solver learnt clauses: 168798
+% SAT solver learnt literals: 1014920
+% 
+% Sat splits: 55340
+% Sat splitting refutations: 177
+% 
+% TWLsolver clauses: 178464
+% TWLsolver calls for satisfiability: 12545033
+% 
+% Memory used [KB]: 1884788
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 2631685
+clauses deleted: 683
+clauses discarded from passive on weight limit update: 10601
+global_subsumption_by_number_of_removed_literals:
+  1: 1378
+  2: 54642
+  3: 577
+  4: 2
+naming_introduced_defs: 41
+ssat_new_components: 110479
+ssat_reused_components: 27840
+ssat_sat_clauses: 55517
+total_frozen: 3943503
+total_unfrozen: 1622618
+unworthy child removed: 4291755
+-----------------------------
+% ------------------------------
+% remaining time: 210233 next slice time: 316
+lrs-2_5_cond=on:fde=none:igrpq=1.0:lcm=predicate:nwc=1:sd=2:ss=axioms:st=3.0:sos=on:sdd=off:ssfp=100000:ssfq=1.4:ssnc=none_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 52451
+% Time elapsed: 0.237 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 210231 next slice time: 946
+ins+11_5_fde=unused:igpr=on:igrr=1/16:igrp=200:igrpq=1.1:igs=1010:igwr=on:nwc=1:sos=all:spl=off_900 on bs
+% (32157)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 66883
+% Input formulas: 65896
+% Initial clauses: 67354
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 1394
+% Trivial inequalities: 1
+% 
+% Simple tautologies: 41438
+% Equational tautologies: 219
+% 
+% SAT solver clauses: 5883258
+% SAT solver unit clauses: 421012
+% SAT solver binary clauses: 171774
+% SAT solver learnt clauses: 1
+% SAT solver learnt literals: 4
+% 
+% InstGen generated clauses: 1288798
+% InstGen redundant clauses: 971905
+% InstGen kept clauses: 4268929
+% InstGen iterations: 52
+% 
+% TWLsolver clauses: 4029923
+% TWLsolver calls for satisfiability: 66935
+% 
+% Memory used [KB]: 1510977
+% Time elapsed: 94.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 1454607
+clauses deleted: 972040
+naming_introduced_defs: 41
+-----------------------------
+% ------------------------------
+% remaining time: 209282 next slice time: 316
+lrs-1_2:1_bd=preordered:bsr=on:br=off:cond=on:gs=on:lcm=reverse:nwc=1:sd=2:ss=axioms:sos=on:sdd=large:sser=off:ssfp=100000:ssfq=2.0:ssnc=none:sp=occurrence:urr=on:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 48997
+% Time elapsed: 0.194 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 209280 next slice time: 316
+lrs+11_2_br=off:cond=on:fde=none:gs=on:gsaa=full_model:igrpq=1.0:lwlo=on:nwc=2:sas=minisat:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence:urr=on_300 on bs
+% (32187)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Passive clauses: 9206
+% Generated clauses: 148571
+% Final passive clauses: 9206
+% Input formulas: 65896
+% Initial clauses: 67354
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 689
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 80623
+% Condensations: 123
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% Forward subsumptions: 357
+% 
+% Split clauses: 39829
+% Split components: 96836
+% SAT solver clauses: 88866
+% SAT solver unit clauses: 7804
+% SAT solver binary clauses: 23222
+% 
+% Sat splits: 39829
+% 
+% Memory used [KB]: 276583
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 276687
+clauses deleted: 436
+naming_introduced_defs: 41
+ssat_new_components: 79695
+ssat_reused_components: 17141
+ssat_sat_clauses: 39829
+-----------------------------
+% ------------------------------
+% remaining time: 208963 next slice time: 316
+dis-4_2_cond=on:fde=unused:igrpq=1.0:lcm=reverse:nwc=1:sos=on:spl=off:sp=reverse_arity:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 66925
+% Final active clauses: 66925
+% Input formulas: 65896
+% Initial clauses: 67396
+% 
+% Duplicate literals: 689
+% Trivial inequalities: 1
+% Condensations: 123
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% 
+% Memory used [KB]: 265454
+% Time elapsed: 1.829 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 67990
+clauses deleted: 436
+naming_introduced_defs: 41
+-----------------------------
+% ------------------------------
+% remaining time: 208944 next slice time: 316
+dis+1002_4_cond=fast:fde=unused:gsp=input_only:gs=on:gsem=on:igrpq=1.0:nm=64:nwc=1:sas=minisat:sos=on:sscc=model:sser=off:sfr=on:ssfp=4000:ssfq=1.4:ssnc=none:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 67961
+% Final active clauses: 67961
+% Input formulas: 65896
+% Initial clauses: 68432
+% 
+% Duplicate literals: 688
+% Trivial inequalities: 1
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 225412
+% Time elapsed: 1.331 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 69978
+clauses deleted: 436
+-----------------------------
+% ------------------------------
+% remaining time: 208930 next slice time: 631
+lrs+4_40_bsr=unit_only:cond=fast:fde=none:gs=on:gsem=on:igrpq=1.0:lwlo=on:nwc=1.2:sd=7:ss=axioms:st=5.0:ssac=none:sdd=off:sfr=on:ssfp=1000:ssfq=1.1:smm=sco:ssnc=all_dependent:sp=reverse_arity:tha=off_600 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% Memory used [KB]: 53090
+% Time elapsed: 0.222 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 208928 next slice time: 316
+lrs+1010_4:1_cond=fast:fsr=off:fde=unused:gs=on:gsem=on:igrpq=1.0:nm=0:nwc=1:sas=minisat:sd=2:ss=axioms:st=1.5:sos=on:sac=on:sdd=off:sser=off:sfr=on:ssfp=100000:ssfq=1.4:ssnc=none:sp=occurrence_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 52195
+% Time elapsed: 0.216 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 208926 next slice time: 316
+dis+1011_1_cond=on:fde=unused:gs=on:gsaa=from_current:gsem=off:igrpq=1.0:nm=0:nwc=1:sas=minisat:sd=3:ss=axioms:sos=on:ssac=none:sfr=on:ssfp=100000:ssfq=1.2:smm=sco:ssnc=none:sp=occurrence_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 49380
+% Time elapsed: 0.170 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 208924 next slice time: 316
+lrs+1010_8:1_fsr=off:fde=none:gs=on:gsem=on:gsssp=full:igrpq=1.0:nwc=1.1:sas=minisat:sos=all:ssac=none:sfr=on:ssfp=100000:ssfq=1.0:smm=off:ssnc=all:sp=occurrence:updr=off_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Active clauses: 66925
+% Final active clauses: 66925
+% Input formulas: 65896
+% Initial clauses: 67396
+% 
+% Duplicate literals: 688
+% Trivial inequalities: 1
+% 
+% Simple tautologies: 252
+% Equational tautologies: 219
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 270187
+% Time elapsed: 1.803 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 67866
+clauses deleted: 436
+naming_introduced_defs: 41
+-----------------------------
+% ------------------------------
+% remaining time: 208906 next slice time: 316
+dis+11_5_fde=none:gs=on:gsaa=from_current:gsssp=full:igrpq=1.0:lcm=reverse:nwc=1:sas=minisat:ss=axioms:st=1.5:sos=on:ssfp=4000:ssfq=1.2:smm=sco:ssnc=none_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation not found, incomplete strategy
+
+% Input formulas: 65896
+% 
+% Selected by SInE selection: 1
+% SInE iterations: 1
+% 
+% SAT solver clauses: 2
+% 
+% Memory used [KB]: 52323
+% Time elapsed: 0.202 s
+% ------------------------------
+----  Runtime statistics ----
+-----------------------------
+% ------------------------------
+% remaining time: 208903 next slice time: 316
+lrs+1002_4_cond=on:er=filter:fde=unused:gsp=input_only:gs=on:gsssp=full:igrpq=1.0:nwc=10:sas=minisat:spl=off:sp=occurrence_300 on bs
+% (32206)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Active clauses: 16331
+% Passive clauses: 217924
+% Extensionality clauses: 7
+% Generated clauses: 764905
+% Final active clauses: 15871
+% Final passive clauses: 197199
+% Final extensionality clauses: 7
+% Input formulas: 65896
+% Initial clauses: 68164
+% Discarded non-redundant clauses: 5313
+% 
+% Pure predicates: 20
+% 
+% Duplicate literals: 1076
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 117205
+% Global subsumptions: 4
+% 
+% Simple tautologies: 371
+% Equational tautologies: 225
+% Forward subsumptions: 427395
+% 
+% Binary resolution: 577658
+% Forward superposition: 49
+% Backward superposition: 45
+% Self superposition: 6
+% Equality factoring: 3
+% Equality resolution: 48
+% Fw extensionality resolution: 398
+% Bw extensionality resolution: 498
+% 
+% SAT solver clauses: 217930
+% SAT solver unit clauses: 8868
+% SAT solver binary clauses: 145203
+% 
+% Memory used [KB]: 419865
+% Time elapsed: 31.700 s
+% ------------------------------
+----  Runtime statistics ----
+binary resolutions skipped for weight limit before building clause: 143
+binary resolutions skipped for weight limit while building clause: 141
+clauses created: 765880
+clauses deleted: 427791
+clauses discarded by weight limit in forward simplification: 10
+clauses discarded from active on weight limit update: 460
+clauses discarded from passive on weight limit update: 4394
+global_subsumption_by_number_of_removed_literals:
+  1: 4
+naming_introduced_defs: 41
+superpositions skipped for weight limit while constructing other literals: 24
+superpositions weight skipped after rewrited literal weight retrieval: 18
+superpositions weight skipped after rewriter weight retrieval: 122
+superpositions weight skipped early: 1
+-----------------------------
+% ------------------------------
+% remaining time: 208586 next slice time: 316
+ott+1011_3_bd=off:fde=unused:nwc=1.5:spl=off:sp=occurrence:updr=off_300 on bs
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for bs
+% SZS output start Proof for bs
+fof(f475519,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f475518,f274161])).
+fof(f274161,plain,(
+  s_instance(s_wife_m,s_AsymmetricRelation)),
+  inference(cnf_transformation,[],[f60381])).
+fof(f60381,axiom,(
+  s_instance(s_wife_m,s_AsymmetricRelation)),
+  file('bs.tptp',a60381)).
+fof(f475518,plain,(
+  ~s_instance(s_wife_m,s_AsymmetricRelation)),
+  inference(subsumption_resolution,[],[f475517,f271786])).
+fof(f271786,plain,(
+  s_instance(s_wife_m,s_Entity)),
+  inference(cnf_transformation,[],[f64981])).
+fof(f64981,axiom,(
+  s_instance(s_wife_m,s_Entity)),
+  file('bs.tptp',a64981)).
+fof(f475517,plain,(
+  ~s_instance(s_wife_m,s_Entity) | ~s_instance(s_wife_m,s_AsymmetricRelation)),
+  inference(resolution,[],[f475514,f456374])).
+fof(f456374,plain,(
+  ( ! [X2] : (~s_instance(X2,s_SymmetricRelation) | ~s_instance(X2,s_Entity) | ~s_instance(X2,s_AsymmetricRelation)) )),
+  inference(resolution,[],[f456298,f277380])).
+fof(f277380,plain,(
+  ( ! [X0] : (s_instance(X0,s_AntisymmetricRelation) | ~s_instance(X0,s_AsymmetricRelation)) )),
+  inference(cnf_transformation,[],[f268747])).
+fof(f268747,plain,(
+  ! [X0] : ((~s_instance(X0,s_AsymmetricRelation) | (s_instance(X0,s_AntisymmetricRelation) & s_instance(X0,s_IrreflexiveRelation))) & (~s_instance(X0,s_AntisymmetricRelation) | ~s_instance(X0,s_IrreflexiveRelation) | s_instance(X0,s_AsymmetricRelation)))),
+  inference(flattening,[],[f268746])).
+fof(f268746,plain,(
+  ! [X0] : ((~s_instance(X0,s_AsymmetricRelation) | (s_instance(X0,s_AntisymmetricRelation) & s_instance(X0,s_IrreflexiveRelation))) & ((~s_instance(X0,s_AntisymmetricRelation) | ~s_instance(X0,s_IrreflexiveRelation)) | s_instance(X0,s_AsymmetricRelation)))),
+  inference(nnf_transformation,[],[f66273])).
+fof(f66273,plain,(
+  ! [X0] : (s_instance(X0,s_AsymmetricRelation) <=> (s_instance(X0,s_AntisymmetricRelation) & s_instance(X0,s_IrreflexiveRelation)))),
+  inference(rectify,[],[f56267])).
+fof(f56267,axiom,(
+  ! [X19] : (s_instance(X19,s_AsymmetricRelation) <=> (s_instance(X19,s_AntisymmetricRelation) & s_instance(X19,s_IrreflexiveRelation)))),
+  file('bs.tptp',a56267)).
+fof(f456298,plain,(
+  ( ! [X3] : (~s_instance(X3,s_AntisymmetricRelation) | ~s_instance(X3,s_SymmetricRelation) | ~s_instance(X3,s_Entity)) )),
+  inference(subsumption_resolution,[],[f456297,f274379])).
+fof(f274379,plain,(
+  s_instance(s_SymmetricRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f60474])).
+fof(f60474,axiom,(
+  s_instance(s_SymmetricRelation,s_SetOrClass)),
+  file('bs.tptp',a60474)).
+fof(f456297,plain,(
+  ( ! [X3] : (~s_instance(X3,s_SymmetricRelation) | ~s_instance(X3,s_AntisymmetricRelation) | ~s_instance(s_SymmetricRelation,s_SetOrClass) | ~s_instance(X3,s_Entity)) )),
+  inference(subsumption_resolution,[],[f456258,f272100])).
+fof(f272100,plain,(
+  s_instance(s_AntisymmetricRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f57900])).
+fof(f57900,axiom,(
+  s_instance(s_AntisymmetricRelation,s_SetOrClass)),
+  file('bs.tptp',a57900)).
+fof(f456258,plain,(
+  ( ! [X3] : (~s_instance(X3,s_SymmetricRelation) | ~s_instance(X3,s_AntisymmetricRelation) | ~s_instance(s_AntisymmetricRelation,s_SetOrClass) | ~s_instance(s_SymmetricRelation,s_SetOrClass) | ~s_instance(X3,s_Entity)) )),
+  inference(resolution,[],[f332323,f269356])).
+fof(f269356,plain,(
+  s_disjoint(s_SymmetricRelation,s_AntisymmetricRelation)),
+  inference(cnf_transformation,[],[f56242])).
+fof(f56242,axiom,(
+  s_disjoint(s_SymmetricRelation,s_AntisymmetricRelation)),
+  file('bs.tptp',a56242)).
+fof(f332323,plain,(
+  ( ! [X2,X0,X1] : (~s_disjoint(X1,X0) | ~s_instance(X2,X1) | ~s_instance(X2,X0) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_Entity)) )),
+  inference(cnf_transformation,[],[f261794])).
+fof(f261794,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_Entity) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X0,s_SetOrClass) | ~s_disjoint(X1,X0) | ~s_instance(X2,X1) | ~s_instance(X2,X0))),
+  inference(flattening,[],[f261793])).
+fof(f261793,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_Entity) | ((~s_instance(X1,s_SetOrClass) | ~s_instance(X0,s_SetOrClass)) | (~s_disjoint(X1,X0) | (~s_instance(X2,X1) | ~s_instance(X2,X0)))))),
+  inference(ennf_transformation,[],[f147971])).
+fof(f147971,plain,(
+  ! [X0,X1,X2] : (s_instance(X2,s_Entity) => ((s_instance(X1,s_SetOrClass) & s_instance(X0,s_SetOrClass)) => (s_disjoint(X1,X0) => ~(s_instance(X2,X1) & s_instance(X2,X0)))))),
+  inference(flattening,[],[f147970])).
+fof(f147970,plain,(
+  ! [X0,X1] : ! [X2] : (s_instance(X2,s_Entity) => ((s_instance(X1,s_SetOrClass) & s_instance(X0,s_SetOrClass)) => (s_disjoint(X1,X0) => ~(s_instance(X2,X1) & s_instance(X2,X0)))))),
+  inference(rectify,[],[f27884])).
+fof(f27884,axiom,(
+  ! [X6,X7] : ! [X46] : (s_instance(X46,s_Entity) => ((s_instance(X7,s_SetOrClass) & s_instance(X6,s_SetOrClass)) => (s_disjoint(X7,X6) => ~(s_instance(X46,X7) & s_instance(X46,X6)))))),
+  file('bs.tptp',a27884)).
+fof(f475514,plain,(
+  s_instance(s_wife_m,s_SymmetricRelation)),
+  inference(subsumption_resolution,[],[f475512,f271788])).
+fof(f271788,plain,(
+  s_instance(s_wife_m,s_Relation)),
+  inference(cnf_transformation,[],[f64979])).
+fof(f64979,axiom,(
+  s_instance(s_wife_m,s_Relation)),
+  file('bs.tptp',a64979)).
+fof(f475512,plain,(
+  s_instance(s_wife_m,s_SymmetricRelation) | ~s_instance(s_wife_m,s_Relation)),
+  inference(resolution,[],[f475429,f465847])).
+fof(f465847,plain,(
+  s_subrelation(s_wife_m,s_relative_m)),
+  inference(subsumption_resolution,[],[f465845,f271788])).
+fof(f465845,plain,(
+  s_subrelation(s_wife_m,s_relative_m) | ~s_instance(s_wife_m,s_Relation)),
+  inference(resolution,[],[f464912,f269480])).
+fof(f269480,plain,(
+  s_subrelation(s_wife_m,s_spouse_m)),
+  inference(cnf_transformation,[],[f60380])).
+fof(f60380,axiom,(
+  s_subrelation(s_wife_m,s_spouse_m)),
+  file('bs.tptp',a60380)).
+fof(f464912,plain,(
+  ( ! [X67] : (~s_subrelation(X67,s_spouse_m) | s_subrelation(X67,s_relative_m) | ~s_instance(X67,s_Relation)) )),
+  inference(subsumption_resolution,[],[f464911,f272621])).
+fof(f272621,plain,(
+  s_instance(s_relative_m,s_Relation)),
+  inference(cnf_transformation,[],[f64689])).
+fof(f64689,axiom,(
+  s_instance(s_relative_m,s_Relation)),
+  file('bs.tptp',a64689)).
+fof(f464911,plain,(
+  ( ! [X67] : (s_subrelation(X67,s_relative_m) | ~s_subrelation(X67,s_spouse_m) | ~s_instance(X67,s_Relation) | ~s_instance(s_relative_m,s_Relation)) )),
+  inference(subsumption_resolution,[],[f464755,f272709])).
+fof(f272709,plain,(
+  s_instance(s_spouse_m,s_Relation)),
+  inference(cnf_transformation,[],[f64652])).
+fof(f64652,axiom,(
+  s_instance(s_spouse_m,s_Relation)),
+  file('bs.tptp',a64652)).
+fof(f464755,plain,(
+  ( ! [X67] : (s_subrelation(X67,s_relative_m) | ~s_subrelation(X67,s_spouse_m) | ~s_instance(X67,s_Relation) | ~s_instance(s_spouse_m,s_Relation) | ~s_instance(s_relative_m,s_Relation)) )),
+  inference(resolution,[],[f448532,f269469])).
+fof(f269469,plain,(
+  s_subrelation(s_spouse_m,s_relative_m)),
+  inference(cnf_transformation,[],[f60318])).
+fof(f60318,axiom,(
+  s_subrelation(s_spouse_m,s_relative_m)),
+  file('bs.tptp',a60318)).
+fof(f448532,plain,(
+  ( ! [X2,X0,X1] : (~s_subrelation(X1,X2) | s_subrelation(X0,X2) | ~s_subrelation(X0,X1) | ~s_instance(X0,s_Relation) | ~s_instance(X1,s_Relation) | ~s_instance(X2,s_Relation)) )),
+  inference(subsumption_resolution,[],[f335241,f273434])).
+fof(f273434,plain,(
+  s_instance(s_subrelation_m,s_TransitiveRelation)),
+  inference(cnf_transformation,[],[f64431])).
+fof(f64431,axiom,(
+  s_instance(s_subrelation_m,s_TransitiveRelation)),
+  file('bs.tptp',a64431)).
+fof(f335241,plain,(
+  ( ! [X2,X0,X1] : (s_subrelation(X0,X2) | ~s_subrelation(X1,X2) | ~s_subrelation(X0,X1) | ~s_instance(s_subrelation_m,s_TransitiveRelation) | ~s_instance(X0,s_Relation) | ~s_instance(X1,s_Relation) | ~s_instance(X2,s_Relation)) )),
+  inference(cnf_transformation,[],[f266277])).
+fof(f266277,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_Relation) | ~s_instance(X1,s_Relation) | ~s_instance(X0,s_Relation) | ~s_instance(s_subrelation_m,s_TransitiveRelation) | ~s_subrelation(X0,X1) | ~s_subrelation(X1,X2) | s_subrelation(X0,X2))),
+  inference(flattening,[],[f266276])).
+fof(f266276,plain,(
+  ! [X0,X1,X2] : ((~s_instance(X2,s_Relation) | ~s_instance(X1,s_Relation) | ~s_instance(X0,s_Relation)) | (~s_instance(s_subrelation_m,s_TransitiveRelation) | ((~s_subrelation(X0,X1) | ~s_subrelation(X1,X2)) | s_subrelation(X0,X2))))),
+  inference(ennf_transformation,[],[f151290])).
+fof(f151290,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,s_Relation) & s_instance(X1,s_Relation) & s_instance(X0,s_Relation)) => (s_instance(s_subrelation_m,s_TransitiveRelation) => ((s_subrelation(X0,X1) & s_subrelation(X1,X2)) => s_subrelation(X0,X2))))),
+  inference(rectify,[],[f56410])).
+fof(f56410,axiom,(
+  ! [X289,X290,X291] : ((s_instance(X291,s_Relation) & s_instance(X290,s_Relation) & s_instance(X289,s_Relation)) => (s_instance(s_subrelation_m,s_TransitiveRelation) => ((s_subrelation(X289,X290) & s_subrelation(X290,X291)) => s_subrelation(X289,X291))))),
+  file('bs.tptp',a56410)).
+fof(f475429,plain,(
+  ( ! [X14] : (~s_subrelation(X14,s_relative_m) | s_instance(X14,s_SymmetricRelation) | ~s_instance(X14,s_Relation)) )),
+  inference(resolution,[],[f474856,f274115])).
+fof(f274115,plain,(
+  s_instance(s_relative_m,s_SymmetricRelation)),
+  inference(cnf_transformation,[],[f60317])).
+fof(f60317,axiom,(
+  s_instance(s_relative_m,s_SymmetricRelation)),
+  file('bs.tptp',a60317)).
+fof(f474856,plain,(
+  ( ! [X2,X1] : (~s_instance(X2,s_SymmetricRelation) | s_instance(X1,s_SymmetricRelation) | ~s_subrelation(X1,X2) | ~s_instance(X1,s_Relation)) )),
+  inference(subsumption_resolution,[],[f474854,f274379])).
+fof(f474854,plain,(
+  ( ! [X2,X1] : (s_instance(X1,s_SymmetricRelation) | ~s_instance(X2,s_SymmetricRelation) | ~s_subrelation(X1,X2) | ~s_instance(X1,s_Relation) | ~s_instance(s_SymmetricRelation,s_SetOrClass)) )),
+  inference(resolution,[],[f474829,f335521])).
+fof(f335521,plain,(
+  ( ! [X2,X0,X1] : (~s_subclass(X0,s_InheritableRelation) | s_instance(X2,X0) | ~s_instance(X1,X0) | ~s_subrelation(X2,X1) | ~s_instance(X2,s_Relation) | ~s_instance(X0,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f266773])).
+fof(f266773,plain,(
+  ! [X0,X1,X2] : (~s_instance(X0,s_SetOrClass) | ~s_instance(X2,s_Relation) | ~s_subrelation(X2,X1) | ~s_instance(X1,X0) | ~s_subclass(X0,s_InheritableRelation) | s_instance(X2,X0))),
+  inference(flattening,[],[f266772])).
+fof(f266772,plain,(
+  ! [X0,X1,X2] : ((~s_instance(X0,s_SetOrClass) | ~s_instance(X2,s_Relation)) | ((~s_subrelation(X2,X1) | ~s_instance(X1,X0) | ~s_subclass(X0,s_InheritableRelation)) | s_instance(X2,X0)))),
+  inference(ennf_transformation,[],[f151638])).
+fof(f151638,plain,(
+  ! [X0,X1,X2] : ((s_instance(X0,s_SetOrClass) & s_instance(X2,s_Relation)) => ((s_subrelation(X2,X1) & s_instance(X1,X0) & s_subclass(X0,s_InheritableRelation)) => s_instance(X2,X0)))),
+  inference(rectify,[],[f27793])).
+fof(f27793,axiom,(
+  ! [X0,X10,X11] : ((s_instance(X0,s_SetOrClass) & s_instance(X11,s_Relation)) => ((s_subrelation(X11,X10) & s_instance(X10,X0) & s_subclass(X0,s_InheritableRelation)) => s_instance(X11,X0)))),
+  file('bs.tptp',a27793)).
+fof(f474829,plain,(
+  s_subclass(s_SymmetricRelation,s_InheritableRelation)),
+  inference(subsumption_resolution,[],[f474812,f274379])).
+fof(f474812,plain,(
+  ~s_instance(s_SymmetricRelation,s_SetOrClass) | s_subclass(s_SymmetricRelation,s_InheritableRelation)),
+  inference(resolution,[],[f474753,f269666])).
+fof(f269666,plain,(
+  s_subclass(s_SymmetricRelation,s_BinaryRelation)),
+  inference(cnf_transformation,[],[f56241])).
+fof(f56241,axiom,(
+  s_subclass(s_SymmetricRelation,s_BinaryRelation)),
+  file('bs.tptp',a56241)).
+fof(f474753,plain,(
+  ( ! [X3] : (~s_subclass(X3,s_BinaryRelation) | ~s_instance(X3,s_SetOrClass) | s_subclass(X3,s_InheritableRelation)) )),
+  inference(subsumption_resolution,[],[f474729,f272006])).
+fof(f272006,plain,(
+  s_instance(s_BinaryRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f57313])).
+fof(f57313,axiom,(
+  s_instance(s_BinaryRelation,s_SetOrClass)),
+  file('bs.tptp',a57313)).
+fof(f474729,plain,(
+  ( ! [X3] : (~s_subclass(X3,s_BinaryRelation) | ~s_instance(X3,s_SetOrClass) | ~s_instance(s_BinaryRelation,s_SetOrClass) | s_subclass(X3,s_InheritableRelation)) )),
+  inference(resolution,[],[f465060,f269669])).
+fof(f269669,plain,(
+  s_subclass(s_BinaryRelation,s_InheritableRelation)),
+  inference(cnf_transformation,[],[f56121])).
+fof(f56121,axiom,(
+  s_subclass(s_BinaryRelation,s_InheritableRelation)),
+  file('bs.tptp',a56121)).
+fof(f465060,plain,(
+  ( ! [X182,X183] : (~s_subclass(X182,s_InheritableRelation) | ~s_subclass(X183,X182) | ~s_instance(X183,s_SetOrClass) | ~s_instance(X182,s_SetOrClass) | s_subclass(X183,s_InheritableRelation)) )),
+  inference(resolution,[],[f448533,f272033])).
+fof(f272033,plain,(
+  s_instance(s_InheritableRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f57337])).
+fof(f57337,axiom,(
+  s_instance(s_InheritableRelation,s_SetOrClass)),
+  file('bs.tptp',a57337)).
+fof(f448533,plain,(
+  ( ! [X2,X0,X1] : (~s_instance(X2,s_SetOrClass) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | s_subclass(X0,X2)) )),
+  inference(subsumption_resolution,[],[f335242,f275452])).
+fof(f275452,plain,(
+  s_instance(s_subclass_m,s_TransitiveRelation)),
+  inference(cnf_transformation,[],[f63424])).
+fof(f63424,axiom,(
+  s_instance(s_subclass_m,s_TransitiveRelation)),
+  file('bs.tptp',a63424)).
+fof(f335242,plain,(
+  ( ! [X2,X0,X1] : (s_subclass(X0,X2) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f266279])).
+fof(f266279,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X0,s_SetOrClass) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_subclass(X0,X1) | ~s_subclass(X1,X2) | s_subclass(X0,X2))),
+  inference(flattening,[],[f266278])).
+fof(f266278,plain,(
+  ! [X0,X1,X2] : ((~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X0,s_SetOrClass)) | (~s_instance(s_subclass_m,s_TransitiveRelation) | ((~s_subclass(X0,X1) | ~s_subclass(X1,X2)) | s_subclass(X0,X2))))),
+  inference(ennf_transformation,[],[f151291])).
+fof(f151291,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,s_SetOrClass) & s_instance(X1,s_SetOrClass) & s_instance(X0,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X0,X1) & s_subclass(X1,X2)) => s_subclass(X0,X2))))),
+  inference(rectify,[],[f56397])).
+fof(f56397,axiom,(
+  ! [X289,X290,X291] : ((s_instance(X291,s_SetOrClass) & s_instance(X290,s_SetOrClass) & s_instance(X289,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X289,X290) & s_subclass(X290,X291)) => s_subclass(X289,X291))))),
+  file('bs.tptp',a56397)).
+% SZS output end Proof for bs
+% ------------------------------
+% Version: Vampire 4.0 CASC-25 Entry
+% Termination reason: Refutation
+
+% Active clauses: 32168
+% Passive clauses: 77431
+% Generated clauses: 206255
+% Final active clauses: 32168
+% Final passive clauses: 45263
+% Input formulas: 65896
+% Initial clauses: 67396
+% 
+% Duplicate literals: 1505
+% Trivial inequalities: 1
+% Fw subsumption resolutions: 121711
+% 
+% Simple tautologies: 295
+% Equational tautologies: 250
+% Forward subsumptions: 5431
+% 
+% Binary resolution: 13279
+% Forward superposition: 1788
+% Backward superposition: 776
+% Self superposition: 138
+% Equality factoring: 1
+% Equality resolution: 31
+% 
+% Memory used [KB]: 233215
+% Time elapsed: 7.008 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 206255
+clauses deleted: 5551
+naming_introduced_defs: 41
+-----------------------------
+% ------------------------------
+% Success in time 748.388 s

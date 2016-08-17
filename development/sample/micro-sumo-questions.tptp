@@ -1,0 +1,2 @@
+fof(q1, question, s_subclass(s_BinaryPredicate, s_Relation)).
+fof(q2, question, s_instance(s_subclass_m, s_TransitiveRelation)).

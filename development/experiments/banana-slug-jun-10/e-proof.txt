@@ -1,0 +1,76 @@
+# SinE strategy is gf600_h_gu_R05_F100_L20000
+# Trying AutoSched0 for 146 seconds
+# AutoSched0-Mode selected heuristic G_E___208_C18_F1_SE_CS_SP_PS_S0YP
+# and selection function SelectMaxLComplexAvoidPosPred.
+#
+# Presaturation interreduction done
+# No success with AutoSched0
+# Trying AutoSched1 for 71 seconds
+# AutoSched1-Mode selected heuristic G_E___207_C18_F1_AE_CS_SP_PI_PS_S0S
+# and selection function SelectComplexG.
+#
+# Presaturation interreduction done
+
+# Proof found!
+# SZS status Theorem
+# SZS output start CNFRefutation.
+fof(c_0_0, axiom, (![X1]:(s_instance(X1,s_Class)<=>s_subclass(X1,s_Entity))), file('bs.tptp', a217567)).
+fof(c_0_1, axiom, (![X6]:![X4]:![X5]:((s_instance(X4,s_SetOrClass)&s_instance(X5,s_SetOrClass))=>((s_subclass(X5,X4)&s_instance(X6,X5))=>s_instance(X6,X4)))), file('bs.tptp', a15)).
+fof(c_0_2, axiom, (![X14]:![X15]:![X13]:(((s_instance(X13,s_Class)&s_instance(X15,s_Class))&s_instance(X14,s_Class))=>(s_partition3(X14,X13,X15)<=>(s_exhaustiveDecomposition3(X14,X13,X15)&s_disjointDecomposition3(X14,X13,X15))))), file('bs.tptp', a217527)).
+fof(c_0_3, axiom, (s_subclass(s_Vertebrate,s_Entity)), file('bs.tptp', b3)).
+fof(c_0_4, axiom, (s_subclass(s_Invertebrate,s_Entity)), file('bs.tptp', b5)).
+fof(c_0_5, axiom, (s_subclass(s_Animal,s_Entity)), file('bs.tptp', b6)).
+fof(c_0_6, axiom, (s_instance(s_Animal,s_SetOrClass)), file('bs.tptp', a229640)).
+fof(c_0_7, axiom, (![X365]:?[X67]:(s_instance(X67,s_Object)&((s_instance(X365,s_Animal)&~((s_instance(X67,s_SpinalColumn)&s_part(X67,X365))))=>~(s_instance(X365,s_Vertebrate))))), file('bs.tptp', a229642)).
+fof(c_0_8, axiom, (![X1]:![X15]:![X13]:![X49]:(s_instance(X49,s_Entity)=>((((((s_instance(X13,s_SetOrClass)&s_instance(X13,s_Class))&s_instance(X15,s_SetOrClass))&s_instance(X15,s_Class))&s_instance(X1,s_Class))&s_instance(X1,s_SetOrClass))=>(s_exhaustiveDecomposition3(X1,X13,X15)=>(s_instance(X49,X1)=>(s_instance(X49,X13)|s_instance(X49,X15))))))), file('bs.tptp', a218501)).
+fof(c_0_9, axiom, (s_partition3(s_Animal,s_Vertebrate,s_Invertebrate)), file('bs.tptp', a222753)).
+fof(c_0_10, axiom, (s_instance(s_Entity,s_SetOrClass)), file('bs.tptp', a217714)).
+fof(c_0_11, axiom, (![X737]:![X1063]:?[X1064]:((s_instance(X737,s_Vertebrate)=>(s_instance(X737,s_Animal)&(s_component(X1064,X737)&s_instance(X1064,s_SpinalColumn))))&((s_instance(X737,s_Animal)&(s_component(X1063,X737)&s_instance(X1063,s_SpinalColumn)))=>s_instance(X737,s_Vertebrate)))), file('bs.tptp', a225444)).
+fof(c_0_12, axiom, (s_instance(s_Vertebrate,s_SetOrClass)), file('bs.tptp', a222783)).
+fof(c_0_13, axiom, (s_instance(s_Invertebrate,s_SetOrClass)), file('bs.tptp', a222770)).
+fof(c_0_14, axiom, (s_instance(s_BananaSlug10_1,s_Animal)), file('bs.tptp', a229641)).
+fof(c_0_15, conjecture, (s_instance(s_BananaSlug10_1,s_Invertebrate)), file('bs.tptp', q1)).
+fof(c_0_16, axiom, (![X1063]:(s_instance(X1063,s_Object)=>~((s_instance(X1063,s_SpinalColumn)&s_part(X1063,s_BananaSlug10_1))))), file('bs.tptp', a229643)).
+fof(c_0_17, plain, (![X2]:![X3]:((~s_instance(X2,s_Class)|s_subclass(X2,s_Entity))&(~s_subclass(X3,s_Entity)|s_instance(X3,s_Class)))), inference(shift_quantors,[status(thm)],[inference(variable_rename,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_0])])])])).
+fof(c_0_18, plain, (![X7]:![X8]:![X9]:((~s_instance(X8,s_SetOrClass)|~s_instance(X9,s_SetOrClass))|((~s_subclass(X9,X8)|~s_instance(X7,X9))|s_instance(X7,X8)))), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_1])])).
+fof(c_0_19, plain, (![X16]:![X17]:![X18]:((((s_exhaustiveDecomposition3(X16,X18,X17)|~s_partition3(X16,X18,X17))|((~s_instance(X18,s_Class)|~s_instance(X17,s_Class))|~s_instance(X16,s_Class)))&((s_disjointDecomposition3(X16,X18,X17)|~s_partition3(X16,X18,X17))|((~s_instance(X18,s_Class)|~s_instance(X17,s_Class))|~s_instance(X16,s_Class))))&(((~s_exhaustiveDecomposition3(X16,X18,X17)|~s_disjointDecomposition3(X16,X18,X17))|s_partition3(X16,X18,X17))|((~s_instance(X18,s_Class)|~s_instance(X17,s_Class))|~s_instance(X16,s_Class))))), inference(distribute,[status(thm)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_2])])])).
+cnf(c_0_20, plain, (s_instance(X1,s_Class)|~s_subclass(X1,s_Entity)), inference(split_conjunct,[status(thm)],[c_0_17])).
+cnf(c_0_21, plain, (s_subclass(s_Vertebrate,s_Entity)), inference(split_conjunct,[status(thm)],[c_0_3])).
+cnf(c_0_22, plain, (s_subclass(s_Invertebrate,s_Entity)), inference(split_conjunct,[status(thm)],[c_0_4])).
+cnf(c_0_23, plain, (s_subclass(s_Animal,s_Entity)), inference(split_conjunct,[status(thm)],[c_0_5])).
+cnf(c_0_24, plain, (s_instance(X1,X2)|~s_instance(X1,X3)|~s_subclass(X3,X2)|~s_instance(X3,s_SetOrClass)|~s_instance(X2,s_SetOrClass)), inference(split_conjunct,[status(thm)],[c_0_18])).
+cnf(c_0_25, plain, (s_instance(s_Animal,s_SetOrClass)), inference(split_conjunct,[status(thm)],[c_0_6])).
+fof(c_0_26, plain, (![X365]:?[X67]:(s_instance(X67,s_Object)&((s_instance(X365,s_Animal)&~((s_instance(X67,s_SpinalColumn)&s_part(X67,X365))))=>~s_instance(X365,s_Vertebrate)))), inference(fof_simplification,[status(thm)],[c_0_7])).
+fof(c_0_27, plain, (![X50]:![X51]:![X52]:![X53]:(~s_instance(X53,s_Entity)|((((((~s_instance(X52,s_SetOrClass)|~s_instance(X52,s_Class))|~s_instance(X51,s_SetOrClass))|~s_instance(X51,s_Class))|~s_instance(X50,s_Class))|~s_instance(X50,s_SetOrClass))|(~s_exhaustiveDecomposition3(X50,X52,X51)|(~s_instance(X53,X50)|(s_instance(X53,X52)|s_instance(X53,X51))))))), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_8])])).
+cnf(c_0_28, plain, (s_exhaustiveDecomposition3(X1,X3,X2)|~s_instance(X1,s_Class)|~s_instance(X2,s_Class)|~s_instance(X3,s_Class)|~s_partition3(X1,X3,X2)), inference(split_conjunct,[status(thm)],[c_0_19])).
+cnf(c_0_29, plain, (s_partition3(s_Animal,s_Vertebrate,s_Invertebrate)), inference(split_conjunct,[status(thm)],[c_0_9])).
+cnf(c_0_30, plain, (s_instance(s_Vertebrate,s_Class)), inference(spm,[status(thm)],[c_0_20, c_0_21])).
+cnf(c_0_31, plain, (s_instance(s_Invertebrate,s_Class)), inference(spm,[status(thm)],[c_0_20, c_0_22])).
+cnf(c_0_32, plain, (s_instance(s_Animal,s_Class)), inference(spm,[status(thm)],[c_0_20, c_0_23])).
+cnf(c_0_33, plain, (s_instance(X1,X2)|~s_subclass(s_Animal,X2)|~s_instance(X2,s_SetOrClass)|~s_instance(X1,s_Animal)), inference(spm,[status(thm)],[c_0_24, c_0_25])).
+cnf(c_0_34, plain, (s_instance(s_Entity,s_SetOrClass)), inference(split_conjunct,[status(thm)],[c_0_10])).
+fof(c_0_35, plain, (![X366]:(s_instance(esk8_1(X366),s_Object)&(((s_instance(esk8_1(X366),s_SpinalColumn)|~s_instance(X366,s_Animal))|~s_instance(X366,s_Vertebrate))&((s_part(esk8_1(X366),X366)|~s_instance(X366,s_Animal))|~s_instance(X366,s_Vertebrate))))), inference(distribute,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_26])])])])).
+fof(c_0_36, plain, (![X1065]:![X1067]:![X1068]:(((s_instance(X1065,s_Animal)|~s_instance(X1065,s_Vertebrate))&((s_component(esk2_1(X1065),X1065)|~s_instance(X1065,s_Vertebrate))&(s_instance(esk2_1(X1065),s_SpinalColumn)|~s_instance(X1065,s_Vertebrate))))&((~s_instance(X1067,s_Animal)|(~s_component(X1068,X1067)|~s_instance(X1068,s_SpinalColumn)))|s_instance(X1067,s_Vertebrate)))), inference(distribute,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(skolemize,[status(esa)],[inference(variable_rename,[status(thm)],[inference(shift_quantors,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_11])])])])])])).
+cnf(c_0_37, plain, (s_instance(X1,X2)|s_instance(X1,X3)|~s_instance(X1,X4)|~s_exhaustiveDecomposition3(X4,X3,X2)|~s_instance(X4,s_SetOrClass)|~s_instance(X4,s_Class)|~s_instance(X2,s_Class)|~s_instance(X2,s_SetOrClass)|~s_instance(X3,s_Class)|~s_instance(X3,s_SetOrClass)|~s_instance(X1,s_Entity)), inference(split_conjunct,[status(thm)],[c_0_27])).
+cnf(c_0_38, plain, (s_exhaustiveDecomposition3(s_Animal,s_Vertebrate,s_Invertebrate)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_28, c_0_29]), c_0_30]), c_0_31]), c_0_32])])).
+cnf(c_0_39, plain, (s_instance(s_Vertebrate,s_SetOrClass)), inference(split_conjunct,[status(thm)],[c_0_12])).
+cnf(c_0_40, plain, (s_instance(s_Invertebrate,s_SetOrClass)), inference(split_conjunct,[status(thm)],[c_0_13])).
+cnf(c_0_41, plain, (s_instance(X1,s_Entity)|~s_instance(X1,s_Animal)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_33, c_0_23]), c_0_34])])).
+cnf(c_0_42, plain, (s_instance(s_BananaSlug10_1,s_Animal)), inference(split_conjunct,[status(thm)],[c_0_14])).
+fof(c_0_43, negated_conjecture, (~s_instance(s_BananaSlug10_1,s_Invertebrate)), inference(fof_simplification,[status(thm)],[inference(assume_negation,[status(cth)],[c_0_15])])).
+cnf(c_0_44, plain, (s_part(esk8_1(X1),X1)|~s_instance(X1,s_Vertebrate)|~s_instance(X1,s_Animal)), inference(split_conjunct,[status(thm)],[c_0_35])).
+cnf(c_0_45, plain, (s_instance(X1,s_Animal)|~s_instance(X1,s_Vertebrate)), inference(split_conjunct,[status(thm)],[c_0_36])).
+cnf(c_0_46, plain, (s_instance(X1,s_Invertebrate)|s_instance(X1,s_Vertebrate)|~s_instance(X1,s_Entity)|~s_instance(X1,s_Animal)), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_37, c_0_38]), c_0_25]), c_0_32]), c_0_39]), c_0_30]), c_0_40]), c_0_31])])).
+cnf(c_0_47, plain, (s_instance(s_BananaSlug10_1,s_Entity)), inference(spm,[status(thm)],[c_0_41, c_0_42])).
+cnf(c_0_48, negated_conjecture, (~s_instance(s_BananaSlug10_1,s_Invertebrate)), inference(split_conjunct,[status(thm)],[c_0_43])).
+cnf(c_0_49, plain, (s_instance(esk8_1(X1),s_SpinalColumn)|~s_instance(X1,s_Vertebrate)|~s_instance(X1,s_Animal)), inference(split_conjunct,[status(thm)],[c_0_35])).
+fof(c_0_50, plain, (![X1064]:(~s_instance(X1064,s_Object)|(~s_instance(X1064,s_SpinalColumn)|~s_part(X1064,s_BananaSlug10_1)))), inference(variable_rename,[status(thm)],[inference(fof_nnf,[status(thm)],[c_0_16])])).
+cnf(c_0_51, plain, (s_part(esk8_1(X1),X1)|~s_instance(X1,s_Vertebrate)), inference(csr,[status(thm)],[c_0_44, c_0_45])).
+cnf(c_0_52, plain, (s_instance(s_BananaSlug10_1,s_Vertebrate)), inference(sr,[status(thm)],[inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_46, c_0_47]), c_0_42])]), c_0_48])).
+cnf(c_0_53, plain, (s_instance(esk8_1(X1),s_SpinalColumn)|~s_instance(X1,s_Vertebrate)), inference(csr,[status(thm)],[c_0_49, c_0_45])).
+cnf(c_0_54, plain, (~s_part(X1,s_BananaSlug10_1)|~s_instance(X1,s_SpinalColumn)|~s_instance(X1,s_Object)), inference(split_conjunct,[status(thm)],[c_0_50])).
+cnf(c_0_55, plain, (s_part(esk8_1(s_BananaSlug10_1),s_BananaSlug10_1)), inference(spm,[status(thm)],[c_0_51, c_0_52])).
+cnf(c_0_56, plain, (s_instance(esk8_1(X1),s_Object)), inference(split_conjunct,[status(thm)],[c_0_35])).
+cnf(c_0_57, plain, (s_instance(esk8_1(s_BananaSlug10_1),s_SpinalColumn)), inference(spm,[status(thm)],[c_0_53, c_0_52])).
+cnf(c_0_58, plain, ($false), inference(cn,[status(thm)],[inference(rw,[status(thm)],[inference(rw,[status(thm)],[inference(spm,[status(thm)],[c_0_54, c_0_55]), c_0_56]), c_0_57])]), ['proof']).
+# SZS output end CNFRefutation.

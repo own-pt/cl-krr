@@ -1,0 +1,6 @@
+(instance John HumanAdult)
+
+;; question: (instance John Human)
+;; fof(q,question,s_instance(s_John, s_Human)).
+;; fof(q,question, s_immediateInstance(s_John, s_HumanAdult)).
+;; fof(q,question, s_immediateInstance(s_John, s_Human)).

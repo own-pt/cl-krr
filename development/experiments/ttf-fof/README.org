@@ -1,0 +1,12 @@
+
+Using the http://www.cs.miami.edu/~tptp/cgi-bin/SystemB4TPTP with
+system 'TPTP2X 0.0' and command line '-q0 -ttff2fof'.
+
+We want to understand the 'relativization' process [1].
+
+* References
+
+[1] A. Pease and G. Sutcliffe, “First Order Reasoning on a Large
+Ontology,” Jun. 2007.
+
+

@@ -1,0 +1,136 @@
+The procedure is identical to the one use on May 18, so look at the
+files on that directory for more details, especially report.txt
+
+We have rerun E and Vampire and rerun IDV on the newly created proof
+obtained from E.
+
+Three axioms were used to obtain the proof:
+
+[a1698]
+(forall (?OBJ ?HOLE)
+ (=>
+  (=> (and (instance ?HOLE Hole) (instance ?OBJ SelfConnectedObject))
+   (hole ?HOLE ?OBJ))
+  (not (instance ?OBJ Hole))))
+
+original from SUMO:
+
+(=> 
+  (hole ?HOLE ?OBJ)
+  (not 
+    (instance ?OBJ Hole)))
+
+[a1699]
+(forall (?HOLE)
+ (<=> (instance ?HOLE Hole)
+  (exists (?OBJ)
+   (and (instance ?OBJ SelfConnectedObject)
+        (=> (instance ?HOLE Hole) 
+            (hole ?HOLE ?OBJ))))))
+
+original from SUMO:
+(<=> 
+  (instance ?HOLE Hole)
+  (exists (?OBJ)
+    (hole ?HOLE ?OBJ)))
+
+[a1719]
+(forall (?S ?O ?TOP)
+ (=>
+  (and (=>
+        (and (instance ?TOP SelfConnectedObject)
+             (instance ?O SelfConnectedObject))
+        (top ?TOP ?O))
+       (=>
+        (and (instance ?S SelfConnectedObject)
+             (instance ?O SelfConnectedObject))
+        (side ?S ?O)))
+  (not (=> (and (instance ?TOP Entity) (instance ?S Entity))
+        (equal ?TOP ?S)))))
+
+
+original from SUMO:
+(=>
+  (and
+    (top ?TOP ?O)
+    (side ?S ?O))
+  (not
+    (equal ?TOP ?S)))
+
+>> We compare our TPTP to Sigma's TPTP and try to prove that they are
+   equivalent
+
+Us:
+fof(a1698,axiom,(
+    ! [OBJ,HOLE] :
+      ( ( ( s_instance(HOLE,s_Hole)
+          & s_instance(OBJ,s_SelfConnectedObject) )
+       => s_hole(HOLE,OBJ) )
+     => ~ s_instance(OBJ,s_Hole) ) )).
+
+
+Sigma:
+fof(kb_SUMO_2310,axiom,(
+    ! [OBJ,HOLE] :
+      ( ( s_instance(OBJ,s_SelfConnectedObject)
+        & s_instance(HOLE,s_Hole) )
+     => ( s_hole(HOLE,OBJ)
+       => ~ s_instance(OBJ,s_Hole) ) ) )).
+
+Us:
+fof(a1699,axiom,(
+    ! [HOLE] :
+      ( s_instance(HOLE,s_Hole)
+    <=> ? [OBJ] :
+          ( s_instance(OBJ,s_SelfConnectedObject)
+          & ( s_instance(HOLE,s_Hole)
+           => s_hole(HOLE,OBJ) ) ) ) )).
+
+Sigma:
+fof(kb_SUMO_91,axiom,(
+    ! [HOLE] :
+      ( s_instance(HOLE,s_Hole)
+    <=> ? [OBJ] :
+          ( s_instance(OBJ,s_SelfConnectedObject)
+          & s_hole(HOLE,OBJ) ) ) )).
+
+Us:
+fof(a1719,axiom,(
+    ! [S,O,TOP] :
+      ( ( ( ( s_instance(TOP,s_SelfConnectedObject)
+            & s_instance(O,s_SelfConnectedObject) )
+         => s_top(TOP,O) )
+        & ( ( s_instance(S,s_SelfConnectedObject)
+            & s_instance(O,s_SelfConnectedObject) )
+         => s_side(S,O) ) )
+     => ~ ( ( s_instance(TOP,s_Entity)
+            & s_instance(S,s_Entity) )
+         => TOP = S ) ) )).
+Sigma:
+fof(kb_SUMO_1618,axiom,(
+    ! [O,S,TOP] :
+      ( ( s_instance(O,s_SelfConnectedObject)
+        & s_instance(S,s_SelfConnectedObject)
+        & s_instance(TOP,s_SelfConnectedObject) )
+     => ( ( s_top(TOP,O)
+          & s_side(S,O) )
+       => TOP != S ) ) )).
+
+We create a TPTP, equivalences.tptp, stating that they are equivalent
+and ran them through Vampire and E one at a time.
+
+See the equivalences.tptp file for the results.
+
+>> We run the TPTP under Mace4 to try to obtain a counter-example.
+
+Since Vampire and E found that the TPTP translation (at least for the
+first axiom above) are not equivalent, we want to use Mace4 to find a
+counter-example.
+
+To do that we selected the conjecture from equivalences.tptp marked
+with [mace4] as a comment, and converted it to the Prover9 format,
+using tptp_to_ladr (from the LADR-2009-11A) install directory of
+Prover9/Mace4.
+
+$ ./tptp_to_ladr < fragment.tptp | ./mace4 > fragment-model.txt
+

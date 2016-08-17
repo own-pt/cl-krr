@@ -1,0 +1,22 @@
+% -*- prolog -*-
+
+% Proof of the equivalent formulas for relativization of quantified
+% variables.
+
+fof(fof_axiom4,conjecture,(
+    (! [X1] : 
+      ( t1(X1)
+     => ? [X2] : 
+          ( t2(X2)
+          & p(X1,X2) ) ) )
+    <=>
+    (! [X1] : ? [X2] : (t1(X1) => (t2(X2) & p(X1,X2)))))).
+
+fof(fof_axiom5,conjecture,(
+    (? [X1] : 
+      ( t1(X1)
+      & ! [X2] : 
+          ( t2(X2)
+         => p(X1,X2) ) ))
+    <=>
+    (? [X1] : ! [X2] : (t1(X1) & (t2(X2) => p(X1,X2)))))).

@@ -1,0 +1,7 @@
+based on TQG8.kif.tq
+
+Vampire proved it in about 50 seconds.
+
+Interestingly, E, when using --auto and --auto-schedule doesn't find a proof.
+
+If I use E without any "auto" parameters, it finds one quickly!

@@ -1,0 +1,5 @@
+%fof(b3, axiom, s_subclass(s_Vertebrate, s_Entity)).
+%fof(b5, axiom, s_subclass(s_Invertebrate, s_Entity)).
+%fof(b6, axiom, s_subclass(s_Animal, s_Entity)).
+
+fof(q1,conjecture,s_instance(s_BananaSlug10_1, s_Invertebrate)).

@@ -1,0 +1,7 @@
+(not (overlapsSpatially Object16-2 Object16-3))
+(instance Object16-1 EngineeringConnection)
+(connectsEngineeringComponents Object16-1 Object16-2 Object16-3)
+(instance Object16-2 EngineeringComponent)
+(instance Object16-3 EngineeringComponent)
+
+(query (meetsSpatially Object16-2 Object16-3))

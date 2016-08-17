@@ -1,0 +1,38 @@
+(subclass PartialOrderingRelation TransitiveRelation)
+(subclass PartialOrderingRelation AntisymmetricRelation)
+(subclass PartialOrderingRelation ReflexiveRelation)
+(subclass PartialOrderingRelation TotalValuedRelation)
+
+(subclass TransitiveRelation BinaryRelation)
+(subclass AntisymmetricRelation BinaryRelation)
+(subclass ReflexiveRelation BinaryRelation)
+(subclass TotalValuedRelation Relation)
+(subclass TotalValuedRelation InheritableRelation)
+
+(subclass BinaryRelation Relation)
+(subclass BinaryRelation InheritableRelation)
+
+(=>
+   (instance ?REL TransitiveRelation)
+   (forall (?INST1 ?INST2 ?INST3)
+      (=>
+         (and
+            (?REL ?INST1 ?INST2)
+            (?REL ?INST2 ?INST3))
+         (?REL ?INST1 ?INST3))))
+
+(=>
+   (instance ?REL AntisymmetricRelation)
+   (forall (?INST1 ?INST2)
+      (=>
+         (and
+            (?REL ?INST1 ?INST2)
+            (?REL ?INST2 ?INST1))
+         (equal ?INST1 ?INST2))))
+
+
+(subclass Animal Organism)
+(subclass Organism OrganicObject)
+(subclass Organism Agent)
+(subclass OrganicObject CorpuscularObject)
+(subclass OrganicObject OrganicThing)

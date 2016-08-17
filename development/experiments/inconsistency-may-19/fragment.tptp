@@ -1,0 +1,12 @@
+fof(a1698_kb_SUMO_2310_equivalence,conjecture,
+    ( ! [OBJ,HOLE] :
+        ( ( s_instance(OBJ,s_SelfConnectedObject)
+          & s_instance(HOLE,s_Hole) )
+       => ( s_hole(HOLE,OBJ)
+         => ~ s_instance(OBJ,s_Hole) ) ) )
+   =>
+     ! [OBJ,HOLE] :
+        ( ( ( s_instance(HOLE,s_Hole)
+            & s_instance(OBJ,s_SelfConnectedObject) )
+         => s_hole(HOLE,OBJ) )
+       => ~ s_instance(OBJ,s_Hole) ) ).

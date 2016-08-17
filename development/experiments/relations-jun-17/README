@@ -1,0 +1,61 @@
+Testing relations and subrelations in SUMO.
+
+Commentary from Valeria in
+
+https://github.com/ontologyportal/sumo/issues/7#issuecomment-226814140
+
+Alexandre, I don't think one should close any issues hastily.
+
+The fix above in 7b7ce3a is a bit of hack, it stops the contradiction,
+but then it destroys the modelling of "penetrates" too, hence a
+proverbial case of the baby with the bathwater, if "penetrates" is a
+useful relation. (I don't know if it is or not)
+
+I don't think I understand the general problem here, yet.  and would
+welcome a clearer, higher level discussion.  what's clear to me, from
+Fabricio's examples so far, is that we have two classes of problems.
+
+1. problems where clear mathematical relations are being understood by
+modellers differently.  (meetsSpatially does look a symmetric relation
+in abstract, while "penetrates" does not look symmetric) (mother does
+not look symmetric, while "relative" does).  Here what's required is
+to decide which intuition is most useful and then change as little as
+possible.
+
+2. problems like the holdsDuring one that invoke a serious modelling
+problem in that case if time is to be considered instants or
+intervals.  I think separating the problems into these two buckets and
+making sure that we can ran a collection of tests on the mathematical
+relations would be a better bet.
+
+/// Also from Valeria: ///
+
+Well, I think you understood completely right Alexandre
+my aim was:
+>whatever one can derive from RCC8 one can derive with SUMO.
+
+and I thought I had sent the following message yesterday, but I found it still as a draft in gmail:
+--------------------
+hi Adam,
+
+our main concern is trying to obtain consistency of Merge. The
+contradictions found so far by Fabricio have mostly to do with
+relations that cannot be both asymmetric and symmetric, partial and
+total. we need to see what are the other cases of mutually exclusive
+relations. but I was thinking that once we do that, we would like to
+know that we're complete, hence the thought of RCC-8.
+
+----- 
+
+Now the reason it was still a draft was that I've decided to have a
+look at relations in SUMO and there are a few things that I don't
+understand there.
+
+I don't understand the notion of InheritableRelation. I don't think
+this makes an awful lot of sense. Every mathematical relation can be
+restricted to subsets of its domain? Why did someone created this
+concept, do you remember Adam? I also do not understand the notion of
+IntentionalRelation.
+
+but maybe we can leave these to later on, after we have dealt with the
+completely extensional contradictions that might still be lurking.

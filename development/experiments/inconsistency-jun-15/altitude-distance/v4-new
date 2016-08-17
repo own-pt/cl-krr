@@ -1,0 +1,595 @@
+Hi Geoff, go and have some cold beer while I am trying to solve this very hard problem!
+% remaining time: 215968 next slice time: 54
+lrs+1002_3_ep=RST:er=known:fsr=off:gs=on:gsaa=from_current:nwc=1:sas=minisat:stl=30:sd=2:ss=axioms:st=5.0:sos=on:sfr=on:ssfp=100000:ssfq=1.4:smm=sco:ssnc=none:sp=occurrence_51 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54625
+% Time elapsed: 0.198 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215966 next slice time: 48
+lrs+1002_2:3_bsr=unit_only:er=known:fde=none:gs=on:gsem=on:nwc=1:sas=minisat:stl=30:sd=1:ss=axioms:st=1.5:sdd=large:sfr=on:ssfp=40000:ssfq=1.4:smm=sco:ssnc=none:sp=reverse_arity_45 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 53730
+% Time elapsed: 0.213 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215964 next slice time: 37
+dis-2_4_cond=fast:ep=RST:er=filter:fde=unused:gs=on:gsem=on:lcm=reverse:nwc=1:sd=3:ss=axioms:sos=on:spl=off:updr=off_35 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 50788
+% Time elapsed: 0.153 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215963 next slice time: 197
+dis-3_10_bsr=unit_only:er=filter:fde=unused:lcm=predicate:nm=64:nwc=1:spl=off:sp=occurrence:updr=off_187 on bs
+% (2467)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 678794
+% Time elapsed: 19.800 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215764 next slice time: 49
+ins+11_3_cond=fast:fde=none:igbrr=0.8:igrr=1/16:igrp=200:igrpq=1.05:igs=1003:igwr=on:nm=64:nwc=1:sas=minisat:sd=2:ss=axioms:st=3.0:sos=on:spl=off:updr=off_46 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54370
+% Time elapsed: 0.203 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215762 next slice time: 29
+dis+2_5:4_fde=none:nwc=1:sd=2:ss=axioms:sos=on:ssfp=40000:ssfq=2.0_27 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51043
+% Time elapsed: 0.157 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215761 next slice time: 58
+dis+11_4_cond=fast:fsr=off:gs=on:gsaa=from_current:gsem=on:nwc=1:sas=minisat:sd=10:ss=axioms:st=5.0:sos=all:sser=off:ssfp=4000:ssfq=1.0:ssnc=none:sp=occurrence_55 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54753
+% Time elapsed: 0.207 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215758 next slice time: 23
+lrs+1010_4:1_cond=fast:fsr=off:fde=unused:gs=on:gsem=on:nm=0:nwc=1:sas=minisat:stl=30:sd=2:ss=axioms:st=1.5:sos=on:sac=on:sdd=off:sser=off:sfr=on:ssfp=100000:ssfq=1.4:ssnc=none:sp=occurrence_21 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 53986
+% Time elapsed: 0.201 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215756 next slice time: 131
+dis+11_5_fde=none:gs=on:gsaa=from_current:gsssp=full:lcm=reverse:nwc=1:sas=minisat:ss=axioms:st=1.5:sos=on:ssfp=4000:ssfq=1.2:smm=sco:ssnc=none_124 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 53986
+% Time elapsed: 0.221 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215754 next slice time: 46
+lrs-4_4_cond=fast:fsr=off:fde=unused:gs=on:gsaa=from_current:gsem=off:gsssp=full:lcm=reverse:nwc=1:sas=minisat:stl=30:sd=4:ss=axioms:sos=on:sac=on:ssac=none:sdd=large:sser=off:ssfp=1000:ssfq=1.2:ssnc=none:sp=reverse_arity_43 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51171
+% Time elapsed: 0.193 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215752 next slice time: 50
+ott+11_8:1_cond=fast:gs=on:gsem=off:nwc=1:nicw=on:sd=2:ss=axioms:st=1.2:sos=all:sscc=on:sfr=on:ssfp=100000:ssfq=1.0:smm=sco:ssnc=none:urr=on_47 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 53858
+% Time elapsed: 0.247 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215749 next slice time: 131
+ott+1011_10_cond=fast:fde=none:gsp=input_only:gs=on:gsssp=full:nwc=1:sas=minisat:sd=3:ss=axioms:sos=all:spl=off:sp=occurrence:updr=off_124 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51043
+% Time elapsed: 0.159 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215747 next slice time: 48
+lrs+1004_2:1_cond=fast:fde=none:gs=on:gsem=off:nwc=1:stl=30:sd=2:ss=axioms:sos=on:spl=off:sp=reverse_arity:updr=off_45 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51171
+% Time elapsed: 0.195 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215745 next slice time: 70
+ins+11_4_cond=fast:fsr=off:fde=none:gsp=input_only:gs=on:gsem=on:igbrr=0.3:igpr=on:igrr=1/8:igrp=100:igrpq=1.5:igwr=on:nwc=1:sd=1:ss=axioms:st=5.0:sos=all:spl=off:dm=on_66 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 55137
+% Time elapsed: 0.234 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215743 next slice time: 296
+lrs+4_2:1_ep=R:fde=unused:gs=on:nwc=1:stl=30:sos=all:sac=on:ssac=none:sser=off:sfr=on:ssfp=10000:ssfq=1.2:ssnc=none:sp=occurrence:updr=off_281 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 224388
+% Time elapsed: 1.385 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215729 next slice time: 103
+lrs-2_5_cond=on:fde=none:lcm=predicate:nwc=1:stl=30:sd=2:ss=axioms:st=3.0:sos=on:sdd=off:ssfp=100000:ssfq=1.4:ssnc=none_98 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54625
+% Time elapsed: 0.211 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215727 next slice time: 54
+dis+4_3:1_gs=on:nwc=1:sd=1:ss=axioms:sos=all:spl=off:updr=off_51 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51299
+% Time elapsed: 0.158 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215725 next slice time: 207
+dis+11_2_fde=none:gsp=input_only:gs=on:gsem=on:nwc=1:sd=2:ss=axioms:st=1.2:sos=all:spl=off:sp=reverse_arity:urr=on:updr=off_197 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 53986
+% Time elapsed: 0.210 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215723 next slice time: 142
+lrs-1_2:1_bd=preordered:bsr=on:br=off:cond=on:gs=on:lcm=reverse:nwc=1:stl=30:sd=2:ss=axioms:sos=on:sdd=large:sser=off:ssfp=100000:ssfq=2.0:ssnc=none:sp=occurrence:urr=on:updr=off_135 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 51299
+% Time elapsed: 0.155 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215721 next slice time: 297
+ott+11_24_cond=fast:ep=RST:fsr=off:fde=none:gs=on:lcm=predicate:nm=64:nwc=1:sas=minisat:ss=axioms:st=5.0:sos=all:spl=off:sp=occurrence_282 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 55265
+% Time elapsed: 0.233 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215719 next slice time: 200
+lrs+1_3:1_cond=fast:gsp=input_only:gs=on:gsaa=from_current:gsem=off:nwc=1:stl=30:sd=2:ss=axioms:st=1.2:sos=on:sac=on:sdd=off:sfr=on:ssfp=100000:ssfq=1.2:smm=sco:ssnc=none:sp=reverse_arity_190 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54242
+% Time elapsed: 0.208 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215717 next slice time: 158
+dis+1003_8:1_bd=off:bs=unit_only:cond=fast:fsr=off:fde=none:gsp=input_only:lcm=reverse:nwc=1:sas=minisat:sos=all:ssac=none:sscc=on:sdd=off:sfr=on:smm=sco:ssnc=none:sp=reverse_arity_150 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 273897
+% Time elapsed: 2.493 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215691 next slice time: 239
+lrs+11_3:2_cond=fast:fsr=off:fde=none:gs=on:nm=0:nwc=1.7:stl=30:sd=2:ss=axioms:st=2.0:spl=off:urr=on_227 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54625
+% Time elapsed: 0.208 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215689 next slice time: 316
+dis+11_7_300 on bs
+% (2513)Time limit reached!
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Time limit
+% Termination phase: Saturation
+
+% Memory used [KB]: 472316
+% Time elapsed: 31.700 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215372 next slice time: 316
+ott+11_8:1_cond=fast:gs=on:gsem=off:igrpq=1.0:nwc=1:nicw=on:sd=2:ss=axioms:st=1.2:sos=all:sscc=on:sfr=on:ssfp=100000:ssfq=1.0:smm=sco:ssnc=none:urr=on_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54370
+% Time elapsed: 0.219 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215369 next slice time: 316
+lrs+1011_4_cond=fast:gs=on:gsaa=from_current:gsem=off:gsssp=full:igrpq=1.0:nm=0:nwc=1:sas=minisat:sd=3:ss=axioms:st=2.0:sdd=off:sfr=on:ssfp=100000:ssfq=1.2:smm=off:ssnc=none:sp=reverse_arity_300 on bs
+% Refutation not found, incomplete strategy
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation not found, incomplete strategy
+
+% Memory used [KB]: 54625
+% Time elapsed: 0.232 s
+% ------------------------------
+% ------------------------------
+% remaining time: 215367 next slice time: 1261
+dis+11_4_bsr=unit_only:cond=fast:fde=none:lwlo=on:nm=0:nwc=1.2:spl=off:sp=occurrence_1200 on bs
+% Refutation found. Thanks to Tanya!
+% SZS status Theorem for bs
+% SZS output start Proof for bs
+fof(f15,axiom,(
+  ! [X5,X3,X4] : ((s_instance(X4,s_SetOrClass) & s_instance(X3,s_SetOrClass)) => ((s_instance(X5,X4) & s_subclass(X4,X3)) => s_instance(X5,X3)))),
+  file('bs.tptp',a15)).
+fof(f27793,axiom,(
+  ! [X0,X10,X11] : ((s_instance(X11,s_Relation) & s_instance(X0,s_SetOrClass)) => ((s_subclass(X0,s_InheritableRelation) & s_instance(X10,X0) & s_subrelation(X11,X10)) => s_instance(X11,X0)))),
+  file('bs.tptp',a27793)).
+fof(f27884,axiom,(
+  ! [X6,X7] : ! [X46] : (s_instance(X46,s_Entity) => ((s_instance(X6,s_SetOrClass) & s_instance(X7,s_SetOrClass)) => (s_disjoint(X7,X6) => ~(s_instance(X46,X6) & s_instance(X46,X7)))))),
+  file('bs.tptp',a27884)).
+fof(f55761,axiom,(
+  ! [X13,X14,X12] : ((s_instance(X13,s_Class) & s_instance(X14,s_Class) & s_instance(X12,s_Class)) => (s_partition3(X13,X12,X14) <=> (s_disjointDecomposition3(X13,X12,X14) & s_exhaustiveDecomposition3(X13,X12,X14))))),
+  file('bs.tptp',a55761)).
+fof(f55801,axiom,(
+  ! [X0] : (s_instance(X0,s_Class) <=> s_subclass(X0,s_Entity))),
+  file('bs.tptp',a55801)).
+fof(f55956,axiom,(
+  s_instance(s_Entity,s_SetOrClass)),
+  file('bs.tptp',a55956)).
+fof(f56077,axiom,(
+  s_partition3(s_Relation,s_TotalValuedRelation,s_PartialValuedRelation)),
+  file('bs.tptp',a56077)).
+fof(f56081,axiom,(
+  s_subclass(s_TotalValuedRelation,s_InheritableRelation)),
+  file('bs.tptp',a56081)).
+fof(f56119,axiom,(
+  s_subclass(s_PartialValuedRelation,s_Relation)),
+  file('bs.tptp',a56119)).
+fof(f56397,axiom,(
+  ! [X289,X290,X291] : ((s_instance(X289,s_SetOrClass) & s_instance(X290,s_SetOrClass) & s_instance(X291,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X290,X291) & s_subclass(X289,X290)) => s_subclass(X289,X291))))),
+  file('bs.tptp',a56397)).
+fof(f56584,axiom,(
+  ! [X0,X14,X12] : ((s_instance(X14,s_SetOrClass) & s_instance(X14,s_Class) & s_instance(X0,s_Class) & s_instance(X12,s_Class) & s_instance(X12,s_SetOrClass)) => (s_disjointDecomposition3(X0,X12,X14) => s_disjoint(X12,X14)))),
+  file('bs.tptp',a56584)).
+fof(f57335,axiom,(
+  s_instance(s_Relation,s_SetOrClass)),
+  file('bs.tptp',a57335)).
+fof(f58665,axiom,(
+  s_instance(s_distance_m,s_TotalValuedRelation)),
+  file('bs.tptp',a58665)).
+fof(f58667,axiom,(
+  s_subrelation(s_altitude_m,s_distance_m)),
+  file('bs.tptp',a58667)).
+fof(f58669,axiom,(
+  s_instance(s_altitude_m,s_PartialValuedRelation)),
+  file('bs.tptp',a58669)).
+fof(f60583,axiom,(
+  s_instance(s_PartialValuedRelation,s_SetOrClass)),
+  file('bs.tptp',a60583)).
+fof(f60729,axiom,(
+  s_instance(s_TotalValuedRelation,s_SetOrClass)),
+  file('bs.tptp',a60729)).
+fof(f61109,axiom,(
+  s_subclass(s_TotalValuedRelation,s_Entity)),
+  file('bs.tptp',a61109)).
+fof(f61522,axiom,(
+  s_subclass(s_Relation,s_Entity)),
+  file('bs.tptp',a61522)).
+fof(f63434,axiom,(
+  s_instance(s_subclass_m,s_TransitiveRelation)),
+  file('bs.tptp',a63434)).
+fof(f65079,axiom,(
+  s_instance(s_altitude_m,s_Relation)),
+  file('bs.tptp',a65079)).
+fof(f121264,plain,(
+  ! [X0,X1] : ! [X2] : (s_instance(X2,s_Entity) => ((s_instance(X0,s_SetOrClass) & s_instance(X1,s_SetOrClass)) => (s_disjoint(X1,X0) => ~(s_instance(X2,X0) & s_instance(X2,X1)))))),
+  inference(rectify,[],[f27884])).
+fof(f121265,plain,(
+  ! [X0,X1,X2] : (s_instance(X2,s_Entity) => ((s_instance(X0,s_SetOrClass) & s_instance(X1,s_SetOrClass)) => (s_disjoint(X1,X0) => ~(s_instance(X2,X0) & s_instance(X2,X1)))))),
+  inference(flattening,[],[f121264])).
+fof(f122468,plain,(
+  ! [X0,X1,X2] : ((s_instance(X1,s_SetOrClass) & s_instance(X1,s_Class) & s_instance(X0,s_Class) & s_instance(X2,s_Class) & s_instance(X2,s_SetOrClass)) => (s_disjointDecomposition3(X0,X2,X1) => s_disjoint(X2,X1)))),
+  inference(rectify,[],[f56584])).
+fof(f123578,plain,(
+  ! [X0,X1,X2] : ((s_instance(X0,s_SetOrClass) & s_instance(X1,s_SetOrClass) & s_instance(X2,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X1,X2) & s_subclass(X0,X1)) => s_subclass(X0,X2))))),
+  inference(rectify,[],[f56397])).
+fof(f123802,plain,(
+  ! [X0,X1,X2] : ((s_instance(X0,s_Class) & s_instance(X1,s_Class) & s_instance(X2,s_Class)) => (s_partition3(X0,X2,X1) <=> (s_disjointDecomposition3(X0,X2,X1) & s_exhaustiveDecomposition3(X0,X2,X1))))),
+  inference(rectify,[],[f55761])).
+fof(f123825,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,s_Relation) & s_instance(X0,s_SetOrClass)) => ((s_subclass(X0,s_InheritableRelation) & s_instance(X1,X0) & s_subrelation(X2,X1)) => s_instance(X2,X0)))),
+  inference(rectify,[],[f27793])).
+fof(f123826,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,s_SetOrClass) & s_instance(X1,s_SetOrClass)) => ((s_instance(X0,X2) & s_subclass(X2,X1)) => s_instance(X0,X1)))),
+  inference(rectify,[],[f15])).
+fof(f233847,plain,(
+  ! [X0,X1,X2] : ((((~s_instance(X2,X0) | ~s_instance(X2,X1)) | ~s_disjoint(X1,X0)) | (~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass))) | ~s_instance(X2,s_Entity))),
+  inference(ennf_transformation,[],[f121265])).
+fof(f233848,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,X0) | ~s_instance(X2,X1) | ~s_disjoint(X1,X0) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_Entity))),
+  inference(flattening,[],[f233847])).
+fof(f236114,plain,(
+  ! [X0,X1,X2] : ((s_disjoint(X2,X1) | ~s_disjointDecomposition3(X0,X2,X1)) | (~s_instance(X1,s_SetOrClass) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class) | ~s_instance(X2,s_Class) | ~s_instance(X2,s_SetOrClass)))),
+  inference(ennf_transformation,[],[f122468])).
+fof(f236115,plain,(
+  ! [X0,X1,X2] : (s_disjoint(X2,X1) | ~s_disjointDecomposition3(X0,X2,X1) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class) | ~s_instance(X2,s_Class) | ~s_instance(X2,s_SetOrClass))),
+  inference(flattening,[],[f236114])).
+fof(f238332,plain,(
+  ! [X0,X1,X2] : (((s_subclass(X0,X2) | (~s_subclass(X1,X2) | ~s_subclass(X0,X1))) | ~s_instance(s_subclass_m,s_TransitiveRelation)) | (~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)))),
+  inference(ennf_transformation,[],[f123578])).
+fof(f238333,plain,(
+  ! [X0,X1,X2] : (s_subclass(X0,X2) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass))),
+  inference(flattening,[],[f238332])).
+fof(f238774,plain,(
+  ! [X0,X1,X2] : ((s_partition3(X0,X2,X1) <=> (s_disjointDecomposition3(X0,X2,X1) & s_exhaustiveDecomposition3(X0,X2,X1))) | (~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X2,s_Class)))),
+  inference(ennf_transformation,[],[f123802])).
+fof(f238775,plain,(
+  ! [X0,X1,X2] : ((s_partition3(X0,X2,X1) <=> (s_disjointDecomposition3(X0,X2,X1) & s_exhaustiveDecomposition3(X0,X2,X1))) | ~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X2,s_Class))),
+  inference(flattening,[],[f238774])).
+fof(f238816,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,X0) | (~s_subclass(X0,s_InheritableRelation) | ~s_instance(X1,X0) | ~s_subrelation(X2,X1))) | (~s_instance(X2,s_Relation) | ~s_instance(X0,s_SetOrClass)))),
+  inference(ennf_transformation,[],[f123825])).
+fof(f238817,plain,(
+  ! [X0,X1,X2] : (s_instance(X2,X0) | ~s_subclass(X0,s_InheritableRelation) | ~s_instance(X1,X0) | ~s_subrelation(X2,X1) | ~s_instance(X2,s_Relation) | ~s_instance(X0,s_SetOrClass))),
+  inference(flattening,[],[f238816])).
+fof(f238818,plain,(
+  ! [X0,X1,X2] : ((s_instance(X0,X1) | (~s_instance(X0,X2) | ~s_subclass(X2,X1))) | (~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass)))),
+  inference(ennf_transformation,[],[f123826])).
+fof(f238819,plain,(
+  ! [X0,X1,X2] : (s_instance(X0,X1) | ~s_instance(X0,X2) | ~s_subclass(X2,X1) | ~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass))),
+  inference(flattening,[],[f238818])).
+fof(f240693,plain,(
+  ! [X0] : ((s_instance(X0,s_Class) | ~s_subclass(X0,s_Entity)) & (s_subclass(X0,s_Entity) | ~s_instance(X0,s_Class)))),
+  inference(nnf_transformation,[],[f55801])).
+fof(f241403,plain,(
+  ! [X0,X1,X2] : (((s_partition3(X0,X2,X1) | (~s_disjointDecomposition3(X0,X2,X1) | ~s_exhaustiveDecomposition3(X0,X2,X1))) & ((s_disjointDecomposition3(X0,X2,X1) & s_exhaustiveDecomposition3(X0,X2,X1)) | ~s_partition3(X0,X2,X1))) | ~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X2,s_Class))),
+  inference(nnf_transformation,[],[f238775])).
+fof(f241404,plain,(
+  ! [X0,X1,X2] : (((s_partition3(X0,X2,X1) | ~s_disjointDecomposition3(X0,X2,X1) | ~s_exhaustiveDecomposition3(X0,X2,X1)) & ((s_disjointDecomposition3(X0,X2,X1) & s_exhaustiveDecomposition3(X0,X2,X1)) | ~s_partition3(X0,X2,X1))) | ~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X2,s_Class))),
+  inference(flattening,[],[f241403])).
+fof(f241786,plain,(
+  s_subrelation(s_altitude_m,s_distance_m)),
+  inference(cnf_transformation,[],[f58667])).
+fof(f242314,plain,(
+  s_subclass(s_PartialValuedRelation,s_Relation)),
+  inference(cnf_transformation,[],[f56119])).
+fof(f242315,plain,(
+  s_subclass(s_TotalValuedRelation,s_InheritableRelation)),
+  inference(cnf_transformation,[],[f56081])).
+fof(f242342,plain,(
+  s_subclass(s_TotalValuedRelation,s_Entity)),
+  inference(cnf_transformation,[],[f61109])).
+fof(f242810,plain,(
+  s_subclass(s_Relation,s_Entity)),
+  inference(cnf_transformation,[],[f61522])).
+fof(f244226,plain,(
+  s_instance(s_altitude_m,s_PartialValuedRelation)),
+  inference(cnf_transformation,[],[f58669])).
+fof(f244228,plain,(
+  s_instance(s_distance_m,s_TotalValuedRelation)),
+  inference(cnf_transformation,[],[f58665])).
+fof(f245073,plain,(
+  s_instance(s_Relation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f57335])).
+fof(f245389,plain,(
+  s_instance(s_Entity,s_SetOrClass)),
+  inference(cnf_transformation,[],[f55956])).
+fof(f245594,plain,(
+  s_instance(s_altitude_m,s_Relation)),
+  inference(cnf_transformation,[],[f65079])).
+fof(f247727,plain,(
+  s_instance(s_subclass_m,s_TransitiveRelation)),
+  inference(cnf_transformation,[],[f63434])).
+fof(f248045,plain,(
+  s_instance(s_TotalValuedRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f60729])).
+fof(f248452,plain,(
+  s_instance(s_PartialValuedRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f60583])).
+fof(f249322,plain,(
+  s_partition3(s_Relation,s_TotalValuedRelation,s_PartialValuedRelation)),
+  inference(cnf_transformation,[],[f56077])).
+fof(f249647,plain,(
+  ( ! [X0] : (~s_subclass(X0,s_Entity) | s_instance(X0,s_Class)) )),
+  inference(cnf_transformation,[],[f240693])).
+fof(f304576,plain,(
+  ( ! [X2,X0,X1] : (~s_disjoint(X1,X0) | ~s_instance(X2,X1) | ~s_instance(X2,X0) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_Entity)) )),
+  inference(cnf_transformation,[],[f233848])).
+fof(f306354,plain,(
+  ( ! [X2,X0,X1] : (~s_disjointDecomposition3(X0,X2,X1) | s_disjoint(X2,X1) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class) | ~s_instance(X2,s_Class) | ~s_instance(X2,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f236115])).
+fof(f307464,plain,(
+  ( ! [X2,X0,X1] : (s_subclass(X0,X2) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f238333])).
+fof(f307709,plain,(
+  ( ! [X2,X0,X1] : (~s_partition3(X0,X2,X1) | s_disjointDecomposition3(X0,X2,X1) | ~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X2,s_Class)) )),
+  inference(cnf_transformation,[],[f241404])).
+fof(f307738,plain,(
+  ( ! [X2,X0,X1] : (~s_subclass(X0,s_InheritableRelation) | s_instance(X2,X0) | ~s_instance(X1,X0) | ~s_subrelation(X2,X1) | ~s_instance(X2,s_Relation) | ~s_instance(X0,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f238817])).
+fof(f307739,plain,(
+  ( ! [X2,X0,X1] : (~s_instance(X1,s_SetOrClass) | ~s_instance(X0,X2) | ~s_subclass(X2,X1) | ~s_instance(X2,s_SetOrClass) | s_instance(X0,X1)) )),
+  inference(cnf_transformation,[],[f238819])).
+fof(f310686,plain,(
+  s_instance(s_TotalValuedRelation,s_Class)),
+  inference(resolution,[],[f249647,f242342])).
+fof(f310691,plain,(
+  s_instance(s_Relation,s_Class)),
+  inference(resolution,[],[f249647,f242810])).
+fof(f316072,plain,(
+  ( ! [X10,X11] : (~s_subclass(X11,s_Entity) | ~s_instance(X10,X11) | ~s_instance(X11,s_SetOrClass) | s_instance(X10,s_Entity)) )),
+  inference(resolution,[],[f307739,f245389])).
+fof(f317204,plain,(
+  s_disjointDecomposition3(s_Relation,s_TotalValuedRelation,s_PartialValuedRelation) | ~s_instance(s_Relation,s_Class) | ~s_instance(s_PartialValuedRelation,s_Class) | ~s_instance(s_TotalValuedRelation,s_Class)),
+  inference(resolution,[],[f307709,f249322])).
+fof(f317239,plain,(
+  s_disjointDecomposition3(s_Relation,s_TotalValuedRelation,s_PartialValuedRelation) | ~s_instance(s_PartialValuedRelation,s_Class) | ~s_instance(s_TotalValuedRelation,s_Class)),
+  inference(subsumption_resolution,[],[f317204,f310691])).
+fof(f317240,plain,(
+  s_disjointDecomposition3(s_Relation,s_TotalValuedRelation,s_PartialValuedRelation) | ~s_instance(s_PartialValuedRelation,s_Class)),
+  inference(subsumption_resolution,[],[f317239,f310686])).
+fof(f322932,plain,(
+  ( ! [X2,X3] : (s_instance(X2,s_TotalValuedRelation) | ~s_instance(X3,s_TotalValuedRelation) | ~s_subrelation(X2,X3) | ~s_instance(X2,s_Relation) | ~s_instance(s_TotalValuedRelation,s_SetOrClass)) )),
+  inference(resolution,[],[f307738,f242315])).
+fof(f322956,plain,(
+  ( ! [X2,X3] : (~s_instance(X3,s_TotalValuedRelation) | s_instance(X2,s_TotalValuedRelation) | ~s_subrelation(X2,X3) | ~s_instance(X2,s_Relation)) )),
+  inference(subsumption_resolution,[],[f322932,f248045])).
+fof(f357530,plain,(
+  ( ! [X4] : (~s_instance(X4,s_TotalValuedRelation) | ~s_instance(s_TotalValuedRelation,s_SetOrClass) | s_instance(X4,s_Entity)) )),
+  inference(resolution,[],[f316072,f242342])).
+fof(f357794,plain,(
+  ( ! [X4] : (s_instance(X4,s_Entity) | ~s_instance(X4,s_TotalValuedRelation)) )),
+  inference(subsumption_resolution,[],[f357530,f248045])).
+fof(f396183,plain,(
+  ( ! [X2,X0,X1] : (~s_instance(X2,s_SetOrClass) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | s_subclass(X0,X2)) )),
+  inference(subsumption_resolution,[],[f307464,f247727])).
+fof(f396199,plain,(
+  ( ! [X10,X11] : (~s_subclass(X10,s_Entity) | ~s_subclass(X11,X10) | ~s_instance(X11,s_SetOrClass) | ~s_instance(X10,s_SetOrClass) | s_subclass(X11,s_Entity)) )),
+  inference(resolution,[],[f396183,f245389])).
+fof(f401517,plain,(
+  ( ! [X36] : (~s_subrelation(X36,s_distance_m) | s_instance(X36,s_TotalValuedRelation) | ~s_instance(X36,s_Relation)) )),
+  inference(resolution,[],[f322956,f244228])).
+fof(f401663,plain,(
+  s_instance(s_altitude_m,s_TotalValuedRelation) | ~s_instance(s_altitude_m,s_Relation)),
+  inference(resolution,[],[f401517,f241786])).
+fof(f401665,plain,(
+  s_instance(s_altitude_m,s_TotalValuedRelation)),
+  inference(subsumption_resolution,[],[f401663,f245594])).
+fof(f403390,plain,(
+  s_disjoint(s_TotalValuedRelation,s_PartialValuedRelation) | ~s_instance(s_PartialValuedRelation,s_SetOrClass) | ~s_instance(s_PartialValuedRelation,s_Class) | ~s_instance(s_Relation,s_Class) | ~s_instance(s_TotalValuedRelation,s_Class) | ~s_instance(s_TotalValuedRelation,s_SetOrClass) | ~s_instance(s_PartialValuedRelation,s_Class)),
+  inference(resolution,[],[f306354,f317240])).
+fof(f403439,plain,(
+  s_disjoint(s_TotalValuedRelation,s_PartialValuedRelation) | ~s_instance(s_PartialValuedRelation,s_SetOrClass) | ~s_instance(s_PartialValuedRelation,s_Class) | ~s_instance(s_Relation,s_Class) | ~s_instance(s_TotalValuedRelation,s_Class) | ~s_instance(s_TotalValuedRelation,s_SetOrClass)),
+  inference(duplicate_literal_removal,[],[f403390])).
+fof(f403449,plain,(
+  s_disjoint(s_TotalValuedRelation,s_PartialValuedRelation) | ~s_instance(s_PartialValuedRelation,s_Class) | ~s_instance(s_Relation,s_Class) | ~s_instance(s_TotalValuedRelation,s_Class) | ~s_instance(s_TotalValuedRelation,s_SetOrClass)),
+  inference(subsumption_resolution,[],[f403439,f248452])).
+fof(f403450,plain,(
+  s_disjoint(s_TotalValuedRelation,s_PartialValuedRelation) | ~s_instance(s_PartialValuedRelation,s_Class) | ~s_instance(s_TotalValuedRelation,s_Class) | ~s_instance(s_TotalValuedRelation,s_SetOrClass)),
+  inference(subsumption_resolution,[],[f403449,f310691])).
+fof(f403451,plain,(
+  s_disjoint(s_TotalValuedRelation,s_PartialValuedRelation) | ~s_instance(s_PartialValuedRelation,s_Class) | ~s_instance(s_TotalValuedRelation,s_SetOrClass)),
+  inference(subsumption_resolution,[],[f403450,f310686])).
+fof(f403452,plain,(
+  ~s_instance(s_PartialValuedRelation,s_Class) | s_disjoint(s_TotalValuedRelation,s_PartialValuedRelation)),
+  inference(subsumption_resolution,[],[f403451,f248045])).
+fof(f958689,plain,(
+  ( ! [X10] : (~s_subclass(X10,s_Relation) | ~s_instance(X10,s_SetOrClass) | ~s_instance(s_Relation,s_SetOrClass) | s_subclass(X10,s_Entity)) )),
+  inference(resolution,[],[f396199,f242810])).
+fof(f958953,plain,(
+  ( ! [X10] : (~s_subclass(X10,s_Relation) | ~s_instance(X10,s_SetOrClass) | s_subclass(X10,s_Entity)) )),
+  inference(subsumption_resolution,[],[f958689,f245073])).
+fof(f961245,plain,(
+  ~s_instance(s_PartialValuedRelation,s_SetOrClass) | s_subclass(s_PartialValuedRelation,s_Entity)),
+  inference(resolution,[],[f958953,f242314])).
+fof(f961269,plain,(
+  s_subclass(s_PartialValuedRelation,s_Entity)),
+  inference(subsumption_resolution,[],[f961245,f248452])).
+fof(f961277,plain,(
+  s_instance(s_PartialValuedRelation,s_Class)),
+  inference(resolution,[],[f961269,f249647])).
+fof(f961309,plain,(
+  s_disjoint(s_TotalValuedRelation,s_PartialValuedRelation)),
+  inference(subsumption_resolution,[],[f403452,f961277])).
+fof(f961313,plain,(
+  ( ! [X0] : (~s_instance(X0,s_TotalValuedRelation) | ~s_instance(X0,s_PartialValuedRelation) | ~s_instance(s_PartialValuedRelation,s_SetOrClass) | ~s_instance(s_TotalValuedRelation,s_SetOrClass) | ~s_instance(X0,s_Entity)) )),
+  inference(resolution,[],[f961309,f304576])).
+fof(f961315,plain,(
+  ( ! [X0] : (~s_instance(X0,s_TotalValuedRelation) | ~s_instance(X0,s_PartialValuedRelation) | ~s_instance(s_TotalValuedRelation,s_SetOrClass) | ~s_instance(X0,s_Entity)) )),
+  inference(subsumption_resolution,[],[f961313,f248452])).
+fof(f961316,plain,(
+  ( ! [X0] : (~s_instance(X0,s_TotalValuedRelation) | ~s_instance(X0,s_PartialValuedRelation) | ~s_instance(X0,s_Entity)) )),
+  inference(subsumption_resolution,[],[f961315,f248045])).
+fof(f961317,plain,(
+  ( ! [X0] : (~s_instance(X0,s_PartialValuedRelation) | ~s_instance(X0,s_TotalValuedRelation)) )),
+  inference(subsumption_resolution,[],[f961316,f357794])).
+fof(f961394,plain,(
+  ~s_instance(s_altitude_m,s_TotalValuedRelation)),
+  inference(resolution,[],[f961317,f244226])).
+fof(f961407,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f961394,f401665])).
+% SZS output end Proof for bs
+% ------------------------------
+% Version: Vampire 4.0 (commit 910b0ff on 2016-04-14 14:40:26 +0200)
+% Termination reason: Refutation
+
+% Memory used [KB]: 463745
+% Time elapsed: 101.062 s
+% ------------------------------
+% ------------------------------
+% Success in time 164.35 s

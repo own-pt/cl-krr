@@ -1,0 +1,2 @@
+(instance Jane8-1 Human)
+(query (exists (?ROLE1 ?ROLE2) (and (capability Reasoning ?ROLE1 Jane8-1) (capability Perception ?ROLE2 Jane8-1))))

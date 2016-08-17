@@ -1,0 +1,7 @@
+based on TQG14.kif.tq
+
+NOTE: Vampire was able to prove this.
+
+E with either --auto or --auto-schedule DOES NOT find a an answer after several minutes waiting.
+
+E without --auto finds in about 2 minutes.

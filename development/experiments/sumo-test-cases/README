@@ -1,0 +1,16 @@
+Directories here contain experiments derived from the SUMO test cases
+present at sumo/tests.  They were adapted to our conversion process,
+and ran through the E and Vampire ATPs. 
+
+How to execute provers (E and Vampire):
+
+time nice E/PROVER/eprover -s --auto-schedule --proof-object --tptp3-format --delete-bad-limit=9048000000
+time nice E/PROVER/eprover -s --auto --proof-object --tptp3-format --delete-bad-limit=9048000000
+time nice E/PROVER/eprover -s --proof-object --tptp3-format --delete-bad-limit=9048000000
+time nice Vampire---4.0/vampire --mode casc -m 20000 -t 6h
+
+All the examples were generated with the core-sumo.kif in this
+directory (which is merge+milo + some contradictions removed). 
+
+;; example:
+(compile-suo-kif :in-files '("core-sumo.kif" "reasoning.kif") :tptp t)

@@ -1,0 +1,3 @@
+%fof(q,conjecture, $sum(1,1) = 2).
+
+tff(q, conjecture, ~ (! [X: $int] : ? [Y: $int] : ($sum(X,1) = Y))).

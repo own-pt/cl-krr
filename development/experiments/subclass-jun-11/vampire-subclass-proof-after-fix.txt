@@ -1,0 +1,144 @@
+fof(f1775043,plain,(
+  $false),
+  inference(sat_splitting_refutation,[],[f1774749,f1354193,f1356186,f1356185,f1397394])).
+fof(f1397394,plain,(
+  $false | $spl88),
+  inference(subsumption_resolution,[],[f1397393,f1009970])).
+fof(f1009970,plain,(
+  s_subclass(s_Organism,s_OrganicObject)),
+  inference(cnf_transformation,[],[f222724])).
+fof(f222724,axiom,(
+  s_subclass(s_Organism,s_OrganicObject)),
+  file('sc.tptp',a222724)).
+fof(f1397393,plain,(
+  ~s_subclass(s_Organism,s_OrganicObject) | $spl88),
+  inference(subsumption_resolution,[],[f1396686,f1012317])).
+fof(f1012317,plain,(
+  s_instance(s_Organism,s_SetOrClass)),
+  inference(cnf_transformation,[],[f222753])).
+fof(f222753,axiom,(
+  s_instance(s_Organism,s_SetOrClass)),
+  file('sc.tptp',a222753)).
+fof(f1396686,plain,(
+  ~s_instance(s_Organism,s_SetOrClass) | ~s_subclass(s_Organism,s_OrganicObject) | $spl88),
+  inference(resolution,[],[f1356186,f1010143])).
+fof(f1010143,plain,(
+  s_subclass(s_Animal,s_Organism)),
+  inference(cnf_transformation,[],[f222751])).
+fof(f222751,axiom,(
+  s_subclass(s_Animal,s_Organism)),
+  file('sc.tptp',a222751)).
+fof(f1356185,plain,(
+  ~s_instance(s_subclass_m,s_TransitiveRelation) | $spl87),
+  inference(cnf_transformation,[],[f1356185_D])).
+fof(f1356185_D,plain,(
+  ~s_instance(s_subclass_m,s_TransitiveRelation) <=> ~$spl87),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl87])])).
+fof(f1356186,plain,(
+  ( ! [X19] : (~s_subclass(s_Animal,X19) | ~s_instance(X19,s_SetOrClass) | ~s_subclass(X19,s_OrganicObject)) ) | $spl88),
+  inference(cnf_transformation,[],[f1356186_D])).
+fof(f1356186_D,plain,(
+  ( ! [X19] : (~s_subclass(s_Animal,X19) | ~s_instance(X19,s_SetOrClass) | ~s_subclass(X19,s_OrganicObject)) ) <=> ~$spl88),
+  introduced(sat_splitting_component,[new_symbols(naming,[$spl88])])).
+fof(f1354193,plain,(
+  ( ! [X19] : (~s_subclass(X19,s_OrganicObject) | ~s_subclass(s_Animal,X19) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X19,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f1354192,f1012141])).
+fof(f1012141,plain,(
+  s_instance(s_OrganicObject,s_SetOrClass)),
+  inference(cnf_transformation,[],[f227281])).
+fof(f227281,axiom,(
+  s_instance(s_OrganicObject,s_SetOrClass)),
+  file('sc.tptp',a227281)).
+fof(f1354192,plain,(
+  ( ! [X19] : (~s_subclass(X19,s_OrganicObject) | ~s_subclass(s_Animal,X19) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X19,s_SetOrClass) | ~s_instance(s_OrganicObject,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f1353507,f1012166])).
+fof(f1012166,plain,(
+  s_instance(s_Animal,s_SetOrClass)),
+  inference(cnf_transformation,[],[f227275])).
+fof(f227275,axiom,(
+  s_instance(s_Animal,s_SetOrClass)),
+  file('sc.tptp',a227275)).
+fof(f1353507,plain,(
+  ( ! [X19] : (~s_subclass(X19,s_OrganicObject) | ~s_subclass(s_Animal,X19) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(s_Animal,s_SetOrClass) | ~s_instance(X19,s_SetOrClass) | ~s_instance(s_OrganicObject,s_SetOrClass)) )),
+  inference(resolution,[],[f1007736,f1239082])).
+fof(f1239082,plain,(
+  ( ! [X2,X0,X1] : (s_subclass(X0,X2) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f1002509])).
+fof(f1002509,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X0,s_SetOrClass) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_subclass(X0,X1) | ~s_subclass(X1,X2) | s_subclass(X0,X2))),
+  inference(flattening,[],[f1002508])).
+fof(f1002508,plain,(
+  ! [X0,X1,X2] : ((~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X0,s_SetOrClass)) | (~s_instance(s_subclass_m,s_TransitiveRelation) | ((~s_subclass(X0,X1) | ~s_subclass(X1,X2)) | s_subclass(X0,X2))))),
+  inference(ennf_transformation,[],[f560181])).
+fof(f560181,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,s_SetOrClass) & s_instance(X1,s_SetOrClass) & s_instance(X0,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X0,X1) & s_subclass(X1,X2)) => s_subclass(X0,X2))))),
+  inference(rectify,[],[f218291])).
+fof(f218291,axiom,(
+  ! [X324,X325,X326] : ((s_instance(X326,s_SetOrClass) & s_instance(X325,s_SetOrClass) & s_instance(X324,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X324,X325) & s_subclass(X325,X326)) => s_subclass(X324,X326))))),
+  file('sc.tptp',a218291)).
+fof(f1007736,plain,(
+  ~s_subclass(s_Animal,s_OrganicObject)),
+  inference(cnf_transformation,[],[f229642])).
+fof(f229642,plain,(
+  ~s_subclass(s_Animal,s_OrganicObject)),
+  inference(flattening,[],[f229641])).
+fof(f229641,negated_conjecture,(
+  ~s_subclass(s_Animal,s_OrganicObject)),
+  inference(negated_conjecture,[],[f229640])).
+fof(f229640,conjecture,(
+  s_subclass(s_Animal,s_OrganicObject)),
+  file('sc.tptp',b6)).
+fof(f1774749,plain,(
+  $false | $spl87),
+  inference(subsumption_resolution,[],[f1774748,f1012415])).
+fof(f1012415,plain,(
+  s_instance(s_PartialOrderingRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f227888])).
+fof(f227888,axiom,(
+  s_instance(s_PartialOrderingRelation,s_SetOrClass)),
+  file('sc.tptp',a227888)).
+fof(f1774748,plain,(
+  ~s_instance(s_PartialOrderingRelation,s_SetOrClass) | $spl87),
+  inference(subsumption_resolution,[],[f1773888,f1011105])).
+fof(f1011105,plain,(
+  s_instance(s_subclass_m,s_PartialOrderingRelation)),
+  inference(cnf_transformation,[],[f13])).
+fof(f13,axiom,(
+  s_instance(s_subclass_m,s_PartialOrderingRelation)),
+  file('sc.tptp',a13)).
+fof(f1773888,plain,(
+  ~s_instance(s_subclass_m,s_PartialOrderingRelation) | ~s_instance(s_PartialOrderingRelation,s_SetOrClass) | $spl87),
+  inference(resolution,[],[f1356970,f1009543])).
+fof(f1009543,plain,(
+  s_subclass(s_PartialOrderingRelation,s_TransitiveRelation)),
+  inference(cnf_transformation,[],[f218348])).
+fof(f218348,axiom,(
+  s_subclass(s_PartialOrderingRelation,s_TransitiveRelation)),
+  file('sc.tptp',a218348)).
+fof(f1356970,plain,(
+  ( ! [X8] : (~s_subclass(X8,s_TransitiveRelation) | ~s_instance(s_subclass_m,X8) | ~s_instance(X8,s_SetOrClass)) ) | $spl87),
+  inference(subsumption_resolution,[],[f1356519,f1014092])).
+fof(f1014092,plain,(
+  s_instance(s_TransitiveRelation,s_SetOrClass)),
+  inference(cnf_transformation,[],[f229595])).
+fof(f229595,axiom,(
+  s_instance(s_TransitiveRelation,s_SetOrClass)),
+  file('sc.tptp',a229595)).
+fof(f1356519,plain,(
+  ( ! [X8] : (~s_instance(s_subclass_m,X8) | ~s_subclass(X8,s_TransitiveRelation) | ~s_instance(X8,s_SetOrClass) | ~s_instance(s_TransitiveRelation,s_SetOrClass)) ) | $spl87),
+  inference(resolution,[],[f1356185,f1239535])).
+fof(f1239535,plain,(
+  ( ! [X2,X0,X1] : (s_instance(X0,X1) | ~s_instance(X0,X2) | ~s_subclass(X2,X1) | ~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f1003343])).
+fof(f1003343,plain,(
+  ! [X0,X1,X2] : (~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass) | ~s_subclass(X2,X1) | ~s_instance(X0,X2) | s_instance(X0,X1))),
+  inference(flattening,[],[f1003342])).
+fof(f1003342,plain,(
+  ! [X0,X1,X2] : ((~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)) | ((~s_subclass(X2,X1) | ~s_instance(X0,X2)) | s_instance(X0,X1)))),
+  inference(ennf_transformation,[],[f560765])).
+fof(f560765,plain,(
+  ! [X0,X1,X2] : ((s_instance(X1,s_SetOrClass) & s_instance(X2,s_SetOrClass)) => ((s_subclass(X2,X1) & s_instance(X0,X2)) => s_instance(X0,X1)))),
+  inference(rectify,[],[f15])).
+fof(f15,axiom,(
+  ! [X5,X3,X4] : ((s_instance(X3,s_SetOrClass) & s_instance(X4,s_SetOrClass)) => ((s_subclass(X4,X3) & s_instance(X5,X4)) => s_instance(X5,X3)))),
+  file('sc.tptp',a15)).

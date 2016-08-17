@@ -1,0 +1,82 @@
+ % SZS start RequiredInformation
+% Congratulations - you have become a registered power user of SystemOnTPTP, at IP address 32.104.18.214.
+% Please consider donating to the TPTP project - see www.tptp.org for details.
+% When you donate this message will disappear.
+% If you do not donate a random delay might be added to your processing time.
+% SZS end RequiredInformation
+
+% START OF SYSTEM OUTPUT
+
+Loading IDV ...
+
+% SZS status Success
+
+
+% END OF SYSTEM OUTPUT
+% RESULT: SOT_DwLKYZ - IDV---0.0 says Success - CPU = 0.01 WC = 0.03 
+% OUTPUT: SOT_DwLKYZ - IDV---0.0 says Assurance - CPU = 0.01 WC = 0.03 
+
+% START OF SYSTEM OUTPUT
+% SZS status Success for /tmp/SystemOnTPTPFormReply41596/SOT_DwLKYZ
+% SZS output start Summary
+% A contradiction was found without a conjecture
+proved($false,[a4808,a2862,a7705,a4449]).
+% SZS output end Summary
+
+% END OF SYSTEM OUTPUT
+% RESULT: SOT_DwLKYZ - PProofSummary---0.0 says Success - CPU = 0.00 WC = 0.00 
+% OUTPUT: SOT_DwLKYZ - PProofSummary---0.0 says Derivation - CPU = 0.00 WC = 0.00 
+
+% START OF SYSTEM OUTPUT
+% SZS status Success for /tmp/SystemOnTPTPFormReply41596/SOT_DwLKYZ
+% SZS output start Summary
+% A contradiction was found without a conjecture
+fof(a4808,axiom,(
+    s_disjoint(s_Collection,s_SelfConnectedObject) ),
+    file('suo-kif-consistency.tptp',a4808)).
+
+fof(a2862,axiom,(
+    ! [X241,X615,X240] :
+      ( ( ( ( s_instance(X240,s_Collection)
+            & s_instance(X615,s_SetOrClass) )
+         => s_memberType(X240,X615) )
+        & ( ( s_instance(X241,s_Object)
+            & s_instance(X240,s_Collection) )
+         => s_member(X241,X240) ) )
+     => s_instance(X241,X615) ) ),
+    file('suo-kif-consistency.tptp',a2862)).
+
+fof(a7705,axiom,(
+    ! [X19,X63,X165] :
+      ( ( ( ( s_instance(X165,s_SelfConnectedObject)
+            & s_instance(X63,s_SelfConnectedObject) )
+         => s_top(X165,X63) )
+        & ( ( s_instance(X19,s_SelfConnectedObject)
+            & s_instance(X63,s_SelfConnectedObject) )
+         => s_side(X19,X63) ) )
+     => ~ ( ( s_instance(X165,s_Entity)
+            & s_instance(X19,s_Entity) )
+         => X165 = X19 ) ) ),
+    file('suo-kif-consistency.tptp',a7705)).
+
+fof(a4449,axiom,(
+    ! [X733,X734] :
+      ( ( ( s_instance(X734,s_SetOrClass)
+          & s_instance(X733,s_SetOrClass) )
+       => s_disjoint(X734,X733) )
+     => ! [X238] :
+          ~ ( s_instance(X238,X734)
+            & s_instance(X238,X733) ) ) ),
+    file('suo-kif-consistency.tptp',a4449)).
+
+cnf(73847,theorem,
+    ( $false ),
+    inference(summary,[status(thm)],[a4808,a2862,a7705,a4449]),
+    [proof]).
+
+% SZS output end Summary
+
+% END OF SYSTEM OUTPUT
+% RESULT: SOT_DwLKYZ - ProofSummary---0.0 says Success - CPU = 0.00 WC = 0.00 
+% OUTPUT: SOT_DwLKYZ - ProofSummary---0.0 says Derivation - CPU = 0.00 WC = 0.00 
+

@@ -1,0 +1,5 @@
+(instance Time15-1 TimeInterval)
+(meetsTemporally Time15-1 Time15-2)
+(instance Time15-2 TimeInterval)
+(query (not (overlapsTemporally Time15-1 Time15-2)))
+

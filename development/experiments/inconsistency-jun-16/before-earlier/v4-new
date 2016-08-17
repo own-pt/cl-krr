@@ -1,0 +1,255 @@
+fof(f15,axiom,(
+  ! [X5,X3,X4] : ((s_instance(X4,s_SetOrClass) & s_instance(X3,s_SetOrClass)) => ((s_instance(X5,X4) & s_subclass(X4,X3)) => s_instance(X5,X3)))),
+  file('bs.tptp',a15)).
+fof(f27884,axiom,(
+  ! [X6,X7] : ! [X46] : (s_instance(X46,s_Entity) => ((s_instance(X6,s_SetOrClass) & s_instance(X7,s_SetOrClass)) => (s_disjoint(X7,X6) => ~(s_instance(X46,X6) & s_instance(X46,X7)))))),
+  file('bs.tptp',a27884)).
+fof(f55761,axiom,(
+  ! [X13,X14,X12] : ((s_instance(X13,s_Class) & s_instance(X14,s_Class) & s_instance(X12,s_Class)) => (s_partition3(X13,X12,X14) <=> (s_disjointDecomposition3(X13,X12,X14) & s_exhaustiveDecomposition3(X13,X12,X14))))),
+  file('bs.tptp',a55761)).
+fof(f55801,axiom,(
+  ! [X0] : (s_instance(X0,s_Class) <=> s_subclass(X0,s_Entity))),
+  file('bs.tptp',a55801)).
+fof(f55956,axiom,(
+  s_instance(s_Entity,s_SetOrClass)),
+  file('bs.tptp',a55956)).
+fof(f56062,axiom,(
+  s_partition3(s_TimePosition,s_TimeInterval,s_TimePoint)),
+  file('bs.tptp',a56062)).
+fof(f56064,axiom,(
+  s_instance(s_TimePosition,s_SetOrClass)),
+  file('bs.tptp',a56064)).
+fof(f56065,axiom,(
+  s_subclass(s_TimePoint,s_TimePosition)),
+  file('bs.tptp',a56065)).
+fof(f56397,axiom,(
+  ! [X289,X290,X291] : ((s_instance(X289,s_SetOrClass) & s_instance(X290,s_SetOrClass) & s_instance(X291,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X290,X291) & s_subclass(X289,X290)) => s_subclass(X289,X291))))),
+  file('bs.tptp',a56397)).
+fof(f56584,axiom,(
+  ! [X0,X14,X12] : ((s_instance(X14,s_SetOrClass) & s_instance(X14,s_Class) & s_instance(X0,s_Class) & s_instance(X12,s_Class) & s_instance(X12,s_SetOrClass)) => (s_disjointDecomposition3(X0,X12,X14) => s_disjoint(X12,X14)))),
+  file('bs.tptp',a56584)).
+fof(f58704,axiom,(
+  s_instance(s_TimePoint,s_SetOrClass)),
+  file('bs.tptp',a58704)).
+fof(f58972,axiom,(
+  s_instance(s_TimeInterval,s_SetOrClass)),
+  file('bs.tptp',a58972)).
+fof(f59463,axiom,(
+  ! [X295,X577] : ? [X59] : ((s_instance(X295,s_Formula) => ((s_patient(X577,X295) & s_instance(X577,s_Remembering)) => ((s_earlier(X59,s_WhenFn(X577)) | s_before(X59,s_WhenFn(X577))) & s_holdsDuring(X59,X295)))) & s_instance(X59,s_TimeInterval) & s_instance(X59,s_TimePoint))),
+  file('bs.tptp',a59463)).
+fof(f61822,axiom,(
+  s_subclass(s_TimePosition,s_Entity)),
+  file('bs.tptp',a61822)).
+fof(f62119,axiom,(
+  s_subclass(s_TimeInterval,s_Entity)),
+  file('bs.tptp',a62119)).
+fof(f63430,axiom,(
+  s_instance(s_subclass_m,s_TransitiveRelation)),
+  file('bs.tptp',a63430)).
+fof(f121260,plain,(
+  ! [X0,X1] : ! [X2] : (s_instance(X2,s_Entity) => ((s_instance(X0,s_SetOrClass) & s_instance(X1,s_SetOrClass)) => (s_disjoint(X1,X0) => ~(s_instance(X2,X0) & s_instance(X2,X1)))))),
+  inference(rectify,[],[f27884])).
+fof(f121261,plain,(
+  ! [X0,X1,X2] : (s_instance(X2,s_Entity) => ((s_instance(X0,s_SetOrClass) & s_instance(X1,s_SetOrClass)) => (s_disjoint(X1,X0) => ~(s_instance(X2,X0) & s_instance(X2,X1)))))),
+  inference(flattening,[],[f121260])).
+fof(f121394,plain,(
+  ! [X0,X1] : ? [X2] : ((s_instance(X0,s_Formula) => ((s_patient(X1,X0) & s_instance(X1,s_Remembering)) => ((s_earlier(X2,s_WhenFn(X1)) | s_before(X2,s_WhenFn(X1))) & s_holdsDuring(X2,X0)))) & s_instance(X2,s_TimeInterval) & s_instance(X2,s_TimePoint))),
+  inference(rectify,[],[f59463])).
+fof(f122464,plain,(
+  ! [X0,X1,X2] : ((s_instance(X1,s_SetOrClass) & s_instance(X1,s_Class) & s_instance(X0,s_Class) & s_instance(X2,s_Class) & s_instance(X2,s_SetOrClass)) => (s_disjointDecomposition3(X0,X2,X1) => s_disjoint(X2,X1)))),
+  inference(rectify,[],[f56584])).
+fof(f123574,plain,(
+  ! [X0,X1,X2] : ((s_instance(X0,s_SetOrClass) & s_instance(X1,s_SetOrClass) & s_instance(X2,s_SetOrClass)) => (s_instance(s_subclass_m,s_TransitiveRelation) => ((s_subclass(X1,X2) & s_subclass(X0,X1)) => s_subclass(X0,X2))))),
+  inference(rectify,[],[f56397])).
+fof(f123797,plain,(
+  ! [X0,X1,X2] : ((s_instance(X0,s_Class) & s_instance(X1,s_Class) & s_instance(X2,s_Class)) => (s_partition3(X0,X2,X1) <=> (s_disjointDecomposition3(X0,X2,X1) & s_exhaustiveDecomposition3(X0,X2,X1))))),
+  inference(rectify,[],[f55761])).
+fof(f123822,plain,(
+  ! [X0,X1,X2] : ((s_instance(X2,s_SetOrClass) & s_instance(X1,s_SetOrClass)) => ((s_instance(X0,X2) & s_subclass(X2,X1)) => s_instance(X0,X1)))),
+  inference(rectify,[],[f15])).
+fof(f233843,plain,(
+  ! [X0,X1,X2] : ((((~s_instance(X2,X0) | ~s_instance(X2,X1)) | ~s_disjoint(X1,X0)) | (~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass))) | ~s_instance(X2,s_Entity))),
+  inference(ennf_transformation,[],[f121261])).
+fof(f233844,plain,(
+  ! [X0,X1,X2] : (~s_instance(X2,X0) | ~s_instance(X2,X1) | ~s_disjoint(X1,X0) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_Entity))),
+  inference(flattening,[],[f233843])).
+fof(f233977,plain,(
+  ! [X0,X1] : ? [X2] : (((((s_earlier(X2,s_WhenFn(X1)) | s_before(X2,s_WhenFn(X1))) & s_holdsDuring(X2,X0)) | (~s_patient(X1,X0) | ~s_instance(X1,s_Remembering))) | ~s_instance(X0,s_Formula)) & s_instance(X2,s_TimeInterval) & s_instance(X2,s_TimePoint))),
+  inference(ennf_transformation,[],[f121394])).
+fof(f233978,plain,(
+  ! [X0,X1] : ? [X2] : ((((s_earlier(X2,s_WhenFn(X1)) | s_before(X2,s_WhenFn(X1))) & s_holdsDuring(X2,X0)) | ~s_patient(X1,X0) | ~s_instance(X1,s_Remembering) | ~s_instance(X0,s_Formula)) & s_instance(X2,s_TimeInterval) & s_instance(X2,s_TimePoint))),
+  inference(flattening,[],[f233977])).
+fof(f236110,plain,(
+  ! [X0,X1,X2] : ((s_disjoint(X2,X1) | ~s_disjointDecomposition3(X0,X2,X1)) | (~s_instance(X1,s_SetOrClass) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class) | ~s_instance(X2,s_Class) | ~s_instance(X2,s_SetOrClass)))),
+  inference(ennf_transformation,[],[f122464])).
+fof(f236111,plain,(
+  ! [X0,X1,X2] : (s_disjoint(X2,X1) | ~s_disjointDecomposition3(X0,X2,X1) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class) | ~s_instance(X2,s_Class) | ~s_instance(X2,s_SetOrClass))),
+  inference(flattening,[],[f236110])).
+fof(f238328,plain,(
+  ! [X0,X1,X2] : (((s_subclass(X0,X2) | (~s_subclass(X1,X2) | ~s_subclass(X0,X1))) | ~s_instance(s_subclass_m,s_TransitiveRelation)) | (~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)))),
+  inference(ennf_transformation,[],[f123574])).
+fof(f238329,plain,(
+  ! [X0,X1,X2] : (s_subclass(X0,X2) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass))),
+  inference(flattening,[],[f238328])).
+fof(f238770,plain,(
+  ! [X0,X1,X2] : ((s_partition3(X0,X2,X1) <=> (s_disjointDecomposition3(X0,X2,X1) & s_exhaustiveDecomposition3(X0,X2,X1))) | (~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X2,s_Class)))),
+  inference(ennf_transformation,[],[f123797])).
+fof(f238771,plain,(
+  ! [X0,X1,X2] : ((s_partition3(X0,X2,X1) <=> (s_disjointDecomposition3(X0,X2,X1) & s_exhaustiveDecomposition3(X0,X2,X1))) | ~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X2,s_Class))),
+  inference(flattening,[],[f238770])).
+fof(f238814,plain,(
+  ! [X0,X1,X2] : ((s_instance(X0,X1) | (~s_instance(X0,X2) | ~s_subclass(X2,X1))) | (~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass)))),
+  inference(ennf_transformation,[],[f123822])).
+fof(f238815,plain,(
+  ! [X0,X1,X2] : (s_instance(X0,X1) | ~s_instance(X0,X2) | ~s_subclass(X2,X1) | ~s_instance(X2,s_SetOrClass) | ~s_instance(X1,s_SetOrClass))),
+  inference(flattening,[],[f238814])).
+fof(f240689,plain,(
+  ! [X0] : ((s_instance(X0,s_Class) | ~s_subclass(X0,s_Entity)) & (s_subclass(X0,s_Entity) | ~s_instance(X0,s_Class)))),
+  inference(nnf_transformation,[],[f55801])).
+fof(f241249,plain,(
+  ! [X1,X0] : (? [X2] : ((((s_earlier(X2,s_WhenFn(X1)) | s_before(X2,s_WhenFn(X1))) & s_holdsDuring(X2,X0)) | ~s_patient(X1,X0) | ~s_instance(X1,s_Remembering) | ~s_instance(X0,s_Formula)) & s_instance(X2,s_TimeInterval) & s_instance(X2,s_TimePoint)) <=> ((((s_earlier(sK448(X0,X1),s_WhenFn(X1)) | s_before(sK448(X0,X1),s_WhenFn(X1))) & s_holdsDuring(sK448(X0,X1),X0)) | ~s_patient(X1,X0) | ~s_instance(X1,s_Remembering) | ~s_instance(X0,s_Formula)) & s_instance(sK448(X0,X1),s_TimeInterval) & s_instance(sK448(X0,X1),s_TimePoint)))),
+  introduced(choice_axiom,[])).
+fof(f241250,plain,(
+  ! [X0,X1] : ((((s_earlier(sK448(X0,X1),s_WhenFn(X1)) | s_before(sK448(X0,X1),s_WhenFn(X1))) & s_holdsDuring(sK448(X0,X1),X0)) | ~s_patient(X1,X0) | ~s_instance(X1,s_Remembering) | ~s_instance(X0,s_Formula)) & s_instance(sK448(X0,X1),s_TimeInterval) & s_instance(sK448(X0,X1),s_TimePoint))),
+  inference(skolemisation,[status(esa),new_symbols(skolem,[sK448])],[f233978,f241249])).
+fof(f241399,plain,(
+  ! [X0,X1,X2] : (((s_partition3(X0,X2,X1) | (~s_disjointDecomposition3(X0,X2,X1) | ~s_exhaustiveDecomposition3(X0,X2,X1))) & ((s_disjointDecomposition3(X0,X2,X1) & s_exhaustiveDecomposition3(X0,X2,X1)) | ~s_partition3(X0,X2,X1))) | ~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X2,s_Class))),
+  inference(nnf_transformation,[],[f238771])).
+fof(f241400,plain,(
+  ! [X0,X1,X2] : (((s_partition3(X0,X2,X1) | ~s_disjointDecomposition3(X0,X2,X1) | ~s_exhaustiveDecomposition3(X0,X2,X1)) & ((s_disjointDecomposition3(X0,X2,X1) & s_exhaustiveDecomposition3(X0,X2,X1)) | ~s_partition3(X0,X2,X1))) | ~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X2,s_Class))),
+  inference(flattening,[],[f241399])).
+fof(f241987,plain,(
+  s_subclass(s_TimePosition,s_Entity)),
+  inference(cnf_transformation,[],[f61822])).
+fof(f242893,plain,(
+  s_subclass(s_TimeInterval,s_Entity)),
+  inference(cnf_transformation,[],[f62119])).
+fof(f243557,plain,(
+  s_subclass(s_TimePoint,s_TimePosition)),
+  inference(cnf_transformation,[],[f56065])).
+fof(f244513,plain,(
+  s_instance(s_TimePosition,s_SetOrClass)),
+  inference(cnf_transformation,[],[f56064])).
+fof(f244519,plain,(
+  s_instance(s_TimeInterval,s_SetOrClass)),
+  inference(cnf_transformation,[],[f58972])).
+fof(f245341,plain,(
+  s_instance(s_TimePoint,s_SetOrClass)),
+  inference(cnf_transformation,[],[f58704])).
+fof(f245969,plain,(
+  s_instance(s_Entity,s_SetOrClass)),
+  inference(cnf_transformation,[],[f55956])).
+fof(f247723,plain,(
+  s_instance(s_subclass_m,s_TransitiveRelation)),
+  inference(cnf_transformation,[],[f63430])).
+fof(f249301,plain,(
+  s_partition3(s_TimePosition,s_TimeInterval,s_TimePoint)),
+  inference(cnf_transformation,[],[f56062])).
+fof(f249639,plain,(
+  ( ! [X0] : (~s_subclass(X0,s_Entity) | s_instance(X0,s_Class)) )),
+  inference(cnf_transformation,[],[f240689])).
+fof(f304568,plain,(
+  ( ! [X2,X0,X1] : (~s_disjoint(X1,X0) | ~s_instance(X2,X1) | ~s_instance(X2,X0) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_Entity)) )),
+  inference(cnf_transformation,[],[f233844])).
+fof(f305139,plain,(
+  ( ! [X0,X1] : (s_instance(sK448(X0,X1),s_TimePoint)) )),
+  inference(cnf_transformation,[],[f241250])).
+fof(f305140,plain,(
+  ( ! [X0,X1] : (s_instance(sK448(X0,X1),s_TimeInterval)) )),
+  inference(cnf_transformation,[],[f241250])).
+fof(f306346,plain,(
+  ( ! [X2,X0,X1] : (~s_disjointDecomposition3(X0,X2,X1) | s_disjoint(X2,X1) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X1,s_Class) | ~s_instance(X0,s_Class) | ~s_instance(X2,s_Class) | ~s_instance(X2,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f236111])).
+fof(f307456,plain,(
+  ( ! [X2,X0,X1] : (s_subclass(X0,X2) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(s_subclass_m,s_TransitiveRelation) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | ~s_instance(X2,s_SetOrClass)) )),
+  inference(cnf_transformation,[],[f238329])).
+fof(f307701,plain,(
+  ( ! [X2,X0,X1] : (~s_partition3(X0,X2,X1) | s_disjointDecomposition3(X0,X2,X1) | ~s_instance(X0,s_Class) | ~s_instance(X1,s_Class) | ~s_instance(X2,s_Class)) )),
+  inference(cnf_transformation,[],[f241400])).
+fof(f307731,plain,(
+  ( ! [X2,X0,X1] : (~s_instance(X1,s_SetOrClass) | ~s_instance(X0,X2) | ~s_subclass(X2,X1) | ~s_instance(X2,s_SetOrClass) | s_instance(X0,X1)) )),
+  inference(cnf_transformation,[],[f238815])).
+fof(f310704,plain,(
+  s_instance(s_TimeInterval,s_Class)),
+  inference(resolution,[],[f249639,f242893])).
+fof(f310706,plain,(
+  s_instance(s_TimePosition,s_Class)),
+  inference(resolution,[],[f249639,f241987])).
+fof(f316066,plain,(
+  ( ! [X10,X11] : (~s_subclass(X11,s_Entity) | ~s_instance(X10,X11) | ~s_instance(X11,s_SetOrClass) | s_instance(X10,s_Entity)) )),
+  inference(resolution,[],[f307731,f245969])).
+fof(f317201,plain,(
+  s_disjointDecomposition3(s_TimePosition,s_TimeInterval,s_TimePoint) | ~s_instance(s_TimePosition,s_Class) | ~s_instance(s_TimePoint,s_Class) | ~s_instance(s_TimeInterval,s_Class)),
+  inference(resolution,[],[f307701,f249301])).
+fof(f317243,plain,(
+  s_disjointDecomposition3(s_TimePosition,s_TimeInterval,s_TimePoint) | ~s_instance(s_TimePoint,s_Class) | ~s_instance(s_TimeInterval,s_Class)),
+  inference(subsumption_resolution,[],[f317201,f310706])).
+fof(f317244,plain,(
+  s_disjointDecomposition3(s_TimePosition,s_TimeInterval,s_TimePoint) | ~s_instance(s_TimePoint,s_Class)),
+  inference(subsumption_resolution,[],[f317243,f310704])).
+fof(f357548,plain,(
+  ( ! [X30] : (~s_instance(X30,s_TimeInterval) | ~s_instance(s_TimeInterval,s_SetOrClass) | s_instance(X30,s_Entity)) )),
+  inference(resolution,[],[f316066,f242893])).
+fof(f357812,plain,(
+  ( ! [X30] : (~s_instance(X30,s_TimeInterval) | s_instance(X30,s_Entity)) )),
+  inference(subsumption_resolution,[],[f357548,f244519])).
+fof(f396163,plain,(
+  ( ! [X2,X0,X1] : (~s_instance(X2,s_SetOrClass) | ~s_subclass(X1,X2) | ~s_subclass(X0,X1) | ~s_instance(X0,s_SetOrClass) | ~s_instance(X1,s_SetOrClass) | s_subclass(X0,X2)) )),
+  inference(subsumption_resolution,[],[f307456,f247723])).
+fof(f396184,plain,(
+  ( ! [X10,X11] : (~s_subclass(X10,s_Entity) | ~s_subclass(X11,X10) | ~s_instance(X11,s_SetOrClass) | ~s_instance(X10,s_SetOrClass) | s_subclass(X11,s_Entity)) )),
+  inference(resolution,[],[f396163,f245969])).
+fof(f403370,plain,(
+  s_disjoint(s_TimeInterval,s_TimePoint) | ~s_instance(s_TimePoint,s_SetOrClass) | ~s_instance(s_TimePoint,s_Class) | ~s_instance(s_TimePosition,s_Class) | ~s_instance(s_TimeInterval,s_Class) | ~s_instance(s_TimeInterval,s_SetOrClass) | ~s_instance(s_TimePoint,s_Class)),
+  inference(resolution,[],[f306346,f317244])).
+fof(f403412,plain,(
+  s_disjoint(s_TimeInterval,s_TimePoint) | ~s_instance(s_TimePoint,s_SetOrClass) | ~s_instance(s_TimePoint,s_Class) | ~s_instance(s_TimePosition,s_Class) | ~s_instance(s_TimeInterval,s_Class) | ~s_instance(s_TimeInterval,s_SetOrClass)),
+  inference(duplicate_literal_removal,[],[f403370])).
+fof(f403446,plain,(
+  s_disjoint(s_TimeInterval,s_TimePoint) | ~s_instance(s_TimePoint,s_Class) | ~s_instance(s_TimePosition,s_Class) | ~s_instance(s_TimeInterval,s_Class) | ~s_instance(s_TimeInterval,s_SetOrClass)),
+  inference(subsumption_resolution,[],[f403412,f245341])).
+fof(f403447,plain,(
+  s_disjoint(s_TimeInterval,s_TimePoint) | ~s_instance(s_TimePoint,s_Class) | ~s_instance(s_TimeInterval,s_Class) | ~s_instance(s_TimeInterval,s_SetOrClass)),
+  inference(subsumption_resolution,[],[f403446,f310706])).
+fof(f403448,plain,(
+  s_disjoint(s_TimeInterval,s_TimePoint) | ~s_instance(s_TimePoint,s_Class) | ~s_instance(s_TimeInterval,s_SetOrClass)),
+  inference(subsumption_resolution,[],[f403447,f310704])).
+fof(f403449,plain,(
+  ~s_instance(s_TimePoint,s_Class) | s_disjoint(s_TimeInterval,s_TimePoint)),
+  inference(subsumption_resolution,[],[f403448,f244519])).
+fof(f958530,plain,(
+  ( ! [X33] : (~s_subclass(X33,s_TimePosition) | ~s_instance(X33,s_SetOrClass) | ~s_instance(s_TimePosition,s_SetOrClass) | s_subclass(X33,s_Entity)) )),
+  inference(resolution,[],[f396184,f241987])).
+fof(f958794,plain,(
+  ( ! [X33] : (~s_subclass(X33,s_TimePosition) | ~s_instance(X33,s_SetOrClass) | s_subclass(X33,s_Entity)) )),
+  inference(subsumption_resolution,[],[f958530,f244513])).
+fof(f962423,plain,(
+  ~s_instance(s_TimePoint,s_SetOrClass) | s_subclass(s_TimePoint,s_Entity)),
+  inference(resolution,[],[f958794,f243557])).
+fof(f962429,plain,(
+  s_subclass(s_TimePoint,s_Entity)),
+  inference(subsumption_resolution,[],[f962423,f245341])).
+fof(f962444,plain,(
+  s_instance(s_TimePoint,s_Class)),
+  inference(resolution,[],[f962429,f249639])).
+fof(f962447,plain,(
+  s_disjoint(s_TimeInterval,s_TimePoint)),
+  inference(subsumption_resolution,[],[f403449,f962444])).
+fof(f962451,plain,(
+  ( ! [X0] : (~s_instance(X0,s_TimeInterval) | ~s_instance(X0,s_TimePoint) | ~s_instance(s_TimePoint,s_SetOrClass) | ~s_instance(s_TimeInterval,s_SetOrClass) | ~s_instance(X0,s_Entity)) )),
+  inference(resolution,[],[f962447,f304568])).
+fof(f962453,plain,(
+  ( ! [X0] : (~s_instance(X0,s_TimeInterval) | ~s_instance(X0,s_TimePoint) | ~s_instance(s_TimePoint,s_SetOrClass) | ~s_instance(s_TimeInterval,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f962451,f357812])).
+fof(f962454,plain,(
+  ( ! [X0] : (~s_instance(X0,s_TimeInterval) | ~s_instance(X0,s_TimePoint) | ~s_instance(s_TimeInterval,s_SetOrClass)) )),
+  inference(subsumption_resolution,[],[f962453,f245341])).
+fof(f962455,plain,(
+  ( ! [X0] : (~s_instance(X0,s_TimeInterval) | ~s_instance(X0,s_TimePoint)) )),
+  inference(subsumption_resolution,[],[f962454,f244519])).
+fof(f962476,plain,(
+  ( ! [X15,X16] : (~s_instance(sK448(X15,X16),s_TimePoint)) )),
+  inference(resolution,[],[f962455,f305140])).
+fof(f962484,plain,(
+  $false),
+  inference(subsumption_resolution,[],[f962476,f305139])).

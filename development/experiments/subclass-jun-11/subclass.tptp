@@ -1,0 +1,97 @@
+/*
+(forall (?Z ?Y ?X)
+ (=> (and (instance ?Y SetOrClass) (instance ?X SetOrClass))
+  (=> (and (subclass ?X ?Y) (instance ?Z ?X)) (instance ?Z ?Y))))
+*/
+fof(a15,axiom,! [Z,Y,X] : (((s_instance(Y, s_SetOrClass) & s_instance(X, s_SetOrClass)) => ((s_subclass(X, Y) & s_instance(Z, X)) => s_instance(Z, Y))))).
+
+/*
+(forall (?INST1 ?INST2 ?INST3)
+ (=>
+  (and (instance ?INST3 SetOrClass) (instance ?INST2 SetOrClass)
+       (instance ?INST1 SetOrClass))
+  (=> (instance subclass TransitiveRelation)
+   (=> (and (subclass ?INST1 ?INST2) (subclass ?INST2 ?INST3))
+    (subclass ?INST1 ?INST3)))))
+*/
+fof(a218291,axiom,! [INST1,INST2,INST3] : (((s_instance(INST3, s_SetOrClass) & s_instance(INST2, s_SetOrClass) & s_instance(INST1, s_SetOrClass)) => (s_instance(s_subclass_m, s_TransitiveRelation) => ((s_subclass(INST1, INST2) & s_subclass(INST2, INST3)) => s_subclass(INST1, INST3)))))).
+
+
+/*
+(forall (?INST1 ?INST2)
+ (=> (and (instance ?INST2 SetOrClass) (instance ?INST1 SetOrClass))
+  (=> (instance subclass AntisymmetricRelation)
+   (=> (and (subclass ?INST1 ?INST2) (subclass ?INST2 ?INST1))
+    (equal ?INST1 ?INST2)))))
+*/
+fof(a218130,axiom,! [INST1,INST2] : (((s_instance(INST2, s_SetOrClass) & s_instance(INST1, s_SetOrClass)) => (s_instance(s_subclass_m, s_AntisymmetricRelation) => ((s_subclass(INST1, INST2) & s_subclass(INST2, INST1)) => (INST1 = INST2)))))).
+
+/*
+(instance subclass PartialOrderingRelation)
+*/
+fof(a13,axiom,s_instance(s_subclass_m, s_PartialOrderingRelation)).
+
+/*
+(subclass PartialOrderingRelation TransitiveRelation)
+*/
+fof(a218348,axiom,s_subclass(s_PartialOrderingRelation, s_TransitiveRelation)).
+
+/*
+(subclass PartialOrderingRelation AntisymmetricRelation)
+*/
+fof(a218349,axiom,s_subclass(s_PartialOrderingRelation, s_AntisymmetricRelation)).
+
+/*
+(subclass Animal Organism)
+*/
+fof(a222752,axiom,s_subclass(s_Animal, s_Organism)).
+
+/*
+(subclass Organism OrganicObject)
+*/
+fof(a222725,axiom,s_subclass(s_Organism, s_OrganicObject)).
+
+/*
+(instance Organism SetOrClass)
+*/
+fof(a222754,axiom,s_instance(s_Organism, s_SetOrClass)).
+
+/*
+(instance OrganicObject SetOrClass)
+*/
+fof(a227281,axiom,s_instance(s_OrganicObject, s_SetOrClass)).
+
+/*
+(instance Animal SetOrClass)
+*/
+fof(a229640,axiom,s_instance(s_Animal, s_SetOrClass)).
+
+/*
+(instance PartialOrderingRelation SetOrClass)
+*/
+fof(a227888,axiom,s_instance(s_PartialOrderingRelation, s_SetOrClass)).
+
+/*
+(instance TransitiveRelation SetOrClass)
+*/
+fof(a229595,axiom,s_instance(s_TransitiveRelation, s_SetOrClass)).
+
+/*
+(instance AntisymmetricRelation SetOrClass)
+*/
+fof(a228233,axiom,s_instance(s_AntisymmetricRelation, s_SetOrClass)).
+
+fof(b6, conjecture, s_subclass(s_Animal, s_OrganicObject)).
+
+
+fof(q1sc, axiom, s_instance(class1, s_SetOrClass)).
+fof(q2sc, axiom, s_instance(class2, s_SetOrClass)).
+fof(q3sc, axiom, s_instance(class3, s_SetOrClass)).
+
+% animal organic
+fof(q12, axiom, s_subclass(class1, class2)).
+
+% organic organicobject
+fof(q23, axiom, s_subclass(class2, class3)).
+
+%fof(c,conjecture,s_subclass(class1, class3)).

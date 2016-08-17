@@ -1,0 +1,116 @@
+%% absolute minimal set of axioms that make banana slug work
+
+% these were manually added; we should replace them one by one until
+% we get only original SUMO axioms
+
+fof(b1, axiom, s_instance(bslug, s_Entity)).
+
+fof(b3, axiom, s_instance(s_Vertebrate, s_Class)).
+fof(b5, axiom, s_instance(s_Invertebrate, s_Class)).
+fof(b6, axiom, s_instance(s_Animal, s_Class)).
+
+/*
+(forall (?CLASS) (<=> (instance ?CLASS Class) (subclass ?CLASS Entity)))
+*/
+fof(a217567,axiom,! [CLASS] : ((s_instance(CLASS, s_Class) <=> s_subclass(CLASS, s_Entity)))).
+
+/*
+(instance Vertebrate SetOrClass)
+*/
+fof(a222783,axiom,s_instance(s_Vertebrate, s_SetOrClass)).
+
+/*
+(instance Invertebrate SetOrClass)
+*/
+fof(a222770,axiom,s_instance(s_Invertebrate, s_SetOrClass)).
+
+/*
+(forall (?CLASS2 ?CLASS1)
+ (forall (?INST)
+  (=> (instance ?INST Entity)
+   (=>
+    (and (instance ?CLASS1 SetOrClass) (instance ?CLASS2 SetOrClass))
+    (=> (disjoint ?CLASS1 ?CLASS2)
+     (not (and (instance ?INST ?CLASS1) (instance ?INST ?CLASS2))))))))
+*/
+fof(a108767,axiom,! [CLASS2,CLASS1] : (! [INST] : ((s_instance(INST, s_Entity) => ((s_instance(CLASS1, s_SetOrClass) & s_instance(CLASS2, s_SetOrClass)) => (s_disjoint(CLASS1, CLASS2) => (~ (s_instance(INST, CLASS1) & s_instance(INST, CLASS2))))))))).
+
+/*
+(forall (?CLASS ?ROW2 ?ROW1)
+ (forall (?OBJ)
+  (=> (instance ?OBJ Entity)
+   (=>
+    (and (instance ?ROW1 SetOrClass) (instance ?ROW1 Class)
+         (instance ?ROW2 SetOrClass) (instance ?ROW2 Class)
+         (instance ?CLASS Class) (instance ?CLASS SetOrClass))
+    (=> (exhaustiveDecomposition3 ?CLASS ?ROW1 ?ROW2)
+     (=> (instance ?OBJ ?CLASS)
+      (or (instance ?OBJ ?ROW1) (instance ?OBJ ?ROW2))))))))
+*/
+fof(a218501,axiom,! [CLASS,ROW2,ROW1] : (! [OBJ] : ((s_instance(OBJ, s_Entity) => ((s_instance(ROW1, s_SetOrClass) & s_instance(ROW1, s_Class) & s_instance(ROW2, s_SetOrClass) & s_instance(ROW2, s_Class) & s_instance(CLASS, s_Class) & s_instance(CLASS, s_SetOrClass)) => (s_exhaustiveDecomposition3(CLASS, ROW1, ROW2) => (s_instance(OBJ, CLASS) => (s_instance(OBJ, ROW1) | s_instance(OBJ, ROW2))))))))).
+
+/*
+(forall (?ROW0 ?ROW2 ?ROW1)
+ (=>
+  (and (instance ?ROW1 Class) (instance ?ROW2 Class)
+       (instance ?ROW0 Class))
+  (<=> (partition3 ?ROW0 ?ROW1 ?ROW2)
+   (and (exhaustiveDecomposition3 ?ROW0 ?ROW1 ?ROW2)
+        (disjointDecomposition3 ?ROW0 ?ROW1 ?ROW2)))))
+*/
+fof(a217527,axiom,! [ROW0,ROW2,ROW1] : (((s_instance(ROW1, s_Class) & s_instance(ROW2, s_Class) & s_instance(ROW0, s_Class)) => (s_partition3(ROW0, ROW1, ROW2) <=> (s_exhaustiveDecomposition3(ROW0, ROW1, ROW2) & s_disjointDecomposition3(ROW0, ROW1, ROW2)))))).
+
+/*
+(forall (?CLASS ?ROW2 ?ROW1)
+ (=>
+  (and (instance ?ROW1 SetOrClass) (instance ?ROW1 Class)
+       (instance ?CLASS Class) (instance ?ROW2 Class)
+       (instance ?ROW2 SetOrClass))
+  (<=> (disjointDecomposition3 ?CLASS ?ROW1 ?ROW2)
+   (disjoint ?ROW1 ?ROW2))))
+*/
+fof(a218505,axiom,! [CLASS,ROW2,ROW1] : (((s_instance(ROW1, s_SetOrClass) & s_instance(ROW1, s_Class) & s_instance(CLASS, s_Class) & s_instance(ROW2, s_Class) & s_instance(ROW2, s_SetOrClass)) => (s_disjointDecomposition3(CLASS, ROW1, ROW2) <=> s_disjoint(ROW1, ROW2))))).
+
+
+/*
+(instance BananaSlug10-1 Animal)
+*/
+fof(a229641,axiom,s_instance(bslug, s_Animal)).
+
+/*
+(instance Animal SetOrClass)
+*/
+fof(a229640,axiom,s_instance(s_Animal, s_SetOrClass)).
+
+/*
+(partition3 Animal Vertebrate Invertebrate)
+*/
+fof(a222753,axiom,s_partition3(s_Animal, s_Vertebrate, s_Invertebrate)).
+
+/*
+(forall (?A)
+ (exists (?PART)
+  (and (instance ?PART Object)
+       (=>
+        (and (instance ?A Animal)
+             (not (and (instance ?PART SpinalColumn) (part ?PART ?A))))
+        (not (instance ?A Vertebrate))))))
+*/
+fof(a229642,axiom,! [A] : (? [PART] : ((s_instance(PART, s_Object) & ((s_instance(A, s_Animal) & (~ (s_instance(PART, s_SpinalColumn) & s_part(PART, A)))) => (~ s_instance(A, s_Vertebrate))))))).
+
+/*
+(forall (?SPINE)
+ (=> (instance ?SPINE Object)
+  (not (and (instance ?SPINE SpinalColumn)
+            (part ?SPINE BananaSlug10-1)))))
+*/
+fof(a229643,axiom,! [SPINE] : ((s_instance(SPINE, s_Object) => (~ (s_instance(SPINE, s_SpinalColumn) & s_part(SPINE, bslug)))))).
+
+% this seems unnecessary
+/*
+(and (instance BodyPart10-1 BodyPart)
+     (component BodyPart10-1 BananaSlug10-1))
+*/
+fof(a229644,axiom,(s_instance(s_BodyPart10_1, s_BodyPart) & s_component(s_BodyPart10_1, bslug))).
+
+fof(q1, conjecture, s_instance(bslug, s_Invertebrate)).

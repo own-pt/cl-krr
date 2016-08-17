@@ -1,0 +1,54 @@
+fof(fof_t1_type,axiom,(
+    ? [A] : t1(A) )).
+
+fof(fof_t2_type,axiom,(
+    ? [A] : t2(A) )).
+
+fof(fof_tn_type,axiom,(
+    ? [A] : tn(A) )).
+
+fof(fof_axiom1,axiom,(
+    ! [X2,Xn] : 
+      ( ! [X1,X2,Xn] : 
+          ( ( t1(X1)
+            & t2(X2)
+            & tn(Xn) )
+         => p(X1,Xn) )
+      & q(X2,Xn) ) )).
+
+fof(fof_axiom2,axiom,(
+    ! [X2,Xn] : 
+      ( ! [X1,X2,Xn] : 
+          ( ( t1(X1)
+            & t2(X2)
+            & tn(Xn) )
+         => p(X1,Xn) )
+      | q(X2,Xn) ) )).
+
+fof(fof_axiom3,axiom,(
+    ! [X2,Xn] : 
+      ( ! [X1,X2,Xn] : 
+          ( ( t1(X1)
+            & t2(X2)
+            & tn(Xn) )
+         => p(X1,Xn) )
+     => q(X2,Xn) ) )).
+
+fof(tn_t2_distinct,axiom,(
+    ! [A,B] : 
+      ( ( tn(A)
+        & t2(B) )
+     => A != B ) )).
+
+fof(tn_t1_distinct,axiom,(
+    ! [A,B] : 
+      ( ( tn(A)
+        & t1(B) )
+     => A != B ) )).
+
+fof(t2_t1_distinct,axiom,(
+    ! [A,B] : 
+      ( ( t2(A)
+        & t1(B) )
+     => A != B ) )).
+

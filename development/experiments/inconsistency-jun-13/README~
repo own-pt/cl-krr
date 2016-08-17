@@ -1,0 +1,5 @@
+While attempting to understand the proof found by Vampire and E (see
+banana-slug-jun-13), we started to get suspicious of the proof there.
+So we tried to prove $false and see what happens.  Vampire found a
+proof in about 3 minutes, and this experiments was created to analyze
+that proof (vampire.txt). 

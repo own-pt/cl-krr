@@ -1,0 +1,52 @@
+This is an analysis of the inconsistency of the output.tptp, generated
+with the latest relativization attempt (prenex2).  See NOTES.text for
+details on the relativization attempts.
+
+I only got proofs using Vampire.
+
+Proof is a little more complicated than the May 23 one.  I also had to
+manually replace strings like $splXXX to splXXX, otherwise IDV would
+refuse to open the file.
+
+Right away this predicate seems strange:
+
+Original SUMO:
+
+(<=> 
+  (instance ?OBJ SelfConnectedObject)
+  (forall (?PART1 ?PART2)
+    (=> 
+      (equal ?OBJ (MereologicalSumFn ?PART1 ?PART2))
+      (connected ?PART1 ?PART2))))
+
+Our translation:
+
+/*
+(forall (?OBJ)
+ (forall (?PART1 ?PART2)
+  (=> (and (instance ?PART2 Object) (instance ?PART1 Object))
+   (<=> (instance ?OBJ SelfConnectedObject)
+    (=> (equal ?OBJ (MereologicalSumFn ?PART1 ?PART2))
+     (connected ?PART1 ?PART2))))))
+*/
+
+fof(a9724,axiom,(
+    ! [OBJ,PART1,PART2] :
+      ( ( s_instance(PART2,s_Object)
+        & s_instance(PART1,s_Object) )
+     => ( s_instance(OBJ,s_SelfConnectedObject)
+      <=> ( OBJ = s_MereologicalSumFn(PART1,PART2)
+         => s_connected(PART1,PART2) ) ) ) )).
+
+Sigma translation:
+
+fof(kb_SUMO_100,axiom,(
+    ! [OBJ] :
+      ( s_instance(OBJ,s_SelfConnectedObject)
+    <=> ! [PART1,PART2] :
+          ( ( s_instance(PART1,s_Object)
+            & s_instance(PART2,s_Object) )
+         => ( OBJ = s_MereologicalSumFn(PART1,PART2)
+           => s_connected(PART1,PART2) ) ) ) )).
+
+So, looks like our <=> prenex transform is wrong!

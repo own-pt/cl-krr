@@ -1,0 +1,20 @@
+(instance instance BinaryPredicate)
+(instance instance BinaryPredicate)
+(instance instance BinaryPredicate)
+(instance instance BinaryPredicate)
+
+(=>
+   (and
+      (domainSubclass ?REL ?NUMBER ?CLASS1)
+      (domainSubclass ?REL ?NUMBER ?CLASS2))
+   (or
+      (subclass ?CLASS1 ?CLASS2)
+      (subclass ?CLASS2 ?CLASS1)))
+
+(=>
+   (and
+      (domainSubclass ?REL ?NUMBER ?CLASS1)
+      (domainSubclass ?REL ?NUMBER ?CLASS2))
+   (or
+      (subclass ?CLASS1 ?CLASS2)
+      (subclass ?CLASS2 ?CLASS1)))

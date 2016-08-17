@@ -1,0 +1,280 @@
+An attempt to make banana slug work under E/Vampire and SUMO.
+
+The reason that we may have problems with banana slug lies on the way
+certain axioms rely on arithmetic on the current SUMO.  Unfortunately,
+they were written using a version of Vampire that no longer exists.
+Current ATPs have arithmetic support only under TFF and not all of
+them have.  (See ARITHMETIC-IN-SUO-KIF.txt for the discussion between
+Adam, Fabricio, and Alexandre.)
+
+Alt-Ergo---0.95.2    => TF1 TF0 FOF CNF;
+Beagle---0.9.47      => TF0 FOF CNF;
+Beagle---SAT-0.9.47  => TF0 FOF CNF;
+CVC4---1.5.1     => TF0;
+leanCoP-Omega---0.1  => TF0_ARI;
+MetiTarski---1.9     => TF0_ARI;
+Princess---160606    => TF0 FOF;
+SNARK---20120808r022 => TF0 FOF CNF;
+SPASS+T---2.2.22     => TF0;
+SPASS-XDB---0.8      => TF0_ARI;
+Vampire---4.0        => TF0 FOF CNF;
+VampireZ3---1.0      => TF0 FOF CNF;
+Z3---4.4-TPTP        => TF0 FOF;
+ZenonArith---0.1.0   => FOF TF0;
+ZenonModulo---0.4.1  => TF1 TF0 FOF CNF;
+Zipperpin---TFF-0.4  => TF0 TF1;
+
+So this experiment consist of having a version of MERGE/MILO that
+don't rely on arithmetic to work.
+
+Files in this directory:
+
+banana-slug.kif: banana slug as described in the original paper.
+
+Pease, A., Sutcliffe, G., Siegel, N., and Trac, S., (2010). Large
+Theory Reasoning with SUMO at CASC, AI Communications, Volume 23,
+Number 2-3 / 2010, Special issue on Practical Aspects of Automated
+Reasoning, IOS Press, ISSN 0921-7126, pp 137-144.
+
+banana-slug.tptp: the conjecture that we want to prove
+
+core-sumo.kif: MERGE+MILO, with modifications as described in this
+README
+
+minimal.tptp: an attempt to boild down banana slug to a bare minimum
+of axioms to understand the source of the problems.
+
+README: this file
+
+translate.lisp: code to generate the TPTP from the KIFs.
+
+///
+
+An issue with relativization was found:
+
+This formula (issue #1 in CL-KRR):
+
+(=>
+   (exhaustiveDecomposition ?CLASS ?ROW0 ?ROW1)
+   (and (instance ?CLASS Class) 
+        (instance ?ROW0 Class) 
+        (instance ?ROW1 Class)))
+
+was relativized as:
+
+(forall (?CLASS ?ROW1 ?ROW0)
+ (=>
+  (and (instance ?ROW0 Entity) (instance ?ROW0 Class)
+       (instance ?ROW1 Entity) (instance ?ROW1 Class)
+       (instance ?CLASS Class) (instance ?CLASS Entity))
+  (=> (exhaustiveDecomposition3 ?CLASS ?ROW0 ?ROW1)
+   (and (instance ?CLASS Class)
+        (and (instance ?ROW0 Class) (instance ?ROW1 Class))))))
+
+Which is clearly wrong: the purpose of the formula is to instantiate
+?CLASS, ?ROW0, and ?ROW1 as instances of Class, so they can't be added
+as restrictions in the antecedent.
+
+///
+
+It turns out that the issue reported above doesn't seem to affect
+much.
+
+What made the experiment work (i.e., prove that a banana slug is an
+invertebrate) was fixing the
+partition/exhaustiveDecomposition/disjointDecomposition axioms to
+avoid the list functions, but also we needed to add the following new axioms:
+
+fof(b3, axiom, s_instance(s_Vertebrate, s_Class)).
+fof(b5, axiom, s_instance(s_Invertebrate, s_Class)).
+fof(b6, axiom, s_instance(s_Animal, s_Class)).
+
+E solves it in 2m49s with the following command line:
+
+time nice eprover -s --auto-schedule --proof-object --tptp3-format -m 9047 bs.tptp
+
+(output in e-proof.txt)
+
+Still investigating why this is needed, specially because we have the
+following in MERGE:
+
+(<=> 
+  (instance ?CLASS Class)
+  (subclass ?CLASS Entity))
+
+And Vertebrate, Invertebrate and Animal are all subclasses of Entity.
+
+///
+
+Having a hard time proving that Animal is a subclass of Entity
+
+fof(b7, conjecture, s_subclass(s_Animal, s_Entity)).
+
+///
+
+OK, putting the subclasses directly as this:
+
+fof(b3, axiom, s_subclass(s_Vertebrate, s_Entity)).
+fof(b5, axiom, s_subclass(s_Invertebrate, s_Entity)).
+fof(b6, axiom, s_subclass(s_Animal, s_Entity)).
+
+Makes E find a proof in the same amount of time.
+
+The file e-proof.txt contains proof by E.
+
+///
+
+NOTE: the exploration on why the subclass is so slow has been moved to
+a different experiment (subclass-jun-11).
+
+///
+
+I have added code do CL-KRR to generate the transitive closure of
+subclasses and instances and STILL I haven't been able to find a proof!
+
+///
+
+Finally!  When using ONLY Merge.kif + caching the transitive closure
+over instances and subclasses*, I was finally able to prove banana slug.
+
+* By that, I mean generating the transitive closure over instances and
+  subclasses as follows:
+
+If (subclass A B) and (subclass B C) then I generate (subclass A C).
+
+Also, in the same example above, if I have
+
+(instance i A)
+
+then I generate also:
+
+(instance i B)
+(instance i C)
+
+File v-proof-after-transitive-closure.txt is Vampire finding the proof
+in 4m 8s.
+
+I would still like to know why adding more axioms (those in MILO, for
+example), makes the proof much harder to find.
+
+///
+
+E found the proof in about 7m 32s.  Added
+e-proof-after-transitive-closure.txt.
+
+/// 
+
+OK, we found an inconsistency*, but it seems unrelated to this problem.
+Fixed Merge.kif and trying again to see if anything changes:
+
+*https://github.com/ontologyportal/sumo/issues/13
+
+///
+
+The proof with the inconsistency removed is the same as before.
+
+Continuing with the previous proof analysis...
+
+///
+
+The proof was actually an inconsistency.
+
+This is the issue that we are going to open in SUMO:
+
+We were trying to reproduce the "banana slug" experiment in:
+
+Pease, A., Sutcliffe, G., Siegel, N., and Trac, S., (2010). Large
+Theory Reasoning with SUMO at CASC, AI Communications, Volume 23,
+Number 2-3 / 2010, Special issue on Practical Aspects of Automated
+Reasoning, IOS Press, ISSN 0921-7126, pp 137-144.
+
+Since we have issues with using arithmetic in SUMO (see issue #12), we
+decided to rewrite the axioms related to `partition`.
+
+We found an issue with `disjoinDecomposition` as follows.  The original was:
+
+```
+(=>
+   (disjointDecomposition ?CLASS @ROW)
+   (forall (?ITEM1 ?ITEM2)
+      (=>
+         (and
+            (inList ?ITEM1 (ListFn @ROW))
+            (inList ?ITEM2 (ListFn @ROW))
+            (not
+               (equal ?ITEM1 ?ITEM2)))
+         (disjoint ?ITEM1 ?ITEM2))))
+```
+
+There was already another axiom, as follows:
+
+```
+(<=>
+  (disjointDecomposition ?CLASS ?ROW1 ?ROW2 ?ROW3)
+  (and
+    (disjoint ?ROW1 ?ROW2)
+    (disjoint ?ROW2 ?ROW3)
+    (disjoint ?ROW3 ?ROW1)))
+```
+
+We added a new one for the case of only two row items as follows:
+
+```
+(<=>
+  (disjointDecomposition ?CLASS ?ROW1 ?ROW2)
+  (disjoint ?ROW1 ?ROW2))
+```
+
+From the axiom above and given that:
+
+```
+(disjoint CorpuscularObject Substance)
+```
+
+we were able to prove:
+
+```
+(disjointDecomposition Substance CorpuscularObject Substance)
+```
+
+Now we can prove that:
+
+```
+(subclass CorpuscularObject Substance)
+(subclass Substance Substance)
+```
+
+Given that `BananaSlug10-1` is an instance of `CorpuscularObject`
+(since it is an `Animal`, etc.) then we conclude that `BananaSlug10-1`
+is an instance of `Substance`, which contradicts the `disjoint`
+statement above.
+
+We suggest to change the equivalance to an implication as follows:
+
+```
+(=>
+  (disjointDecomposition ?CLASS ?ROW1 ?ROW2 ?ROW3)
+  (and
+    (disjoint ?ROW1 ?ROW2)
+    (disjoint ?ROW2 ?ROW3)
+    (disjoint ?ROW3 ?ROW1)))
+
+(=>
+  (disjointDecomposition ?CLASS ?ROW1 ?ROW2)
+  (disjoint ?ROW1 ?ROW2))
+```
+
+///
+
+Next step, I'm going to rerun everything with the changes above.
+
+I have created a new bs.tptp.bz2
+
+Vampire found a proof (v-proof-after-corrections.txt), which is a
+"real" proof, as opposed to finding an inconsistency, from which
+anything can be proved, as in the case above.
+
+One thing that I noticed is that this proof is way more behaved than
+the previous one.  The proof, as shown by IDV, is much more structure,
+in a triangular fashion.  The previous proofs, all inconsistencies,
+are more chaotic.

@@ -1,0 +1,56 @@
+This is an offshoot of the banana-slug-jun-10 experiment.  We want to
+explore why the subclass checking takes so long.
+
+See file SUBCLASS-HIERARCHY.txt for a discussion on this between Adam,
+Fabricio, and Alexandre.
+
+The file vampire-subclass-proof.txt contains a proof by Vampire (found
+in 5m 49s) of:
+
+fof(b6, conjecture, s_subclass(s_Animal, s_OrganicObject)).
+
+(command line used: time nice Vampire---4.0/vampire --mode casc -m 10000 -t 6h bs.tptp)
+
+///
+
+First expriment is to separate the axioms related to the subclass
+relation out of the other SUMO axioms and see how they behave on their
+own.
+
+The subclass.tptp proves the relation pretty quickly.
+
+///
+
+To eliminate any problems that may be caused by partition and the
+like, I tried to prove a completely artificial example as follows:
+
+fof(q1sc, axiom, s_instance(class1, s_SetOrClass)).
+fof(q2sc, axiom, s_instance(class2, s_SetOrClass)).
+fof(q3sc, axiom, s_instance(class3, s_SetOrClass)).
+
+% animal organic
+fof(q12, axiom, s_subclass(class1, class2)).
+
+% organic organicobject
+fof(q23, axiom, s_subclass(class2, class3)).
+
+fof(c,conjecture,s_subclass(class1, class3)).
+
+And it still takes me 5 minutes to prove this on the full MERGE+MILO.
+
+On the reduce subclass.tptp, it takes only a couple of seconds.
+
+///
+
+snark.lisp contains code to use SNARK.
+
+///
+
+Given that we found a problem with disjointDecomposition, I'm updating
+Merge.kif and retrying this experiment. 
+
+///
+
+Looks like the fix didn't help.  It still takes a long time to prove.
+
+See new proof at vampire-subclass-proof-after-fix.txt.

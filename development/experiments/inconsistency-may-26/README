@@ -1,0 +1,76 @@
+Hi Adam, Alexandre,
+
+while testing our own SUO-KIF -> TPTP conversion, I stumbled with a
+possible contradiction in SUMO.
+
+I have attached contradiction.tgz with the original TPTP, the
+command-line used to analyze it and the proof found by E.  I was
+actually not looking for a inconsistencies, but testing the subclass
+axioms.
+
+My attempt to reconstruct the proof with the original SUMO formulas
+follows.  Let me know if this makes sense.
+
+First, we have this formula about inheritable relations.
+
+(=>
+   (and
+      (subrelation ?PRED1 ?PRED2)
+      (instance ?PRED2 ?CLASS)
+      (subclass ?CLASS InheritableRelation))
+   (instance ?PRED1 ?CLASS))
+
+Then, let's analyze "penetrates" and "meetsSpatially" as follows:
+
+(subrelation penetrates meetsSpatially)
+(instance meetsSpatially SymmetricRelation)
+
+SymmetricRelation is a subclass of InheritableRelation because:
+
+(subclass SymmetricRelation BinaryRelation)
+(subclass BinaryRelation InheritableRelation)
+
+so the conclusion is that:
+
+(instance penetrates SymmetricRelation)
+
+but penetrates is defined explicitly as:
+
+(instance penetrates AsymmetricRelation)
+
+and we have the following regarding AsymmetricRelations:
+
+(<=>
+   (instance ?REL AsymmetricRelation)
+   (and
+       (instance ?REL AntisymmetricRelation)
+       (instance ?REL IrreflexiveRelation)))
+
+so, the conclusion is that:
+
+(instance penetrates AntisymmetricRelation)
+
+but we also state that:
+
+(disjoint SymmetricRelation AntisymmetricRelation)
+
+and that:
+
+(=>
+   (disjoint ?CLASS1 ?CLASS2)
+   (forall (?INST)
+     (not
+       (and 
+         (instance ?INST ?CLASS1)
+         (instance ?INST ?CLASS2)))))
+
+but, recall that, from above, we have:
+
+(and
+   (instance penetrates AsymmetricRelation)
+   (instance penetrates AntisymmetricRelation)) 
+
+Thus a contradiction is found.
+
+Cheers,
+Fabricio
