@@ -1,0 +1,258 @@
+Info in KBmanager.initializeOnce()
+Info in KBmanager.initializeOnce(): initializing with /Users/ar/.sigmakee/KBs
+KBmanager.readConfiguration()
+KBmanager.serializedExists(): true
+KBmanager.serializedOld(config): 
+KBmanager.serializedOld(config): save date: Tue Jun 11 10:59:24 BRT 2019
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+Error in KBmanager.kbsFilenamesFromXML(): Bad tag: preference
+Error in KBmanager.kbsFilenamesFromXML(): expected <kb>
+kbsFilenamesFromXML(): Completed loading KB names
+KBmanager.serializedOld(config): returning false (not old)
+KBmanager.loadSerialized(): KBmanager has been deserialized 
+WordNet.initOnce(): using baseDir = /Users/ar/.sigmakee/KBs/WordNetMappings
+WordNet.loadFresh(): 
+INFO in WordNet.compileRegexPatterns(): compiling patterns
+INFO in WordNet.readNouns(): Reading WordNet noun files
+...............
+Error in WordNet.readNouns(): No match in /Users/ar/.sigmakee/KBs/WordNetMappings/WordNetMappings30-noun.txt for line ElectricalConductor+
+...................................................................x
+  1.647 seconds to process /Users/ar/.sigmakee/KBs/WordNetMappings/WordNetMappings30-noun.txt with 82242 lines
+  0.006 seconds to process /Users/ar/.sigmakee/KBs/WordNetMappings/noun.exc
+INFO in WordNet.readVerbs(): Reading WordNet verb files
+.............x
+  0.238 seconds to process /Users/ar/.sigmakee/KBs/WordNetMappings/WordNetMappings30-verb.txt with 13837 lines
+  0.003 seconds to process /Users/ar/.sigmakee/KBs/WordNetMappings/verb.exc
+INFO in WordNet.readAdjectives(): Reading WordNet adjective files
+..................x
+  0.345 seconds to process /Users/ar/.sigmakee/KBs/WordNetMappings/WordNetMappings30-adj.txt with 18226 lines
+INFO in WordNet.readAdverbs(): Reading WordNet adverb files
+...x
+  0.059 seconds to process /Users/ar/.sigmakee/KBs/WordNetMappings/WordNetMappings30-adv.txt with 3691 lines
+INFO in WordNet.readWordFrequencies(): Reading WordNet word frequencies
+.................................x
+  2.052 seconds to process /Users/ar/.sigmakee/KBs/WordNetMappings/wordFrequencies.txt
+INFO in WordNet.readStopWords(): Reading stop words
+  0.002 seconds to process /Users/ar/.sigmakee/KBs/WordNetMappings/stopwords.txt
+INFO in WordNet.readSenseIndex(): Reading WordNet sense index
+..............................................................................................................................................................................................................x
+  0.597 seconds to process /Users/ar/.sigmakee/KBs/WordNetMappings/index.sense with 206000 senses.
+INFO in WordNet.readSenseCount(): Reading WordNet sense counts
+.....Info in WordNet.readSenseCount(): > 100 missing senses, suppressing messages 
+................................x
+  0.206 seconds to process /Users/ar/.sigmakee/KBs/WordNetMappings/cntlist with 37000 senses.
+INFO in WordNet.serialize(): origMaxNounSynsetID: 15300051 and: 15300051
+WordNet.serialize(): WN has been serialized 
+ENTER DB.readSpreadsheet(/Users/ar/.sigmakee/KBs/WordNetMappings/sentiment.csv, null)
+ENTER DB.readSpreadsheet(java.io.FileReader@264e0dbc, null)
+EXIT DB.readSpreadsheet(java.io.FileReader@264e0dbc, null)
+  rows == [list of 8222 rows]
+  0.08 seconds elapsed time
+EXIT DB.readSpreadsheet(/Users/ar/.sigmakee/KBs/WordNetMappings/sentiment.csv, null)
+NLGUtils.init(): initializing with /Users/ar/.sigmakee/KBs
+NLGUtils.readKeywordMap():
+NLGUtils.serializedExists(): true
+NLGUtils.loadSerialized()
+NLGUtils.loadSerialized(): NLGUtils has been deserialized 
+INFO in OMWordnet.readOMWfiles(): reading files: 
+OMWordnet.loadSerialized(): OMW has been deserialized 
+Info in KBmanager.initializeOnce(): initialized is true
+.Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation altitude in formula: 
+(altitude ?OBJ1 ?OBJ2 ?HEIGHT)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation altitude in formula: 
+(altitude ?OBJ1 ?OBJ2 ?HEIGHT)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 3 of relation altitude in formula: 
+(altitude ?OBJ1 ?OBJ2 ?HEIGHT)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation altitude in formula: 
+(altitude ?OBJ1 ?OBJ2 ?HEIGHT)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation altitude in formula: 
+(altitude ?OBJ1 ?OBJ2 ?HEIGHT)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 3 of relation altitude in formula: 
+(altitude ?OBJ1 ?OBJ2 ?HEIGHT)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation altitude in formula: 
+(altitude ?OBJ1 ?OBJ2 ?Q)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation altitude in formula: 
+(altitude ?OBJ1 ?OBJ2 ?Q)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 3 of relation altitude in formula: 
+(altitude ?OBJ1 ?OBJ2 ?Q)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?PART ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?PART ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?ELEMENT ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?ELEMENT ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?ELEMENT ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?ELEMENT ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?S ?B)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?S ?B)
+...Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?PART ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?PART ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?PART ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?PART ?OBJ)
+.Error in FormulaPreprocessor.findType(): no type information for predicate routeInSystem
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation routeInSystem in formula: 
+(routeInSystem ?P ?S)
+Error in FormulaPreprocessor.findType(): no type information for predicate routeInSystem
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation routeInSystem in formula: 
+(routeInSystem ?P ?S)
+.Error in FormulaPreprocessor.findType(): no type information for predicate maxValue
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation maxValue in formula: 
+(maxValue ?R ?ARG ?N)
+Error in FormulaPreprocessor.findType(): no type information for predicate maxValue
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation maxValue in formula: 
+(maxValue ?R ?ARG ?N)
+Error in FormulaPreprocessor.findType(): no type information for predicate maxValue
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 3 of relation maxValue in formula: 
+(maxValue ?R ?ARG ?N)
+Error in FormulaPreprocessor.findType(): no type information for predicate minValue
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation minValue in formula: 
+(minValue ?R ?ARG ?N)
+Error in FormulaPreprocessor.findType(): no type information for predicate minValue
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation minValue in formula: 
+(minValue ?R ?ARG ?N)
+Error in FormulaPreprocessor.findType(): no type information for predicate minValue
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 3 of relation minValue in formula: 
+(minValue ?R ?ARG ?N)
+Error in FormulaPreprocessor.findType(): no type information for predicate approximateDiameter
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation approximateDiameter in formula: 
+(approximateDiameter ?Particle
+  (MeasureFn ?Size Millimeter))
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?SP ?O)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?SP ?O)
+.Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?PART1 ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?PART1 ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?PART2 ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?PART2 ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?PART1 ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?PART1 ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?PART2 ?OBJ)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?PART2 ?OBJ)
+..Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?OBJ3
+  (HoleHostFn ?HOLE))
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?OBJ3
+  (HoleHostFn ?HOLE))
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?OBJ3
+  (HoleHostFn ?HOLE))
+..Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?COVER ?BODY)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?COVER ?BODY)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?COVER ?BODY)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?COVER ?BODY)
+...Error in FormulaPreprocessor.findType(): no type information for predicate shape
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation shape in formula: 
+(shape ?OBJ Flat)
+....Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?PART ?OBJ2)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?PART ?OBJ2)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?PART ?OBJ2)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?PART ?OBJ2)
+.Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?OBJ1 ?OBJ2)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?OBJ1 ?OBJ2)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?PART ?WHOLE)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?PART ?WHOLE)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?OBJ3 ?OBJ2)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?OBJ3 ?OBJ2)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 1 of relation superficialPart in formula: 
+(superficialPart ?OBJ3 ?OBJ2)
+Error in FormulaPreprocessor.computeVariableTypesRecurse(): no type information for arg 2 of relation superficialPart in formula: 
+(superficialPart ?OBJ3 ?OBJ2)
+..............................................................................................................................................................................................................................................................................................................................
+File written: /Users/ar/.sigmakee/KBs/SUMO.tptp
