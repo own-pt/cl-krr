@@ -14,3 +14,19 @@ directory (which is merge+milo + some contradictions removed).
 
 ;; example:
 (compile-suo-kif :in-files '("core-sumo.kif" "reasoning.kif") :tptp t)
+
+NOTE: CL-KRR does not support QUERY yet, so you need to update the QUERY TPTP line to switch to a conjecture.
+
+For example:
+
+/*
+(QUERY (MEETSSPATIALLY OBJECT16-2 OBJECT16-3))
+*/
+
+Generated:
+
+fof(a229665,axiom,s_QUERY(s_MEETSSPATIALLY(s_OBJECT16_2, s_OBJECT16_3))).
+
+Fixed:
+
+fof(a229665,conjecture,s_MEETSSPATIALLY(s_OBJECT16_2, s_OBJECT16_3)).
