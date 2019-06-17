@@ -17,7 +17,7 @@
 (defparameter *max-row-expansion* 7 "Maximum number of variables to expand row vars")
 
 (defparameter *excluded-predicates*
-  '(documentation domain format termFormat externalImage
+  '(documentation domain range format termFormat externalImage
     relatedExternalConcept relatedInternalConcept formerName 
     abbreviation conventionalShortName conventionalLongName)
   "Predicates to be excluded from the final TPTP conversion")
