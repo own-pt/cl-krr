@@ -52,50 +52,50 @@
                   (bindings (pairlis '(E1 E2) `(,(or p1 e1) ,(or p2 e2)))))
              (when (or p1 p2) (sublis bindings pat)))))
     (match f
-      (`(<=> (exists ,v ,e1) ,e2) 
-        `(and (=> (exists ,v ,e1) ,e2)
-              (=> ,e2 (exists ,v ,e1))))
+      (`(<=> (|exists| ,v ,e1) ,e2) 
+        `(|and| (=> (|exists| ,v ,e1) ,e2)
+              (=> ,e2 (|exists| ,v ,e1))))
 
-      (`(<=> ,e1 (exists ,v ,e2))
-        `(and (=> ,e1 (exists ,v ,e2))
-              (=> (exists ,v ,e2) ,e1)))
+      (`(<=> ,e1 (|exists| ,v ,e2))
+        `(|and| (=> ,e1 (|exists| ,v ,e2))
+              (=> (|exists| ,v ,e2) ,e1)))
 
-      (`(<=> (forall ,v ,e1) ,e2)
-        `(and (=> (forall ,v ,e1) ,e2)
-              (=> ,e2 (forall ,v ,e1))))
+      (`(<=> (|forall| ,v ,e1) ,e2)
+        `(|and| (=> (|forall| ,v ,e1) ,e2)
+              (=> ,e2 (|forall| ,v ,e1))))
 
-      (`(<=> ,e1 (forall ,v ,e2))
-        `(and (=> ,e1 (forall ,v ,e2))
-              (=> (forall ,v ,e2) ,e1)))
+      (`(<=> ,e1 (|forall| ,v ,e2))
+        `(|and| (=> ,e1 (|forall| ,v ,e2))
+              (=> (|forall| ,v ,e2) ,e1)))
 
-      (`(=> (forall ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(exists V (=> E1 E2))))
-      (`(=> (exists ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(forall V (=> E1 E2))))
-      (`(=> ,e1 (exists ,v ,e2)) (tr2 v e1 e2 :e1 '(exists V (=> E1 E2))))
-      (`(=> ,e1 (forall ,v ,e2)) (tr2 v e1 e2 :e1 '(forall V (=> E1 E2))))
+      (`(=> (|forall| ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(|exists| V (=> E1 E2))))
+      (`(=> (|exists| ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(|forall| V (=> E1 E2))))
+      (`(=> ,e1 (|exists| ,v ,e2)) (tr2 v e1 e2 :e1 '(|exists| V (=> E1 E2))))
+      (`(=> ,e1 (|forall| ,v ,e2)) (tr2 v e1 e2 :e1 '(|forall| V (=> E1 E2))))
 
-      (`(not (exists ,v ,e)) `(forall ,v (not ,e)))
-      (`(not (forall ,v ,e)) `(exists ,v (not ,e)))
+      (`(|not| (|exists| ,v ,e)) `(|forall| ,v (|not| ,e)))
+      (`(|not| (|forall| ,v ,e)) `(|exists| ,v (|not| ,e)))
 
-      (`(or ,e1 (exists ,v ,e2)) (tr2 v e1 e2 :e1 '(exists V (or E1 E2))))
-      (`(or ,e1 (forall ,v ,e2)) (tr2 v e1 e2 :e1 '(forall V (or E1 E2))))
-      (`(or (exists ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(exists V (or E1 E2))))
-      (`(or (forall ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(forall V (or E1 E2))))
+      (`(|or| ,e1 (|exists| ,v ,e2)) (tr2 v e1 e2 :e1 '(|exists| V (|or| E1 E2))))
+      (`(|or| ,e1 (|forall| ,v ,e2)) (tr2 v e1 e2 :e1 '(|forall| V (|or| E1 E2))))
+      (`(|or| (|exists| ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(|exists| V (|or| E1 E2))))
+      (`(|or| (|forall| ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(|forall| V (|or| E1 E2))))
 
-      (`(and ,e1 (forall ,v ,e2)) (tr2 v e1 e2 :e1 '(forall V (and E1 E2))))
-      (`(and (forall ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(forall V (and E1 E2))))
-      (`(and ,e1 (exists ,v ,e2)) (tr2 v e1 e2 :e1 '(exists V (and E1 E2))))
-      (`(and (exists ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(exists V (and E1 E2))))
+      (`(|and| ,e1 (|forall| ,v ,e2)) (tr2 v e1 e2 :e1 '(|forall| V (|and| E1 E2))))
+      (`(|and| (|forall| ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(|forall| V (|and| E1 E2))))
+      (`(|and| ,e1 (|exists| ,v ,e2)) (tr2 v e1 e2 :e1 '(|exists| V (|and| E1 E2))))
+      (`(|and| (|exists| ,v ,e1) ,e2) (tr2 v e1 e2 :e2 '(|exists| V (|and| E1 E2))))
 
       ;; these are the "end of the recursion" matches.  they use the
       ;; special forms tr1* and tr2* that return NIL if there is no
       ;; further substitution made.
-      (`(exists ,v ,e) (tr1* v e '(exists V E)))
-      (`(forall ,v ,e) (tr1* v e '(forall V E)))
+      (`(|exists| ,v ,e) (tr1* v e '(|exists| V E)))
+      (`(|forall| ,v ,e) (tr1* v e '(|forall| V E)))
 
       (`(<=> ,e1 ,e2) (tr2* e1 e2 '(<=> E1 E2)))
       (`(=> ,e1 ,e2)  (tr2* e1 e2  '(=> E1 E2)))
-      (`(or ,e1 ,e2)  (tr2* e1 e2  '(or E1 E2)))
-      (`(and ,e1 ,e2) (tr2* e1 e2 '(and E1 E2)))
+      (`(|or| ,e1 ,e2)  (tr2* e1 e2  '(|or| E1 E2)))
+      (`(|and| ,e1 ,e2) (tr2* e1 e2 '(|and| E1 E2)))
       (otherwise nil))))
 
 (named-readtables:in-readtable :standard)
@@ -111,7 +111,7 @@
 (defun binarize (f)
   "Convert n-arity AND and OR predicates into their binary form."
   (flet ((and-or-p (f)
-           (member (car f)  '(or and))))
+           (member (car f)  '(|or| |and|))))
     (cond
       ((atom f) f)
       ((and (and-or-p f) (> (length f) 3))

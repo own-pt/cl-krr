@@ -17,9 +17,9 @@
 (defparameter *max-row-expansion* 7 "Maximum number of variables to expand row vars")
 
 (defparameter *excluded-predicates*
-  '(documentation domain range format termFormat externalImage
-    relatedExternalConcept relatedInternalConcept formerName 
-    abbreviation conventionalShortName conventionalLongName)
+  '(|documentation| |domain| |range| |format| |termFormat| |externalImage|
+    |relatedExternalConcept| |relatedInternalConcept| |formerName| 
+    |abbreviation| |conventionalShortName| |conventionalLongName|)
   "Predicates to be excluded from the final TPTP conversion")
 
 (defparameter *kb* nil
@@ -41,7 +41,7 @@
 
 (defun instance-of (formula type)
   "Checks if FORMULA defines an instance of TYPE."
-  (and (car-is formula 'instance) (nth-arg-is formula 2 type)))
+  (and (car-is formula '|instance|) (nth-arg-is formula 2 type)))
 
 (defun read-kif (files)
   (let ((res nil))
@@ -75,10 +75,10 @@
   (let ((r (make-hash-table))
         (temp (make-hash-table)))
     (dolist (formula formulas)
-      (when (or (car-is formula 'domain) (car-is formula 'domainSubclass))
+      (when (or (car-is formula '|domain|) (car-is formula '|domainSubclass|))
         (let ((relation (cadr formula))
               (position (caddr formula))
-              (type (if (car-is formula 'domain) 
+              (type (if (car-is formula '|domain|) 
                         (cadddr formula) 
                         (symbolicate (cadddr formula) '+))))
           (push (cons position type) (gethash relation temp)))))
@@ -102,7 +102,7 @@
 the SUBRELATION statement."
   (let ((parent-relations nil))
     (dolist (formula formulas)
-      (when (and (= 3 (length formula)) (car-is formula 'subrelation))
+      (when (and (= 3 (length formula)) (car-is formula '|subrelation|))
         (let ((child (cadr formula))
               (parent (caddr formula)))
           (setf parent-relations (acons child parent parent-relations)))))
@@ -114,7 +114,7 @@ SUBCLASS statement."
   (let ((subclasses (make-hash-table))
         (superclasses (make-hash-table)))
     (dolist (formula formulas)
-      (when (and (= 3 (length formula)) (car-is formula 'subclass))
+      (when (and (= 3 (length formula)) (car-is formula '|subclass|))
         (let ((child (cadr formula))
               (parent (caddr formula)))
           (setf (gethash child superclasses) parent)
@@ -126,7 +126,7 @@ SUBCLASS statement."
 arity via (instance <PRED> VariableArityRelation)."
   (let ((r nil))
     (dolist (formula formulas)
-      (when (instance-of formula 'VariableArityRelation)
+      (when (instance-of formula '|VariableArityRelation|)
         (let ((predicate (cadr formula)))
           (push predicate r))))
     r))
@@ -135,7 +135,7 @@ arity via (instance <PRED> VariableArityRelation)."
   "Collects all the instances and their types."
   (let ((r (make-hash-table)))
     (dolist (formula formulas)
-      (when (car-is formula 'instance)
+      (when (car-is formula '|instance|)
         (let ((name (cadr formula))
               (type (caddr formula)))
           (push type (gethash name r)))))
@@ -203,7 +203,7 @@ relation."
 SUBCLASS statements where VARIABLE appears."
   (flet ((infer-explicit-type (f)
            (when (consp f)
-             (when (or (car-is f 'instance) (car-is f 'subclass))
+             (when (or (car-is f '|instance|) (car-is f '|subclass|))
                (let ((p (position variable f)))
                  (when (and p (= p 1))
                    (let ((potential-type (caddr f)))
@@ -374,7 +374,8 @@ one that is suffixed with a +"
 where the theorem prover doesn't handle overloaded predicates."
   (labels ((disambiguated-name (f)
              (symbolicate (car f) (write-to-string (length (cdr f)))))
-           (insert-new-relation-signature (rel new-rel arity)
+
+	   (insert-new-relation-signature (rel new-rel arity)
              "Assuming that the last sort specified as the domain of
               REL is the sort that is going to be used for the rest of
               parameters.  Insert into the global *domains* hash table
@@ -385,11 +386,14 @@ where the theorem prover doesn't handle overloaded predicates."
                    (when (> arity-diff 0)
                      (let ((missing-sorts (make-list arity-diff :initial-element (car (last rel-domain)))))
                        (setf (gethash new-rel *domains*) (append rel-domain missing-sorts))))))))
-           (insert-new-relation-instance (rel new-rel)
+
+	   (insert-new-relation-instance (rel new-rel)
              (let ((original-types (gethash rel *instances*)))
                (setf (gethash new-rel *instances*) original-types)))
-           (variable-arity-predicate (f)
+
+	   (variable-arity-predicate (f)
              (and (consp f) (member (car f) *variable-arity-relations*)))
+	   
            (disambiguate-relation-name (f)
              (let ((rel (car f))
                    (new-rel (disambiguated-name f)))
@@ -592,11 +596,11 @@ number (defined by *max-row-expansion*).
               (find-free-variables (cdr formula) context)))))
 
 (defun quantify-free-variables (formula &optional (axiom? t))
-  (let ((quantifier (if axiom? 'forall 'exists))
-        (free-variables (find-free-variables formula)))
+  (let ((quantifier (if axiom? '|forall| '|exists|))
+	(free-variables (find-free-variables formula)))
     (if free-variables
-        `((,quantifier ,free-variables ,formula))
-        `(,formula))))
+	`((,quantifier ,free-variables ,formula))
+	`(,formula))))
 
 (defun generate-instantiations (f)
   "From a F, generate new (instance <X> SetOrClass) as follows:
@@ -611,20 +615,20 @@ number (defined by *max-row-expansion*).
    (instance Y SetOrClass)"
   (let ((instantiations))
     (cond
-      ((and (car-is f 'instance))
+      ((and (car-is f '|instance|))
        (unless (variablep (caddr f))
-         (push `(instance ,(caddr f) SetOrClass) instantiations)))
-      ((car-is f 'subclass)
+         (push `(|instance| ,(caddr f) |SetOrClass|) instantiations)))
+      ((car-is f '|subclass|)
        (unless (variablep (cadr f))
-         (push `(instance ,(cadr f) SetOrClass) instantiations))
+         (push `(|instance| ,(cadr f) |SetOrClass|) instantiations))
        (unless (variablep (caddr f))
-         (push `(instance ,(caddr f) SetOrClass) instantiations))))
+         (push `(|instance| ,(caddr f) |SetOrClass|) instantiations))))
     instantiations))
 
 (defun save-pass (file formulas)
   (with-output-to-file (out file :if-exists :supersede)
     (dolist (f formulas)
-      (print f out))))
+      (format out "~s~%" f))))
 
 (defun binarize-and-prenex (f)
   `(,(prenex (binarize f))))
@@ -637,7 +641,7 @@ number (defined by *max-row-expansion*).
                           (save-passes nil))
   "First pass of the compiler: reads the filename, and capture all
 metadata to be used in later passes."
-  (let* ((kb (read-kif in-files))
+  (let* ((kb (with-case-sensitivity (read-kif in-files)))
          (augmented-kb)
          (passes '(expand-predicate-vars
                    expand-row-vars
@@ -652,7 +656,7 @@ metadata to be used in later passes."
     (memoize 'find-class-hierarchy)
     (memoize 'topmost-relation)
     (memoize 'subclassp)
-
+    
     (setf *kb* kb)
     (setf *variable-arity-relations* (collect-variable-arity-predicates kb))
     (setf *parent-relation* (collect-relation-hierarchy kb))
@@ -666,10 +670,10 @@ metadata to be used in later passes."
         (mapcar (lambda (x) 
                   (when x
                     (let ((instance-types (gethash (cadr x) *instances*)))
-                      (unless (or (not x) (member 'SetOrClass instance-types))
-                        (push 'SetOrClass (gethash (cadr x) *instances*))
+		      (unless (or (not x) (member '|SetOrClass| instance-types))
+                        (push '|SetOrClass| (gethash (cadr x) *instances*))
                         (push x augmented-kb)))))
-                (generate-instantiations f))))
+		(generate-instantiations f))))
 
 ;; Experimental code:
 ;;
@@ -691,7 +695,7 @@ metadata to be used in later passes."
 
       (setf augmented-kb (append augmented-kb (transitive-closure-classes (hash-table-keys *subclasses*))))
       (setf augmented-kb (append augmented-kb (transitive-closure-instances (hash-table-keys *instances*)))))
-
+    
     (format t "Original  KB: ~a~%" (length kb))
     (format t "Augmented KB: ~a~%" (length augmented-kb))
 
@@ -700,10 +704,10 @@ metadata to be used in later passes."
     (dolist (pass passes)
       (when debug-passes
         (format t "[executing ~a (~a formulas): " pass (length p)))
-      (setq real-time 
+      (setq real-time
             (timings (lambda () 
-                       (dolist (f p)
-                         (dolist (n (funcall pass f))
+		       (dolist (f p)
+			 (dolist (n (funcall pass f))
                            (push n q))))))
       (when debug-passes
         (format t "~w s]~%" (float real-time)))
@@ -738,9 +742,9 @@ metadata to be used in later passes."
       ((atom f) nil)
       ((quantifierp f) (find-explicit-instantiations (caddr f))) 
       ((and (consp f) (logical-operatorp (car f)))
-       (flatten (mapcar (lambda (x) (find-explicit-instantiations x (car-is f 'not))) (cdr f))))
+       (flatten (mapcar (lambda (x) (find-explicit-instantiations x (car-is f '|not|))) (cdr f))))
       ((trivialp f)       
-       (when (and (car-is f 'instance) (regular-varp (cadr f)))
+       (when (and (car-is f '|instance|) (regular-varp (cadr f)))
          (list (cadr f))))
       (t
        (cons (find-explicit-instantiations (car f)) (find-explicit-instantiations (cdr f)))))))
@@ -759,9 +763,9 @@ metadata to be used in later passes."
            (create-restriction (var type)
              "Create a restriction stating that VAR needs to be SORT."
              (cond ((regular-typep type) 
-                    `(instance ,var ,type))
+                    `(|instance| ,var ,type))
                    ((subclass-typep type)
-                    `(subclass ,var ,(remove-subclass-indicator type)))))
+                    `(|subclass| ,var ,(remove-subclass-indicator type)))))
            (create-conjunction (vars formula)
              "From a list of VARS and FORMULA, generate the
               appropriate type restriction as follows.
@@ -787,7 +791,7 @@ metadata to be used in later passes."
                  (when restrictions
                    (if (= 1 (length restrictions))
                        (car restrictions)
-                       (cons 'and restrictions))))))
+                       (cons '|and| restrictions))))))
            (create-restrictions (formula contexts)
              "Create restrictions of VARS over FORMULA based on
               CONTEXTS, which is a stack of quantifiers and their
@@ -797,7 +801,7 @@ metadata to be used in later passes."
                         (instantiated-vars (find-explicit-instantiations (get-antecedent formula)))
                         (quantifier (car ctx))
                         (quantified-vars (cdr ctx))
-                        (op (ecase quantifier (forall '=>) (exists 'and)))
+                        (op (ecase quantifier (|forall| '=>) (|exists| '|and|)))
                         (conjunction (create-conjunction (set-difference quantified-vars instantiated-vars) formula)))
                    (if conjunction
                        `(,op (,@conjunction)

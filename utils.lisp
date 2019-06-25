@@ -14,6 +14,7 @@
 
 (in-package #:suo-kif)
 
+
 (defparameter *variable-arity-relations* nil
   "List of predicates defined as having variable arity.")
 
@@ -35,9 +36,9 @@
 (defparameter *type-instances* nil
   "All defined types and their instances.")
 
-(defparameter *binary-logical-operators* '(and or => <=>))
-(defparameter *unary-logical-operators* '(not))
-(defparameter *quantifiers* '(forall exists))
+(defparameter *binary-logical-operators* '(|and| |or| => <=>))
+(defparameter *unary-logical-operators* '(|not|))
+(defparameter *quantifiers* '(|forall| |exists|))
 
 (defun row-varp (s)
   "Checks if S is a row variable, i.e., starts with @."
@@ -55,19 +56,19 @@
 
 (defun quantifierp (f)
   "Check if the formula fragment is a quantifier."
-  (and (consp f) (or (eq 'exists (car f)) (eq 'forall (car f)))))
+  (and (consp f) (or (eq '|exists| (car f)) (eq '|forall| (car f)))))
 
 (defun relationp (s)
   "Checks if S is a relation."
   (let ((types (gethash (topmost-relation s) *instances*)))
-    (some #'identity (mapcar (lambda (x) (subclassp x 'Relation)) types))))
+    (some #'identity (mapcar (lambda (x) (subclassp x '|Relation|)) types))))
 
 (defun kif-functionp (s)
   "Checks if S is a function."
   (let ((types (gethash (topmost-relation s) *instances*)))
     (or
-     (member 'Function types)
-     (some #'identity (mapcar (lambda (x) (subclassp x 'Function)) types)))))
+     (member '|Function| types)
+     (some #'identity (mapcar (lambda (x) (subclassp x '|Function|)) types)))))
 
 (defun strictly-relationp (s)
   "Checks if S is strictly a relation (i.e., not a function)."
@@ -185,3 +186,9 @@
     (dolist (l list-of-lists)
       (setf r (union r l)))
     r))
+
+(defmacro with-case-sensitivity ( &body body)
+   `(let ((*readtable* (copy-readtable)))
+      (setf (readtable-case *readtable*) :preserve)
+      (progn
+        ,@body)))
