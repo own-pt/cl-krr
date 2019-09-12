@@ -36,7 +36,7 @@
 (defparameter *type-instances* nil
   "All defined types and their instances.")
 
-(defparameter *binary-logical-operators* '(|and| |or| => <=> |equal|))
+(defparameter *binary-logical-operators* '(|and| |or| => <=>))
 (defparameter *unary-logical-operators* '(|not|))
 (defparameter *quantifiers* '(|forall| |exists|))
 
