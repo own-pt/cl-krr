@@ -111,6 +111,7 @@ fof(a229643,axiom,! [SPINE] : ((s_instance(SPINE, s_Object) => (~ (s_instance(SP
 (and (instance BodyPart10-1 BodyPart)
      (component BodyPart10-1 BananaSlug10-1))
 */
-fof(a229644,axiom,(s_instance(s_BodyPart10_1, s_BodyPart) & s_component(s_BodyPart10_1, bslug))).
+% fof(a229644,axiom,(s_instance(s_BodyPart10_1, s_BodyPart) & s_component(s_BodyPart10_1, bslug))).
 
 fof(q1, conjecture, s_instance(bslug, s_Invertebrate)).
+%fof(q1, conjecture, s_instance(bslug, s_Vertebrate)).

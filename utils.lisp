@@ -79,8 +79,8 @@
       (member s *unary-logical-operators*)))
 
 (defun binary-logical-formulap (formula)
-  (or (member (car formula) *binary-logical-operators*)
-      (eq (car formula) 'equal)))
+  (member (car formula)
+	  (cons '|equal| *binary-logical-operators*)))
 
 (defun unary-logical-formulap (formula)
   (member (car formula) *unary-logical-operators*))
