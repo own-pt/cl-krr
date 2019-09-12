@@ -40,6 +40,3 @@ maximum time limit (otherwise it will assume 5 minutes).
 Secondly, try -xAuto -tAuto instead of --auto. That will run auto-mode,
 but without SInE.
 
-I’ve got at least 3 students working on improving the situation, but they
-are a mixed blessing ;-). I also try to hack things myself, but I have
-quite some teaching to do nowadays.
